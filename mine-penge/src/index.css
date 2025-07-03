@@ -1,0 +1,192 @@
+@import "@fontsource/inter/index.css";
+
+:root {
+  --bg: #F6F8FA;
+  --bg-card: #E9F1F7;
+  --accent: #4A90C2;
+  --accent2: #B7D7C1;
+  --text: #2E3A43;
+  --text-muted: #6B7A89;
+  --shadow: 0 4px 24px #0002;
+  --radius: 18px;
+  --transition: 0.18s cubic-bezier(.4,0,.2,1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'InterVariable', 'Inter', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-card);
+  box-shadow: var(--shadow);
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100vw;
+}
+.header-inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius);
+  transition: background var(--transition), color var(--transition);
+}
+nav a:hover, nav a.active {
+  background: var(--accent);
+  color: #181f25;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem 2rem 1rem;
+  background: linear-gradient(120deg, #1a232b 60%, #232e36 100%);
+  border-radius: var(--radius);
+  margin: 2rem auto 2.5rem auto;
+  max-width: 900px;
+  box-shadow: var(--shadow);
+}
+.hero-icon {
+  font-size: 4rem;
+  color: var(--accent2);
+  margin-bottom: 1rem;
+}
+.hero h1 {
+  font-size: 2.7rem;
+  margin: 0.5rem 0 0.7rem 0;
+  color: var(--accent);
+  letter-spacing: -1px;
+}
+.hero p {
+  color: var(--text-muted);
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem 1.3rem 1.3rem 1.3rem;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.card:hover {
+  box-shadow: 0 8px 32px #0007;
+  transform: translateY(-4px) scale(1.02);
+}
+.card .card-icon {
+  font-size: 2.2rem;
+  color: var(--accent2);
+  margin-bottom: 0.7rem;
+}
+.card h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+.card p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+button, input[type="submit"] {
+  background: var(--accent);
+  color: #181f25;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+  box-shadow: 0 2px 8px #0002;
+}
+button:hover, input[type="submit"]:hover {
+  background: var(--accent2);
+  color: #181f25;
+  box-shadow: 0 4px 16px #0004;
+}
+
+input, textarea {
+  font-size: 1.1rem;
+  padding: 0.7rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--accent2);
+  margin-top: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--bg-card);
+  color: var(--text);
+}
+input:focus, textarea:focus {
+  outline: 2px solid var(--accent);
+  border-color: var(--accent);
+}
+
+ul, li {
+  color: var(--text);
+}
+
+@media (max-width: 800px) {
+  .header-inner { padding: 0 1rem; }
+  .hero { padding: 2.5rem 0.5rem 1.5rem 0.5rem; }
+}
+@media (max-width: 600px) {
+  .header-inner { flex-direction: column; gap: 0.7rem; padding: 0 0.5rem; }
+  nav { flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .hero { padding: 1.5rem 0.2rem; }
+  .card-list { grid-template-columns: 1fr; }
+}
