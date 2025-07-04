@@ -34,8 +34,8 @@ class Article(BaseModel):
     url: str
 
 class ScrapeRequest(BaseModel):
-    sources: List[str] = ["dr.dk", "tv2.dk", "finans.dk", "bolius.dk"]
-    keywords: List[str] = ["økonomi", "penge", "opsparing", "investering", "su", "bolig"]
+    sources: List[str] = ["dr.dk", "tv2.dk", "finans.dk", "bolius.dk", "moneymum.dk", "pengepugeren.dk"]
+    keywords: List[str] = []  # Not used anymore, but kept for compatibility
 
 class ScraperStatus(BaseModel):
     is_running: bool
@@ -77,6 +77,8 @@ async def root():
 async def get_articles():
     """Get all articles"""
     articles = load_articles()
+    # Sort by relevance score first, then by found date (newest first)
+    articles.sort(key=lambda x: (x.get('relevance_score', 0), x.get('foundAt', '')), reverse=True)
     return {"articles": articles}
 
 @app.get("/api/articles/source/{source}")
@@ -84,7 +86,26 @@ async def get_articles_by_source(source: str):
     """Get articles from specific source"""
     articles = load_articles()
     filtered = [article for article in articles if article["source"].lower() == source.lower()]
+    # Sort by relevance score first, then by found date (newest first)
+    filtered.sort(key=lambda x: (x.get('relevance_score', 0), x.get('foundAt', '')), reverse=True)
     return {"articles": filtered}
+
+@app.get("/api/articles/relevant")
+async def get_relevant_articles(min_score: float = 3.0):
+    """Get articles with minimum relevance score"""
+    articles = load_articles()
+    relevant = [article for article in articles if article.get('relevance_score', 0) >= min_score]
+    # Sort by relevance score first, then by found date (newest first)
+    relevant.sort(key=lambda x: (x.get('relevance_score', 0), x.get('foundAt', '')), reverse=True)
+    return {"articles": relevant, "min_score": min_score}
+
+@app.get("/api/articles/latest")
+async def get_latest_articles():
+    """Get articles sorted by found date (newest first)"""
+    articles = load_articles()
+    # Sort by found date (newest first)
+    articles.sort(key=lambda x: x.get('foundAt', ''), reverse=True)
+    return {"articles": articles}
 
 @app.post("/api/articles/date-range")
 async def get_articles_by_date_range(request: dict):
@@ -98,10 +119,9 @@ async def trigger_scraper(request: ScrapeRequest):
     """Trigger the scraper to fetch new articles"""
     try:
         print(f"Starting scraper with sources: {request.sources}")
-        print(f"Keywords: {request.keywords}")
         
-        # Run scraper
-        new_articles = await scraper.scrape_articles(request.sources, request.keywords)
+        # Run scraper (keywords not used anymore)
+        new_articles = await scraper.scrape_articles(request.sources)
         
         # Load existing articles
         existing_articles = load_articles()
@@ -128,7 +148,7 @@ async def get_scraper_status():
         is_running=False,
         last_run=datetime.now().isoformat(),
         articles_found=len(load_articles()),
-        sources_scraped=["dr.dk", "tv2.dk", "finans.dk", "bolius.dk"]
+        sources_scraped=["dr.dk", "tv2.dk", "finans.dk", "bolius.dk", "moneymum.dk", "pengepugeren.dk"]
     )
 
 @app.get("/api/statistics")
