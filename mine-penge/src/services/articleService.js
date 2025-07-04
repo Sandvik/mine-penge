@@ -201,8 +201,8 @@ class ArticleService {
       this.updateMetadata();
       return this.articles;
     } catch (error) {
-      console.error('Error loading articles from API:', error);
-      return this.articles; // Fallback to current data
+      console.error('Error loading from API:', error);
+      return this.articles;
     }
   }
 
@@ -221,12 +221,12 @@ class ArticleService {
       });
       return response.ok;
     } catch (error) {
-      console.error('Error saving articles to API:', error);
+      console.error('Error saving to API:', error);
       return false;
     }
   }
 
-  // Export current data as JSON
+  // Export data
   exportData() {
     return {
       articles: this.articles,
@@ -234,11 +234,10 @@ class ArticleService {
     };
   }
 
-  // Import data from JSON
+  // Import data
   importData(data) {
     if (data.articles && Array.isArray(data.articles)) {
       this.articles = data.articles;
-      this.metadata = data.metadata || this.metadata;
       this.updateMetadata();
       return true;
     }
@@ -248,47 +247,76 @@ class ArticleService {
   // Get scraper status
   async getScraperStatus() {
     try {
-      const response = await fetch(`${this.apiBaseUrl}/api/scraper/status`);
+      const response = await fetch(`${this.apiBaseUrl}/api/status`);
       if (response.ok) {
         return await response.json();
       }
-      return null;
+      return { status: 'offline' };
     } catch (error) {
-      console.error('Error getting scraper status:', error);
-      return null;
+      return { status: 'offline', error: error.message };
     }
   }
 
-  // Get statistics for dashboard
+  // Get statistics
   getStatistics() {
-    const stats = {
+    return {
       totalArticles: this.articles.length,
       sources: this.metadata.sources.length,
       topics: this.metadata.topics.length,
-      recentArticles: this.articles.filter(article => {
-        const published = new Date(article.publishedAt);
-        const oneWeekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-        return published > oneWeekAgo;
-      }).length,
-      byAudience: {},
-      byDifficulty: {}
+      lastUpdated: this.metadata.lastUpdated
     };
-
-    // Count by audience
-    this.articles.forEach(article => {
-      stats.byAudience[article.audience] = (stats.byAudience[article.audience] || 0) + 1;
-    });
-
-    // Count by difficulty
-    this.articles.forEach(article => {
-      stats.byDifficulty[article.difficulty] = (stats.byDifficulty[article.difficulty] || 0) + 1;
-    });
-
-    return stats;
   }
 }
 
 // Create singleton instance
 const articleService = new ArticleService();
+
+// Export functions for App.jsx
+export const fetchArticles = async () => {
+  try {
+    const response = await fetch('http://localhost:8000/api/articles');
+    if (response.ok) {
+      const data = await response.json();
+      return data.articles || data;
+    } else {
+      // Fallback to local data
+      return articleService.getAllArticles();
+    }
+  } catch (error) {
+    console.error('Error fetching articles:', error);
+    // Fallback to local data
+    return articleService.getAllArticles();
+  }
+};
+
+export const scrapeArticles = async () => {
+  try {
+    const response = await fetch('http://localhost:8000/api/scrape', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        sources: [
+          "dr.dk", "tv2.dk", "finans.dk", "bolius.dk", "moneymum.dk", "pengepugeren.dk", "samvirke.dk",
+          "nordea.com", "moneypennyandmore.dk", "kenddinepenge.dk", "styrpaabudget.dk", "lunar.app", 
+          "fairkredit.dk", "privatøkonomiskrådgivning.dk", "nordlaan.dk", "collectia.dk", "goddik.dk",
+          "kreditnu.dk", "danskebank.com", "pwc.dk"
+        ]
+      })
+    });
+    
+    if (response.ok) {
+      console.log('Scraper completed successfully');
+      return true;
+    } else {
+      console.error('Scraper failed');
+      return false;
+    }
+  } catch (error) {
+    console.error('Error scraping articles:', error);
+    return false;
+  }
+};
 
 export default articleService; 

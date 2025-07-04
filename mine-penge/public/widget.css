@@ -1,13 +1,19 @@
 /* MinePenge.dk Embeddable Widget Styles */
 .minepenge-widget {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   max-width: 400px;
-  border: 1px solid #e5e7eb;
   border-radius: 12px;
-  background: white;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: #f1f5f9; /* Mørkere baggrund */
   overflow: hidden;
   margin: 20px 0;
+}
+
+.minepenge-widget-header {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+  padding: 16px 20px;
+  text-align: center;
 }
 
 .widget-header {
@@ -47,14 +53,15 @@
   gap: 16px;
 }
 
-.widget-article {
-  border-bottom: 1px solid #f3f4f6;
-  padding-bottom: 16px;
+.minepenge-widget-article {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e2e8f0;
+  background: #e2e8f0; /* Mørkere baggrund */
+  transition: background-color 0.2s ease;
 }
 
-.widget-article:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
+.minepenge-widget-article:hover {
+  background: #cbd5e1; /* Mørkere hover baggrund */
 }
 
 .article-title {

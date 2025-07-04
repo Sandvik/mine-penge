@@ -4,7 +4,7 @@ import UserFeedback from './UserFeedback';
 
 function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
   const { title, summary, tags, source, publishedAt, foundAt, difficulty, audience, relevance_score } = article || {};
-  
+
   const getDifficultyColor = (difficulty) => {
     switch (difficulty) {
       case 'begynder': return 'bg-success-100 text-success-800';
@@ -24,9 +24,9 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
   };
 
   const getRelevanceColor = (score) => {
-    if (score >= 8) return 'bg-success-100 text-success-800';
-    if (score >= 5) return 'bg-primary-100 text-primary-800';
-    if (score >= 3) return 'bg-warning-100 text-warning-800';
+    if (score >= 80) return 'bg-success-100 text-success-800';
+    if (score >= 60) return 'bg-primary-100 text-primary-800';
+    if (score >= 40) return 'bg-warning-100 text-warning-800';
     return 'bg-nordic-100 text-nordic-800';
   };
 
@@ -59,7 +59,7 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
             )}
           </div>
         </div>
-        <button 
+        <button
           onClick={onToggleFavorite}
           className={`p-2 rounded-lg transition-colors ${
             isFavorite 
@@ -70,7 +70,7 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
           <Heart className={`h-5 w-5 ${isFavorite ? 'fill-current' : ''}`} />
         </button>
       </div>
-
+      
       {/* Summary */}
       <p className="text-nordic-700 mb-4 leading-relaxed">
         {summary || 'AI-resumé: Planlægning og madplaner kan spare dig for tusindvis af kroner årligt. Her er de bedste tips til at reducere dit madbudget uden at gå på kompromis med kvaliteten.'}
@@ -79,7 +79,7 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
       {/* Tags */}
       <div className="flex flex-wrap gap-2 mb-4">
         {(tags || ['opsparing', 'børnefamilie', 'begynder']).map((tag, index) => (
-          <span
+          <span 
             key={index}
             className={`px-3 py-1 rounded-full text-xs font-medium ${
               index === 0 ? 'bg-primary-100 text-primary-800' :
@@ -91,15 +91,15 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
           </span>
         ))}
       </div>
-
+      
       {/* Footer */}
       <div className="flex items-center justify-between pt-4 border-t border-nordic-200">
         <span className="text-sm text-nordic-500">
           Kilde: {source || 'DR.dk'}
         </span>
-        <a
+        <a 
           href={article?.url || "#"}
-          target="_blank"
+          target="_blank" 
           rel="noopener noreferrer"
           className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium text-sm transition-colors"
         >
@@ -109,7 +109,7 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
       </div>
       
       {/* User Feedback */}
-      <div className="mt-4">
+      <div className="mt-4 pt-4 border-t border-nordic-100">
         <UserFeedback articleId={article?.id} />
       </div>
     </article>

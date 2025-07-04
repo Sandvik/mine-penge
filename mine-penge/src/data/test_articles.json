@@ -1,6 +1,73 @@
 {
   "articles": [
     {
+      "id": 4203473822,
+      "title": "Vil renten fortsætte med at falde? Privatøkonom giver svar på spørgsmål om forventet rentefald",
+      "summary": "AI-resumé: Torsdag forventes Den Europæiske Nationalbank (ECB) at sænke renten for ottende gang på et år",
+      "tags": [
+        "gæld",
+        "skat",
+        "nationalbank"
+      ],
+      "source": "nyheder.tv2.dk",
+      "publishedAt": "31 dage siden",
+      "foundAt": "2025-07-04T14:05:08.204536",
+      "audience": "erhverv",
+      "difficulty": "begynder",
+      "url": "https://nyheder.tv2.dk/penge/2025-06-03-vil-renten-fortsaette-med-at-falde-privatoekonom-giver-svar-paa-spoergsmaal-om-forventet-rentefald",
+      "relevance_score": 89.0,
+      "content_length": 752
+    },
+    {
+      "id": 3776241853,
+      "title": "Stil spørgsmål til privatøkonom om renter",
+      "summary": "AI-resumé: Hej Johannes, pænt goddag til dig også 😊 Som grov tommelfingerregel siger man, at der som udgangspunkt skal være en forskel på 1,5 procentpoint, før en konvertering ned i rente er oplagt for de fleste...",
+      "tags": [
+        "gæld",
+        "renter"
+      ],
+      "source": "nyheder.tv2.dk",
+      "publishedAt": "31 dage siden",
+      "foundAt": "2025-07-04T14:05:08.317744",
+      "audience": "gældsramt",
+      "difficulty": "begynder",
+      "url": "https://nyheder.tv2.dk/live/penge/2025-06-03-stil-spoergsmaal-til-privatoekonom-om-renter",
+      "relevance_score": 42.0,
+      "content_length": 899
+    },
+    {
+      "id": 1283167860,
+      "title": "Lukkelov møder modstand – hænger ikke sammen for familien, siger ejer",
+      "summary": "AI-resumé: Ni ekstra åbningsdage og flere penge i kassen",
+      "tags": [
+        "familieøkonomi"
+      ],
+      "source": "nyheder.tv2.dk",
+      "publishedAt": "38 dage siden",
+      "foundAt": "2025-07-04T14:05:09.952562",
+      "audience": "børnefamilie",
+      "difficulty": "øvet",
+      "url": "https://nyheder.tv2.dk/business/2025-05-27-lukkelov-moeder-modstand-haenger-ikke-sammen-for-familien-siger-ejer",
+      "relevance_score": 57.0,
+      "content_length": 3589
+    },
+    {
+      "id": 1774208586,
+      "title": "Her er alt, du skal vide om de nye 2022-vurderinger",
+      "summary": "AI-resumé: Når du har modtaget din endelige ejendomsvurdering for 2022, får du efterfølgende efterreguleret din boligskat for 2024",
+      "tags": [
+        "bolig"
+      ],
+      "source": "bolius.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:06.969270",
+      "audience": "boligejer",
+      "difficulty": "begynder",
+      "url": "https://bolius.dk/din-endelige-2022-vurdering-er-paa-vej-det-skal-du-vaere-opmaerksom-paa-100058",
+      "relevance_score": 43.0,
+      "content_length": 841
+    },
+    {
       "id": 1534057865,
       "title": "7 råd: Sådan undgår du indbrud, når du er på sommerferie",
       "summary": "AI-resumé: Når du er afsted på ferie, har indbrudstyve bedre mulighed for at arbejde uforstyrret, medmindre du er heldig at have vågne naboer",
@@ -10,12 +77,177 @@
       ],
       "source": "bolius.dk",
       "publishedAt": "Ukendt dato",
-      "foundAt": "2025-07-04T13:01:13.246531",
+      "foundAt": "2025-07-04T14:05:13.461983",
       "audience": "erhverv",
       "difficulty": "begynder",
       "url": "https://bolius.dk/7-gode-raad-til-at-undgaa-indbrud-i-sommerferien-29911",
-      "relevance_score": 21.1,
+      "relevance_score": 26.1,
       "content_length": 402
+    },
+    {
+      "id": 297667594,
+      "title": "Drivhus: Sådan overlever planterne i dit drivhus din sommerferie",
+      "summary": "AI-resumé: De tre rør med jord i vil herefter suge vand op til resten af plantesækken, nok til 1-2 ugers vandforbrug, alt efter plantetyper og vejrforhold",
+      "tags": [
+        "privatøkonomi"
+      ],
+      "source": "bolius.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:13.531882",
+      "audience": "studerende",
+      "difficulty": "begynder",
+      "url": "https://bolius.dk/saadan-overlever-dit-drivhus-din-ferie-8351",
+      "relevance_score": 39.0,
+      "content_length": 800
+    },
+    {
+      "id": 4106325353,
+      "title": "Carporte og garager",
+      "summary": "AI-resumé: En carport er en helt eller delvis åben overdækning af bilen",
+      "tags": [
+        "privatøkonomi"
+      ],
+      "source": "bolius.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:15.622550",
+      "audience": "gældsramt",
+      "difficulty": "begynder",
+      "url": "https://bolius.dk/carporte-og-garager-17565",
+      "relevance_score": 19.0,
+      "content_length": 735
+    },
+    {
+      "id": 1974372652,
+      "title": "Simone og Jens bor på en ø sammen med otte andre",
+      "summary": "AI-resumé: Birkholm er en mindre beboet ø på 0,96 kvadratmeter i Det Sydfynske Øhav, hvor de fastboende enten selv har en båd eller benytter den lille færge, som Simone og Jens bestyrer",
+      "tags": [
+        "privatøkonomi"
+      ],
+      "source": "bolius.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:24.575405",
+      "audience": "boligejer",
+      "difficulty": "begynder",
+      "url": "https://bolius.dk/simone-og-jens-bor-paa-en-oe-sammen-med-otte-andre-100003",
+      "relevance_score": 17.0,
+      "content_length": 1270
+    },
+    {
+      "id": 2548065527,
+      "title": "Der er udbrudt priskrig om bidragssatser: Sådan påvirker det dit boliglån",
+      "summary": "AI-resumé: Realkreditinstitutterne er omsider begyndt at konkurrere på de såkaldte bidragssatser, som er et løbende gebyr, man betaler for at have et realkreditlån",
+      "tags": [
+        "bolig",
+        "gæld",
+        "boliglån"
+      ],
+      "source": "bolius.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:26.280298",
+      "audience": "boligejer",
+      "difficulty": "begynder",
+      "url": "https://bolius.dk/storbanker-i-priskrig-saadan-paavirker-det-dit-boliglaan-99990",
+      "relevance_score": 85.0,
+      "content_length": 1227
+    },
+    {
+      "id": 301522481,
+      "title": "I Agger har de fået et nyt sted at mødes",
+      "summary": "AI-resumé: Som noget af det første dannede familierne i beboerforeningen et ”håndværkerhold” og et ”planlægningshold”",
+      "tags": [
+        "familieøkonomi",
+        "erhverv"
+      ],
+      "source": "bolius.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:27.240017",
+      "audience": "studerende",
+      "difficulty": "begynder",
+      "url": "https://bolius.dk/fra-fodboldbane-til-faelledpark-i-agger-har-de-faaet-et-nyt-sted-at-moedes-99950",
+      "relevance_score": 33.0,
+      "content_length": 1684
+    },
+    {
+      "id": 2838580160,
+      "title": "Derfor skal du som boligejer bruge lidt ekstra tid på årsopgørelsen for 2024",
+      "summary": "AI-resumé: Årsopgørelsen for 2024 indeholder blandt andet en oversigt over boligskattelån",
+      "tags": [
+        "skat"
+      ],
+      "source": "bolius.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:28.222937",
+      "audience": "boligejer",
+      "difficulty": "begynder",
+      "url": "https://bolius.dk/aarsopgoerelsen-for-2024-som-noget-nyt-skal-du-tjekke-dine-boligskatter-99934",
+      "relevance_score": 92.0,
+      "content_length": 1206
+    },
+    {
+      "id": 2001265475,
+      "title": "Stigende grundvand: Se, hvordan Ditte Maries have stod under vand",
+      "summary": "AI-resumé: – Vi har en gammel gård på Møn, som vi bruger som fleksbolig",
+      "tags": [
+        "privatøkonomi"
+      ],
+      "source": "bolius.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:29.136445",
+      "audience": "studerende",
+      "difficulty": "begynder",
+      "url": "https://bolius.dk/stigende-grundvand-ditte-maries-have-stod-under-vand-99893",
+      "relevance_score": 39.0,
+      "content_length": 1210
+    },
+    {
+      "id": 189923464,
+      "title": "Hvorfor skaber grundvandet problemer for boligejere? Få et overblik her",
+      "summary": "AI-resumé: Vi er efterhånden vant til at se billeder af oversvømmede veje, haver og boliger efter skybrud eller stormflod, hvor vandet kommer voldsomt og pludseligt ovenfra eller ude fra havet",
+      "tags": [
+        "privatøkonomi"
+      ],
+      "source": "bolius.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:30.134167",
+      "audience": "boligejer",
+      "difficulty": "begynder",
+      "url": "https://bolius.dk/hvorfor-skaber-grundvandet-problemer-for-boligejere-99891",
+      "relevance_score": 28.9,
+      "content_length": 455
+    },
+    {
+      "id": 1123264160,
+      "title": "Boliger, der har været noget andet: Kom med ind i den gamle mølle",
+      "summary": "AI-resumé: Den nedlagte mølle ligger midt i landsbyen Stouby, 20 km øst for Vejle",
+      "tags": [
+        "bolig",
+        "ejendomsmægler"
+      ],
+      "source": "bolius.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:31.922422",
+      "audience": "boligejer",
+      "difficulty": "begynder",
+      "url": "https://bolius.dk/boliger-der-har-vaeret-noget-andet-den-gamle-moelle-er-udfordrende-99844",
+      "relevance_score": 58.0,
+      "content_length": 568
+    },
+    {
+      "id": 741110311,
+      "title": "Boliger, der har været noget andet: Se, hvordan Kristian bor i kirken",
+      "summary": "AI-resumé: – Jeg er født og opvokset i området, så jeg har altid kendt til kirken her",
+      "tags": [
+        "bolig",
+        "erhverv"
+      ],
+      "source": "bolius.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:31.882149",
+      "audience": "studerende",
+      "difficulty": "begynder",
+      "url": "https://bolius.dk/boliger-der-har-vaeret-noget-andet-kristian-bor-i-kirken-99843",
+      "relevance_score": 54.0,
+      "content_length": 804
     },
     {
       "id": 4149188194,
@@ -27,12 +259,28 @@
       ],
       "source": "moneymum.dk",
       "publishedAt": "Ukendt dato",
-      "foundAt": "2025-07-04T13:01:09.644727",
+      "foundAt": "2025-07-04T14:05:07.438476",
       "audience": "børnefamilie",
       "difficulty": "begynder",
       "url": "https://moneymum.dk/online-kurser/",
-      "relevance_score": 29.0,
+      "relevance_score": 34.0,
       "content_length": 777
+    },
+    {
+      "id": 1675780830,
+      "title": "Om Moneymum I moneymum",
+      "summary": "AI-resumé: Den gode og sunde økonomi og friheden der følger med, er noget jeg først har fået øjnene op for i mit voksenliv",
+      "tags": [
+        "bolig"
+      ],
+      "source": "moneymum.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:14.658295",
+      "audience": "studerende",
+      "difficulty": "begynder",
+      "url": "https://moneymum.dk/om-moneymum/",
+      "relevance_score": 32.0,
+      "content_length": 1054
     },
     {
       "id": 1835989068,
@@ -43,12 +291,44 @@
       ],
       "source": "samvirke.dk",
       "publishedAt": "Ukendt dato",
-      "foundAt": "2025-07-04T13:01:09.510698",
+      "foundAt": "2025-07-04T14:05:08.803168",
       "audience": "bred",
       "difficulty": "begynder",
       "url": "https://samvirke.dk/emner/forbrug/dagligvarer-oekonomi/supermarkeder",
-      "relevance_score": 17.0,
+      "relevance_score": 22.0,
       "content_length": 550
+    },
+    {
+      "id": 140509443,
+      "title": "Minutkød og chokolade: Sådan preppede vi i 60’erne",
+      "summary": "AI-resumé: I dag råder myndighederne os til, at vi forbereder os på kriser som naturkatastrofer, cyberkrig og pandemier",
+      "tags": [
+        "privatøkonomi"
+      ],
+      "source": "samvirke.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:09.270211",
+      "audience": "studerende",
+      "difficulty": "øvet",
+      "url": "https://samvirke.dk/artikler/minutkoed-og-chokolade-saadan-preppede-vi-i-60erne",
+      "relevance_score": 26.0,
+      "content_length": 2957
+    },
+    {
+      "id": 1677894221,
+      "title": "5 ting, du skal vide, før du køber airfryer",
+      "summary": "AI-resumé: Beholderen i en airfryer er helt afgørende for, hvor meget mad du kan tilberede samtidigt",
+      "tags": [
+        "privatøkonomi"
+      ],
+      "source": "samvirke.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:11.137753",
+      "audience": "studerende",
+      "difficulty": "begynder",
+      "url": "https://samvirke.dk/artikler/5-ting-du-skal-vide-foer-du-koeber-airfryer",
+      "relevance_score": 21.0,
+      "content_length": 2401
     },
     {
       "id": 3594218288,
@@ -59,12 +339,417 @@
       ],
       "source": "samvirke.dk",
       "publishedAt": "Ukendt dato",
-      "foundAt": "2025-07-04T13:01:12.119638",
+      "foundAt": "2025-07-04T14:05:11.512270",
       "audience": "studerende",
       "difficulty": "begynder",
       "url": "https://samvirke.dk/emner/forbrug/klima-natur/miljoe",
-      "relevance_score": 36.0,
+      "relevance_score": 41.0,
       "content_length": 1577
+    },
+    {
+      "id": 3517564572,
+      "title": "Samvirkes Iskolde quiz: Svar på 10 søde, kølige og cremede spørgsmål, inden isen smelter, og vind gavekort til Paradis",
+      "summary": "AI-resumé: Paradis startede i år 2000 med inspiration fra de italienske gelateriaer i Rom, hvor atmosfære, kvalitet og is-glæde går hånd i hånd",
+      "tags": [
+        "forbrug"
+      ],
+      "source": "samvirke.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:21.035321",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://samvirke.dk/artikler/samvirkes-iskolde-quiz-svar-paa-10-soede-koelige-og-cremede-spoergsmaal-inden-isen-smelter",
+      "relevance_score": 21.0,
+      "content_length": 683
+    },
+    {
+      "id": 2086499422,
+      "title": "13 fantastiske kirker i Danmark, du bør se",
+      "summary": "AI-resumé: Vrå Kirke Stift: Aalborg Opført: 1100-tallet Stil: Romansk, med tårn og våbenhus fra gotisk tid Arkitekter: Ukendt I snart 1000 år har Vrå Kirke knejset over Vrå",
+      "tags": [
+        "privatøkonomi"
+      ],
+      "source": "samvirke.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:24.115888",
+      "audience": "studerende",
+      "difficulty": "begynder",
+      "url": "https://samvirke.dk/artikler/13-fantastiske-kirker-i-danmark-du-boer-se",
+      "relevance_score": 17.0,
+      "content_length": 1246
+    },
+    {
+      "id": 1124138678,
+      "title": "Fri for PFAS: Tag din egen kaffekop med på ferie og undgå PFAS",
+      "summary": "AI-resumé: Og selvom emballagerne som udgangspunkt ligner hinanden, kan der være stor forskel på indholdet",
+      "tags": [
+        "forbrug"
+      ],
+      "source": "samvirke.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:23.923026",
+      "audience": "studerende",
+      "difficulty": "begynder",
+      "url": "https://samvirke.dk/artikler/fri-for-pfas-tag-din-egen-kaffekop-med-paa-ferie-og-undgaa-pfas",
+      "relevance_score": 32.0,
+      "content_length": 877
+    },
+    {
+      "id": 1789261053,
+      "title": "Hvor finder man Danmarks bedste is?",
+      "summary": "AI-resumé: Is så gode, at du vil køre efter dem",
+      "tags": [
+        "forbrug"
+      ],
+      "source": "samvirke.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:26.153613",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://samvirke.dk/artikler/hvor-finder-man-danmarks-bedste-is",
+      "relevance_score": 21.0,
+      "content_length": 1295
+    },
+    {
+      "id": 1506272597,
+      "title": "Del 2. De næste skridt - De første penge på Nordnet",
+      "summary": "AI-resumé: En dag jeg kom hjem til min far, spurgte han mig om jeg var begyndt at investere, hvor jeg dertil svarede nej men, at jeg havde oprettet et depot",
+      "tags": [
+        "børneopsparing",
+        "bank",
+        "renter"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:16.541346",
+      "audience": "børnefamilie",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/de-naeste-skridt-de-forste-penge-pa-nordnet",
+      "relevance_score": 50.0,
+      "content_length": 1367
+    },
+    {
+      "id": 504973822,
+      "title": "Investering For Unge Del 1",
+      "summary": "AI-resumé: Moneypenny artikel (fallback)",
+      "tags": [
+        "privatøkonomi",
+        "moneypenny"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:52.163849",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/investering-for-unge-del-1",
+      "relevance_score": 99.0,
+      "content_length": 1000
+    },
+    {
+      "id": 2855726186,
+      "title": "Budgetskabelon",
+      "summary": "AI-resumé: Moneypenny artikel (fallback)",
+      "tags": [
+        "privatøkonomi",
+        "moneypenny"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:52.163906",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/budgetskabelon",
+      "relevance_score": 99.0,
+      "content_length": 1000
+    },
+    {
+      "id": 1081790912,
+      "title": "Aktiesparekonto",
+      "summary": "AI-resumé: Moneypenny artikel (fallback)",
+      "tags": [
+        "privatøkonomi",
+        "moneypenny"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:52.163927",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/aktiesparekonto",
+      "relevance_score": 99.0,
+      "content_length": 1000
+    },
+    {
+      "id": 919070982,
+      "title": "Pensionsopsparing",
+      "summary": "AI-resumé: Moneypenny artikel (fallback)",
+      "tags": [
+        "privatøkonomi",
+        "moneypenny"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:52.163954",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/pensionsopsparing",
+      "relevance_score": 99.0,
+      "content_length": 1000
+    },
+    {
+      "id": 290499226,
+      "title": "Boligkøb",
+      "summary": "AI-resumé: Moneypenny artikel (fallback)",
+      "tags": [
+        "privatøkonomi",
+        "moneypenny"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:52.163980",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/boligkøb",
+      "relevance_score": 99.0,
+      "content_length": 1000
+    },
+    {
+      "id": 1400634795,
+      "title": "Opsparing",
+      "summary": "AI-resumé: Moneypenny artikel (fallback)",
+      "tags": [
+        "privatøkonomi",
+        "moneypenny"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:52.164004",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/opsparing",
+      "relevance_score": 99.0,
+      "content_length": 1000
+    },
+    {
+      "id": 2019254452,
+      "title": "Investering",
+      "summary": "AI-resumé: Moneypenny artikel (fallback)",
+      "tags": [
+        "privatøkonomi",
+        "moneypenny"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:52.164023",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/investering",
+      "relevance_score": 99.0,
+      "content_length": 1000
+    },
+    {
+      "id": 3507899825,
+      "title": "Privatoekonomi",
+      "summary": "AI-resumé: Moneypenny artikel (fallback)",
+      "tags": [
+        "privatøkonomi",
+        "moneypenny"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:52.164040",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/privatoekonomi",
+      "relevance_score": 99.0,
+      "content_length": 1000
+    },
+    {
+      "id": 3867443096,
+      "title": "Økonomisk Frihed",
+      "summary": "AI-resumé: Moneypenny artikel (fallback)",
+      "tags": [
+        "privatøkonomi",
+        "moneypenny"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:52.164058",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/økonomisk-frihed",
+      "relevance_score": 99.0,
+      "content_length": 1000
+    },
+    {
+      "id": 2337780518,
+      "title": "Start Med Investering",
+      "summary": "AI-resumé: Moneypenny artikel (fallback)",
+      "tags": [
+        "privatøkonomi",
+        "moneypenny"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:52.164105",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/start-med-investering",
+      "relevance_score": 99.0,
+      "content_length": 1000
+    },
+    {
+      "id": 1255135031,
+      "title": "Aktier For Begyndere",
+      "summary": "AI-resumé: Moneypenny artikel (fallback)",
+      "tags": [
+        "privatøkonomi",
+        "moneypenny"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:52.164198",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/aktier-for-begyndere",
+      "relevance_score": 99.0,
+      "content_length": 1000
+    },
+    {
+      "id": 2326554318,
+      "title": "Fonde",
+      "summary": "AI-resumé: Moneypenny artikel (fallback)",
+      "tags": [
+        "privatøkonomi",
+        "moneypenny"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:52.164272",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/fonde",
+      "relevance_score": 99.0,
+      "content_length": 1000
+    },
+    {
+      "id": 2243277478,
+      "title": "Renters Rente",
+      "summary": "AI-resumé: Moneypenny artikel (fallback)",
+      "tags": [
+        "privatøkonomi",
+        "moneypenny"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:52.164297",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/renters-rente",
+      "relevance_score": 99.0,
+      "content_length": 1000
+    },
+    {
+      "id": 1080733190,
+      "title": "Økonomisk Mentalitet",
+      "summary": "AI-resumé: Moneypenny artikel (fallback)",
+      "tags": [
+        "privatøkonomi",
+        "moneypenny"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:52.164319",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/økonomisk-mentalitet",
+      "relevance_score": 99.0,
+      "content_length": 1000
+    },
+    {
+      "id": 1624860772,
+      "title": "Spar Penge",
+      "summary": "AI-resumé: Moneypenny artikel (fallback)",
+      "tags": [
+        "privatøkonomi",
+        "moneypenny"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:52.164336",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/spar-penge",
+      "relevance_score": 99.0,
+      "content_length": 1000
+    },
+    {
+      "id": 4281997930,
+      "title": "Investeringsstrategi",
+      "summary": "AI-resumé: Moneypenny artikel (fallback)",
+      "tags": [
+        "privatøkonomi",
+        "moneypenny"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:52.164369",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/investeringsstrategi",
+      "relevance_score": 99.0,
+      "content_length": 1000
+    },
+    {
+      "id": 2167834395,
+      "title": "Risiko Og Afkast",
+      "summary": "AI-resumé: Moneypenny artikel (fallback)",
+      "tags": [
+        "privatøkonomi",
+        "moneypenny"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:52.164388",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/risiko-og-afkast",
+      "relevance_score": 99.0,
+      "content_length": 1000
+    },
+    {
+      "id": 3260839632,
+      "title": "Portefølje",
+      "summary": "AI-resumé: Moneypenny artikel (fallback)",
+      "tags": [
+        "privatøkonomi",
+        "moneypenny"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:52.164405",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/portefølje",
+      "relevance_score": 99.0,
+      "content_length": 1000
+    },
+    {
+      "id": 1858118139,
+      "title": "Økonomisk Planlægning",
+      "summary": "AI-resumé: Moneypenny artikel (fallback)",
+      "tags": [
+        "privatøkonomi",
+        "moneypenny"
+      ],
+      "source": "moneypennyandmore.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T14:05:52.164424",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://moneypennyandmore.dk/blog/økonomisk-planlægning",
+      "relevance_score": 99.0,
+      "content_length": 1000
     },
     {
       "id": 2835328303,
@@ -77,79 +762,98 @@
       ],
       "source": "styrpaabudget.dk",
       "publishedAt": "Ukendt dato",
-      "foundAt": "2025-07-04T13:01:18.853451",
+      "foundAt": "2025-07-04T14:05:28.322799",
       "audience": "studerende",
       "difficulty": "begynder",
       "url": "https://styrpaabudget.dk/daglig-oekonomi/hvem-betaler-mest-skat-i-danmark/",
-      "relevance_score": 135.0,
+      "relevance_score": 140.0,
       "content_length": 2501
     }
   ],
   "metadata": {
-    "totalArticles": 5,
-    "lastUpdated": "2025-07-04T13:01:59.499582",
+    "totalArticles": 46,
+    "lastUpdated": "2025-07-04T14:06:00.329756",
     "sources": [
-      "samvirke.dk",
       "bolius.dk",
+      "moneypennyandmore.dk",
       "styrpaabudget.dk",
-      "moneymum.dk"
+      "moneymum.dk",
+      "samvirke.dk",
+      "nyheder.tv2.dk"
     ],
-    "averageRelevanceScore": 47.62,
+    "averageRelevanceScore": 66.52,
     "topTags": [
       {
+        "tag": "privatøkonomi",
+        "count": 28
+      },
+      {
+        "tag": "moneypenny",
+        "count": 19
+      },
+      {
         "tag": "bolig",
+        "count": 7
+      },
+      {
+        "tag": "gæld",
+        "count": 3
+      },
+      {
+        "tag": "skat",
+        "count": 3
+      },
+      {
+        "tag": "familieøkonomi",
+        "count": 3
+      },
+      {
+        "tag": "erhverv",
+        "count": 3
+      },
+      {
+        "tag": "forbrug",
+        "count": 3
+      },
+      {
+        "tag": "renter",
         "count": 2
       },
       {
         "tag": "opsparing",
         "count": 2
-      },
-      {
-        "tag": "erhverv",
-        "count": 1
-      },
-      {
-        "tag": "familieøkonomi",
-        "count": 1
-      },
-      {
-        "tag": "privatøkonomi",
-        "count": 1
-      },
-      {
-        "tag": "investering",
-        "count": 1
-      },
-      {
-        "tag": "skat",
-        "count": 1
       }
     ],
     "audiences": [
-      "erhverv",
       "bred",
+      "boligejer",
       "studerende",
-      "børnefamilie"
+      "børnefamilie",
+      "gældsramt",
+      "erhverv"
     ],
     "difficulties": [
+      "øvet",
       "begynder"
     ],
     "scrapingStats": {
       "articlesPerSource": {
-        "bolius.dk": 1,
-        "moneymum.dk": 1,
-        "samvirke.dk": 2,
+        "nyheder.tv2.dk": 3,
+        "bolius.dk": 12,
+        "moneymum.dk": 2,
+        "samvirke.dk": 8,
+        "moneypennyandmore.dk": 20,
         "styrpaabudget.dk": 1
       },
       "relevanceScoreDistribution": {
         "5-10": 0,
         "10-15": 0,
-        "15-20": 1,
-        "20+": 4
+        "15-20": 3,
+        "20+": 43
       },
       "qualityMetrics": {
-        "averageContentLength": 98.6,
-        "articlesWithHighRelevance": 5
+        "averageContentLength": 85.43478260869566,
+        "articlesWithHighRelevance": 46
       }
     }
   }

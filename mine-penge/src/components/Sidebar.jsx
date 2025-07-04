@@ -1,96 +1,46 @@
 import React from 'react';
-import { Bookmark, TrendingUp, Clock, Star } from 'lucide-react';
+import { Tag } from 'lucide-react';
 
-function Sidebar({
-  onNavigate,
-  onFilterTopic,
-  onFilterAudience,
-  onShowNew,
-  onShowSaved
-}) {
+function Sidebar({ selectedTopics, onTopicChange }) {
+  const tags = [
+    'Alle tags',
+    'Opsparing',
+    'Investering', 
+    'Gæld',
+    'Budget',
+    'Pension',
+    'Forsikring',
+    'Bolig',
+    'Skatter',
+    'Børn & Familie',
+    'Studerende',
+    'Begynder',
+    'Øvet',
+    'Avanceret'
+  ];
+
   return (
-    <aside className="hidden lg:block w-80 bg-primary-50 border-r border-primary-200 p-6">
-      <div className="sticky top-20">
-        {/* Quick Stats */}
-        <div className="mb-8">
-          <h3 className="text-lg font-semibold text-primary-900 mb-4">I dag</h3>
-          <div className="space-y-3">
+    <aside className="w-full lg:w-64 bg-nordic-100 shadow-soft lg:border-r border-nordic-200 p-4 lg:p-6">
+      <div className="mb-4 lg:mb-6">
+        <h2 className="text-base lg:text-lg font-semibold text-nordic-900 mb-3 lg:mb-4 flex items-center">
+          <Tag className="h-4 w-4 lg:h-5 lg:w-5 mr-2 text-primary-600" />
+          Tags
+        </h2>
+        
+        <div className="flex flex-wrap gap-1.5 lg:gap-2">
+          {tags.map((tag) => (
             <button
-              className="flex items-center justify-between w-full p-3 bg-primary-50 rounded-lg text-left"
-              onClick={onShowNew}
+              key={tag}
+              onClick={() => onTopicChange(tag)}
+              className={`px-2 lg:px-3 py-1 lg:py-1.5 rounded-full text-xs font-medium transition-colors ${
+                selectedTopics.includes(tag)
+                  ? 'bg-primary-600 text-white shadow-sm'
+                  : 'bg-white text-nordic-700 hover:bg-nordic-200 hover:text-nordic-900 border border-nordic-200'
+              }`}
             >
-              <span className="text-sm text-primary-700">Nye artikler</span>
-              <span className="text-lg font-semibold text-primary-900">12</span>
+              {tag}
             </button>
-            <button
-              className="flex items-center justify-between w-full p-3 bg-success-50 rounded-lg text-left"
-              onClick={onShowSaved}
-            >
-              <span className="text-sm text-success-700">Gemte</span>
-              <span className="text-lg font-semibold text-success-900">3</span>
-            </button>
-          </div>
-        </div>
-
-        {/* Quick Navigation */}
-        <div className="mb-8">
-          <h3 className="text-lg font-semibold text-primary-900 mb-4">Hurtig navigation</h3>
-          <nav className="space-y-2">
-            <button type="button" onClick={() => onNavigate('seneste')} className="flex items-center w-full p-3 text-primary-700 hover:bg-primary-100 rounded-lg transition-colors">
-              <Clock className="h-5 w-5 mr-3" />
-              Seneste
-            </button>
-            <button type="button" onClick={() => onNavigate('populaere')} className="flex items-center w-full p-3 text-primary-700 hover:bg-primary-100 rounded-lg transition-colors">
-              <TrendingUp className="h-5 w-5 mr-3" />
-              Populære
-            </button>
-            <button type="button" onClick={() => onNavigate('anbefalede')} className="flex items-center w-full p-3 text-primary-700 hover:bg-primary-100 rounded-lg transition-colors">
-              <Star className="h-5 w-5 mr-3" />
-              Anbefalede
-            </button>
-            <button type="button" onClick={() => onNavigate('gemte')} className="flex items-center w-full p-3 text-primary-700 hover:bg-primary-100 rounded-lg transition-colors">
-              <Bookmark className="h-5 w-5 mr-3" />
-              Gemte artikler
-            </button>
-          </nav>
-        </div>
-
-        {/* Topics */}
-        <div className="mb-8">
-          <h3 className="text-lg font-semibold text-primary-900 mb-4">Emner</h3>
-          <div className="space-y-2">
-            {['Osparing', 'SU', 'Bolig', 'Investering', 'Gæld', 'Pension'].map((topic) => (
-              <button
-                key={topic}
-                className="w-full text-left p-3 text-primary-700 hover:bg-primary-100 rounded-lg transition-colors"
-                onClick={() => onFilterTopic(topic)}
-              >
-                {topic}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Audience */}
-        <div>
-          <h3 className="text-lg font-semibold text-primary-900 mb-4">Målgruppe</h3>
-          <div className="space-y-2">
-            {[
-              { name: 'Studerende', icon: '🎓' },
-              { name: 'Børnefamilie', icon: '👨‍👩‍👧‍👦' },
-              { name: 'Pensionist', icon: '👴' },
-              { name: 'Bred målgruppe', icon: '👤' }
-            ].map((audience) => (
-              <button
-                key={audience.name}
-                className="w-full text-left p-3 text-primary-700 hover:bg-primary-100 rounded-lg transition-colors"
-                onClick={() => onFilterAudience(audience.name)}
-              >
-                <span className="mr-2">{audience.icon}</span>
-                {audience.name}
-              </button>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </aside>
