@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Search, Filter, User, Heart, Menu } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 function Navigation({ onSearch }) {
   const [searchValue, setSearchValue] = useState('');
@@ -9,6 +10,7 @@ function Navigation({ onSearch }) {
     setSearchValue(value);
     onSearch(value);
   };
+
   return (
     <nav className="bg-white border-b border-nordic-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,7 +18,9 @@ function Navigation({ onSearch }) {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-blue-600">MinePenge</h1>
+              <Link to="/" className="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
+                MinePenge
+              </Link>
             </div>
           </div>
 

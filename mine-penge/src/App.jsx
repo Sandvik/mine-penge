@@ -1,11 +1,18 @@
 import React, { useState, useMemo } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import FilterBar from './components/FilterBar';
 import ArticleCard from './components/ArticleCard';
 import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
+import EmbedWidget from './pages/EmbedWidget';
+import LandingPageGenerator from './pages/LandingPageGenerator';
+import QAFeedGenerator from './pages/QAFeedGenerator';
+import InternalLinkStructure from './pages/InternalLinkStructure';
+import SEODashboard from './pages/SEODashboard';
 import articleService from './services/articleService';
 
-function App() {
+function HomePage() {
   // All state definitions
   const [filters, setFilters] = useState({
     topic: '',
@@ -135,7 +142,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-nordic-50">
+    <div className="min-h-screen bg-nordic-50 flex flex-col">
       <Navigation onSearch={handleSearch} />
       <FilterBar 
         filters={filters}
@@ -143,7 +150,7 @@ function App() {
         onClearFilters={clearFilters}
       />
       
-      <div className="flex">
+      <div className="flex flex-1">
         <Sidebar />
         
         <main className="flex-1 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -203,7 +210,26 @@ function App() {
           </div>
         </main>
       </div>
+      
+      <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen bg-nordic-50">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/seo-dashboard" element={<SEODashboard />} />
+          <Route path="/embed-widget" element={<EmbedWidget />} />
+          <Route path="/landing-pages" element={<LandingPageGenerator />} />
+          <Route path="/qa-feed" element={<QAFeedGenerator />} />
+          <Route path="/internal-links" element={<InternalLinkStructure />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

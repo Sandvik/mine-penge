@@ -12,7 +12,7 @@ app = FastAPI(title="MinePenge Scraper API", version="1.0.0")
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000"],
+    allow_origins=["http://localhost:5173", "http://localhost:5174", "http://localhost:3000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -42,6 +42,12 @@ class ScraperStatus(BaseModel):
     last_run: Optional[str]
     articles_found: int
     sources_scraped: List[str]
+
+class UserFeedback(BaseModel):
+    articleId: int
+    rating: str  # 'positive' or 'negative'
+    comment: str = ""
+    timestamp: str
 
 # Load articles from JSON file
 def load_articles():
@@ -166,6 +172,66 @@ async def get_statistics():
     }
     
     return stats
+
+@app.post("/api/feedback")
+async def submit_feedback(feedback: UserFeedback):
+    """Submit user feedback for articles"""
+    try:
+        # Load existing feedback
+        feedback_file = "feedback.json"
+        try:
+            with open(feedback_file, "r", encoding="utf-8") as f:
+                feedback_data = json.load(f)
+        except FileNotFoundError:
+            feedback_data = {"feedback": []}
+        
+        # Add new feedback
+        feedback_data["feedback"].append({
+            "articleId": feedback.articleId,
+            "rating": feedback.rating,
+            "comment": feedback.comment,
+            "timestamp": feedback.timestamp
+        })
+        
+        # Save feedback
+        with open(feedback_file, "w", encoding="utf-8") as f:
+            json.dump(feedback_data, f, ensure_ascii=False, indent=2)
+        
+        return {"message": "Feedback submitted successfully"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/feedback/statistics")
+async def get_feedback_statistics():
+    """Get feedback statistics"""
+    try:
+        feedback_file = "feedback.json"
+        try:
+            with open(feedback_file, "r", encoding="utf-8") as f:
+                feedback_data = json.load(f)
+        except FileNotFoundError:
+            return {"total_feedback": 0, "positive_ratio": 0, "recent_feedback": 0}
+        
+        feedback_list = feedback_data.get("feedback", [])
+        total_feedback = len(feedback_list)
+        
+        if total_feedback == 0:
+            return {"total_feedback": 0, "positive_ratio": 0, "recent_feedback": 0}
+        
+        positive_count = len([f for f in feedback_list if f["rating"] == "positive"])
+        positive_ratio = (positive_count / total_feedback) * 100
+        
+        # Recent feedback (last 7 days)
+        week_ago = (datetime.now() - timedelta(days=7)).isoformat()
+        recent_feedback = len([f for f in feedback_list if f["timestamp"] > week_ago])
+        
+        return {
+            "total_feedback": total_feedback,
+            "positive_ratio": round(positive_ratio, 1),
+            "recent_feedback": recent_feedback
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
     import uvicorn

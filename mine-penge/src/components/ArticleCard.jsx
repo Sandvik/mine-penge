@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heart, ExternalLink, Clock, User } from 'lucide-react';
+import UserFeedback from './UserFeedback';
 
 function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
   const { title, summary, tags, source, publishedAt, foundAt, difficulty, audience, relevance_score } = article || {};
@@ -105,6 +106,11 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
           Læs mere
           <ExternalLink className="h-4 w-4 ml-1" />
         </a>
+      </div>
+      
+      {/* User Feedback */}
+      <div className="mt-4">
+        <UserFeedback articleId={article?.id} />
       </div>
     </article>
   );
