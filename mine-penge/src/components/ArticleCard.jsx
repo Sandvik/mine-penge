@@ -7,9 +7,9 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
   
   const getDifficultyColor = (difficulty) => {
     switch (difficulty) {
-      case 'begynder': return 'bg-green-100 text-green-800';
-      case 'øvet': return 'bg-blue-100 text-blue-800';
-      case 'avanceret': return 'bg-purple-100 text-purple-800';
+      case 'begynder': return 'bg-success-100 text-success-800';
+      case 'øvet': return 'bg-primary-100 text-primary-800';
+      case 'avanceret': return 'bg-warning-100 text-warning-800';
       default: return 'bg-nordic-100 text-nordic-800';
     }
   };
@@ -24,10 +24,10 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
   };
 
   const getRelevanceColor = (score) => {
-    if (score >= 8) return 'bg-green-100 text-green-800';
-    if (score >= 5) return 'bg-blue-100 text-blue-800';
-    if (score >= 3) return 'bg-yellow-100 text-yellow-800';
-    return 'bg-gray-100 text-gray-800';
+    if (score >= 8) return 'bg-success-100 text-success-800';
+    if (score >= 5) return 'bg-primary-100 text-primary-800';
+    if (score >= 3) return 'bg-warning-100 text-warning-800';
+    return 'bg-nordic-100 text-nordic-800';
   };
 
   return (
@@ -63,8 +63,8 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
           onClick={onToggleFavorite}
           className={`p-2 rounded-lg transition-colors ${
             isFavorite 
-              ? 'text-red-500 bg-red-50 hover:bg-red-100' 
-              : 'text-nordic-400 hover:text-red-500 hover:bg-red-50'
+              ? 'text-error-500 bg-error-50 hover:bg-error-100' 
+              : 'text-nordic-400 hover:text-error-500 hover:bg-error-50'
           }`}
         >
           <Heart className={`h-5 w-5 ${isFavorite ? 'fill-current' : ''}`} />
@@ -82,8 +82,8 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
           <span
             key={index}
             className={`px-3 py-1 rounded-full text-xs font-medium ${
-              index === 0 ? 'bg-blue-100 text-blue-800' :
-              index === 1 ? 'bg-green-100 text-green-800' :
+              index === 0 ? 'bg-primary-100 text-primary-800' :
+              index === 1 ? 'bg-success-100 text-success-800' :
               getDifficultyColor(tag)
             }`}
           >
@@ -101,7 +101,7 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
           href={article?.url || "#"}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors"
+          className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium text-sm transition-colors"
         >
           Læs mere
           <ExternalLink className="h-4 w-4 ml-1" />

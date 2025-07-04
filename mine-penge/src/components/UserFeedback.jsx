@@ -47,8 +47,8 @@ function UserFeedback({ articleId, onFeedback }) {
 
   if (submitted) {
     return (
-      <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-center">
-        <p className="text-green-800 text-sm">
+      <div className="bg-success-50 border border-success-200 rounded-lg p-4 text-center">
+        <p className="text-success-800 text-sm">
           Tak for din feedback! Det hjælper os med at forbedre indholdet.
         </p>
       </div>
@@ -69,8 +69,8 @@ function UserFeedback({ articleId, onFeedback }) {
           onClick={() => handleRating('positive')}
           className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
             rating === 'positive'
-              ? 'bg-green-100 text-green-800 border border-green-300'
-              : 'bg-white text-nordic-600 border border-nordic-300 hover:bg-green-50'
+              ? 'bg-success-100 text-success-800 border border-success-300'
+              : 'bg-white text-nordic-600 border border-nordic-300 hover:bg-success-50'
           }`}
         >
           <ThumbsUp className="h-4 w-4" />
@@ -81,8 +81,8 @@ function UserFeedback({ articleId, onFeedback }) {
           onClick={() => handleRating('negative')}
           className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
             rating === 'negative'
-              ? 'bg-red-100 text-red-800 border border-red-300'
-              : 'bg-white text-nordic-600 border border-nordic-300 hover:bg-red-50'
+              ? 'bg-error-100 text-error-800 border border-error-300'
+              : 'bg-white text-nordic-600 border border-nordic-300 hover:bg-error-50'
           }`}
         >
           <ThumbsDown className="h-4 w-4" />
@@ -100,7 +100,7 @@ function UserFeedback({ articleId, onFeedback }) {
             onChange={(e) => setComment(e.target.value)}
             placeholder="Del dine tanker om artiklen..."
             rows={3}
-            className="w-full px-3 py-2 border border-nordic-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+            className="w-full px-3 py-2 border border-nordic-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-sm"
           />
         </div>
       )}
@@ -108,7 +108,7 @@ function UserFeedback({ articleId, onFeedback }) {
       {rating && (
         <button
           onClick={handleSubmit}
-          className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+          className="w-full bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-colors text-sm font-medium"
         >
           Send feedback
         </button>

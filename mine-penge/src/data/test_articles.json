@@ -1,0 +1,156 @@
+{
+  "articles": [
+    {
+      "id": 1534057865,
+      "title": "7 råd: Sådan undgår du indbrud, når du er på sommerferie",
+      "summary": "AI-resumé: Når du er afsted på ferie, har indbrudstyve bedre mulighed for at arbejde uforstyrret, medmindre du er heldig at have vågne naboer",
+      "tags": [
+        "bolig",
+        "erhverv"
+      ],
+      "source": "bolius.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T13:01:13.246531",
+      "audience": "erhverv",
+      "difficulty": "begynder",
+      "url": "https://bolius.dk/7-gode-raad-til-at-undgaa-indbrud-i-sommerferien-29911",
+      "relevance_score": 21.1,
+      "content_length": 402
+    },
+    {
+      "id": 4149188194,
+      "title": "Online kurser – moneymum",
+      "summary": "AI-resumé: Hvordan sikrer du dine børns økonomiske fremtid",
+      "tags": [
+        "opsparing",
+        "familieøkonomi"
+      ],
+      "source": "moneymum.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T13:01:09.644727",
+      "audience": "børnefamilie",
+      "difficulty": "begynder",
+      "url": "https://moneymum.dk/online-kurser/",
+      "relevance_score": 29.0,
+      "content_length": 777
+    },
+    {
+      "id": 1835989068,
+      "title": "Se artikler og gode råd om supermarkeder",
+      "summary": "AI-resumé: FOKUS elektronik Hver tredje vaskemaskine, der ender på genbrugspladsen, virker stadig eller kunne nemt komme til at køre igen",
+      "tags": [
+        "privatøkonomi"
+      ],
+      "source": "samvirke.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T13:01:09.510698",
+      "audience": "bred",
+      "difficulty": "begynder",
+      "url": "https://samvirke.dk/emner/forbrug/dagligvarer-oekonomi/supermarkeder",
+      "relevance_score": 17.0,
+      "content_length": 550
+    },
+    {
+      "id": 3594218288,
+      "title": "Se artikler og gode råd om miljø - Læs det hele på Samvirke",
+      "summary": "AI-resumé: ANNONCE ANNONCE Omtrent 270",
+      "tags": [
+        "opsparing"
+      ],
+      "source": "samvirke.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T13:01:12.119638",
+      "audience": "studerende",
+      "difficulty": "begynder",
+      "url": "https://samvirke.dk/emner/forbrug/klima-natur/miljoe",
+      "relevance_score": 36.0,
+      "content_length": 1577
+    },
+    {
+      "id": 2835328303,
+      "title": "Hvem betaler mest skat i Danmark?",
+      "summary": "AI-resumé: Skat spiller en central rolle i det danske samfund og er en vigtig finansieringskilde for offentlige ydelser",
+      "tags": [
+        "bolig",
+        "investering",
+        "skat"
+      ],
+      "source": "styrpaabudget.dk",
+      "publishedAt": "Ukendt dato",
+      "foundAt": "2025-07-04T13:01:18.853451",
+      "audience": "studerende",
+      "difficulty": "begynder",
+      "url": "https://styrpaabudget.dk/daglig-oekonomi/hvem-betaler-mest-skat-i-danmark/",
+      "relevance_score": 135.0,
+      "content_length": 2501
+    }
+  ],
+  "metadata": {
+    "totalArticles": 5,
+    "lastUpdated": "2025-07-04T13:01:59.499582",
+    "sources": [
+      "samvirke.dk",
+      "bolius.dk",
+      "styrpaabudget.dk",
+      "moneymum.dk"
+    ],
+    "averageRelevanceScore": 47.62,
+    "topTags": [
+      {
+        "tag": "bolig",
+        "count": 2
+      },
+      {
+        "tag": "opsparing",
+        "count": 2
+      },
+      {
+        "tag": "erhverv",
+        "count": 1
+      },
+      {
+        "tag": "familieøkonomi",
+        "count": 1
+      },
+      {
+        "tag": "privatøkonomi",
+        "count": 1
+      },
+      {
+        "tag": "investering",
+        "count": 1
+      },
+      {
+        "tag": "skat",
+        "count": 1
+      }
+    ],
+    "audiences": [
+      "erhverv",
+      "bred",
+      "studerende",
+      "børnefamilie"
+    ],
+    "difficulties": [
+      "begynder"
+    ],
+    "scrapingStats": {
+      "articlesPerSource": {
+        "bolius.dk": 1,
+        "moneymum.dk": 1,
+        "samvirke.dk": 2,
+        "styrpaabudget.dk": 1
+      },
+      "relevanceScoreDistribution": {
+        "5-10": 0,
+        "10-15": 0,
+        "15-20": 1,
+        "20+": 4
+      },
+      "qualityMetrics": {
+        "averageContentLength": 98.6,
+        "articlesWithHighRelevance": 5
+      }
+    }
+  }
+}

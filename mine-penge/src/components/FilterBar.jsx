@@ -3,45 +3,45 @@ import { Filter, X } from 'lucide-react';
 
 function FilterBar({ filters, onFilterChange, onClearFilters }) {
   return (
-    <div className="bg-white border-b border-nordic-200 py-4">
+    <div className="bg-primary-50 border-b border-primary-200 py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <Filter className="h-5 w-5 text-nordic-600" />
-            <span className="text-sm font-medium text-nordic-700">Filtrer artikler</span>
+            <Filter className="h-5 w-5 text-primary-600" />
+            <span className="text-sm font-medium text-primary-700">Filtrer artikler</span>
           </div>
           
           <div className="flex items-center space-x-3 overflow-x-auto pb-2 lg:pb-0">
             <select 
               value={filters.topic}
               onChange={(e) => onFilterChange('topic', e.target.value)}
-              className="px-3 py-2 border border-nordic-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white whitespace-nowrap"
+              className="px-3 py-2 border border-nordic-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white whitespace-nowrap"
             >
               <option value="">Alle emner</option>
-              <option value="opsparing">Osparing</option>
-              <option value="su">SU</option>
-              <option value="bolig">Bolig</option>
-              <option value="investering">Investering</option>
-              <option value="gæld">Gæld</option>
-              <option value="pension">Pension</option>
+              <option value="Osparing">Osparing</option>
+              <option value="SU">SU</option>
+              <option value="Bolig">Bolig</option>
+              <option value="Investering">Investering</option>
+              <option value="Gæld">Gæld</option>
+              <option value="Pension">Pension</option>
             </select>
             
             <select 
               value={filters.audience}
               onChange={(e) => onFilterChange('audience', e.target.value)}
-              className="px-3 py-2 border border-nordic-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white whitespace-nowrap"
+              className="px-3 py-2 border border-nordic-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white whitespace-nowrap"
             >
               <option value="">Alle målgrupper</option>
-              <option value="studerende">Studerende</option>
-              <option value="børnefamilie">Børnefamilie</option>
-              <option value="pensionist">Pensionist</option>
-              <option value="bred">Bred målgruppe</option>
+              <option value="Studerende">Studerende</option>
+              <option value="Børnefamilie">Børnefamilie</option>
+              <option value="Pensionist">Pensionist</option>
+              <option value="Bred målgruppe">Bred målgruppe</option>
             </select>
             
             <select 
               value={filters.difficulty}
               onChange={(e) => onFilterChange('difficulty', e.target.value)}
-              className="px-3 py-2 border border-nordic-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white whitespace-nowrap"
+              className="px-3 py-2 border border-nordic-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white whitespace-nowrap"
             >
               <option value="">Alle niveauer</option>
               <option value="begynder">Begynder</option>

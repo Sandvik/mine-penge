@@ -1,11 +1,12 @@
 // Article service for handling data from Python scraper scripts and APIs
-import articlesData from '../data/articles.json';
+import testArticlesData from '../data/test_articles.json';
 
 class ArticleService {
   constructor() {
-    this.articles = articlesData.articles;
-    this.metadata = articlesData.metadata;
+    this.articles = testArticlesData.articles || [];
+    this.metadata = {};
     this.apiBaseUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+    this.updateMetadata();
   }
 
   // Get all articles
@@ -113,27 +114,40 @@ class ArticleService {
     };
   }
 
-  // Load fresh articles from scraper API
+  // Load fresh articles from test_articles.json
   async loadFreshArticles() {
     try {
-      console.log('Loading fresh articles from scraper API...');
-      const response = await fetch(`${this.apiBaseUrl}/api/articles`);
+      console.log('Loading fresh articles from API...');
       
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
+      // Try to load from API first
+      const response = await fetch(`${this.apiBaseUrl}/api/test-articles`);
       
-      const data = await response.json();
-      
-      if (data.articles && Array.isArray(data.articles)) {
-        this.articles = data.articles;
-        this.metadata = data.metadata || this.metadata;
-        this.updateMetadata();
-        console.log(`Loaded ${this.articles.length} fresh articles`);
-        return this.articles;
+      if (response.ok) {
+        const freshData = await response.json();
+        
+        if (freshData.articles && Array.isArray(freshData.articles)) {
+          this.articles = freshData.articles;
+          this.updateMetadata();
+          console.log(`Loaded ${this.articles.length} fresh articles from API`);
+          return this.articles;
+        } else {
+          console.warn('Invalid data format from API');
+          return this.articles; // Fallback to current data
+        }
       } else {
-        console.warn('Invalid data format from API');
-        return this.articles; // Fallback to current data
+        console.log('API not available, falling back to local file');
+        // Fallback to local file
+        const freshData = await import('../data/test_articles.json');
+        
+        if (freshData.default.articles && Array.isArray(freshData.default.articles)) {
+          this.articles = freshData.default.articles;
+          this.updateMetadata();
+          console.log(`Loaded ${this.articles.length} fresh articles from local file`);
+          return this.articles;
+        } else {
+          console.warn('Invalid data format from local file');
+          return this.articles; // Fallback to current data
+        }
       }
     } catch (error) {
       console.error('Error loading fresh articles:', error);
@@ -145,28 +159,35 @@ class ArticleService {
   async triggerScraper() {
     try {
       console.log('Triggering Python scraper...');
+      
+      // Try to run the scraper directly
       const response = await fetch(`${this.apiBaseUrl}/api/scrape`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          sources: ['dr.dk', 'tv2.dk', 'finans.dk', 'bolius.dk'],
-          keywords: ['økonomi', 'penge', 'opsparing', 'investering', 'su', 'bolig']
+          sources: [
+            "dr.dk", "tv2.dk", "finans.dk", "bolius.dk", "moneymum.dk", "pengepugeren.dk", "samvirke.dk",
+            "nordea.com", "moneypennyandmore.dk", "kenddinepenge.dk", "styrpaabudget.dk", "lunar.app", 
+            "fairkredit.dk", "privatøkonomiskrådgivning.dk", "nordlaan.dk", "collectia.dk", "goddik.dk",
+            "kreditnu.dk", "danskebank.com", "pwc.dk"
+          ]
         })
       });
       
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      if (response.ok) {
+        console.log('Scraper completed successfully');
+        // Load fresh articles after scraping
+        return await this.loadFreshArticles();
+      } else {
+        console.log('Scraper API not available, showing manual instructions');
+        alert('Scraper API ikke tilgængelig. Kør scraper manuelt:\n\n1. Åbn terminal i backend mappen\n2. Kør: python main.py\n3. Klik "Opdater" for at indlæse nye artikler');
+        return false;
       }
-      
-      const result = await response.json();
-      console.log('Scraper triggered:', result);
-      
-      // Load fresh articles after scraping
-      return await this.loadFreshArticles();
     } catch (error) {
       console.error('Error triggering scraper:', error);
+      alert('Kunne ikke starte scraper. Kør scraper manuelt:\n\n1. Åbn terminal i backend mappen\n2. Kør: python main.py\n3. Klik "Opdater" for at indlæse nye artikler');
       return false;
     }
   }

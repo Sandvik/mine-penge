@@ -34,7 +34,12 @@ class Article(BaseModel):
     url: str
 
 class ScrapeRequest(BaseModel):
-    sources: List[str] = ["dr.dk", "tv2.dk", "finans.dk", "bolius.dk", "moneymum.dk", "pengepugeren.dk"]
+    sources: List[str] = [
+        "dr.dk", "tv2.dk", "finans.dk", "bolius.dk", "moneymum.dk", "pengepugeren.dk", "samvirke.dk",
+        "nordea.com", "moneypennyandmore.dk", "kenddinepenge.dk", "styrpaabudget.dk", "lunar.app", 
+        "fairkredit.dk", "privatøkonomiskrådgivning.dk", "nordlaan.dk", "collectia.dk", "goddik.dk",
+        "kreditnu.dk", "danskebank.com", "pwc.dk", "andersbm.dk"
+    ]
     keywords: List[str] = []  # Not used anymore, but kept for compatibility
 
 class ScraperStatus(BaseModel):
@@ -49,31 +54,7 @@ class UserFeedback(BaseModel):
     comment: str = ""
     timestamp: str
 
-# Load articles from JSON file
-def load_articles():
-    try:
-        with open("../src/data/articles.json", "r", encoding="utf-8") as f:
-            data = json.load(f)
-            return data["articles"]
-    except FileNotFoundError:
-        return []
 
-# Save articles to JSON file
-def save_articles(articles):
-    data = {
-        "articles": articles,
-        "metadata": {
-            "totalArticles": len(articles),
-            "lastUpdated": datetime.now().isoformat(),
-            "sources": list(set(article["source"] for article in articles)),
-            "topics": list(set(tag for article in articles for tag in article["tags"])),
-            "audiences": list(set(article["audience"] for article in articles)),
-            "difficulties": list(set(article["difficulty"] for article in articles))
-        }
-    }
-    
-    with open("../src/data/articles.json", "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
 
 @app.get("/")
 async def root():
@@ -82,43 +63,78 @@ async def root():
 @app.get("/api/articles")
 async def get_articles():
     """Get all articles"""
-    articles = load_articles()
-    # Sort by relevance score first, then by found date (newest first)
-    articles.sort(key=lambda x: (x.get('relevance_score', 0), x.get('foundAt', '')), reverse=True)
-    return {"articles": articles}
+    try:
+        data_path = os.path.join(os.path.dirname(__file__), '../src/data/test_articles.json')
+        data_path = os.path.abspath(data_path)
+        with open(data_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            articles = data.get("articles", [])
+            # Sort by relevance score first, then by found date (newest first)
+            articles.sort(key=lambda x: (x.get('relevance_score', 0), x.get('foundAt', '')), reverse=True)
+            return {"articles": articles}
+    except FileNotFoundError:
+        return {"articles": []}
 
 @app.get("/api/articles/source/{source}")
 async def get_articles_by_source(source: str):
     """Get articles from specific source"""
-    articles = load_articles()
-    filtered = [article for article in articles if article["source"].lower() == source.lower()]
-    # Sort by relevance score first, then by found date (newest first)
-    filtered.sort(key=lambda x: (x.get('relevance_score', 0), x.get('foundAt', '')), reverse=True)
-    return {"articles": filtered}
+    try:
+        data_path = os.path.join(os.path.dirname(__file__), '../src/data/test_articles.json')
+        data_path = os.path.abspath(data_path)
+        with open(data_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            articles = data.get("articles", [])
+            filtered = [article for article in articles if article["source"].lower() == source.lower()]
+            # Sort by relevance score first, then by found date (newest first)
+            filtered.sort(key=lambda x: (x.get('relevance_score', 0), x.get('foundAt', '')), reverse=True)
+            return {"articles": filtered}
+    except FileNotFoundError:
+        return {"articles": []}
 
 @app.get("/api/articles/relevant")
 async def get_relevant_articles(min_score: float = 3.0):
     """Get articles with minimum relevance score"""
-    articles = load_articles()
-    relevant = [article for article in articles if article.get('relevance_score', 0) >= min_score]
-    # Sort by relevance score first, then by found date (newest first)
-    relevant.sort(key=lambda x: (x.get('relevance_score', 0), x.get('foundAt', '')), reverse=True)
-    return {"articles": relevant, "min_score": min_score}
+    try:
+        data_path = os.path.join(os.path.dirname(__file__), '../src/data/test_articles.json')
+        data_path = os.path.abspath(data_path)
+        with open(data_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            articles = data.get("articles", [])
+            relevant = [article for article in articles if article.get('relevance_score', 0) >= min_score]
+            # Sort by relevance score first, then by found date (newest first)
+            relevant.sort(key=lambda x: (x.get('relevance_score', 0), x.get('foundAt', '')), reverse=True)
+            return {"articles": relevant, "min_score": min_score}
+    except FileNotFoundError:
+        return {"articles": [], "min_score": min_score}
 
 @app.get("/api/articles/latest")
 async def get_latest_articles():
     """Get articles sorted by found date (newest first)"""
-    articles = load_articles()
-    # Sort by found date (newest first)
-    articles.sort(key=lambda x: x.get('foundAt', ''), reverse=True)
-    return {"articles": articles}
+    try:
+        data_path = os.path.join(os.path.dirname(__file__), '../src/data/test_articles.json')
+        data_path = os.path.abspath(data_path)
+        with open(data_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            articles = data.get("articles", [])
+            # Sort by found date (newest first)
+            articles.sort(key=lambda x: x.get('foundAt', ''), reverse=True)
+            return {"articles": articles}
+    except FileNotFoundError:
+        return {"articles": []}
 
 @app.post("/api/articles/date-range")
 async def get_articles_by_date_range(request: dict):
     """Get articles within date range"""
-    articles = load_articles()
-    # Implementation for date filtering
-    return {"articles": articles}
+    try:
+        data_path = os.path.join(os.path.dirname(__file__), '../src/data/test_articles.json')
+        data_path = os.path.abspath(data_path)
+        with open(data_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            articles = data.get("articles", [])
+            # Implementation for date filtering
+            return {"articles": articles}
+    except FileNotFoundError:
+        return {"articles": []}
 
 @app.post("/api/scrape")
 async def trigger_scraper(request: ScrapeRequest):
@@ -126,41 +142,69 @@ async def trigger_scraper(request: ScrapeRequest):
     try:
         print(f"Starting scraper with sources: {request.sources}")
         
-        # Run scraper (keywords not used anymore)
+        # Run scraper and save to test_articles.json
         new_articles = await scraper.scrape_articles(request.sources)
         
-        # Load existing articles
-        existing_articles = load_articles()
-        
-        # Merge and deduplicate
-        all_articles = existing_articles + new_articles
-        unique_articles = scraper.deduplicate_articles(all_articles)
-        
-        # Save updated articles
-        save_articles(unique_articles)
+        # Save to test_articles.json for frontend
+        scraper.save_articles_to_json(new_articles, "test_articles.json")
         
         return {
             "message": "Scraping completed",
             "new_articles": len(new_articles),
-            "total_articles": len(unique_articles)
+            "total_articles": len(new_articles)
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+
+
+@app.get("/api/test-articles")
+async def get_test_articles():
+    """Get articles from test_articles.json"""
+    try:
+        data_path = os.path.join(os.path.dirname(__file__), '../src/data/test_articles.json')
+        data_path = os.path.abspath(data_path)
+        with open(data_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            return data
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail="test_articles.json not found")
+
 @app.get("/api/scraper/status")
 async def get_scraper_status():
     """Get scraper status"""
+    try:
+        data_path = os.path.join(os.path.dirname(__file__), '../src/data/test_articles.json')
+        data_path = os.path.abspath(data_path)
+        with open(data_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            articles_count = len(data.get("articles", []))
+    except FileNotFoundError:
+        articles_count = 0
+    
     return ScraperStatus(
         is_running=False,
         last_run=datetime.now().isoformat(),
-        articles_found=len(load_articles()),
-        sources_scraped=["dr.dk", "tv2.dk", "finans.dk", "bolius.dk", "moneymum.dk", "pengepugeren.dk"]
+        articles_found=articles_count,
+        sources_scraped=[
+            "dr.dk", "tv2.dk", "finans.dk", "bolius.dk", "moneymum.dk", "pengepugeren.dk", "samvirke.dk",
+            "nordea.com", "moneypennyandmore.dk", "kenddinepenge.dk", "styrpaabudget.dk", "lunar.app", 
+            "fairkredit.dk", "privatøkonomiskrådgivning.dk", "nordlaan.dk", "collectia.dk", "goddik.dk",
+            "kreditnu.dk", "danskebank.com", "pwc.dk", "andersbm.dk"
+        ]
     )
 
 @app.get("/api/statistics")
 async def get_statistics():
     """Get article statistics"""
-    articles = load_articles()
+    try:
+        data_path = os.path.join(os.path.dirname(__file__), '../src/data/test_articles.json')
+        data_path = os.path.abspath(data_path)
+        with open(data_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            articles = data.get("articles", [])
+    except FileNotFoundError:
+        articles = []
     
     stats = {
         "total_articles": len(articles),

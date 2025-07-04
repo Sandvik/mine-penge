@@ -20,7 +20,7 @@ function Footer() {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-blue-400 mb-2">MinePenge</h3>
+              <h3 className="text-2xl font-bold text-teal-400 mb-2">MinePenge</h3>
               <p className="text-nordic-300 mb-4">
                 Din guide til smart privatøkonomi. Vi hjælper dig med at spare penge, 
                 investere klogt og bygge en sund økonomisk fremtid.

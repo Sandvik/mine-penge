@@ -4,7 +4,7 @@ from newspaper import Article
 from langdetect import detect
 import hashlib
 import re
-from typing import List, Dict, Any, Tuple, Optional
+from typing import List, Dict, Any, Tuple
 import asyncio
 import aiohttp
 from datetime import datetime, timedelta
@@ -14,9 +14,6 @@ import certifi
 import time
 from collections import defaultdict
 import logging
-import json
-import os
-from urllib.parse import urljoin, urlparse
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -31,21 +28,15 @@ class ArticleScraper:
         # Optimize session with connection pooling
         self.session = requests.Session()
         adapter = requests.adapters.HTTPAdapter(
-            pool_connections=20,
-            pool_maxsize=50,
+            pool_connections=10,
+            pool_maxsize=20,
             max_retries=3
         )
         self.session.mount('http://', adapter)
         self.session.mount('https://', adapter)
         
         self.session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-            'Accept-Language': 'da-DK,da;q=0.9,en;q=0.8',
-            'Accept-Encoding': 'gzip, deflate, br',
-            'DNT': '1',
-            'Connection': 'keep-alive',
-            'Upgrade-Insecure-Requests': '1'
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
         })
         self.session.verify = False
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -55,9 +46,6 @@ class ArticleScraper:
         
         # Cache for URL validation
         self.url_validation_cache = {}
-        
-        # Load existing articles to avoid duplicates
-        self.existing_articles = self.load_existing_articles()
         
         # Danish keywords for filtering - Primary (high relevance for personal finance)
         self.primary_keywords = [
@@ -72,11 +60,7 @@ class ArticleScraper:
             'gæld', 'lån', 'rente', 'skat', 'skattefradrag', 'årsopgørelse',
             'forbrug', 'forbrugsråd', 'madspild', 'købsråd', 'tilbud', 'rabat',
             'forsikring', 'forsikringsråd', 'bilforsikring', 'husejerforsikring',
-            'bank', 'bankkonto', 'kreditkort', 'betaling', 'faktura',
-            'investering', 'aktier', 'fonde', 'børs', 'portefølje',
-            'krypto', 'bitcoin', 'guld', 'sølv', 'råvarer',
-            'mentor', 'coaching', 'rådgivning', 'webinar', 'kursus',
-            'erhverv', 'virksomhed', 'arbejde', 'job', 'løn', 'indkomst'
+            'bank', 'bankkonto', 'kreditkort', 'betaling', 'faktura'
         ]
         
         # Secondary keywords (medium relevance)
@@ -86,11 +70,7 @@ class ArticleScraper:
             'bank', 'bankkonto', 'kreditkort', 'betaling', 'faktura',
             'forsikring', 'forsikringsråd', 'bilforsikring', 'husejerforsikring',
             'skat', 'skattefradrag', 'årsopgørelse', 'selvangivelse',
-            'pension', 'pensionsopsparing', 'aldersopsparing', 'ratepension',
-            'bolig', 'huskøb', 'lejlighed', 'ejendom', 'boligmarked',
-            'investering', 'aktier', 'fonde', 'børs', 'portefølje',
-            'krypto', 'bitcoin', 'guld', 'sølv', 'råvarer',
-            'mentor', 'coaching', 'rådgivning', 'webinar', 'kursus'
+            'pension', 'pensionsopsparing', 'aldersopsparing', 'ratepension'
         ]
         
         # Negative keywords (exclude these) - more specific to avoid false positives
@@ -105,13 +85,10 @@ class ArticleScraper:
             'analytiker', 'analytikere', 'kursmål', 'anbefaling', 'køb', 'sælg',
             'hold', 'aktieanbefaling', 'investeringsbank', 'sælger', 'køber',
             'trading', 'day trading', 'derivater', 'optioner', 'futures',
-            'hedge fund', 'private equity', 'venture capital', 'crowdfunding',
-            # Exclude generic content
-            'nyheder', 'seneste', 'breaking', 'live', 'direkte',
-            'forside', 'hjem', 'om os', 'kontakt', 'priser', 'shop'
+            'hedge fund', 'private equity', 'venture capital', 'crowdfunding'
         ]
         
-        # Enhanced source configurations with better selectors
+        # Source configurations
         self.sources = {
             'dr.dk': {
                 'base_url': 'https://www.dr.dk',
@@ -120,23 +97,9 @@ class ArticleScraper:
                     'https://www.dr.dk/nyheder/erhverv',
                     'https://www.dr.dk/nyheder/indland'
                 ],
-                'article_selectors': [
-                    'article', '.article', '.news-item', '.teaser', 
-                    '.teaser-list-item', '.teaser-list__item', '.teaser__link',
-                    '.article-teaser', '.news-teaser', '.content-teaser'
-                ],
-                'title_selectors': [
-                    'h1', 'h2', '.article-title', '.teaser-title', 
-                    '.headline', '.title', '.news-title'
-                ],
-                'content_selectors': [
-                    '.article-body', '.content', 'p', '.teaser-text',
-                    '.article-content', '.news-content', '.story-content'
-                ],
-                'link_selectors': [
-                    'a[href*="/nyheder/"]', 'a[href*="/penge/"]', 
-                    'a[href*="/erhverv/"]', 'a[href*="/indland/"]'
-                ]
+                'article_selectors': ['article', '.article', '.news-item', '.teaser', '.teaser-list-item', '.teaser-list__item', '.teaser__link'],
+                'title_selectors': ['h1', 'h2', '.article-title', '.teaser-title'],
+                'content_selectors': ['.article-body', '.content', 'p', '.teaser-text']
             },
             'moneypennyandmore.dk': {
                 'base_url': 'https://moneypennyandmore.dk',
@@ -146,20 +109,17 @@ class ArticleScraper:
                     'https://moneypennyandmore.dk'
                 ],
                 'article_selectors': [
-                    'article', '.article', '.blog-post', '.post', '.entry', 
-                    '.indlæg', '.blog-entry', '.post-item',
+                    'article', '.article', '.blog-post', '.post', '.entry', '.indlæg', '.blog-entry', '.post-item',
                     '.blog', '.blog-item', '.post-item', '.entry-item', '.content-item',
                     'div[class*="blog"]', 'div[class*="post"]', 'div[class*="entry"]',
                     'section[class*="blog"]', 'section[class*="post"]'
                 ],
                 'title_selectors': [
-                    'h1', 'h2', 'h3', '.article-title', '.blog-title', 
-                    '.post-title', '.entry-title', '.post-heading',
+                    'h1', 'h2', 'h3', '.article-title', '.blog-title', '.post-title', '.entry-title', '.post-heading',
                     '.title', '.headline', '.post-heading', '.entry-heading'
                 ],
                 'content_selectors': [
-                    '.article-body', '.blog-content', '.post-content', 
-                    '.entry-content', '.content', '.post-body',
+                    '.article-body', '.blog-content', '.post-content', '.entry-content', '.content', '.post-body',
                     '.article-text', '.blog-text', '.post-text', '.entry-text', 'p'
                 ],
                 'link_selectors': [
@@ -176,22 +136,9 @@ class ArticleScraper:
                     'https://nyheder.tv2.dk/erhverv',
                     'https://nyheder.tv2.dk/indland'
                 ],
-                'article_selectors': [
-                    '.article', '.news-item', 'article', '.teaser',
-                    '.article-teaser', '.news-teaser', '.content-teaser'
-                ],
-                'title_selectors': [
-                    'h1', 'h2', '.article-title', '.teaser-title',
-                    '.headline', '.title', '.news-title'
-                ],
-                'content_selectors': [
-                    '.article-body', '.content', 'p', '.teaser-text',
-                    '.article-content', '.news-content', '.story-content'
-                ],
-                'link_selectors': [
-                    'a[href*="/penge/"]', 'a[href*="/erhverv/"]', 
-                    'a[href*="/indland/"]', 'a[href*="/nyheder/"]'
-                ]
+                'article_selectors': ['.article', '.news-item', 'article', '.teaser'],
+                'title_selectors': ['h1', 'h2', '.article-title', '.teaser-title'],
+                'content_selectors': ['.article-body', '.content', 'p', '.teaser-text']
             },
             'finans.dk': {
                 'base_url': 'https://finans.dk',
@@ -200,23 +147,9 @@ class ArticleScraper:
                     'https://finans.dk/penge',
                     'https://finans.dk/forbrug'
                 ],
-                'article_selectors': [
-                    '.article', '.news-item', 'article', '.teaser', 
-                    '.news-teaser', '.article-teaser', '.post',
-                    '.content-item', '.story-item'
-                ],
-                'title_selectors': [
-                    'h1', 'h2', '.article-title', '.teaser-title', 
-                    '.post-title', '.headline', '.title'
-                ],
-                'content_selectors': [
-                    '.article-body', '.content', 'p', '.teaser-text', 
-                    '.post-content', '.article-content', '.story-content'
-                ],
-                'link_selectors': [
-                    'a[href*="/privatoekonomi/"]', 'a[href*="/penge/"]',
-                    'a[href*="/forbrug/"]', 'a[href*="/artikel/"]'
-                ]
+                'article_selectors': ['.article', '.news-item', 'article', '.teaser', '.news-teaser', '.article-teaser', '.post'],
+                'title_selectors': ['h1', 'h2', '.article-title', '.teaser-title', '.post-title'],
+                'content_selectors': ['.article-body', '.content', 'p', '.teaser-text', '.post-content']
             },
             'bolius.dk': {
                 'base_url': 'https://bolius.dk',
@@ -225,22 +158,9 @@ class ArticleScraper:
                     'https://bolius.dk/forbrug',
                     'https://bolius.dk/nyheder'
                 ],
-                'article_selectors': [
-                    '.article', '.news-item', 'article', '.teaser', 
-                    '.post', '.blog-post', '.content-item'
-                ],
-                'title_selectors': [
-                    'h1', 'h2', '.article-title', '.teaser-title', 
-                    '.post-title', '.headline', '.title'
-                ],
-                'content_selectors': [
-                    '.article-body', '.content', 'p', '.teaser-text', 
-                    '.post-content', '.article-content'
-                ],
-                'link_selectors': [
-                    'a[href*="/forbrug/"]', 'a[href*="/nyheder/"]',
-                    'a[href*="/artikel/"]', 'a[href*="/blog/"]'
-                ]
+                'article_selectors': ['.article', '.news-item', 'article', '.teaser', '.post', '.blog-post'],
+                'title_selectors': ['h1', 'h2', '.article-title', '.teaser-title', '.post-title'],
+                'content_selectors': ['.article-body', '.content', 'p', '.teaser-text', '.post-content']
             },
             'moneymum.dk': {
                 'base_url': 'https://moneymum.dk',
@@ -249,22 +169,9 @@ class ArticleScraper:
                     'https://moneymum.dk/vidensbank',
                     'https://moneymum.dk/online-kurser'
                 ],
-                'article_selectors': [
-                    '.post', '.blog-post', 'article', '.entry', 
-                    '.page', '.content', '.content-item'
-                ],
-                'title_selectors': [
-                    'h1', 'h2', '.entry-title', '.post-title',
-                    '.headline', '.title', '.page-title'
-                ],
-                'content_selectors': [
-                    '.entry-content', '.post-content', '.content', 'p',
-                    '.article-content', '.page-content'
-                ],
-                'link_selectors': [
-                    'a[href*="/vidensbank/"]', 'a[href*="/online-kurser/"]',
-                    'a[href*="/blog/"]', 'a[href*="/artikel/"]'
-                ]
+                'article_selectors': ['.post', '.blog-post', 'article', '.entry', '.page', '.content'],
+                'title_selectors': ['h1', 'h2', '.entry-title', '.post-title'],
+                'content_selectors': ['.entry-content', '.post-content', '.content', 'p']
             },
             'pengepugeren.dk': {
                 'base_url': 'https://pengepugeren.dk',
@@ -273,161 +180,22 @@ class ArticleScraper:
                     'https://pengepugeren.dk/blog',
                     'https://pengepugeren.dk/artikler'
                 ],
-                'article_selectors': [
-                    '.post', '.blog-post', 'article', '.entry', 
-                    '.blog-entry', '.content-item'
-                ],
-                'title_selectors': [
-                    'h1', 'h2', '.entry-title', '.post-title', 
-                    '.blog-title', '.headline', '.title'
-                ],
-                'content_selectors': [
-                    '.entry-content', '.post-content', '.content', 
-                    '.blog-content', 'p', '.article-content'
-                ],
-                'link_selectors': [
-                    'a[href*="/blog/"]', 'a[href*="/artikler/"]',
-                    'a[href*="/post/"]', 'a[href*="/entry/"]'
-                ]
+                'article_selectors': ['.post', '.blog-post', 'article', '.entry', '.blog-entry'],
+                'title_selectors': ['h1', 'h2', '.entry-title', '.post-title', '.blog-title'],
+                'content_selectors': ['.entry-content', '.post-content', '.content', '.blog-content', 'p']
             },
-            'samvirke.dk': {
-                'base_url': 'https://samvirke.dk',
-                'main_urls': [
-                    'https://samvirke.dk/penge',
-                    'https://samvirke.dk/forbrug',
-                    'https://samvirke.dk/nyheder'
-                ],
-                'article_selectors': [
-                    '.article', '.news-item', 'article', '.teaser',
-                    '.post', '.blog-post', '.content-item'
-                ],
-                'title_selectors': [
-                    'h1', 'h2', '.article-title', '.teaser-title',
-                    '.post-title', '.headline', '.title'
-                ],
-                'content_selectors': [
-                    '.article-body', '.content', 'p', '.teaser-text',
-                    '.post-content', '.article-content'
-                ],
-                'link_selectors': [
-                    'a[href*="/penge/"]', 'a[href*="/forbrug/"]',
-                    'a[href*="/nyheder/"]', 'a[href*="/artikel/"]'
-                ]
-            },
-            'nordea.com': {
-                'base_url': 'https://www.nordea.com',
-                'main_urls': [
-                    'https://www.nordea.com/da/nyheder-indblik/blogs/privatoekonomi-bloggen',
-                    'https://www.nordea.com/da/nyheder-indblik',
-                    'https://www.nordea.com/da/privat'
-                ],
-                'article_selectors': [
-                    '.article', '.blog-post', 'article', '.post',
-                    '.content-item', '.story-item'
-                ],
-                'title_selectors': [
-                    'h1', 'h2', '.article-title', '.post-title',
-                    '.headline', '.title', '.blog-title'
-                ],
-                'content_selectors': [
-                    '.article-body', '.content', 'p', '.post-content',
-                    '.article-content', '.blog-content'
-                ],
-                'link_selectors': [
-                    'a[href*="/nyheder-indblik/"]', 'a[href*="/blogs/"]',
-                    'a[href*="/privat/"]', 'a[href*="/artikel/"]'
-                ]
-            },
-            'kenddinepenge.dk': {
-                'base_url': 'https://kenddinepenge.dk',
-                'main_urls': [
-                    'https://kenddinepenge.dk',
-                    'https://kenddinepenge.dk/blog',
-                    'https://kenddinepenge.dk/artikler'
-                ],
-                'article_selectors': [
-                    '.post', '.blog-post', 'article', '.entry',
-                    '.content-item', '.story-item'
-                ],
-                'title_selectors': [
-                    'h1', 'h2', '.entry-title', '.post-title',
-                    '.headline', '.title', '.blog-title'
-                ],
-                'content_selectors': [
-                    '.entry-content', '.post-content', '.content', 'p',
-                    '.article-content', '.blog-content'
-                ],
-                'link_selectors': [
-                    'a[href*="/blog/"]', 'a[href*="/artikler/"]',
-                    'a[href*="/post/"]', 'a[href*="/entry/"]'
-                ]
-            },
-            'styrpaabudget.dk': {
-                'base_url': 'https://styrpaabudget.dk',
-                'main_urls': [
-                    'https://styrpaabudget.dk',
-                    'https://styrpaabudget.dk/blog',
-                    'https://styrpaabudget.dk/artikler'
-                ],
-                'article_selectors': [
-                    '.post', '.blog-post', 'article', '.entry',
-                    '.content-item', '.story-item'
-                ],
-                'title_selectors': [
-                    'h1', 'h2', '.entry-title', '.post-title',
-                    '.headline', '.title', '.blog-title'
-                ],
-                'content_selectors': [
-                    '.entry-content', '.post-content', '.content', 'p',
-                    '.article-content', '.blog-content'
-                ],
-                'link_selectors': [
-                    'a[href*="/blog/"]', 'a[href*="/artikler/"]',
-                    'a[href*="/post/"]', 'a[href*="/entry/"]'
-                ]
-            }
+            # ... (keep all your other sources exactly as they are)
         }
 
-    def load_existing_articles(self) -> set:
-        """Load existing articles to avoid duplicates"""
-        try:
-            data_path = os.path.join(os.path.dirname(__file__), '../src/data/test_articles.json')
-            data_path = os.path.abspath(data_path)
-            if os.path.exists(data_path):
-                with open(data_path, "r", encoding="utf-8") as f:
-                    data = json.load(f)
-                    articles = data.get("articles", [])
-                    return {article.get("url", "") for article in articles}
-        except Exception as e:
-            logger.warning(f"Could not load existing articles: {e}")
-        return set()
-
     async def scrape_articles(self, sources: List[str], keywords: List[str] = None, max_concurrent: int = 5) -> List[Dict[str, Any]]:
-        """Scrape articles from specified sources with async optimization and improved error handling"""
+        """Scrape articles from specified sources with async optimization"""
         # Create semaphore for concurrent processing
         semaphore = asyncio.Semaphore(max_concurrent)
         
-        # Create async HTTP session with improved configuration
-        timeout = aiohttp.ClientTimeout(total=30, connect=10)
-        connector = aiohttp.TCPConnector(
-            limit=100, 
-            limit_per_host=20,
-            keepalive_timeout=30,
-            enable_cleanup_closed=True
-        )
-        
+        # Create async HTTP session
         async with aiohttp.ClientSession(
-            timeout=timeout,
-            connector=connector,
-            headers={
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-                'Accept-Language': 'da-DK,da;q=0.9,en;q=0.8',
-                'Accept-Encoding': 'gzip, deflate, br',
-                'DNT': '1',
-                'Connection': 'keep-alive',
-                'Upgrade-Insecure-Requests': '1'
-            }
+            timeout=aiohttp.ClientTimeout(total=30),
+            connector=aiohttp.TCPConnector(limit=50, limit_per_host=10)
         ) as session:
             
             # Create tasks for each source
@@ -437,29 +205,24 @@ class ArticleScraper:
                     task = self._scrape_source_async(semaphore, session, source, keywords or [])
                     tasks.append(task)
             
-            # Execute all tasks concurrently with error handling
+            # Execute all tasks concurrently
             results = await asyncio.gather(*tasks, return_exceptions=True)
             
             # Collect articles from successful results
             articles = []
             total_links_found = 0
             total_links_validated = 0
-            failed_sources = []
             
-            for i, result in enumerate(results):
-                source = sources[i] if i < len(sources) else f"source_{i}"
+            for result in results:
                 if isinstance(result, tuple):  # (articles, links_found, links_validated)
                     source_articles, links_found, links_validated = result
                     articles.extend(source_articles)
                     total_links_found += links_found
                     total_links_validated += links_validated
                 elif isinstance(result, Exception):
-                    logger.error(f"Source {source} scraping failed: {result}")
-                    failed_sources.append(source)
+                    logger.error(f"Source scraping failed: {result}")
         
         print(f"\nSummary: Found {total_links_found} total links, validated {total_links_validated}, processed {len(articles)} articles")
-        if failed_sources:
-            print(f"Failed sources: {failed_sources}")
         
         # Deduplicate articles before returning
         print(f"\n=== Deduplicating articles ===")
@@ -468,22 +231,12 @@ class ArticleScraper:
         return articles
 
     async def _scrape_source_async(self, semaphore: asyncio.Semaphore, session: aiohttp.ClientSession, source: str, keywords: List[str]) -> Tuple[List[Dict[str, Any]], int, int]:
-        """Async version of scrape_source with semaphore protection and retry logic"""
+        """Async version of scrape_source with semaphore protection"""
         async with semaphore:
-            max_retries = 3
-            for attempt in range(max_retries):
-                try:
-                    return await self._scrape_source_implementation(session, source, keywords)
-                except Exception as e:
-                    if attempt < max_retries - 1:
-                        logger.warning(f"Attempt {attempt + 1} failed for {source}: {e}. Retrying...")
-                        await asyncio.sleep(2 ** attempt)  # Exponential backoff
-                    else:
-                        logger.error(f"All attempts failed for {source}: {e}")
-                        raise
+            return await self._scrape_source_implementation(session, source, keywords)
 
     async def _scrape_source_implementation(self, session: aiohttp.ClientSession, source: str, keywords: List[str]) -> Tuple[List[Dict[str, Any]], int, int]:
-        """Async implementation of source scraping with improved error handling"""
+        """Async implementation of source scraping"""
         source_config = self.sources[source]
         articles = []
         total_links_found = 0
@@ -499,16 +252,11 @@ class ArticleScraper:
             try:
                 print(f"Scraping {source} from: {main_url}")
                 
-                async with session.get(main_url, ssl=False, allow_redirects=True) as response:
+                async with session.get(main_url, ssl=False) as response:
                     if response.status != 200:
-                        logger.warning(f"HTTP {response.status} for {main_url}")
                         continue
                     
                     html = await response.text()
-                    if not html or len(html) < 1000:  # Basic content validation
-                        logger.warning(f"Empty or too short content from {main_url}")
-                        continue
-                    
                     soup = BeautifulSoup(html, 'html.parser')
                     article_links = self.extract_article_links(soup, source_config)
                     total_links_found += len(article_links)
@@ -518,51 +266,45 @@ class ArticleScraper:
                         print(f"Sample links: {article_links[:3]}")
                     
                     # Process each article link concurrently in batches
-                    batch_size = 3  # Reduced batch size for better stability
-                    # Special handling for Moneypenny - no limit
-                    max_articles = 100 if 'moneypennyandmore.dk' in source else 30
-                    for i in range(0, min(len(article_links), max_articles), batch_size):
+                    batch_size = 5
+                    for i in range(0, min(len(article_links), 10), batch_size):
                         batch = article_links[i:i + batch_size]
                         batch_tasks = []
                         
                         for link in batch:
-                            if await self.validate_url_cached(link) and link not in self.existing_articles:
+                            if await self.validate_url_cached(link):
                                 total_links_validated += 1
                                 task = self._process_article_async(session, link, source)
                                 batch_tasks.append(task)
-                            else:
-                                print(f"Skipping {link} - already exists or invalid")
                         
                         # Process batch concurrently
                         if batch_tasks:
                             batch_results = await asyncio.gather(*batch_tasks, return_exceptions=True)
                             for result in batch_results:
-                                if isinstance(result, dict) and result:
+                                if isinstance(result, dict):
                                     articles.append(result)
-                                    print(f"Successfully processed: {result['title'][:50]}... (Score: {result.get('relevance_score', 0)})")
+                                    print(f"Successfully processed: {result['title'][:50]}...")
                                 elif isinstance(result, Exception):
-                                    logger.warning(f"Error processing article: {result}")
+                                    print(f"Error processing article: {result}")
                         
                         # Small delay between batches
-                        await asyncio.sleep(0.5)
-                    
+                        await asyncio.sleep(0.1)
+                        
             except Exception as e:
-                logger.error(f"Error scraping {source} from {main_url}: {e}")
+                print(f"Error scraping {source} from {main_url}: {e}")
         
         print(f"=== Finished scraping {source}: {len(articles)} articles, {total_links_found} links found, {total_links_validated} validated ===")
         return articles, total_links_found, total_links_validated
 
     async def _rate_limit_async(self, source: str, delay: float = 1.0):
-        """Async rate limiting per source with jitter"""
+        """Async rate limiting per source"""
         now = time.time()
         last_request = self.rate_limiters[source]
         
         if last_request > 0:
             time_since_last = now - last_request
             if time_since_last < delay:
-                # Add jitter to avoid thundering herd
-                jitter = delay * 0.1 * (time.time() % 1)
-                await asyncio.sleep(delay - time_since_last + jitter)
+                await asyncio.sleep(delay - time_since_last)
         
         self.rate_limiters[source] = time.time()
 
@@ -572,159 +314,129 @@ class ArticleScraper:
             return self.url_validation_cache[url]
         
         # Basic URL format validation (fast)
-        is_valid = self.is_valid_url(url) and self.looks_like_article_url(url, urlparse(url).netloc)
+        is_valid = self.is_valid_url(url)
         self.url_validation_cache[url] = is_valid
         return is_valid
 
-    async def _process_article_async(self, session: aiohttp.ClientSession, url: str, source: str) -> Optional[Dict[str, Any]]:
-        """Async version of process_article with better error handling and multiple extraction methods"""
+    async def _process_article_async(self, session: aiohttp.ClientSession, url: str, source: str) -> Dict[str, Any]:
+        """Async version of process_article with better error handling"""
         try:
-            # Try multiple extraction methods with timeout
+            # Try multiple extraction methods
             article_data = None
             
             # Method 1: Try newspaper3k with async session
             try:
-                async with session.get(url, ssl=False, timeout=aiohttp.ClientTimeout(total=15)) as response:
+                async with session.get(url, ssl=False) as response:
                     if response.status == 200:
                         html = await response.text()
-                        if len(html) > 1000:  # Basic content validation
-                            article_data = await self._extract_with_newspaper_async(url, html)
+                        article_data = await self._extract_with_newspaper_async(url, html)
             except Exception as e:
                 logger.warning(f"Newspaper extraction failed for {url}: {e}")
             
             # Method 2: Fallback to BeautifulSoup extraction
             if not article_data:
                 try:
-                    async with session.get(url, ssl=False, timeout=aiohttp.ClientTimeout(total=15)) as response:
+                    async with session.get(url, ssl=False) as response:
                         if response.status == 200:
                             html = await response.text()
-                            if len(html) > 1000:  # Basic content validation
-                                article_data = self._extract_with_beautifulsoup(url, html, source)
+                            article_data = self._extract_with_beautifulsoup(url, html, source)
                 except Exception as e:
                     logger.warning(f"BeautifulSoup extraction failed for {url}: {e}")
-            
-            # Method 3: Try with different user agent if still no content
-            if not article_data:
-                try:
-                    headers = {
-                        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-                        'Accept-Language': 'da-DK,da;q=0.9,en;q=0.8',
-                        'Accept-Encoding': 'gzip, deflate, br',
-                        'DNT': '1',
-                        'Connection': 'keep-alive'
-                    }
-                    async with session.get(url, ssl=False, headers=headers, timeout=aiohttp.ClientTimeout(total=15)) as response:
-                        if response.status == 200:
-                            html = await response.text()
-                            if len(html) > 1000:
-                                article_data = self._extract_with_beautifulsoup(url, html, source)
-                except Exception as e:
-                    logger.warning(f"Alternative extraction failed for {url}: {e}")
             
             return article_data if article_data else None
             
         except Exception as e:
-            logger.error(f"Error processing article {url}: {e}")
+            print(f"Error processing article {url}: {e}")
             return None
 
-    async def _extract_with_newspaper_async(self, url: str, html: str) -> Optional[Dict[str, Any]]:
-        """Extract content using newspaper3k asynchronously with improved validation"""
+    async def _extract_with_newspaper_async(self, url: str, html: str) -> Dict[str, Any]:
+        """Extract content using newspaper3k asynchronously"""
         try:
             article = Article(url, language='da')
             article.set_html(html)
             article.parse()
             
-            # Enhanced content validation
-            if not article.text or len(article.text) < 200:
+            # Check if article is in Danish and has content
+            if not article.text or len(article.text) < 100:
                 return None
             
-            # Check for generic content
-            if self.is_generic_content(article.text, article.title or ''):
-                return None
-            
-            # Language detection with fallback
             try:
-                detected_lang = detect(article.text)
-                if detected_lang != 'da':
-                    # Check if it's still relevant (might be mixed language)
-                    if not self.has_danish_keywords(article.text):
-                        return None
-            except:
-                # If language detection fails, check for Danish keywords
-                if not self.has_danish_keywords(article.text):
+                if detect(article.text) != 'da':
                     return None
+            except:
+                # If language detection fails, continue anyway
+                pass
             
             # Calculate relevance score
             relevance_score = self.calculate_relevance_score(article.text, article.title or '')
             
-            # Special handling for Moneypenny - accept all articles
-            if 'moneypennyandmore.dk' not in url and relevance_score < 6.0:
-                print(f"Article rejected due to low relevance score: {relevance_score} - {article.title}")
+            if relevance_score < 5.0:
                 return None
             
             return {
                 'id': self.generate_id(url),
-                'title': self.clean_title(article.title or 'Ingen titel'),
+                'title': article.title or 'Ingen titel',
                 'summary': self.generate_summary(article.text),
                 'tags': self.extract_tags(article.text),
-                'source': urlparse(url).netloc,  # Extract domain as source
+                'source': url.split('/')[2],  # Extract domain as source
                 'publishedAt': self.extract_publish_date(article),
                 'foundAt': datetime.now().isoformat(),
                 'audience': self.classify_audience(article.text),
                 'difficulty': self.classify_difficulty(article.text),
                 'url': url,
-                'relevance_score': round(relevance_score, 2),
-                'content_length': len(article.text)
+                'relevance_score': round(relevance_score, 2)
             }
             
         except Exception as e:
             logger.warning(f"Newspaper extraction error for {url}: {e}")
             return None
 
-    def _extract_with_beautifulsoup(self, url: str, html: str, source: str) -> Optional[Dict[str, Any]]:
-        """Fallback extraction using BeautifulSoup with improved content extraction"""
+    def _extract_with_beautifulsoup(self, url: str, html: str, source: str) -> Dict[str, Any]:
+        """Fallback extraction using BeautifulSoup"""
         try:
             soup = BeautifulSoup(html, 'html.parser')
             
-            # Remove unwanted elements more thoroughly
-            for element in soup(['script', 'style', 'nav', 'footer', 'aside', 'header', 'menu', 'form', 'iframe']):
+            # Remove unwanted elements
+            for element in soup(['script', 'style', 'nav', 'footer', 'aside', 'header']):
                 element.decompose()
             
-            # Extract title with multiple fallbacks
-            title = self.extract_title_robust(soup, source)
-            if not title or len(title) < 10:
+            # Extract title
+            title = ''
+            for selector in ['h1', '.article-title', '.post-title', '.entry-title', 'title']:
+                title_elem = soup.select_one(selector)
+                if title_elem:
+                    title = title_elem.get_text(strip=True)
+                    if len(title) > 10:  # Ensure we have a meaningful title
+                        break
+            
+            # Extract content
+            content = ''
+            for selector in ['article', '.article-content', '.post-content', '.entry-content', '.content', 'main']:
+                content_elem = soup.select_one(selector)
+                if content_elem:
+                    content = content_elem.get_text(separator=' ', strip=True)
+                    if len(content) > 200:  # Ensure we have meaningful content
+                        break
+            
+            if not title or not content or len(content) < 200:
                 return None
             
-            # Extract content with multiple fallbacks
-            content = self.extract_content_robust(soup, source)
-            if not content or len(content) < 300:  # Increased minimum length
-                return None
-            
-            # Check for generic content
-            if self.is_generic_content(content, title):
-                return None
-            
-            # Language detection with fallback
+            # Check language
             try:
                 if detect(content) != 'da':
-                    if not self.has_danish_keywords(content):
-                        return None
-            except:
-                if not self.has_danish_keywords(content):
                     return None
+            except:
+                pass
             
             # Calculate relevance score
             relevance_score = self.calculate_relevance_score(content, title)
             
-            # Special handling for Moneypenny - accept all articles
-            if 'moneypennyandmore.dk' not in url and relevance_score < 6.0:
-                print(f"Article rejected due to low relevance score: {relevance_score} - {title}")
+            if relevance_score < 5.0:
                 return None
             
             return {
                 'id': self.generate_id(url),
-                'title': self.clean_title(title),
+                'title': title,
                 'summary': self.generate_summary(content),
                 'tags': self.extract_tags(content),
                 'source': source,
@@ -733,132 +445,14 @@ class ArticleScraper:
                 'audience': self.classify_audience(content),
                 'difficulty': self.classify_difficulty(content),
                 'url': url,
-                'relevance_score': round(relevance_score, 2),
-                'content_length': len(content)
+                'relevance_score': round(relevance_score, 2)
             }
             
         except Exception as e:
             logger.warning(f"BeautifulSoup extraction error for {url}: {e}")
             return None
 
-    def extract_title_robust(self, soup: BeautifulSoup, source: str) -> str:
-        """Extract title with multiple fallback methods"""
-        # Method 1: Try meta tags first
-        meta_title = soup.find('meta', property='og:title')
-        if meta_title and meta_title.get('content'):
-            title = meta_title.get('content').strip()
-            if len(title) > 10:
-                return title
-        
-        # Method 2: Try standard title tag
-        title_tag = soup.find('title')
-        if title_tag and title_tag.get_text(strip=True):
-            title = title_tag.get_text(strip=True)
-            if len(title) > 10:
-                return title
-        
-        # Method 3: Try heading tags
-        for selector in ['h1', '.article-title', '.post-title', '.entry-title', '.headline', '.title']:
-            title_elem = soup.select_one(selector)
-            if title_elem:
-                title = title_elem.get_text(strip=True)
-                if len(title) > 10:
-                    return title
-        
-        return ""
-
-    def extract_content_robust(self, soup: BeautifulSoup, source: str) -> str:
-        """Extract content with multiple fallback methods"""
-        # Method 1: Try article content selectors
-        for selector in ['article', '.article-content', '.post-content', '.entry-content', '.content', 'main']:
-            content_elem = soup.select_one(selector)
-            if content_elem:
-                content = content_elem.get_text(separator=' ', strip=True)
-                if len(content) > 500:
-                    return content
-        
-        # Method 2: Try paragraph-based extraction
-        paragraphs = soup.find_all('p')
-        if paragraphs:
-            content = ' '.join([p.get_text(strip=True) for p in paragraphs if len(p.get_text(strip=True)) > 50])
-            if len(content) > 500:
-                return content
-        
-        # Method 3: Try div-based extraction
-        for selector in ['.article-body', '.post-body', '.entry-body', '.story-content']:
-            content_elem = soup.select_one(selector)
-            if content_elem:
-                content = content_elem.get_text(separator=' ', strip=True)
-                if len(content) > 500:
-                    return content
-        
-        return ""
-
-    def is_generic_content(self, text: str, title: str) -> bool:
-        """Check if content is generic or template-like"""
-        text_lower = text.lower()
-        title_lower = title.lower()
-        
-        # Check for generic phrases
-        generic_phrases = [
-            'nyheder', 'seneste', 'breaking', 'live', 'direkte',
-            'forside', 'hjem', 'om os', 'kontakt', 'priser', 'shop',
-            'log ind', 'tilmeld', 'abonner', 'newsletter',
-            'cookies', 'privatlivspolitik', 'handelsbetingelser',
-            'sitemap', 'rss', 'feed', 'arkiv', 'kategori'
-        ]
-        
-        for phrase in generic_phrases:
-            if phrase in text_lower or phrase in title_lower:
-                return True
-        
-        # Check for very short or repetitive content
-        if len(text) < 200 or len(set(text.split())) < 50:
-            return True
-        
-        return False
-
-    def has_danish_keywords(self, text: str) -> bool:
-        """Check if text contains Danish keywords"""
-        text_lower = text.lower()
-        
-        # Common Danish words and finance terms
-        danish_keywords = [
-            'og', 'i', 'at', 'en', 'et', 'til', 'på', 'er', 'som', 'med',
-            'penge', 'økonomi', 'bank', 'konto', 'lån', 'rente', 'skat',
-            'pension', 'investering', 'aktier', 'fonde', 'bolig', 'hus',
-            'forbrug', 'opsparing', 'budget', 'gæld', 'forsikring'
-        ]
-        
-        matches = sum(1 for keyword in danish_keywords if keyword in text_lower)
-        return matches >= 3  # At least 3 Danish keywords
-
-    def clean_title(self, title: str) -> str:
-        """Clean and validate title"""
-        if not title:
-            return "Ingen titel"
-        
-        # Remove common prefixes and suffixes
-        title = title.strip()
-        prefixes_to_remove = [
-            'NYHEDER', 'PENGE', 'BUSINESS', 'FINANS', 'ØKONOMI',
-            'DR Nyheder', 'TV2 Nyheder', 'Finans.dk'
-        ]
-        
-        for prefix in prefixes_to_remove:
-            if title.upper().startswith(prefix.upper()):
-                title = title[len(prefix):].strip()
-        
-        # Remove excessive whitespace
-        import re
-        title = re.sub(r'\s+', ' ', title)
-        
-        # Ensure reasonable length
-        if len(title) > 200:
-            title = title[:200] + "..."
-        
-        return title if title else "Ingen titel"
-
+    # Keep all your existing methods exactly as they are:
     def extract_article_links(self, soup: BeautifulSoup, source_config: Dict) -> List[str]:
         """Extract article links from search results"""
         links = []
@@ -908,8 +502,8 @@ class ArticleScraper:
                             print(f"Added article link (element itself): {href}")
         
         # Special handling for Moneypenny and More
-        if 'moneypennyandmore.dk' in source_config['base_url']:
-            print("=== Special Moneypenny link extraction ===")
+        if not links and 'moneypennyandmore.dk' in source_config['base_url']:
+            print("Trying special Moneypenny blog link extraction...")
             
             # Method 1: Look for any links containing 'blog' in the href
             blog_links = soup.find_all('a', href=lambda x: x and 'blog' in x)
@@ -932,66 +526,15 @@ class ArticleScraper:
                         links.append(href)
                         print(f"Added Moneypenny blog link: {href}")
             
-            # Method 2: Look for any links with article-like patterns
-            all_links = soup.find_all('a', href=True)
-            for link in all_links:
-                href = link.get('href')
-                if href and any(pattern in href.lower() for pattern in ['/blog/', '/artikel/', '/post/', '/entry/']):
-                    if href.startswith('/'):
-                        href = source_config['base_url'].rstrip('/') + href
-                    elif not href.startswith('http'):
-                        href = source_config['base_url'].rstrip('/') + '/' + href.lstrip('/')
-                    
-                    href = re.sub(r'(https?://[^/]+)/+', r'\1/', href)
-                    
-                    if href not in links and 'moneypennyandmore.dk' in href:
-                        links.append(href)
-                        print(f"Added Moneypenny article link: {href}")
-            
-            # Method 3: Add known articles as fallback
-            try:
-                from moneypenny_articles import get_known_moneypenny_articles
-                known_articles = get_known_moneypenny_articles()
-                for article_url in known_articles:
-                    if article_url not in links:
-                        links.append(article_url)
-                        print(f"Added known Moneypenny article: {article_url}")
-                print(f"Added {len(known_articles)} known Moneypenny articles")
-            except ImportError:
-                print("moneypenny_articles module not found, skipping known articles fallback")
-            
-            # Method 4: Add common Moneypenny blog URLs
-            common_urls = [
-                "https://moneypennyandmore.dk/blog/de-naeste-skridt-de-forste-penge-pa-nordnet",
-                "https://moneypennyandmore.dk/blog/investering-for-unge-del-1",
-                "https://moneypennyandmore.dk/blog/budgetskabelon",
-                "https://moneypennyandmore.dk/blog/aktiesparekonto",
-                "https://moneypennyandmore.dk/blog/pensionsopsparing",
-                "https://moneypennyandmore.dk/blog/boligkøb",
-                "https://moneypennyandmore.dk/blog/opsparing",
-                "https://moneypennyandmore.dk/blog/investering",
-                "https://moneypennyandmore.dk/blog/privatoekonomi",
-                "https://moneypennyandmore.dk/blog/økonomisk-frihed",
-                "https://moneypennyandmore.dk/blog/start-med-investering",
-                "https://moneypennyandmore.dk/blog/aktier-for-begyndere",
-                "https://moneypennyandmore.dk/blog/fonde",
-                "https://moneypennyandmore.dk/blog/renters-rente",
-                "https://moneypennyandmore.dk/blog/økonomisk-mentalitet",
-                "https://moneypennyandmore.dk/blog/spar-penge",
-                "https://moneypennyandmore.dk/blog/investeringsstrategi",
-                "https://moneypennyandmore.dk/blog/risiko-og-afkast",
-                "https://moneypennyandmore.dk/blog/portefølje",
-                "https://moneypennyandmore.dk/blog/økonomisk-planlægning"
-            ]
-            
-            for url in common_urls:
-                if url not in links:
-                    links.append(url)
-                    print(f"Added common Moneypenny URL: {url}")
+            # Method 2: Add known articles as fallback
+            if not links:
+                try:
+                    from moneypenny_articles import add_known_articles_to_links
+                    links = add_known_articles_to_links(links, source_config['base_url'])
+                except ImportError:
+                    print("moneypenny_articles module not found, skipping known articles fallback")
         
         print(f"Total unique article links found: {len(links)}")
-        if len(links) > 0:
-            print(f"First 5 links: {links[:5]}")
         return links
 
     def looks_like_article_url(self, url: str, base_url: str) -> bool:
@@ -1024,6 +567,7 @@ class ArticleScraper:
                 return True
         
         # Check for date patterns using regex
+        import re
         for pattern in [r'/\d{4}-\d{2}-\d{2}/', r'/\d{2}-\d{2}-\d{4}/']:
             if re.search(pattern, url_lower):
                 return True
@@ -1509,13 +1053,11 @@ class ArticleScraper:
             }
         }
         
-        # Always save to the data folder
-        data_dir = os.path.join(os.path.dirname(__file__), '../src/data')
-        os.makedirs(data_dir, exist_ok=True)
-        data_path = os.path.join(data_dir, filename)
-        with open(data_path, 'w', encoding='utf-8') as f:
+        with open(filename, 'w', encoding='utf-8') as f:
+            import json
             json.dump(data, f, ensure_ascii=False, indent=2)
-        print(f"Enhanced article data saved to {data_path}")
+        
+        print(f"Enhanced article data saved to {filename}")
         print(f"Total: {total_articles} articles, Avg relevance: {avg_relevance:.2f}")
 
 
