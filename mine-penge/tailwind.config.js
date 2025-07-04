@@ -88,6 +88,9 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+        display: ['Poppins', 'sans-serif'],
+        modern: ['Montserrat', 'sans-serif'],
       },
       borderRadius: {
         'xl': '1rem',

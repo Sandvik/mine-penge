@@ -131,11 +131,14 @@ function App() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
         {/* Header */}
         <div className="mb-4 sm:mb-6 lg:mb-8">
-          <h1 className="text-2xl sm:text-3xl font-bold text-nordic-900 mb-2 sm:mb-4">
-            Velkommen til MinePenge.dk
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-nordic-900 mb-3 sm:mb-4 leading-tight">
+            Velkommen
           </h1>
-          <p className="text-nordic-600 text-base sm:text-lg">
-            Din guide til personlig økonomi og finansiel frihed
+          <p className="text-xl sm:text-2xl lg:text-3xl font-serif font-medium text-primary-600 mb-2 sm:mb-3">
+            & MinePenge Club
+          </p>
+          <p className="text-base sm:text-lg lg:text-xl font-modern font-light text-nordic-500 mt-3 sm:mt-4 italic">
+            Fordi det er meget mere end bare økonomi
           </p>
         </div>
 

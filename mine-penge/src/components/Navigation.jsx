@@ -28,14 +28,14 @@ function Navigation() {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-nordic-900">
+              <h1 className="text-2xl font-serif font-medium text-primary-600">
                 MinePenge.dk
               </h1>
             </div>
           </div>
 
           {/* Search Bar */}
-          <div className="hidden md:block flex-1 max-w-md mx-8">
+          <div className="hidden md:block max-w-xs ml-auto mr-1 sm:mr-2 lg:mr-3">
             <form onSubmit={handleSearch} className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <Search className="h-5 w-5 text-nordic-400" />
@@ -74,14 +74,14 @@ function Navigation() {
             {/* Mobile Search */}
             <div className="px-3 py-2">
               <form onSubmit={handleSearch} className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Search className="h-5 w-5 text-nordic-400" />
+                <div className="absolute inset-y-0 left-0 pl-2 flex items-center pointer-events-none">
+                  <Search className="h-4 w-4 text-nordic-400" />
                 </div>
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="block w-full pl-10 pr-3 py-2 border border-nordic-300 rounded-lg leading-5 bg-white placeholder-nordic-500 focus:outline-none focus:placeholder-nordic-400 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-sm"
+                  className="block w-full pl-8 pr-2 py-1 border border-nordic-300 rounded-lg leading-5 bg-white placeholder-nordic-500 focus:outline-none focus:placeholder-nordic-400 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-xs"
                   placeholder="Søg i artikler..."
                 />
               </form>
