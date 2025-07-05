@@ -1,0 +1,120 @@
+{
+  "tag_categories": {
+    "Bolig & Ejendom": [
+      "bolig", "huskøb", "lejebolig", "ejendomsmægler", "ejendom", 
+      "boligmarked", "husleje", "ejerbolig", "andelsbolig"
+    ],
+    "Investering & Aktier": [
+      "investering", "fonde", "aktiesparekonto", "danske aktier", 
+      "aktier", "etf", "reit", "udbytte", "portefølje", "børs", 
+      "kurs", "afkast", "risiko", "diversificering"
+    ],
+    "Pension": [
+      "pension", "pensionstyper", "aldersopsparing", "ratepension", 
+      "livrente", "pensionsopsparing", "pensionsselskab", "pensionsrådgivning"
+    ],
+    "SU & Studerende": [
+      "su", "studielån", "studerende", "universitet", "uddannelse", 
+      "studie", "stipendium", "studiebolig", "studieudgifter"
+    ],
+    "Gæld & Lån": [
+      "gæld", "boliglån", "forbrugslån", "lån", "rente", "afdrag", 
+      "gældsrådgivning", "gældssanering", "inkasso"
+    ],
+    "Opsparing": [
+      "opsparing", "børneopsparing", "spare", "opsparingskonto", 
+      "renteopsparing", "opsparingsmål", "sparertips"
+    ],
+    "Bank & Betaling": [
+      "bank", "kort", "mobilepay", "netbank", "betaling", 
+      "overførsel", "bankkonto", "kreditkort", "debetkort"
+    ],
+    "Skat & Fradrag": [
+      "skat", "fradrag", "skattefradrag", "skattepligtig", 
+      "skattefri", "skatteåret", "selvangivelse"
+    ],
+    "Rente": [
+      "renter", "nationalbank", "styrerente", "rentesats", 
+      "renteudvikling", "rentemarked", "fastforrentet"
+    ],
+    "Forbrug": [
+      "forbrug", "sparertips", "budget", "forbrugsvarer", 
+      "pris", "rabat", "tilbud", "shopping"
+    ],
+    "Forsikring": [
+      "forsikring", "forsikringstyper", "ansvarsforsikring", 
+      "ulykkesforsikring", "indboforsikring", "rejseforsikring"
+    ],
+    "Rådgivning": [
+      "rådgivning", "budget", "undervisning", "tips", "råd", 
+      "guide", "hjælp", "vejledning"
+    ],
+    "Familieøkonomi": [
+      "familieøkonomi", "madspild", "familie", "børn", 
+      "husholdning", "familiebudget", "børneopsparing"
+    ],
+    "Erhverv": [
+      "erhverv", "løn", "job", "karriere", "arbejde", 
+      "indkomst", "ansættelse", "arbejdsmarked"
+    ],
+    "Krypto": [
+      "krypto", "råvarer", "bitcoin", "blockchain", 
+      "kryptovaluta", "nft", "defi"
+    ],
+    "Pensionist": [
+      "pensionist", "senior", "ældre", "pensionering", 
+      "aldersopsparing", "livrente"
+    ],
+    "Problemer": [
+      "økonomisk kriminalitet", "økonomiske problemer", 
+      "gældsproblemer", "økonomisk stress", "svindel"
+    ]
+  },
+  "target_audiences": {
+    "studerende": [
+      "su", "studielån", "studerende", "universitet", "billig", 
+      "spare", "budget", "studie", "uddannelse"
+    ],
+    "børnefamilier": [
+      "børn", "familie", "børneopsparing", "familieøkonomi", 
+      "husholdning", "familiebudget", "børnefamilie"
+    ],
+    "lavindkomstgrupper": [
+      "billig", "spare", "budget", "gæld", "rådgivning", 
+      "grundlæggende", "lav indkomst", "økonomisk hjælp"
+    ],
+    "nybegynder_investering": [
+      "begynder", "første gang", "grundlæggende", "investering", 
+      "aktiesparekonto", "etf", "starte med investering"
+    ],
+    "økonomi_nybegynder": [
+      "budget", "opsparing", "grundlæggende", "tips", "guide", 
+      "råd", "første gang", "nybegynder"
+    ],
+    "pensionister": [
+      "pension", "pensionist", "senior", "aldersopsparing", 
+      "livrente", "ældre", "pensionering"
+    ]
+  },
+  "complexity_indicators": {
+    "begynder": [
+      "grundlæggende", "første gang", "begynder", "simpel", 
+      "let", "guide", "tips", "introduktion"
+    ],
+    "avanceret": [
+      "avanceret", "kompleks", "ekspert", "professionel", 
+      "sophistikeret", "tekniske termer", "ekspertise"
+    ]
+  },
+  "technical_terms": [
+    "volatilitet", "diversificering", "korrelation", "beta", 
+    "alfa", "sharpe ratio", "derivater", "optioner", 
+    "futures", "arbitrage", "hedging", "portefølje teori"
+  ],
+  "settings": {
+    "confidence_threshold": 0.3,
+    "max_tags_per_article": 10,
+    "max_audiences_per_article": 3,
+    "min_word_count": 50
+  }
+} 

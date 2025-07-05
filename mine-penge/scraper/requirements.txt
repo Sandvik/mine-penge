@@ -1,0 +1,29 @@
+# Mine Penge Scraper Requirements
+# Install with: pip install -r requirements.txt
+
+# Web scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+newspaper3k>=0.2.8
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Machine learning & NLP
+scikit-learn>=1.3.0
+nltk>=3.8.0
+
+# Date parsing
+dateparser>=1.1.0
+
+# Language detection
+langdetect>=1.0.9
+
+# HTML cleaning
+lxml-html-clean>=1.0.0
+
+# Optional: For better performance
+# ujson>=5.8.0  # Faster JSON processing
+# aiohttp>=3.8.0  # Async HTTP requests 

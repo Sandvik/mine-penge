@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Sidebar from './components/Sidebar';
 import ArticleCard from './components/ArticleCard';
+import SearchBar from './components/SearchBar';
 import Footer from './components/Footer';
 import SEODashboard from './pages/SEODashboard';
 import LandingPageGenerator from './pages/LandingPageGenerator';
 import QAFeedGenerator from './pages/QAFeedGenerator';
 import InternalLinkStructure from './pages/InternalLinkStructure';
 import EmbedWidget from './pages/EmbedWidget';
-import { fetchArticles, scrapeArticles } from './services/articleService';
+import { fetchArticles, searchArticles, getArticlesByFilter, getStatistics, getAvailableFilters } from './services/articleService';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import './index.css';
 
@@ -17,24 +18,131 @@ function App() {
   const [articles, setArticles] = useState([]);
   const [filteredArticles, setFilteredArticles] = useState([]);
   const [favorites, setFavorites] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
   const [selectedTopics, setSelectedTopics] = useState(['Alle tags']);
   const [loading, setLoading] = useState(true);
-  const [scraping, setScraping] = useState(false);
+  const [pagination, setPagination] = useState({
+    currentPage: 1,
+    pageSize: 20,
+    totalArticles: 0,
+    totalPages: 0,
+    hasNextPage: false,
+    hasPrevPage: false
+  });
+  const [statistics, setStatistics] = useState({});
+  const [availableTags, setAvailableTags] = useState([]);
 
   useEffect(() => {
     loadArticles();
   }, []);
 
+  // Show articles when articles state changes
   useEffect(() => {
-    filterArticles();
-  }, [articles, searchQuery, selectedTopics]);
+    if (articles.length > 0 && selectedTopics.includes('Alle tags')) {
+      showCurrentPageArticles();
+    }
+  }, [articles]);
 
-  const loadArticles = async () => {
+  // Simple function to show articles for current page
+  const showCurrentPageArticles = () => {
+    // Sort articles by date (newest first) and then by source for variety
+    const sortedArticles = [...articles].sort((a, b) => {
+      // First sort by date (newest first)
+      const dateA = new Date(a.published_date || a.scraped_date || 0);
+      const dateB = new Date(b.published_date || b.scraped_date || 0);
+      
+      if (dateA > dateB) return -1;
+      if (dateA < dateB) return 1;
+      
+      // If same date, sort by source for variety
+      const sourceA = a.source || '';
+      const sourceB = b.source || '';
+      return sourceA.localeCompare(sourceB);
+    });
+    
+    const startIndex = (pagination.currentPage - 1) * pagination.pageSize;
+    const endIndex = startIndex + pagination.pageSize;
+    const currentPageArticles = sortedArticles.slice(startIndex, endIndex);
+    setFilteredArticles(currentPageArticles);
+    
+    // Update pagination info
+    setPagination(prev => ({
+      ...prev,
+      totalArticles: articles.length,
+      totalPages: Math.ceil(articles.length / prev.pageSize),
+      hasNextPage: endIndex < articles.length,
+      hasPrevPage: pagination.currentPage > 1
+    }));
+  };
+
+  // Handle search
+  const handleSearch = (searchQuery) => {
+    console.log('handleSearch called with:', searchQuery);
+    
+    if (!searchQuery.trim()) {
+      console.log('Empty search, showing current page articles');
+      showCurrentPageArticles();
+      return;
+    }
+    
+    console.log('Searching for:', searchQuery);
+    const searchData = searchArticles(searchQuery, pagination.currentPage, pagination.pageSize);
+    console.log('Search results:', searchData);
+    setFilteredArticles(searchData.articles || []);
+    setPagination(searchData.pagination || pagination);
+  };
+
+  // Handle topic change
+  const handleTopicChange = (topic) => {
+    setSelectedTopics([topic]);
+    setPagination(prev => ({ ...prev, currentPage: 1 }));
+    
+    if (topic === 'Alle tags') {
+      showCurrentPageArticles();
+    } else {
+      const filterData = getArticlesByFilter({
+        topic: topic.toLowerCase()
+      }, 1, pagination.pageSize);
+      setFilteredArticles(filterData.articles || []);
+      setPagination(filterData.pagination || pagination);
+    }
+  };
+
+  const loadArticles = async (page = 1) => {
     try {
       setLoading(true);
-      const data = await fetchArticles();
-      setArticles(data);
+      const data = await fetchArticles(page, pagination.pageSize);
+      setArticles(data.articles || []);
+      setPagination(data.pagination || {});
+      setStatistics(getStatistics());
+      
+      // Get available tags and log for debugging
+      const filters = getAvailableFilters();
+      console.log('Available filters:', filters);
+      console.log('Available tags:', filters.tags);
+      console.log('Available audiences:', filters.audiences);
+      console.log('Available complexities:', filters.complexities);
+      
+      // Fallback to hardcoded tags if no tags found in data
+      const tags = filters.tags && filters.tags.length > 0 ? filters.tags : [
+        'Opsparing',
+        'Investering', 
+        'Gæld',
+        'Budget',
+        'Pension',
+        'Forsikring',
+        'Bolig',
+        'Skatter',
+        'Børn & Familie',
+        'Studerende',
+        'Begynder',
+        'Øvet',
+        'Avanceret'
+      ];
+      
+      setAvailableTags(tags);
+      
+      // Show initial articles after state is updated
+      setTimeout(() => showCurrentPageArticles(), 0);
     } catch (error) {
       console.error('Error loading articles:', error);
     } finally {
@@ -42,80 +150,23 @@ function App() {
     }
   };
 
-  const handleScrape = async () => {
-    try {
-      setScraping(true);
-      await scrapeArticles();
-      await loadArticles(); // Reload articles after scraping
-    } catch (error) {
-      console.error('Error scraping articles:', error);
-    } finally {
-      setScraping(false);
+
+
+
+
+  const handlePageChange = (newPage) => {
+    // Update articles for new page
+    if (selectedTopics.includes('Alle tags')) {
+      setPagination(prev => ({ ...prev, currentPage: newPage }));
+      setTimeout(() => showCurrentPageArticles(), 0);
+    } else {
+      const selectedTag = selectedTopics[0];
+      const filterData = getArticlesByFilter({
+        topic: selectedTag.toLowerCase()
+      }, newPage, pagination.pageSize);
+      setFilteredArticles(filterData.articles || []);
+      setPagination(filterData.pagination || pagination);
     }
-  };
-
-  const filterArticles = () => {
-    let filtered = [...articles];
-
-    // Filter by search query
-    if (searchQuery) {
-      filtered = filtered.filter(article =>
-        article.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        article.summary?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        article.tags?.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      );
-    }
-
-    // Filter by selected topics
-    if (!selectedTopics.includes('Alle tags')) {
-      const selectedTag = selectedTopics[0]; // Kun 1 tag er aktivt
-      
-      // Mapping af sidebar tags til artikel tags/audience/difficulty
-      const tagMapping = {
-        'Opsparing': ['opsparing', 'spare', 'spareri'],
-        'Investering': ['investering', 'aktiesparekonto', 'fonde'],
-        'Gæld': ['gæld', 'lån', 'rente', 'gældfri', 'gældfrihed', 'boliglån'],
-        'Budget': ['budget', 'økonomi', 'privatøkonomi'],
-        'Pension': ['pension', 'pensionsopsparing', 'aldersopsparing', 'ratepension'],
-        'Forsikring': ['forsikring'],
-        'Bolig': ['bolig', 'huskøb', 'lejlighed', 'ejendom', 'boligmarked'],
-        'Skatter': ['skat', 'skatter'],
-        'Børn & Familie': ['børnefamilie', 'familieøkonomi'],
-        'Studerende': ['studerende'],
-        'Begynder': ['begynder'],
-        'Øvet': ['øvet'],
-        'Avanceret': ['avanceret']
-      };
-
-      const mappedTags = tagMapping[selectedTag] || [selectedTag.toLowerCase()];
-      
-      filtered = filtered.filter(article => {
-        // Tjek om artiklen har et af de mappede tags
-        if (article.tags && article.tags.some(tag => 
-          mappedTags.some(mappedTag => tag.toLowerCase().includes(mappedTag.toLowerCase()))
-        )) {
-          return true;
-        }
-        
-        // Tjek om artiklen har det valgte audience
-        if (article.audience && article.audience.toLowerCase() === selectedTag.toLowerCase()) {
-          return true;
-        }
-        
-        // Tjek om artiklen har den valgte difficulty
-        if (article.difficulty && article.difficulty.toLowerCase() === selectedTag.toLowerCase()) {
-          return true;
-        }
-        
-        return false;
-      });
-    }
-
-    setFilteredArticles(filtered);
-  };
-
-  const handleTopicChange = (topic) => {
-    setSelectedTopics([topic]);
   };
 
   const toggleFavorite = (articleId) => {
@@ -123,6 +174,81 @@ function App() {
       prev.includes(articleId) 
         ? prev.filter(id => id !== articleId)
         : [...prev, articleId]
+    );
+  };
+
+  const PaginationControls = () => {
+    if (pagination.totalPages <= 1) return null;
+
+    const pages = [];
+    const maxVisiblePages = 5;
+    let startPage = Math.max(1, pagination.currentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = Math.min(pagination.totalPages, startPage + maxVisiblePages - 1);
+
+    if (endPage - startPage + 1 < maxVisiblePages) {
+      startPage = Math.max(1, endPage - maxVisiblePages + 1);
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+      pages.push(i);
+    }
+
+    return (
+      <div className="flex justify-center items-center space-x-2 mt-8 mb-4">
+        <button
+          onClick={() => handlePageChange(pagination.currentPage - 1)}
+          disabled={!pagination.hasPrevPage}
+          className="px-3 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          Forrige
+        </button>
+        
+        {startPage > 1 && (
+          <>
+            <button
+              onClick={() => handlePageChange(1)}
+              className="px-3 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300"
+            >
+              1
+            </button>
+            {startPage > 2 && <span className="px-2">...</span>}
+          </>
+        )}
+        
+        {pages.map(page => (
+          <button
+            key={page}
+            onClick={() => handlePageChange(page)}
+            className={`px-3 py-2 rounded-lg ${
+              page === pagination.currentPage
+                ? 'bg-primary-600 text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            {page}
+          </button>
+        ))}
+        
+        {endPage < pagination.totalPages && (
+          <>
+            {endPage < pagination.totalPages - 1 && <span className="px-2">...</span>}
+            <button
+              onClick={() => handlePageChange(pagination.totalPages)}
+              className="px-3 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300"
+            >
+              {pagination.totalPages}
+            </button>
+          </>
+        )}
+        
+        <button
+          onClick={() => handlePageChange(pagination.currentPage + 1)}
+          disabled={!pagination.hasNextPage}
+          className="px-3 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          Næste
+        </button>
+      </div>
     );
   };
 
@@ -135,42 +261,54 @@ function App() {
             Velkommen
           </h1>
           <p className="text-xl sm:text-2xl lg:text-3xl font-serif font-medium text-primary-600 mb-2 sm:mb-3">
-            & MinePenge Club
+            & MinePenge
           </p>
           <p className="text-base sm:text-lg lg:text-xl font-modern font-light text-nordic-500 mt-3 sm:mt-4 italic">
             Fordi det er meget mere end bare økonomi
           </p>
         </div>
 
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mb-4 sm:mb-6 lg:mb-8">
-          <button
-            onClick={loadArticles}
-            disabled={loading}
-            className="px-4 sm:px-6 py-2 sm:py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors disabled:opacity-50 text-sm sm:text-base"
-          >
-            {loading ? 'Indlæser...' : 'Opdater artikler'}
-          </button>
-          <button
-            onClick={handleScrape}
-            disabled={scraping}
-            className="px-4 sm:px-6 py-2 sm:py-3 bg-success-600 text-white rounded-lg hover:bg-success-700 transition-colors disabled:opacity-50 text-sm sm:text-base"
-          >
-            {scraping ? 'Scraper...' : 'Start scraper'}
-          </button>
-        </div>
+        {/* Statistics */}
+        {statistics.totalArticles > 0 && (
+          <div className="bg-white rounded-lg p-4 mb-6 shadow-sm">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+              <div>
+                <div className="text-2xl font-bold text-primary-600">{statistics.totalArticles}</div>
+                <div className="text-sm text-gray-600">Artikler</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-primary-600">{statistics.sources?.length || 0}</div>
+                <div className="text-sm text-gray-600">Kilder</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-primary-600">{statistics.availableTags || 0}</div>
+                <div className="text-sm text-gray-600">Tags</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-primary-600">{pagination.totalPages}</div>
+                <div className="text-sm text-gray-600">Sider</div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Search */}
+        <SearchBar onSearch={handleSearch} />
 
         {/* Articles Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
           {filteredArticles.map((article, index) => (
             <ArticleCard
-              key={article.id || index}
+              key={article.article_id || index}
               article={article}
-              isFavorite={favorites.includes(article.id)}
-              onToggleFavorite={() => toggleFavorite(article.id)}
+              isFavorite={favorites.includes(article.article_id)}
+              onToggleFavorite={() => toggleFavorite(article.article_id)}
             />
           ))}
         </div>
+
+        {/* Pagination */}
+        <PaginationControls />
 
         {filteredArticles.length === 0 && !loading && (
           <div className="text-center py-8 sm:py-12">
@@ -192,6 +330,7 @@ function App() {
           <Sidebar 
             selectedTopics={selectedTopics}
             onTopicChange={handleTopicChange}
+            availableTags={availableTags}
           />
           
           <main className="flex-1 min-w-0">
@@ -206,8 +345,8 @@ function App() {
           </main>
         </div>
         
-        <Footer />
         <ScrollToTopButton />
+        <Footer />
       </div>
     </Router>
   );

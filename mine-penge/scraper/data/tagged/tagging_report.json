@@ -1,0 +1,49 @@
+{
+  "summary": {
+    "total_files_processed": 5,
+    "total_articles_tagged": 706,
+    "processing_date": "2025-07-05T16:10:36.289187"
+  },
+  "tag_statistics": {
+    "investering": 603,
+    "aktier": 476,
+    "su": 456,
+    "bank": 313,
+    "spare": 267,
+    "skat": 245,
+    "råd": 239,
+    "udbytte": 230,
+    "pris": 223,
+    "portefølje": 221,
+    "arbejde": 212,
+    "kort": 210,
+    "opsparing": 204,
+    "fonde": 180,
+    "forbrug": 155,
+    "gæld": 132,
+    "betaling": 128,
+    "rente": 122,
+    "budget": 111,
+    "guide": 108
+  },
+  "audience_statistics": {
+    "lavindkomstgrupper": 515,
+    "studerende": 401,
+    "nybegynder_investering": 521,
+    "økonomi_nybegynder": 342,
+    "pensionister": 60,
+    "børnefamilier": 68
+  },
+  "complexity_statistics": {
+    "begynder": 634,
+    "mellem": 69,
+    "avanceret": 3
+  },
+  "tagged_files": [
+    "data/tagged/tagged_mitteldorf_blog_posts.json",
+    "data/tagged/tagged_moneypenny_blog_posts.json",
+    "data/tagged/tagged_ungmedpenge_blog_posts.json",
+    "data/tagged/tagged_nordnet_blog_posts.json",
+    "data/tagged/tagged_budgetnoerden_blog_posts.json"
+  ]
+}

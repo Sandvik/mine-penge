@@ -3,7 +3,18 @@ import { Heart, ExternalLink, Clock, User } from 'lucide-react';
 import UserFeedback from './UserFeedback';
 
 function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
-  const { title, summary, tags, source, publishedAt, foundAt, difficulty, audience, relevance_score } = article || {};
+  const { 
+    title, 
+    summary, 
+    minepenge_tags, 
+    source, 
+    publishedAt, 
+    foundAt, 
+    complexity_level, 
+    target_audiences,
+    article_id,
+    url
+  } = article || {};
 
   const getDifficultyColor = (difficulty) => {
     switch (difficulty) {
@@ -14,20 +25,47 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
     }
   };
 
-  const getAudienceIcon = (audience) => {
+  const getAudienceIcon = (audiences) => {
+    if (!audiences || audiences.length === 0) return '👤';
+    
+    const audience = audiences[0]; // Use first audience for icon
     switch (audience) {
-      case 'studerende': return '🎓';
-      case 'børnefamilie': return '👨‍👩‍👧‍👦';
+      case 'studerende':
+      case 'nybegynder_investering': return '🎓';
+      case 'børnefamilie':
+      case 'familieøkonomi': return '👨‍👩‍👧‍👦';
+      case 'pensionister':
       case 'pensionist': return '👴';
+      case 'erhverv':
+      case 'investor': return '💼';
       default: return '👤';
     }
   };
 
-  const getRelevanceColor = (score) => {
-    if (score >= 80) return 'bg-success-100 text-success-800';
-    if (score >= 60) return 'bg-primary-100 text-primary-800';
-    if (score >= 40) return 'bg-warning-100 text-warning-800';
-    return 'bg-nordic-100 text-nordic-800';
+  const getAudienceLabel = (audiences) => {
+    if (!audiences || audiences.length === 0) return 'Bred';
+    
+    const audience = audiences[0]; // Use first audience for label
+    switch (audience) {
+      case 'studerende': return 'Studerende';
+      case 'nybegynder_investering': return 'Nybegynder';
+      case 'børnefamilie': return 'Børnefamilie';
+      case 'familieøkonomi': return 'Familieøkonomi';
+      case 'pensionister': return 'Pensionister';
+      case 'pensionist': return 'Pensionist';
+      case 'erhverv': return 'Erhverv';
+      case 'investor': return 'Investor';
+      default: return audience.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    }
+  };
+
+  const getComplexityLabel = (complexity) => {
+    switch (complexity) {
+      case 'begynder': return 'Begynder';
+      case 'øvet': return 'Øvet';
+      case 'avanceret': return 'Avanceret';
+      default: return complexity || 'Begynder';
+    }
   };
 
   return (
@@ -45,11 +83,11 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
             </span>
             <span className="flex items-center">
               <User className="h-4 w-4 mr-1" />
-              {getAudienceIcon(audience || 'børnefamilie')} {audience || 'Børnefamilie'}
+              {getAudienceIcon(target_audiences)} {getAudienceLabel(target_audiences)}
             </span>
-            {relevance_score && (
-              <span className={`px-2 py-1 rounded-full text-xs font-medium ${getRelevanceColor(relevance_score)}`}>
-                Relevans: {relevance_score}
+            {complexity_level && (
+              <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(complexity_level)}`}>
+                {getComplexityLabel(complexity_level)}
               </span>
             )}
             {foundAt && (
@@ -78,7 +116,7 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
 
       {/* Tags */}
       <div className="flex flex-wrap gap-2 mb-4">
-        {(tags || ['opsparing', 'børnefamilie', 'begynder']).map((tag, index) => (
+        {(minepenge_tags || ['opsparing', 'børnefamilie', 'begynder']).slice(0, 3).map((tag, index) => (
           <span 
             key={index}
             className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -90,6 +128,11 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
             {tag}
           </span>
         ))}
+        {minepenge_tags && minepenge_tags.length > 3 && (
+          <span className="px-3 py-1 rounded-full text-xs font-medium bg-nordic-100 text-nordic-600">
+            +{minepenge_tags.length - 3} mere
+          </span>
+        )}
       </div>
       
       {/* Footer */}
@@ -98,7 +141,7 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
           Kilde: {source || 'DR.dk'}
         </span>
         <a 
-          href={article?.url || "#"}
+          href={url || "#"}
           target="_blank" 
           rel="noopener noreferrer"
           className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium text-sm transition-colors"
@@ -110,7 +153,7 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite }) {
       
       {/* User Feedback */}
       <div className="mt-4 pt-4 border-t border-nordic-100">
-        <UserFeedback articleId={article?.id} />
+        <UserFeedback articleId={article_id} />
       </div>
     </article>
   );

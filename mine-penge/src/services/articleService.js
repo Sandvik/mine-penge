@@ -1,41 +1,81 @@
 // Article service for handling data from Python scraper scripts and APIs
-import testArticlesData from '../data/test_articles.json';
+import articlesData from '../data/articles.json';
 
 class ArticleService {
   constructor() {
-    this.articles = testArticlesData.articles || [];
-    this.metadata = {};
+    this.articles = articlesData.articles || [];
+    this.metadata = articlesData.metadata || {};
     this.apiBaseUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
-    this.updateMetadata();
+    this.cache = new Map();
+    this.lastFetch = null;
+    this.cacheTimeout = 5 * 60 * 1000; // 5 minutter
   }
 
-  // Get all articles
-  getAllArticles() {
-    return this.articles;
+  // Get all articles with pagination
+  getAllArticles(page = 1, pageSize = 20) {
+    // Sort articles by date (newest first) and then by source for variety
+    const sortedArticles = [...this.articles].sort((a, b) => {
+      // First sort by date (newest first)
+      const dateA = new Date(a.published_date || a.scraped_date || 0);
+      const dateB = new Date(b.published_date || b.scraped_date || 0);
+      
+      if (dateA > dateB) return -1;
+      if (dateA < dateB) return 1;
+      
+      // If same date, sort by source for variety
+      const sourceA = a.source || '';
+      const sourceB = b.source || '';
+      return sourceA.localeCompare(sourceB);
+    });
+    
+    const startIndex = (page - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    const paginatedArticles = sortedArticles.slice(startIndex, endIndex);
+    
+    return {
+      articles: paginatedArticles,
+      pagination: {
+        currentPage: page,
+        pageSize: pageSize,
+        totalArticles: this.articles.length,
+        totalPages: Math.ceil(this.articles.length / pageSize),
+        hasNextPage: endIndex < this.articles.length,
+        hasPrevPage: page > 1
+      }
+    };
   }
 
-  // Get articles by filter
-  getArticlesByFilter(filters = {}) {
+  // Get articles by filter with pagination
+  getArticlesByFilter(filters = {}, page = 1, pageSize = 20) {
     let filtered = this.articles;
 
-    // Filter by topic
+    // Filter by topic/tags
     if (filters.topic) {
       filtered = filtered.filter(article => 
-        article.tags.includes(filters.topic)
+        article.minepenge_tags && article.minepenge_tags.some(tag => 
+          tag.toLowerCase().includes(filters.topic.toLowerCase())
+        )
       );
     }
 
     // Filter by audience
     if (filters.audience) {
       filtered = filtered.filter(article => 
-        article.audience === filters.audience
+        article.target_audiences && article.target_audiences.includes(filters.audience)
       );
     }
 
-    // Filter by difficulty
+    // Filter by difficulty/complexity
     if (filters.difficulty) {
       filtered = filtered.filter(article => 
-        article.difficulty === filters.difficulty
+        article.complexity_level === filters.difficulty
+      );
+    }
+
+    // Filter by source
+    if (filters.source) {
+      filtered = filtered.filter(article => 
+        article.source && article.source.toLowerCase().includes(filters.source.toLowerCase())
       );
     }
 
@@ -43,19 +83,35 @@ class ArticleService {
     if (filters.searchQuery) {
       const searchLower = filters.searchQuery.toLowerCase();
       filtered = filtered.filter(article => 
-        article.title.toLowerCase().includes(searchLower) ||
-        article.summary.toLowerCase().includes(searchLower) ||
-        article.tags.some(tag => tag.toLowerCase().includes(searchLower)) ||
-        article.source.toLowerCase().includes(searchLower)
+        article.title && article.title.toLowerCase().includes(searchLower) ||
+        article.summary && article.summary.toLowerCase().includes(searchLower) ||
+        (article.minepenge_tags && article.minepenge_tags.some(tag => 
+          tag.toLowerCase().includes(searchLower)
+        ))
       );
     }
 
-    return filtered;
+    // Apply pagination
+    const startIndex = (page - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    const paginatedArticles = filtered.slice(startIndex, endIndex);
+    
+    return {
+      articles: paginatedArticles,
+      pagination: {
+        currentPage: page,
+        pageSize: pageSize,
+        totalArticles: filtered.length,
+        totalPages: Math.ceil(filtered.length / pageSize),
+        hasNextPage: endIndex < filtered.length,
+        hasPrevPage: page > 1
+      }
+    };
   }
 
   // Get article by ID
   getArticleById(id) {
-    return this.articles.find(article => article.id === id);
+    return this.articles.find(article => article.article_id === id);
   }
 
   // Get metadata
@@ -63,95 +119,98 @@ class ArticleService {
     return this.metadata;
   }
 
-  // Add new article (for future use with backend)
-  addArticle(article) {
-    const newArticle = {
-      ...article,
-      id: this.getNextId(),
-      publishedAt: new Date().toISOString()
+  // Get available filters
+  getAvailableFilters() {
+    const allTags = new Set();
+    const allAudiences = new Set();
+    const allComplexities = new Set();
+    const allSources = new Set();
+
+    this.articles.forEach(article => {
+      if (article.minepenge_tags) {
+        article.minepenge_tags.forEach(tag => allTags.add(tag));
+      }
+      if (article.target_audiences) {
+        article.target_audiences.forEach(audience => allAudiences.add(audience));
+      }
+      if (article.complexity_level) {
+        allComplexities.add(article.complexity_level);
+      }
+      if (article.source) {
+        allSources.add(article.source);
+      }
+    });
+
+    return {
+      tags: Array.from(allTags).sort(),
+      audiences: Array.from(allAudiences).sort(),
+      complexities: Array.from(allComplexities).sort(),
+      sources: Array.from(allSources).sort()
     };
-    this.articles.push(newArticle);
-    this.updateMetadata();
-    return newArticle;
   }
 
-  // Update article
-  updateArticle(id, updates) {
-    const index = this.articles.findIndex(article => article.id === id);
-    if (index !== -1) {
-      this.articles[index] = { ...this.articles[index], ...updates };
-      this.updateMetadata();
-      return this.articles[index];
-    }
-    return null;
-  }
-
-  // Delete article
-  deleteArticle(id) {
-    const index = this.articles.findIndex(article => article.id === id);
-    if (index !== -1) {
-      this.articles.splice(index, 1);
-      this.updateMetadata();
-      return true;
-    }
-    return false;
-  }
-
-  // Get next available ID
-  getNextId() {
-    return Math.max(...this.articles.map(article => article.id)) + 1;
-  }
-
-  // Update metadata
-  updateMetadata() {
-    this.metadata = {
+  // Get statistics
+  getStatistics() {
+    const filters = this.getAvailableFilters();
+    
+    return {
       totalArticles: this.articles.length,
-      lastUpdated: new Date().toISOString(),
-      sources: [...new Set(this.articles.map(article => article.source))],
-      topics: [...new Set(this.articles.flatMap(article => article.tags))],
-      audiences: [...new Set(this.articles.map(article => article.audience))],
-      difficulties: [...new Set(this.articles.map(article => article.difficulty))]
+      lastUpdated: this.metadata.lastUpdated,
+      sources: this.metadata.sources || [],
+      articlesPerSource: this.metadata.articlesPerSource || {},
+      availableTags: filters.tags.length,
+      availableAudiences: filters.audiences.length,
+      availableComplexities: filters.complexities.length,
+      averageArticlesPerPage: 20,
+      totalPages: Math.ceil(this.articles.length / 20)
     };
   }
 
-  // Load fresh articles from test_articles.json
+  // Load fresh articles from articles.json
   async loadFreshArticles() {
     try {
-      console.log('Loading fresh articles from API...');
+      console.log('Loading fresh articles from articles.json...');
       
-      // Try to load from API first
-      const response = await fetch(`${this.apiBaseUrl}/api/test-articles`);
-      
-      if (response.ok) {
-        const freshData = await response.json();
+      // Check if cache is still valid
+      if (this.lastFetch && (Date.now() - this.lastFetch) < this.cacheTimeout) {
+        console.log('Using cached articles data');
+        return this.articles;
+      }
+
+      // Try to load from API first (if available)
+      try {
+        const response = await fetch(`${this.apiBaseUrl}/api/articles`);
         
-        if (freshData.articles && Array.isArray(freshData.articles)) {
-          this.articles = freshData.articles;
-          this.updateMetadata();
-          console.log(`Loaded ${this.articles.length} fresh articles from API`);
-          return this.articles;
-        } else {
-          console.warn('Invalid data format from API');
-          return this.articles; // Fallback to current data
+        if (response.ok) {
+          const freshData = await response.json();
+          
+          if (freshData.articles && Array.isArray(freshData.articles)) {
+            this.articles = freshData.articles;
+            this.metadata = freshData.metadata || {};
+            this.lastFetch = Date.now();
+            console.log(`Loaded ${this.articles.length} fresh articles from API`);
+            return this.articles;
+          }
         }
+      } catch (apiError) {
+        console.log('API not available, using local file');
+      }
+
+      // Fallback to local file
+      const freshData = await import('../data/articles.json');
+      
+      if (freshData.default.articles && Array.isArray(freshData.default.articles)) {
+        this.articles = freshData.default.articles;
+        this.metadata = freshData.default.metadata || {};
+        this.lastFetch = Date.now();
+        console.log(`Loaded ${this.articles.length} fresh articles from local file`);
+        return this.articles;
       } else {
-        console.log('API not available, falling back to local file');
-        // Fallback to local file
-        const freshData = await import('../data/test_articles.json');
-        
-        if (freshData.default.articles && Array.isArray(freshData.default.articles)) {
-          this.articles = freshData.default.articles;
-          this.updateMetadata();
-          console.log(`Loaded ${this.articles.length} fresh articles from local file`);
-          return this.articles;
-        } else {
-          console.warn('Invalid data format from local file');
-          return this.articles; // Fallback to current data
-        }
+        throw new Error('Invalid data format in articles.json');
       }
     } catch (error) {
       console.error('Error loading fresh articles:', error);
-      return this.articles; // Fallback to current data
+      throw error;
     }
   }
 
@@ -160,19 +219,13 @@ class ArticleService {
     try {
       console.log('Triggering Python scraper...');
       
-      // Try to run the scraper directly
       const response = await fetch(`${this.apiBaseUrl}/api/scrape`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          sources: [
-            "dr.dk", "tv2.dk", "finans.dk", "bolius.dk", "moneymum.dk", "pengepugeren.dk", "samvirke.dk",
-            "nordea.com", "moneypennyandmore.dk", "kenddinepenge.dk", "styrpaabudget.dk", "lunar.app", 
-            "fairkredit.dk", "privatøkonomiskrådgivning.dk", "nordlaan.dk", "collectia.dk", "goddik.dk",
-            "kreditnu.dk", "danskebank.com", "pwc.dk"
-          ]
+          sources: this.metadata.sources || []
         })
       });
       
@@ -181,142 +234,163 @@ class ArticleService {
         // Load fresh articles after scraping
         return await this.loadFreshArticles();
       } else {
-        console.log('Scraper API not available, showing manual instructions');
-        alert('Scraper API ikke tilgængelig. Kør scraper manuelt:\n\n1. Åbn terminal i backend mappen\n2. Kør: python main.py\n3. Klik "Opdater" for at indlæse nye artikler');
-        return false;
+        throw new Error('Scraper API not available');
       }
     } catch (error) {
       console.error('Error triggering scraper:', error);
-      alert('Kunne ikke starte scraper. Kør scraper manuelt:\n\n1. Åbn terminal i backend mappen\n2. Kør: python main.py\n3. Klik "Opdater" for at indlæse nye artikler');
-      return false;
+      throw new Error('Kunne ikke starte scraper. Kør scraper manuelt:\n\n1. Åbn terminal i scraper mappen\n2. Kør: python3 update_all_data.py\n3. Klik "Opdater" for at indlæse nye artikler');
     }
   }
 
-  // Load articles from external source (future use)
-  async loadFromAPI(url) {
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      this.articles = data.articles || data;
-      this.updateMetadata();
-      return this.articles;
-    } catch (error) {
-      console.error('Error loading from API:', error);
-      return this.articles;
+  // Precise search function
+  searchArticles(query, page = 1, pageSize = 20) {
+    console.log('searchArticles called with query:', query, 'page:', page);
+    
+    if (!query || query.trim() === '') {
+      console.log('Empty query, returning all articles');
+      return this.getAllArticles(page, pageSize);
     }
-  }
 
-  // Save articles to external source (future use)
-  async saveToAPI(url) {
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          articles: this.articles,
-          metadata: this.metadata
-        })
-      });
-      return response.ok;
-    } catch (error) {
-      console.error('Error saving to API:', error);
-      return false;
-    }
-  }
-
-  // Export data
-  exportData() {
-    return {
-      articles: this.articles,
-      metadata: this.metadata
-    };
-  }
-
-  // Import data
-  importData(data) {
-    if (data.articles && Array.isArray(data.articles)) {
-      this.articles = data.articles;
-      this.updateMetadata();
-      return true;
-    }
-    return false;
-  }
-
-  // Get scraper status
-  async getScraperStatus() {
-    try {
-      const response = await fetch(`${this.apiBaseUrl}/api/status`);
-      if (response.ok) {
-        return await response.json();
+    const searchLower = query.toLowerCase().trim();
+    console.log('Searching for:', searchLower);
+    
+    // Simple and precise search
+    const filtered = this.articles.filter(article => {
+      const title = (article.title || '').toLowerCase();
+      const summary = (article.summary || '').toLowerCase();
+      const tags = (article.minepenge_tags || []).map(tag => tag.toLowerCase());
+      
+      // Check for exact matches in title, summary, or tags
+      const titleMatch = title.includes(searchLower);
+      const summaryMatch = summary.includes(searchLower);
+      const tagMatch = tags.some(tag => tag.includes(searchLower));
+      
+      if (titleMatch || summaryMatch || tagMatch) {
+        console.log('Found match in article:', article.title);
+        return true;
       }
-      return { status: 'offline' };
-    } catch (error) {
-      return { status: 'offline', error: error.message };
-    }
+      
+      return false;
+    });
+
+    console.log('Found', filtered.length, 'articles for search:', searchLower);
+
+    const startIndex = (page - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    const paginatedArticles = filtered.slice(startIndex, endIndex);
+    
+    return {
+      articles: paginatedArticles,
+      pagination: {
+        currentPage: page,
+        pageSize: pageSize,
+        totalArticles: filtered.length,
+        totalPages: Math.ceil(filtered.length / pageSize),
+        hasNextPage: endIndex < filtered.length,
+        hasPrevPage: page > 1
+      },
+      searchQuery: query
+    };
   }
 
-  // Get statistics
-  getStatistics() {
+  // Get articles by tag with pagination
+  getArticlesByTag(tag, page = 1, pageSize = 20) {
+    const filtered = this.articles.filter(article => 
+      article.minepenge_tags && article.minepenge_tags.some(t => 
+        t.toLowerCase() === tag.toLowerCase()
+      )
+    );
+
+    const startIndex = (page - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    const paginatedArticles = filtered.slice(startIndex, endIndex);
+    
     return {
-      totalArticles: this.articles.length,
-      sources: this.metadata.sources.length,
-      topics: this.metadata.topics.length,
-      lastUpdated: this.metadata.lastUpdated
+      articles: paginatedArticles,
+      pagination: {
+        currentPage: page,
+        pageSize: pageSize,
+        totalArticles: filtered.length,
+        totalPages: Math.ceil(filtered.length / pageSize),
+        hasNextPage: endIndex < filtered.length,
+        hasPrevPage: page > 1
+      },
+      selectedTag: tag
     };
+  }
+
+  // Get articles by source with pagination
+  getArticlesBySource(source, page = 1, pageSize = 20) {
+    const filtered = this.articles.filter(article => 
+      article.source && article.source.toLowerCase().includes(source.toLowerCase())
+    );
+
+    const startIndex = (page - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    const paginatedArticles = filtered.slice(startIndex, endIndex);
+    
+    return {
+      articles: paginatedArticles,
+      pagination: {
+        currentPage: page,
+        pageSize: pageSize,
+        totalArticles: filtered.length,
+        totalPages: Math.ceil(filtered.length / pageSize),
+        hasNextPage: endIndex < filtered.length,
+        hasPrevPage: page > 1
+      },
+      selectedSource: source
+    };
+  }
+
+  // Clear cache
+  clearCache() {
+    this.cache.clear();
+    this.lastFetch = null;
   }
 }
 
 // Create singleton instance
 const articleService = new ArticleService();
 
-// Export functions for App.jsx
-export const fetchArticles = async () => {
+// Export functions for backward compatibility
+export const fetchArticles = async (page = 1, pageSize = 20) => {
   try {
-    const response = await fetch('http://localhost:8000/api/articles');
-    if (response.ok) {
-      const data = await response.json();
-      return data.articles || data;
-    } else {
-      // Fallback to local data
-      return articleService.getAllArticles();
-    }
+    await articleService.loadFreshArticles();
+    return articleService.getAllArticles(page, pageSize);
   } catch (error) {
     console.error('Error fetching articles:', error);
-    // Fallback to local data
-    return articleService.getAllArticles();
+    throw error;
   }
 };
 
 export const scrapeArticles = async () => {
   try {
-    const response = await fetch('http://localhost:8000/api/scrape', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        sources: [
-          "dr.dk", "tv2.dk", "finans.dk", "bolius.dk", "moneymum.dk", "pengepugeren.dk", "samvirke.dk",
-          "nordea.com", "moneypennyandmore.dk", "kenddinepenge.dk", "styrpaabudget.dk", "lunar.app", 
-          "fairkredit.dk", "privatøkonomiskrådgivning.dk", "nordlaan.dk", "collectia.dk", "goddik.dk",
-          "kreditnu.dk", "danskebank.com", "pwc.dk"
-        ]
-      })
-    });
-    
-    if (response.ok) {
-      console.log('Scraper completed successfully');
-      return true;
-    } else {
-      console.error('Scraper failed');
-      return false;
-    }
+    return await articleService.triggerScraper();
   } catch (error) {
     console.error('Error scraping articles:', error);
-    return false;
+    throw error;
   }
+};
+
+export const searchArticles = (query, page = 1, pageSize = 20) => {
+  return articleService.searchArticles(query, page, pageSize);
+};
+
+export const getArticlesByTag = (tag, page = 1, pageSize = 20) => {
+  return articleService.getArticlesByTag(tag, page, pageSize);
+};
+
+export const getArticlesByFilter = (filters, page = 1, pageSize = 20) => {
+  return articleService.getArticlesByFilter(filters, page, pageSize);
+};
+
+export const getAvailableFilters = () => {
+  return articleService.getAvailableFilters();
+};
+
+export const getStatistics = () => {
+  return articleService.getStatistics();
 };
 
 export default articleService; 

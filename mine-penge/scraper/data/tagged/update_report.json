@@ -1,0 +1,40 @@
+{
+  "update_timestamp": "2025-07-05T16:10:36.292398",
+  "scrapers_run": [
+    "scraperMoneypenny.py",
+    "scraperNordNet.py",
+    "scraperBudgetNoerd.py",
+    "scraperUngMedPenge.py",
+    "scraperMitteldorfDK.py"
+  ],
+  "files_updated": [
+    {
+      "filename": "mitteldorf_blog_posts.json",
+      "articles": 214
+    },
+    {
+      "filename": "moneypenny_blog_posts.json",
+      "articles": 103
+    },
+    {
+      "filename": "ungmedpenge_blog_posts.json",
+      "articles": 241
+    },
+    {
+      "filename": "nordnet_blog_posts.json",
+      "articles": 52
+    },
+    {
+      "filename": "budgetnoerden_blog_posts.json",
+      "articles": 96
+    }
+  ],
+  "tagged_files": [
+    "tagged_budgetnoerden_blog_posts.json",
+    "tagged_ungmedpenge_blog_posts.json",
+    "tagged_moneypenny_blog_posts.json",
+    "tagged_mitteldorf_blog_posts.json",
+    "tagged_nordnet_blog_posts.json"
+  ],
+  "total_articles": 706
+}
