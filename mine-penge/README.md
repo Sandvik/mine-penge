@@ -14,23 +14,22 @@ npm run dev
 ```
 Åbn `http://localhost:5173`
 
-### Backend
+### Backend (Scraper)
 ```bash
-cd backend
+cd scraper
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
-python main.py
+python update_all_data.py  # Kør alle scrapers
 ```
-API kører på `http://localhost:8000`
 
 ## 🏗️ System Arkitektur
 
 ```
-Frontend (React) ←→ Backend API (FastAPI) ←→ Web Scrapers
+Frontend (React) ←→ Article Service ←→ Consolidated Data
      ↓                    ↓                      ↓
-  Tailwind CSS      Python Scrapers        Danske Sites
-  React Hooks       JSON Storage           (DR, TV2, etc.)
+  Tailwind CSS      Local JSON Files      Scraper Suite
+  React Hooks       Search & Filter       (5 Blog Sources)
 ```
 
 ## 🧱 Teknologier
@@ -40,26 +39,25 @@ Frontend (React) ←→ Backend API (FastAPI) ←→ Web Scrapers
 - **Tailwind CSS** - Nordisk moderne styling
 - **Lucide React** - Clean line icons
 - **React Hooks** - State management
+- **React Router** - Navigation
 
-### Backend
-- **FastAPI** - REST API
+### Backend (Scraper Suite)
+- **Python 3.9+** - Scraping og data processing
 - **BeautifulSoup4** - HTML parsing
-- **Newspaper3k** - Article extraction
-- **Langdetect** - Dansk sprog detektion
+- **Requests** - HTTP requests
+- **JSON** - Data storage
+- **Content Tagger** - AI-drevet kategorisering
 
 ## 📰 Web Scraping
 
-Systemet scraper automatisk artikler fra:
+Systemet scraper automatisk artikler fra 5 danske økonomiblogger:
 
-- **DR.dk** - Danmarks Radio
-- **TV2.dk** - TV2 Nyheder
-- **Finans.dk** - Finansnyheder  
-- **Bolius.dk** - Bolig og økonomi
-
-### 🔍 Søgeord
-- økonomi, penge, opsparing, investering
-- su, bolig, gæld, pension, budget
-- madspild, studerende, familieøkonomi
+### Aktive Scrapeers
+- **Moneypenny** - Investering og privatøkonomi for kvinder
+- **Nordnet** - Investeringsanalyser og finansnyheder  
+- **Budgetnoerden** - Budget tips og økonomi
+- **Ungmedpenge** - Investering for unge
+- **Mitteldorf** - FIRE, value investing og minimalisme
 
 ### 🤖 Automatisk Klassificering
 
@@ -67,37 +65,57 @@ Artikler klassificeres automatisk på:
 
 **Målgruppe:**
 - studerende - SU og studie-relateret
-- børnefamilie - Familieøkonomi  
-- pensionist - Pension og ældre
-- bred - Generelle artikler
+- børnefamilier - Familieøkonomi  
+- lavindkomstgrupper - Grundlæggende budget og gældsrådgivning
+- nybegynder_investering - Første investering
+- økonomi_nybegynder - Budget basics
+- pensionister - Pension og ældre
 
 **Sværhedsgrad:**
 - begynder - Korte, simple artikler
-- øvet - Mellemlange artikler
+- mellem - Mellemlange artikler
 - avanceret - Lange, detaljerede artikler
 
-**Tags:**
-- opsparing, su, bolig, investering, gæld, pension
+**Tags (17 kategorier):**
+- bolig, investering, pension, su, gæld, opsparing, bank, skat, renter, forbrug, forsikring, rådgivning, familieøkonomi, erhverv, krypto, pensionist, problemer
 
 ## 📱 Funktioner
 
 - ✅ **Feed med seneste artikler** - Automatisk opdateret
-- ✅ **Filtrering** - Efter emne og målgruppe
-- ✅ **Søgning** - I artikler og tags
-- ✅ **Favoritter** - Gem dine foretrukne artikler
+- ✅ **Avanceret filtrering** - Efter emne, målgruppe og kompleksitet
+- ✅ **Præcis søgning** - I titler, sammendrag og tags
+- ✅ **Pagination** - Effektiv navigation gennem artikler
+- ✅ **Dynamisk sidebar** - Tags baseret på faktisk data
 - ✅ **Responsivt design** - Mobile + desktop
 - ✅ **Nordisk design** - Moderne, rent interface
+- ✅ **Artikel sortering** - Nyeste først, varieret kilder
+- ✅ **SearchBar komponent** - Dedikeret søgefunktionalitet
 - [ ] **Login system** - Kommer senere
 - [ ] **Ugens highlights** - Kommer senere
 - [ ] **E-mail nyhedsbrev** - Kommer senere
 
-## 🔧 API Endpoints
+## 🔧 Data Flow
 
-### Frontend → Backend
-- `GET /api/articles` - Hent alle artikler
-- `POST /api/scrape` - Start scraper
-- `GET /api/scraper/status` - Scraper status
-- `GET /api/statistics` - Artikel statistikker
+### 1. Scraping
+```bash
+cd scraper
+python update_all_data.py
+```
+
+### 2. Kategorisering
+```bash
+python tagging/content_tagger.py
+```
+
+### 3. Konsolidering
+```bash
+python build_articles.py
+```
+
+### 4. Frontend Integration
+- Data læses fra `src/data/articles.json`
+- Søgning og filtrering sker client-side
+- Pagination håndteres i React
 
 ## 📁 Projekt struktur
 
@@ -106,19 +124,48 @@ mine-penge/
 ├── src/                    # Frontend
 │   ├── components/         # React komponenter
 │   │   ├── ArticleCard.jsx
+│   │   ├── SearchBar.jsx   # Dedikeret søgekomponent
 │   │   ├── FilterBar.jsx
 │   │   ├── Navigation.jsx
-│   │   └── Sidebar.jsx
+│   │   ├── Sidebar.jsx
+│   │   ├── Footer.jsx
+│   │   ├── UserFeedback.jsx
+│   │   ├── EmbeddableWidget.jsx
+│   │   └── ScrollToTopButton.jsx
+│   ├── pages/             # Side komponenter
+│   │   ├── SEODashboard.jsx
+│   │   ├── EmbedWidget.jsx
+│   │   ├── LandingPageGenerator.jsx
+│   │   ├── QAFeedGenerator.jsx
+│   │   └── InternalLinkStructure.jsx
 │   ├── data/              # Data filer
-│   │   └── articles.json
+│   │   ├── articles.json  # Konsolideret artikel data
+│   │   └── test_articles.json
 │   ├── services/          # Service lag
 │   │   └── articleService.js
 │   └── App.jsx           # Hoved app
-├── backend/               # Python backend
-│   ├── main.py           # FastAPI server
-│   ├── scraper.py        # Web scraper
-│   ├── requirements.txt  # Python dependencies
-│   └── README.md         # Backend dokumentation
+├── scraper/               # Python scraper suite
+│   ├── scrapers/         # Individuelle scrapers
+│   │   ├── scraperMoneypenny.py
+│   │   ├── scraperNordNet.py
+│   │   ├── scraperBudgetNoerd.py
+│   │   ├── scraperUngMedPenge.py
+│   │   └── scraperMitteldorfDK.py
+│   ├── data/             # Scraped data
+│   │   ├── *.json        # Raw scraped data
+│   │   └── tagged/       # Kategoriseret data
+│   ├── tagging/          # AI kategorisering
+│   │   ├── content_tagger.py
+│   │   ├── test_tagger.py
+│   │   └── tag_config.json
+│   ├── build_articles.py # Data konsolidering
+│   ├── update_all_data.py
+│   ├── requirements.txt
+│   └── README.md
+├── public/               # Statiske filer
+│   ├── widget.css
+│   ├── widget.js
+│   └── index.html
 └── README.md             # Hoved dokumentation
 ```
 
@@ -134,36 +181,36 @@ mine-penge/
 
 ## 🚀 Brug af systemet
 
-### 1. Start begge servere
+### 1. Start frontend
 ```bash
-# Terminal 1 - Frontend
 npm run dev
-
-# Terminal 2 - Backend  
-cd backend
-python main.py
 ```
+Åbn `http://localhost:5173`
 
-### 2. Scrape artikler
-- Klik "Start Scraper" knappen i frontend
-- Eller kald API'et direkte: `POST /api/scrape`
+### 2. Opdater artikel data
+```bash
+cd scraper
+python update_all_data.py
+python build_articles.py
+```
 
 ### 3. Filtrer og søg
 - Brug filtrene i sidebar
-- Søg i søgefeltet
-- Gem favoritter
+- Søg i søgefeltet (Enter eller søgeknap)
+- Naviger med pagination
 
 ## 🔧 Udvikling
 
 ### Tilføj ny kilde
-1. Tilføj konfiguration i `backend/scraper.py`
-2. Test med `python scraper.py`
+1. Opret ny scraper i `scraper/scrapers/`
+2. Tilføj til `update_all_data.py`
+3. Test med `python update_all_data.py`
 
-### Tilføj nye søgeord
-Rediger `danish_keywords` i `ArticleScraper.__init__()`
+### Tilføj nye tags
+Rediger `scraper/tagging/tag_config.json`
 
 ### Tilføj nye filtre
-Opdater `FilterBar.jsx` og `App.jsx`
+Opdater `src/components/Sidebar.jsx` og `src/App.jsx`
 
 ## ⚙️ Miljøvariabler
 
@@ -176,17 +223,19 @@ VITE_API_URL=http://localhost:8000
 
 ## 🐛 Fejlfinding
 
-### CORS fejl
-Sørg for at backend kører og CORS er konfigureret
+### Frontend problemer
+- Tjek at `src/data/articles.json` eksisterer
+- Verificer at alle dependencies er installeret
+- Tjek browser console for fejl
 
-### Scraping fejl  
+### Scraping problemer
 - Tjek internetforbindelse
 - Nogle sites kan blokere requests
-- Prøv at ændre User-Agent
+- Prøv at ændre User-Agent i scrapers
 
-### Frontend kan ikke forbinde
-- Tjek at backend kører på port 8000
-- Tjek CORS konfiguration
+### Søgeproblemer
+- Søgning aktiveres med Enter eller søgeknap
+- Tjek at artikler har korrekt data struktur
 
 ## 📦 Deployment
 
@@ -196,13 +245,45 @@ npm run build
 # Deploy dist/ mappen
 ```
 
-### Backend
+### Data opdatering
 ```bash
-# Deploy til server med Python 3.8+
-pip install -r requirements.txt
-python main.py
+cd scraper
+python update_all_data.py
+python build_articles.py
+# Kopier articles.json til src/data/
 ```
+
+## 📊 Nuværende Status
+
+### ✅ Implementeret
+- 5 aktive blog scrapers
+- AI-drevet kategorisering med 17 tag-kategorier
+- Avanceret søgefunktionalitet
+- Pagination og filtrering
+- Responsivt design
+- Data konsolidering
+- Modulær komponent struktur
+
+### 🚧 I udvikling
+- Login system
+- Brugerprofiler
+- Personaliserede feeds
+- E-mail nyhedsbrev
+
+### 📈 Statistikker
+- **5 blog kilder** aktivt scraped
+- **17 tag-kategorier** for præcis kategorisering
+- **6 målgrupper** for personlig indholdsvisning
+- **3 kompleksitetsniveauer** for tilpasset indhold
+
+## 🤝 Bidrag
+
+1. Fork projektet
+2. Opret feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit ændringer (`git commit -m 'Add some AmazingFeature'`)
+4. Push til branch (`git push origin feature/AmazingFeature`)
+5. Åbn Pull Request
 
 ## 📄 Licens
 
-Privat projekt
+Dette projekt er under udvikling for minepenge.dk

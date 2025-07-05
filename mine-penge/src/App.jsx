@@ -150,10 +150,6 @@ function App() {
     }
   };
 
-
-
-
-
   const handlePageChange = (newPage) => {
     // Update articles for new page
     if (selectedTopics.includes('Alle tags')) {
@@ -254,43 +250,77 @@ function App() {
 
   const HomePage = () => (
     <div className="min-h-screen bg-nordic-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-4 lg:py-6">
         {/* Header */}
-        <div className="mb-4 sm:mb-6 lg:mb-8">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-nordic-900 mb-3 sm:mb-4 leading-tight">
+        <div className="mb-3 sm:mb-4 lg:mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-nordic-900 mb-2 sm:mb-3 leading-tight">
             Velkommen
           </h1>
-          <p className="text-xl sm:text-2xl lg:text-3xl font-serif font-medium text-primary-600 mb-2 sm:mb-3">
+          <p className="text-xl sm:text-2xl lg:text-3xl font-serif font-medium text-primary-600 mb-1 sm:mb-2">
             & MinePenge
           </p>
-          <p className="text-base sm:text-lg lg:text-xl font-modern font-light text-nordic-500 mt-3 sm:mt-4 italic">
+          <p className="text-base sm:text-lg lg:text-xl font-modern font-light text-nordic-500 mt-2 sm:mt-3 italic">
             Fordi det er meget mere end bare økonomi
           </p>
         </div>
 
-        {/* Statistics */}
-        {statistics.totalArticles > 0 && (
-          <div className="bg-white rounded-lg p-4 mb-6 shadow-sm">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-              <div>
-                <div className="text-2xl font-bold text-primary-600">{statistics.totalArticles}</div>
-                <div className="text-sm text-gray-600">Artikler</div>
+        {/* Stats */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-4 sm:mb-6">
+          <div className="bg-white rounded-lg p-3 sm:p-4 text-center shadow-sm">
+            <div className="text-2xl sm:text-3xl font-bold text-primary-600">{statistics.totalArticles || articles.length}</div>
+            <div className="text-sm sm:text-base text-nordic-600">Artikler</div>
+          </div>
+          <div className="bg-white rounded-lg p-3 sm:p-4 text-center shadow-sm">
+            <div className="text-2xl sm:text-3xl font-bold text-primary-600">{statistics.sources?.length || 5}</div>
+            <div className="text-sm sm:text-base text-nordic-600">Kilder</div>
+          </div>
+          <div className="bg-white rounded-lg p-3 sm:p-4 text-center shadow-sm">
+            <div className="text-2xl sm:text-3xl font-bold text-primary-600">{statistics.availableTags || availableTags.length}</div>
+            <div className="text-sm sm:text-base text-nordic-600">Tags</div>
+          </div>
+          <div className="bg-white rounded-lg p-3 sm:p-4 text-center shadow-sm">
+            <div className="text-2xl sm:text-3xl font-bold text-primary-600">{pagination.totalPages || 1}</div>
+            <div className="text-sm sm:text-base text-nordic-600">Sider</div>
+          </div>
+        </div>
+
+
+
+
+
+        {/* How to use section */}
+        <div className="bg-white rounded-lg p-6 mb-6 shadow-sm">
+          <h2 className="text-2xl font-bold text-nordic-900 mb-4">Sådan bruger du MinePenge</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="bg-primary-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                <span className="text-primary-600 font-bold text-lg">1</span>
               </div>
-              <div>
-                <div className="text-2xl font-bold text-primary-600">{statistics.sources?.length || 0}</div>
-                <div className="text-sm text-gray-600">Kilder</div>
+              <h3 className="font-semibold text-nordic-900 mb-2">Søg og find</h3>
+              <p className="text-sm text-nordic-700">
+                Brug søgefeltet til at finde artikler om specifikke emner som "budget", "investering" eller "pension"
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="bg-primary-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                <span className="text-primary-600 font-bold text-lg">2</span>
               </div>
-              <div>
-                <div className="text-2xl font-bold text-primary-600">{statistics.availableTags || 0}</div>
-                <div className="text-sm text-gray-600">Tags</div>
+              <h3 className="font-semibold text-nordic-900 mb-2">Filtrer efter interesse</h3>
+              <p className="text-sm text-nordic-700">
+                Brug sidebar-filtrene til at finde indhold tilpasset din situation og kompleksitetsniveau
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="bg-primary-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                <span className="text-primary-600 font-bold text-lg">3</span>
               </div>
-              <div>
-                <div className="text-2xl font-bold text-primary-600">{pagination.totalPages}</div>
-                <div className="text-sm text-gray-600">Sider</div>
-              </div>
+              <h3 className="font-semibold text-nordic-900 mb-2">Læs og lær</h3>
+              <p className="text-sm text-nordic-700">
+                Klik på artiklerne for at læse fuldt indhold og få praktiske råd til din økonomi
+              </p>
             </div>
           </div>
-        )}
+        </div>
 
         {/* Search */}
         <SearchBar onSearch={handleSearch} />

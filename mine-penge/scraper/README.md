@@ -191,6 +191,109 @@ Systemet analyserer artikel indhold og:
 - **`confidence_scores`**: Numeriske scores for hver målgruppe (0.0-1.0)
 - **`original_data`**: Bevarer alle oprindelige data for bagudkompatibilitet
 
+## 🔄 Data Konsolidering
+
+### `build_articles.py` - Hovedscript
+Konsoliderer alle taggede artikler til en enkelt JSON-fil til brug i frontend.
+
+**Funktioner:**
+- Læser alle taggede JSON-filer fra `data/tagged/`
+- Kombinerer artikler fra alle kilder
+- Sorterer artikler efter dato (nyeste først)
+- Fjerner duplikater baseret på URL
+- Genererer `articles.json` til frontend brug
+- Opretter detaljerede rapporter
+
+### Output Format
+```json
+{
+  "metadata": {
+    "total_articles": 847,
+    "sources": ["Moneypenny", "Nordnet", "Budgetnoerden", "Ungmedpenge", "Mitteldorf"],
+    "date_range": "2020-01-01 to 2025-01-15",
+    "built_at": "2025-01-15T10:30:00",
+    "tag_categories": ["Bolig & Ejendom", "Investering & Aktier", ...],
+    "target_audiences": ["studerende", "børnefamilier", ...]
+  },
+  "articles": [
+    {
+      "article_id": "unique_id",
+      "title": "Artikel titel",
+      "source": "Blog navn",
+      "url": "artikel URL",
+      "summary": "Kort resume...",
+      "target_audiences": ["målgruppe1", "målgruppe2"],
+      "complexity_level": "begynder",
+      "minepenge_tags": ["tag1", "tag2"],
+      "tag_categories": ["Kategori1", "Kategori2"],
+      "date_published": "2025-01-15",
+      "word_count": 1234
+    }
+  ]
+}
+```
+
+## 🚀 Brug af Scraper Suite
+
+### Komplet workflow
+```bash
+# 1. Installer dependencies
+pip install -r requirements.txt
+
+# 2. Kør alle scrapers
+python update_all_data.py
+
+# 3. Kategoriser artikler
+python tagging/content_tagger.py
+
+# 4. Konsolider data
+python build_articles.py
+
+# 5. Kopier til frontend (manuelt)
+cp articles.json ../src/data/
+```
+
+### Individuelle scripts
+```bash
+# Kun kør scrapers
+python update_all_data.py
+
+# Kun kategoriser
+python tagging/content_tagger.py
+
+# Kun konsolider
+python build_articles.py
+
+# Test tagging på enkelt fil
+python tagging/test_tagger.py
+```
+
+## 📊 Nuværende Status
+
+### ✅ Implementeret
+- **5 aktive blog scrapers** med stabil funktionalitet
+- **AI-drevet kategorisering** med 17 tag-kategorier
+- **Automatisk målgruppe-tildeling** med confidence scores
+- **Kompleksitetsanalyse** (begynder/mellem/avanceret)
+- **Data konsolidering** til frontend brug
+- **Detaljerede rapporter** for kvalitetskontrol
+- **Modulær arkitektur** for nem udvidelse
+
+### 📈 Statistikker
+- **5 blog kilder** aktivt scraped
+- **17 tag-kategorier** for præcis kategorisering
+- **6 målgrupper** for personlig indholdsvisning
+- **3 kompleksitetsniveauer** for tilpasset indhold
+- **~800+ artikler** i konsolideret database
+
+### 🔧 Tekniske detaljer
+- **Python 3.9+** kompatibilitet
+- **JSON-baseret** data storage
+- **Modulær scraper** arkitektur
+- **Konfigurerbar tagging** via `tag_config.json`
+- **Automatisk duplikat-fjernelse**
+- **Dato-baseret sortering**
+
 ## 🌐 Integration til minepenge.dk
 
 Den kategoriserede data integreres i minepenge.dk for at:
@@ -198,399 +301,76 @@ Den kategoriserede data integreres i minepenge.dk for at:
 - **Anbefale relevante artikler** til forskellige målgrupper
 - **Filtrere indhold** efter kompleksitetsniveau og tags
 - **Oprette målgruppespecifikke sektioner** (fx "For studerende", "Investering for begyndere")
-- **Tag-baseret navigation** gennem de 17 hovedkategorier
 
-### Content Mapping Eksempler
+### Frontend Integration
+- Data læses fra `src/data/articles.json`
+- Søgning og filtrering sker client-side
+- Pagination håndteres i React
+- Dynamisk sidebar baseret på faktisk data
 
-| Blog Indhold | Detekterede Tags | Målgruppe | Kompleksitet |
-|--------------|------------------|-----------|--------------|
-| "Aktiesparekonto for begyndere" | `investering`, `aktiesparekonto` | Nybegynder investering | Begynder |
-| "Budget på SU" | `su`, `budget`, `studielån` | Studerende | Begynder |
-| "Børneopsparing og skat" | `børneopsparing`, `skat`, `familieøkonomi` | Børnefamilier | Begynder |
-| "Pensionstyper guide" | `pension`, `pensionstyper` | Pensionist, Voksne | Mellem |
-| "Boliglån tips" | `boliglån`, `gæld`, `bolig` | Voksne, Familier | Begynder |
+## 🔧 Udvikling
 
-### Workflow
-```
-Blogs → Scrapeers → Raw JSON → Content Tagger → Tagged JSON → minepenge.dk API → Website
-```
+### Tilføj ny scraper
+1. Opret ny fil i `scrapers/` mappen
+2. Følg eksisterende struktur og output format
+3. Tilføj til `update_all_data.py`
+4. Test med `python update_all_data.py`
 
-## 📁 Projekt Struktur
+### Tilføj nye tags
+1. Rediger `tagging/tag_config.json`
+2. Tilføj nye nøgleord og kategorier
+3. Test med `python tagging/test_tagger.py`
 
-```
-/
-├── update_all_data.py            # Master script - opdaterer alt data (standard)
-├── update_all_data_realtime.py   # Master script - opdaterer alt data (real-time)
-├── scrapers/                     # Blog scraper scripts
-│   ├── scraperMoneypenny.py      # Moneypenny blog scraper
-│   ├── scraperNordNet.py         # Nordnet blog scraper
-│   ├── scraperBudgetNoerd.py     # Budgetnoerden blog scraper
-│   ├── scraperUngMedPenge.py     # Ungmedpenge blog scraper
-│   └── scraperMitteldorfDK.py    # Mitteldorf blog scraper
-├── tagging/                      # Tagging scripts og konfiguration
-│   ├── content_tagger.py         # Automatisk kategorisering og tagging
-│   ├── test_tagger.py            # Test script for tagging system
-│   └── tag_config.json           # Konfiguration for tagging system
-├── data/                         # Scraped data output
-│   ├── moneypenny_blog_posts.json
-│   ├── nordnet_blog_posts.json
-│   ├── budgetnoerden_blog_posts.json
-│   ├── ungmedpenge_blog_posts.json
-│   ├── mitteldorf_blog_posts.json
-│   └── articles.json
-├── data/tagged/                  # Tagged data output
-│   ├── tagged_moneypenny_blog_posts.json
-│   ├── tagged_nordnet_blog_posts.json
-│   ├── tagged_budgetnoerden_blog_posts.json
-│   ├── tagged_ungmedpenge_blog_posts.json
-│   ├── tagged_mitteldorf_blog_posts.json
-│   ├── tagging_report.json       # Detaljeret rapport over tagging
-│   ├── update_report.json        # Rapport over data opdatering
-│   └── test_result.json          # Test resultat
-└── README.md
-```
+### Opdater kategorisering
+1. Modificer `tagging/content_tagger.py`
+2. Test på enkelt fil først
+3. Kør på alle data
 
-## 🚀 Installation og Brug
+## 🐛 Fejlfinding
 
-### Krav
+### Scraping problemer
+- Tjek internetforbindelse
+- Nogle sites kan blokere requests
+- Prøv at ændre User-Agent i scrapers
+- Verificer at HTML struktur ikke er ændret
+
+### Tagging problemer
+- Tjek `tag_config.json` syntax
+- Verificer at input JSON-filer er korrekte
+- Test på enkelt fil først med `test_tagger.py`
+
+### Konsolidering problemer
+- Sørg for at alle taggede filer eksisterer
+- Tjek JSON syntax i alle filer
+- Verificer at `articles.json` bliver genereret korrekt
+
+## 📦 Deployment
+
+### Produktionsmiljø
 ```bash
-pip install requests beautifulsoup4 lxml pandas scikit-learn nltk newspaper3k dateparser langdetect lxml_html_clean
-```
-
-## 🔄 Opdatering af Alt Data
-
-### Automatisk Opdatering (Anbefalet)
-Kør dette ene script for at opdatere alt data i korrekt rækkefølge:
-
-#### Real-time Version (Anbefalet)
-```bash
-python update_all_data_realtime.py
-```
-- Viser output fra alle scrapers mens de kører
-- Du kan følge processen i real-time
-- Ingen "hængende" følelse - du ser alt output
-
-#### Standard Version
-```bash
+# Automatiseret workflow
 python update_all_data.py
-```
-- Kører alle scripts i baggrunden
-- Viser kun status når hver scraper er færdig
-
-### Hvad Master Scriptet Gør
-**Begge scripts vil automatisk:**
-1. ✅ Køre alle scraper scripts i korrekt rækkefølge:
-   - Moneypenny → Nordnet → Budgetnoerden → Ungmedpenge → Mitteldorf
-2. 🔍 Tjekke for dubletter i alle JSON filer
-3. 🏷️ Køre automatisk tagging på alle opdaterede filer
-4. 📊 Generere en samlet rapport med statistikker
-5. 📄 Gemme rapport i `data/tagged/update_report.json`
-
-### Eksempel Output
-```
-🚀 MINE PENGE DATA UPDATER - REAL-TIME VERSION
-============================================================
-📊 Scraping resultat: 5/5 succesfulde
-🔍 Tjekker for dubletter...
-✅ Ingen dubletter fundet
-🏷️ Starter automatisk tagging...
-✅ Tagging kørt succesfuldt
-📊 Total artikler opdateret: 706
-🎉 Alt data er nu opdateret og klar til brug!
-```
-
-### Manuel Opdatering
-Hvis du vil køre scripts individuelt:
-
-#### Kør Scrapeers
-```bash
-# Hent data fra alle blogger (kør i denne rækkefølge)
-python scrapers/scraperMoneypenny.py
-python scrapers/scraperNordNet.py
-python scrapers/scraperBudgetNoerd.py
-python scrapers/scraperUngMedPenge.py
-python scrapers/scraperMitteldorfDK.py
-```
-
-#### Kør Content Tagger
-```bash
-# Test tagging system på en enkelt fil
-python tagging/test_tagger.py
-
-# Kør automatisk tagging på alle JSON-filer
 python tagging/content_tagger.py
+python build_articles.py
+
+# Kopier til frontend
+cp articles.json ../src/data/
 ```
 
-### Output og Rapporter
-
-#### Raw JSON-filer
-Gemmes i `data/` mappen:
-- `data/moneypenny_blog_posts.json`
-- `data/nordnet_blog_posts.json`
-- `data/budgetnoerden_blog_posts.json`
-- `data/ungmedpenge_blog_posts.json`
-- `data/mitteldorf_blog_posts.json`
-
-#### Taggede JSON-filer
-Gemmes i `data/tagged/` mappen:
-- `data/tagged/tagged_moneypenny_blog_posts.json`
-- `data/tagged/tagged_nordnet_blog_posts.json`
-- `data/tagged/tagged_budgetnoerden_blog_posts.json`
-- `data/tagged/tagged_ungmedpenge_blog_posts.json`
-- `data/tagged/tagged_mitteldorf_blog_posts.json`
-
-#### Automatisk Genererede Rapporter
-- `data/tagged/tagging_report.json` - Detaljeret rapport over tagging processen
-- `data/tagged/update_report.json` - Samlet rapport over data opdatering
-- `data/tagged/test_result.json` - Test resultat fra test_tagger.py
-
-### Rapport Indhold
-
-#### `update_report.json` - Master Opdateringsrapport
-```json
-{
-  "update_timestamp": "2025-07-05T16:10:36.273",
-  "scrapers_run": ["scraperMoneypenny.py", "scraperNordNet.py", ...],
-  "files_updated": [
-    {"filename": "mitteldorf_blog_posts.json", "articles": 214},
-    {"filename": "moneypenny_blog_posts.json", "articles": 103}
-  ],
-  "tagged_files": ["tagged_mitteldorf_blog_posts.json", ...],
-  "total_articles": 706
-}
+### Cron job eksempel
+```bash
+# Kør dagligt kl 06:00
+0 6 * * * cd /path/to/scraper && python update_all_data.py && python tagging/content_tagger.py && python build_articles.py
 ```
 
-#### `tagging_report.json` - Detaljeret Tagging Rapport
-```json
-{
-  "tagged_at": "2025-07-05T16:10:36.273",
-  "total_articles_processed": 706,
-  "complexity_distribution": {
-    "begynder": 634,
-    "mellem": 69,
-    "avanceret": 3
-  },
-  "top_target_audiences": {
-    "studerende": 412,
-    "nybegynder_investering": 353
-  },
-  "top_tags": {
-    "investering": 581,
-    "aktier": 431
-  }
-}
-```
+## 🤝 Bidrag
 
-## 📊 Tagging Statistikker
+1. Fork projektet
+2. Opret feature branch
+3. Test ændringer grundigt
+4. Opdater dokumentation
+5. Åbn Pull Request
 
-### Seneste Kørsel (706 artikler behandlet)
-- **Kompleksitetsfordeling:**
-  - Begynder: 634 artikler (90%)
-  - Mellem: 69 artikler (10%)
-  - Avanceret: 3 artikler (<1%)
+## 📄 Licens
 
-- **Top målgrupper:**
-  - Studerende: 412 artikler
-  - Nybegynder investering: 353 artikler
-  - Lavindkomstgrupper: 346 artikler
-  - Økonomi nybegynder: 298 artikler
-
-- **Top tags:**
-  - Investering: 581 artikler
-  - Aktier: 431 artikler
-  - SU: 411 artikler
-  - Afkast: 313 artikler
-  - Bank: 300 artikler
-
-## 🔧 Konfiguration
-
-### tag_config.json
-Konfigurerbar fil med alle tags, målgrupper og indstillinger:
-
-```json
-{
-  "tag_categories": {
-    "Bolig & Ejendom": ["bolig", "huskøb", "lejebolig", ...],
-    "Investering & Aktier": ["investering", "fonde", "aktiesparekonto", ...]
-  },
-  "target_audiences": {
-    "studerende": ["su", "studielån", "studerende", ...],
-    "børnefamilier": ["børn", "familie", "børneopsparing", ...]
-  },
-  "settings": {
-    "confidence_threshold": 0.3,
-    "max_tags_per_article": 10,
-    "max_audiences_per_article": 3,
-    "min_word_count": 50
-  }
-}
-```
-
-## 📈 Tag Mapping Eksempler
-
-### Blog → Tag Mapping
-
-**Moneypenny artikel: "Sådan får du månedligt udbytte med REITs"**
-- **Tags**: `investering`, `fonde`, `danske aktier`, `udbytte`
-- **Kategori**: Investering & Aktier
-- **Målgruppe**: Nybegynder investering
-- **Kompleksitet**: Begynder
-
-**Budgetnoerden artikel: "Zero-based budget guide"**
-- **Tags**: `budget`, `rådgivning`, `sparertips`
-- **Kategori**: Rådgivning, Forbrug
-- **Målgruppe**: Økonomi nybegyndere
-- **Kompleksitet**: Begynder
-
-**Ungmedpenge artikel: "Budget for studerende"**
-- **Tags**: `su`, `budget`, `studielån`
-- **Kategori**: SU & Studerende, Rådgivning
-- **Målgruppe**: Studerende
-- **Kompleksitet**: Begynder
-
-## 🔄 Fremtidige Udvidelser
-
-- Integration af flere danske økonomiblogger
-- Machine learning forbedring af tag-kategorisering
-- Real-time indholdsanbefaling baseret på bruger-tags
-- Automatisk opdatering af tag-konfidence scores
-- A/B testing af tag-relevans for forskellige målgrupper
-- API integration til minepenge.dk
-- Avanceret NLP-analyse for bedre tag-identifikation
-- Automatisk kvalitetsvurdering af artikler
-- Integration med sociale medier for trending emner
-
-## 📞 Support
-
-For spørgsmål om projektet eller tag-integration, kontakt udviklingsteamet på minepenge.dk
-
-## ⚠️ Vigtige Noter
-
-- Alle scrapeers respekterer robots.txt og bruger forsigtige delays mellem requests
-- Data gemmes automatisk i `data/` mappen
-- Taggede data gemmes i `data/tagged/` mappen
-- Scrapeers inkluderer fallback-metoder for robust data-ekstraktion
-- Alle scripts er konfigureret til dansk sprog og danske finansblogs
-- Content tagger bevarer oprindelige JSON-filer og opretter nye taggede versioner
-- Konfiguration kan nemt tilpasses via `tag_config.json`
-
-## 🔍 Dublet-Prevention
-
-Systemet inkluderer automatisk dublet-detektering:
-
-### Hvordan det virker:
-- **URL-baseret tjek**: Systemet tjekker for identiske URLs i hver JSON fil
-- **Automatisk advarsel**: Dubletter rapporteres i loggene under opdatering
-- **Ingen automatisk fjernelse**: Dubletter fjernes ikke automatisk for at bevare data integritet
-- **Manuel håndtering**: Dubletter skal fjernes manuelt hvis nødvendigt
-
-### Dublet-rapportering:
-```
-🔍 Tjekker for dubletter...
-✅ moneypenny_blog_posts.json: Ingen dubletter
-⚠️ mitteldorf_blog_posts.json: 3 dubletter fundet
-✅ nordnet_blog_posts.json: Ingen dubletter
-```
-
-### Håndtering af dubletter:
-1. **Identificer kilden**: Tjek hvilken scraper der skaber dubletter
-2. **Analyser årsagen**: Ofte skyldes dubletter i scraper-logikken
-3. **Fix scraper**: Opdater scraper scriptet for at undgå dubletter
-4. **Kør igen**: Kør `update_all_data.py` igen efter rettelse 
-
-## 🗂️ Mappestruktur og filplacering
-
-Projektet er organiseret i følgende mapper for at gøre det let at finde og vedligeholde de forskellige komponenter:
-
-- **scrapers/**
-  - Indeholder alle scraper-scripts, ét for hver blog.
-  - Eksempel: `scrapers/scraperMoneypenny.py`, `scrapers/scraperNordNet.py` osv.
-  - Formål: Alt der henter/indsamler data fra eksterne kilder.
-
-- **tagging/**
-  - Indeholder scripts og konfiguration til automatisk kategorisering og tagging.
-  - Eksempel: `tagging/content_tagger.py`, `tagging/test_tagger.py`, `tagging/tag_config.json`
-  - Formål: Alt der har med analyse, kategorisering og tagging af data at gøre.
-
-- **data/**
-  - Indeholder alle outputdata fra scrapers og tagging.
-  - Rå JSON-data fra scrapers gemmes direkte i denne mappe.
-  - Taggede JSON-filer og rapporter gemmes i `data/tagged/`.
-  - Formål: Al outputdata, både rå og taggede versioner.
-
-- **Rodmappen**
-  - Indeholder kun dokumentation og evt. overordnet projektstyring.
-  - Eksempel: `README.md`
-
-Denne struktur sikrer, at kode, konfiguration og data er adskilt og let at navigere for både udviklere og brugere af projektet.
-
-## 📝 Om tag_config.json
-
-`tag_config.json` er en central konfigurationsfil, der styrer hvordan det automatiske tagging- og kategoriseringssystem arbejder. Den gør det nemt at tilpasse og udvide systemet uden at ændre i selve Python-koden.
-
-### Struktur og felter
-
-**1. "tag_categories"**
-- Definerer alle de tags, der kan tildeles artikler, grupperet i overordnede kategorier.
-- Eksempel:
-  ```json
-  "tag_categories": {
-    "Investering & Aktier": ["investering", "aktier", "etf", "udbytte"],
-    "Bolig & Ejendom": ["bolig", "huskøb", "lejebolig"]
-  }
-  ```
-- Brug: Når en artikel indeholder et af ordene fra listen, tildeles det relevante tag og kategori.
-
-**2. "target_audiences"**
-- Definerer de målgrupper, som artikler kan være relevante for, samt nøgleord der indikerer relevans.
-- Eksempel:
-  ```json
-  "target_audiences": {
-    "studerende": ["su", "studielån", "universitet"],
-    "børnefamilier": ["børn", "familie", "børneopsparing"]
-  }
-  ```
-- Brug: Systemet beregner en "confidence score" for hver målgruppe baseret på hvor mange af nøgleordene der optræder i artiklen.
-
-**3. "complexity_indicators"** (valgfri)
-- Bruges til at vurdere om en artikel er for begyndere eller avancerede brugere, baseret på ordvalg.
-- Eksempel:
-  ```json
-  "complexity_indicators": {
-    "begynder": ["grundlæggende", "let", "guide"],
-    "avanceret": ["avanceret", "ekspert", "tekniske termer"]
-  }
-  ```
-
-**4. "technical_terms"** (valgfri)
-- Liste over tekniske termer, der bruges til at vurdere kompleksitet.
-
-**5. "settings"**
-- Styrer hvordan tagging-algoritmen arbejder.
-- Felter:
-  - `confidence_threshold`: Minimum score for at en målgruppe tildeles.
-  - `max_tags_per_article`: Maksimalt antal tags pr. artikel.
-  - `max_audiences_per_article`: Maksimalt antal målgrupper pr. artikel.
-  - `min_word_count`: Minimum antal ord for at en artikel behandles.
-- Eksempel:
-  ```json
-  "settings": {
-    "confidence_threshold": 0.3,
-    "max_tags_per_article": 10,
-    "max_audiences_per_article": 3,
-    "min_word_count": 50
-  }
-  ```
-
-### Hvordan bruges filen?
-Når du kører tagging-systemet, indlæses `tag_config.json` automatisk. Du kan:
-- Tilføje nye tags eller kategorier
-- Justere hvilke ord der matcher hvilke målgrupper
-- Finjustere hvor mange tags/målgrupper der må tildeles
-- Tilpasse hvor "strengt" systemet skal være
-
-**Fordel:**
-Du kan ændre tagging-logikken uden at røre Python-koden – kun ved at redigere denne ene fil!
-
-**Kort sagt:**
-`tag_config.json` er hjernen bag det fleksible og automatiske tagging-system. Den gør det nemt at tilpasse, udvide og styre hvordan artikler kategoriseres og tagges i hele projektet. 
+Dette projekt er under udvikling for minepenge.dk 

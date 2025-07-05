@@ -5,10 +5,10 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [] }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedCategories, setExpandedCategories] = useState({
     'Alle tags': true,
-    'Økonomi': true,
-    'Livsstil': true,
-    'Niveau': true,
-    'Andre': true
+    'Økonomi': false,
+    'Livsstil': false,
+    'Niveau': false,
+    'Andre': false
   });
 
   // Kategoriser tags automatisk baseret på tag-navne
@@ -87,6 +87,58 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [] }) {
   return (
     <aside className="w-full lg:w-64 bg-nordic-100 shadow-soft lg:border-r border-nordic-200 p-4 lg:p-6">
       <div className="mb-4 lg:mb-6">
+        {/* MinePenge beskrivelse */}
+        <div className="bg-gradient-to-br from-primary-50 to-nordic-50 rounded-lg p-4 mb-4 shadow-sm border border-primary-100">
+          <div className="flex items-center mb-2">
+            <div className="bg-primary-600 rounded-full p-1.5 mr-2">
+              <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 className="text-sm text-nordic-900">Hvad er MinePenge?</h3>
+          </div>
+          
+          <p className="text-xs text-nordic-700 mb-3 leading-relaxed">
+            Din guide til dansk privatøkonomi. Vi samler de bedste artikler fra Danmarks 
+            førende økonomiblogger på ét sted.
+          </p>
+          
+          <div className="bg-white rounded-md p-2 border border-primary-100">
+            <h4 className="text-xs text-nordic-900 mb-2 flex items-center">
+              <svg className="w-3 h-3 text-primary-600 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Hvad kan du bruge det til?
+            </h4>
+            <ul className="space-y-1.5">
+              <li className="flex items-start group">
+                <div className="bg-primary-100 rounded-full p-0.5 mr-2 mt-0.5 group-hover:bg-primary-200 transition-colors">
+                  <svg className="w-2.5 h-2.5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <span className="text-xs text-nordic-700 group-hover:text-nordic-900 transition-colors">Find artikler tilpasset din situation</span>
+              </li>
+              <li className="flex items-start group">
+                <div className="bg-primary-100 rounded-full p-0.5 mr-2 mt-0.5 group-hover:bg-primary-200 transition-colors">
+                  <svg className="w-2.5 h-2.5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <span className="text-xs text-nordic-700 group-hover:text-nordic-900 transition-colors">Søg efter specifikke emner</span>
+              </li>
+              <li className="flex items-start group">
+                <div className="bg-primary-100 rounded-full p-0.5 mr-2 mt-0.5 group-hover:bg-primary-200 transition-colors">
+                  <svg className="w-2.5 h-2.5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <span className="text-xs text-nordic-700 group-hover:text-nordic-900 transition-colors">Hold dig opdateret med de seneste trends</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <h2 className="text-base lg:text-lg font-semibold text-nordic-900 mb-3 lg:mb-4 flex items-center">
           <Tag className="h-4 w-4 lg:h-5 lg:w-5 mr-2 text-primary-600" />
           Tags
