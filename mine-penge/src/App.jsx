@@ -5,16 +5,34 @@ import Sidebar from './components/Sidebar';
 import ArticleCard from './components/ArticleCard';
 import SearchBar from './components/SearchBar';
 import Footer from './components/Footer';
+import SEOHead from './components/SEOHead';
 import SEODashboard from './pages/SEODashboard';
 import LandingPageGenerator from './pages/LandingPageGenerator';
 import QAFeedGenerator from './pages/QAFeedGenerator';
 import InternalLinkStructure from './pages/InternalLinkStructure';
 import EmbedWidget from './pages/EmbedWidget';
+import OmOs from './pages/OmOs';
+import Kontakt from './pages/Kontakt';
 import CurationPanel from './components/CurationPanel';
 import { fetchArticles, searchArticles, getArticlesByFilter, getStatistics, getAvailableFilters } from './services/articleService';
 import curationService from './services/curationService';
 import ScrollToTopButton from './components/ScrollToTopButton';
+import RelatedArticles from './components/RelatedArticles';
+import AdSense from './components/AdSense';
+import { getPublisherId, getAdSlot } from './config/adsense';
+import { generateSitemap } from './utils/sitemapGenerator';
 import './index.css';
+
+// Sitemap component
+const Sitemap = () => {
+  const sitemap = generateSitemap();
+  
+  return (
+    <div style={{ whiteSpace: 'pre-wrap', fontFamily: 'monospace' }}>
+      {sitemap}
+    </div>
+  );
+};
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -198,64 +216,25 @@ function App() {
       setPagination(data.pagination || {});
       setStatistics(getStatistics());
       
-      // Get available tags and log for debugging
+      // Get available tags for sidebar
       const filters = getAvailableFilters();
-      console.log('Available filters:', filters);
-      console.log('Available tags:', filters.tags);
-      console.log('Available audiences:', filters.audiences);
-      console.log('Available complexities:', filters.complexities);
+      setAvailableTags(filters.tags || []);
       
-      // Capitalize tags for display and add some common ones
-      const rawTags = filters.tags && filters.tags.length > 0 ? filters.tags : [];
-      const capitalizedTags = rawTags.map(tag => {
-        // Capitalize first letter and handle special cases
-        if (tag === 'opsparing') return 'Opsparing';
-        if (tag === 'investering') return 'Investering';
-        if (tag === 'gæld') return 'Gæld';
-        if (tag === 'budget') return 'Budget';
-        if (tag === 'pension') return 'Pension';
-        if (tag === 'forsikring') return 'Forsikring';
-        if (tag === 'bolig') return 'Bolig';
-        if (tag === 'skatter') return 'Skatter';
-        if (tag === 'børn') return 'Børn & Familie';
-        if (tag === 'studerende') return 'Studerende';
-        if (tag === 'begynder') return 'Begynder';
-        if (tag === 'øvet') return 'Øvet';
-        if (tag === 'avanceret') return 'Avanceret';
-        
-        // General capitalization
-        return tag.charAt(0).toUpperCase() + tag.slice(1);
-      });
-      
-      // Remove duplicates and sort
-      const uniqueTags = [...new Set(capitalizedTags)].sort();
-      
-      setAvailableTags(uniqueTags);
+      setLoading(false);
     } catch (error) {
       console.error('Error loading articles:', error);
-    } finally {
       setLoading(false);
     }
   };
 
   const handlePageChange = (newPage) => {
-    console.log('=== handlePageChange START ===');
-    console.log('Changing to page:', newPage);
-    console.log('Selected topics:', selectedTopics);
-    
     setPagination(prev => ({ ...prev, currentPage: newPage }));
-    
-    // Let useEffect handle the filtering by calling showCurrentPageArticles
-    console.log('=== handlePageChange END ===');
   };
 
-  // Handle blacklist updates
   const handleBlacklistUpdate = () => {
-    // Refresh articles when blacklist changes
+    // Reload articles to reflect blacklist changes
     showCurrentPageArticles();
   };
-
-
 
   const PaginationControls = () => {
     if (pagination.totalPages <= 1) return null;
@@ -333,126 +312,144 @@ function App() {
   };
 
   const HomePage = () => (
-    <div className="min-h-screen bg-nordic-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-4 lg:py-6">
-        {/* Header */}
-        <div className="mb-3 sm:mb-4 lg:mb-6">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-nordic-900 mb-2 sm:mb-3 leading-tight">
-            Velkommen
-          </h1>
-          <p className="text-xl sm:text-2xl lg:text-3xl font-serif font-medium text-primary-600 mb-1 sm:mb-2">
-            & MinePenge
-          </p>
-          <p className="text-base sm:text-lg lg:text-xl font-modern font-light text-nordic-500 mt-2 sm:mt-3 italic">
-            Fordi det er meget mere end bare økonomi
-          </p>
-        </div>
-
-        {/* Stats */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-4 sm:mb-6">
-          <div className="bg-white rounded-lg p-3 sm:p-4 text-center shadow-sm">
-            <div className="text-2xl sm:text-3xl font-bold text-primary-600">{statistics.totalArticles || articles.length}</div>
-            <div className="text-sm sm:text-base text-nordic-600">Artikler</div>
-          </div>
-          <div className="bg-white rounded-lg p-3 sm:p-4 text-center shadow-sm">
-            <div className="text-2xl sm:text-3xl font-bold text-primary-600">{statistics.sources?.length || 5}</div>
-            <div className="text-sm sm:text-base text-nordic-600">Kilder</div>
-          </div>
-          <div className="bg-white rounded-lg p-3 sm:p-4 text-center shadow-sm">
-            <div className="text-2xl sm:text-3xl font-bold text-primary-600">{statistics.availableTags || availableTags.length}</div>
-            <div className="text-sm sm:text-base text-nordic-600">Tags</div>
-          </div>
-          <div className="bg-white rounded-lg p-3 sm:p-4 text-center shadow-sm">
-            <div className="text-2xl sm:text-3xl font-bold text-primary-600">{pagination.totalPages || 1}</div>
-            <div className="text-sm sm:text-base text-nordic-600">Sider</div>
-          </div>
-        </div>
-
-        {/* How to use section */}
-        <div className="bg-white rounded-lg p-6 mb-6 shadow-sm">
-          <h2 className="text-2xl font-bold text-nordic-900 mb-4">Sådan bruger du MinePenge</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="bg-primary-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                <span className="text-primary-600 font-bold text-lg">1</span>
-              </div>
-              <h3 className="font-semibold text-nordic-900 mb-2">Søg og find</h3>
-              <p className="text-sm text-nordic-700">
-                Brug søgefeltet til at finde artikler om specifikke emner som "budget", "investering" eller "pension"
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-primary-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                <span className="text-primary-600 font-bold text-lg">2</span>
-              </div>
-              <h3 className="font-semibold text-nordic-900 mb-2">Filtrer efter interesse</h3>
-              <p className="text-sm text-nordic-700">
-                Brug sidebar-filtrene til at finde indhold tilpasset din situation og kompleksitetsniveau
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-primary-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                <span className="text-primary-600 font-bold text-lg">3</span>
-              </div>
-              <h3 className="font-semibold text-nordic-900 mb-2">Læs og lær</h3>
-              <p className="text-sm text-nordic-700">
-                Klik på artiklerne for at læse fuldt indhold og få praktiske råd til din økonomi
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Search */}
-        <SearchBar onSearch={handleSearch} />
-
-        {/* Selected Tag Indicator */}
-        {selectedTopics.length > 0 && !selectedTopics.includes('Alle tags') && (
-          <div className="mb-4 p-3 bg-primary-50 border border-primary-200 rounded-lg">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <span className="text-primary-700 font-medium">
-                  Viser artikler med tag: 
-                </span>
-                <span className="ml-2 px-3 py-1 bg-primary-600 text-white rounded-full text-sm font-semibold">
-                  {selectedTopics[0]}
-                </span>
-                <span className="ml-2 text-primary-600">
-                  ({pagination.totalArticles} artikler fundet)
-                </span>
-              </div>
-              <button
-                onClick={() => handleTopicChange('Alle tags')}
-                className="text-primary-600 hover:text-primary-700 text-sm font-medium"
-              >
-                Vis alle artikler
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* Articles Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
-          {filteredArticles.map((article, index) => (
-            <ArticleCard
-              key={article.article_id || index}
-              article={article}
-              selectedTag={selectedTopics.length > 0 && !selectedTopics.includes('Alle tags') ? selectedTopics[0] : null}
-            />
-          ))}
-        </div>
-
-        {/* Pagination */}
-        <PaginationControls />
-
-        {filteredArticles.length === 0 && !loading && (
-          <div className="text-center py-8 sm:py-12">
-            <p className="text-nordic-500 text-base sm:text-lg">
-              Ingen artikler fundet. Prøv at ændre dine filtre eller start scraperen.
+    <>
+      <SEOHead 
+        title="MinePenge.nu - Dansk Privatøkonomi"
+        description="Få styr på pengene med guides, AI-værktøjer og inspiration til unge og børnefamilier. Lær om budget, opsparing, investering og privatøkonomi."
+        keywords="privatøkonomi, budget, opsparing, investering, dansk økonomi, penge, familieøkonomi, studerende økonomi"
+      />
+      
+      <div className="min-h-screen bg-nordic-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-4 lg:py-6">
+          {/* Header */}
+          <div className="mb-3 sm:mb-4 lg:mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-nordic-900 mb-2 sm:mb-3 leading-tight">
+              Velkommen
+            </h1>
+            <p className="text-xl sm:text-2xl lg:text-3xl font-serif font-medium text-primary-600 mb-1 sm:mb-2">
+              & MinePenge
+            </p>
+            <p className="text-base sm:text-lg lg:text-xl font-modern font-light text-nordic-500 mt-2 sm:mt-3 italic">
+              Fordi det er meget mere end bare økonomi
             </p>
           </div>
-        )}
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-4 sm:mb-6">
+            <div className="bg-white rounded-lg p-3 sm:p-4 text-center shadow-sm">
+              <div className="text-2xl sm:text-3xl font-bold text-primary-600">{statistics.totalArticles || articles.length}</div>
+              <div className="text-sm sm:text-base text-nordic-600">Artikler</div>
+            </div>
+            <div className="bg-white rounded-lg p-3 sm:p-4 text-center shadow-sm">
+              <div className="text-2xl sm:text-3xl font-bold text-primary-600">{statistics.sources?.length || 5}</div>
+              <div className="text-sm sm:text-base text-nordic-600">Kilder</div>
+            </div>
+            <div className="bg-white rounded-lg p-3 sm:p-4 text-center shadow-sm">
+              <div className="text-2xl sm:text-3xl font-bold text-primary-600">{statistics.availableTags || availableTags.length}</div>
+              <div className="text-sm sm:text-base text-nordic-600">Tags</div>
+            </div>
+            <div className="bg-white rounded-lg p-3 sm:p-4 text-center shadow-sm">
+              <div className="text-2xl sm:text-3xl font-bold text-primary-600">{pagination.totalPages || 1}</div>
+              <div className="text-sm sm:text-base text-nordic-600">Sider</div>
+            </div>
+          </div>
+
+          {/* How to use section */}
+          <div className="bg-white rounded-lg p-6 mb-6 shadow-sm">
+            <h2 className="text-2xl font-bold text-nordic-900 mb-4">Sådan bruger du MinePenge</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="bg-primary-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                  <span className="text-primary-600 font-bold text-lg">1</span>
+                </div>
+                <h3 className="font-semibold text-nordic-900 mb-2">Søg og find</h3>
+                <p className="text-sm text-nordic-700">
+                  Brug søgefeltet til at finde artikler om specifikke emner som "budget", "investering" eller "pension"
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-primary-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                  <span className="text-primary-600 font-bold text-lg">2</span>
+                </div>
+                <h3 className="font-semibold text-nordic-900 mb-2">Filtrer efter interesse</h3>
+                <p className="text-sm text-nordic-700">
+                  Brug sidebar-filtrene til at finde indhold tilpasset din situation og kompleksitetsniveau
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-primary-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                  <span className="text-primary-600 font-bold text-lg">3</span>
+                </div>
+                <h3 className="font-semibold text-nordic-900 mb-2">Læs og lær</h3>
+                <p className="text-sm text-nordic-700">
+                  Klik på artiklerne for at læse fuldt indhold og få praktiske råd til din økonomi
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Search */}
+          <SearchBar onSearch={handleSearch} />
+
+          {/* Selected Tag Indicator */}
+          {selectedTopics.length > 0 && !selectedTopics.includes('Alle tags') && (
+            <div className="mb-4 p-3 bg-primary-50 border border-primary-200 rounded-lg">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center">
+                  <span className="text-primary-700 font-medium">
+                    Viser artikler med tag: 
+                  </span>
+                  <span className="ml-2 px-3 py-1 bg-primary-600 text-white rounded-full text-sm font-semibold">
+                    {selectedTopics[0]}
+                  </span>
+                  <span className="ml-2 text-primary-600">
+                    ({pagination.totalArticles} artikler fundet)
+                  </span>
+                </div>
+                <button
+                  onClick={() => handleTopicChange('Alle tags')}
+                  className="text-primary-600 hover:text-primary-700 text-sm font-medium"
+                >
+                  Vis alle artikler
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Articles Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+            {filteredArticles.map((article, index) => (
+              <ArticleCard
+                key={article.article_id || index}
+                article={article}
+                selectedTag={selectedTopics.length > 0 && !selectedTopics.includes('Alle tags') ? selectedTopics[0] : null}
+              />
+            ))}
+          </div>
+
+          {/* Related Articles - Show based on selected tag or first article */}
+          {filteredArticles.length > 0 && (
+            <div className="mt-8">
+              <RelatedArticles 
+                currentArticleId={filteredArticles[0].article_id} 
+                limit={3}
+              />
+            </div>
+          )}
+
+          {/* Pagination */}
+          <PaginationControls />
+
+          {filteredArticles.length === 0 && !loading && (
+            <div className="text-center py-8 sm:py-12">
+              <p className="text-nordic-500 text-base sm:text-lg">
+                Ingen artikler fundet. Prøv at ændre dine filtre eller start scraperen.
+              </p>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 
   return (
@@ -475,6 +472,9 @@ function App() {
               <Route path="/qa-feed-generator" element={<QAFeedGenerator />} />
               <Route path="/internal-link-structure" element={<InternalLinkStructure />} />
               <Route path="/embed-widget" element={<EmbedWidget />} />
+              <Route path="/om-os" element={<OmOs />} />
+              <Route path="/kontakt" element={<Kontakt />} />
+              <Route path="/sitemap.xml" element={<Sitemap />} />
             </Routes>
           </main>
         </div>

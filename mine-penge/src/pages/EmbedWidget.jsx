@@ -10,7 +10,7 @@ function EmbedWidget() {
           {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-nordic-900 mb-4">
-              MinePenge.dk Widget
+              MinePenge.nu Widget
             </h1>
             <p className="text-lg text-nordic-600">
               Del relevante artikler om personlig Økonomi på din hjemmeside
@@ -62,7 +62,7 @@ function EmbedWidget() {
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                    Direkte links til MinePenge.dk for at læse mere
+                    Direkte links til MinePenge.nu for at læse mere
                   </li>
                 </ul>
               </div>

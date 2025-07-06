@@ -18,12 +18,12 @@ function EmbedScriptGenerator() {
   ];
 
   const generateScript = () => {
-    const script = `<!-- MinePenge.dk Widget -->
+    const script = `<!-- MinePenge.nu Widget -->
 <div id="minepenge-widget-${theme}"></div>
 <script>
 (function() {
   var script = document.createElement('script');
-  script.src = 'https://minepenge.dk/widget.js';
+  script.src = 'https://minepenge.nu/widget.js';
   script.async = true;
   script.onload = function() {
     window.MinePengeWidget.init({

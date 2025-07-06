@@ -1,10 +1,10 @@
-// MinePenge.dk Widget for external sites
+// MinePenge.nu Widget for external sites
 (function() {
   'use strict';
 
   // Widget configuration
   var config = {
-    apiUrl: 'https://minepenge.dk/api',
+    apiUrl: 'https://minepenge.nu/api',
     defaultTheme: 'all',
     defaultLimit: 3,
     defaultShowSource: true
@@ -37,7 +37,7 @@
       var self = this;
       
       // Show loading state
-      this.container.innerHTML = '<div class="minepenge-widget"><div class="widget-header"><h3>MinePenge.dk</h3></div><div class="widget-content"><p>Indlæser artikler...</p></div></div>';
+              this.container.innerHTML = '<div class="minepenge-widget"><div class="widget-header"><h3>MinePenge.nu</h3></div><div class="widget-content"><p>Indlæser artikler...</p></div></div>';
 
       // Fetch articles from API
       fetch(config.apiUrl + '/articles/relevant?min_score=3.0')
@@ -49,7 +49,7 @@
         })
         .catch(function(error) {
           console.error('MinePenge Widget: Error loading articles', error);
-          self.container.innerHTML = '<div class="minepenge-widget"><div class="widget-header"><h3>MinePenge.dk</h3></div><div class="widget-content"><p>Kunne ikke indlæse artikler</p></div></div>';
+                      self.container.innerHTML = '<div class="minepenge-widget"><div class="widget-header"><h3>MinePenge.nu</h3></div><div class="widget-content"><p>Kunne ikke indlæse artikler</p></div></div>';
         });
     };
 
@@ -76,8 +76,8 @@
       
       var html = '<div class="minepenge-widget">';
       html += '<div class="widget-header">';
-      html += '<h3>MinePenge.dk - ' + themeTitle + '</h3>';
-      html += '<a href="https://minepenge.dk" target="_blank" rel="noopener noreferrer">Se alle artikler →</a>';
+              html += '<h3>MinePenge.nu - ' + themeTitle + '</h3>';
+        html += '<a href="https://minepenge.nu" target="_blank" rel="noopener noreferrer">Se alle artikler →</a>';
       html += '</div>';
       
       html += '<div class="widget-content">';
@@ -108,7 +108,7 @@
       
       html += '</div>';
       html += '<div class="widget-footer">';
-      html += '<p>Powered by <a href="https://minepenge.dk" target="_blank" rel="noopener noreferrer">MinePenge.dk</a></p>';
+              html += '<p>Powered by <a href="https://minepenge.nu" target="_blank" rel="noopener noreferrer">MinePenge.nu</a></p>';
       html += '</div>';
       html += '</div>';
 
@@ -139,7 +139,7 @@
     var link = document.createElement('link');
     link.id = 'minepenge-widget-css';
     link.rel = 'stylesheet';
-    link.href = 'https://minepenge.dk/widget.css';
+            link.href = 'https://minepenge.nu/widget.css';
     document.head.appendChild(link);
   }
 

@@ -86,7 +86,7 @@ function LandingPageGenerator() {
       'spare penge på el og varme som studerende': 'Sådan sparer du penge på el og varme som studerende'
     };
     
-    return titles[searchTerm] || `${searchTerm} - MinePenge.dk`;
+    return titles[searchTerm] || `${searchTerm} - MinePenge.nu`;
   };
 
   const generatePageContent = async (searchTerm, relevantArticles) => {

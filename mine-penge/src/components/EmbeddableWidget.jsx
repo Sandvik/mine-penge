@@ -49,7 +49,7 @@ function EmbeddableWidget({ theme = 'su', limit = 3, showSource = true }) {
     return (
       <div className="minepenge-widget">
         <div className="widget-header">
-          <h3>MinePenge.dk - {getThemeTitle(theme)}</h3>
+          <h3>MinePenge.nu - {getThemeTitle(theme)}</h3>
         </div>
         <div className="widget-content">
           <p>Indlæser artikler...</p>
@@ -62,7 +62,7 @@ function EmbeddableWidget({ theme = 'su', limit = 3, showSource = true }) {
     return (
       <div className="minepenge-widget">
         <div className="widget-header">
-          <h3>MinePenge.dk - {getThemeTitle(theme)}</h3>
+          <h3>MinePenge.nu - {getThemeTitle(theme)}</h3>
         </div>
         <div className="widget-content">
           <p>{error}</p>
@@ -74,8 +74,8 @@ function EmbeddableWidget({ theme = 'su', limit = 3, showSource = true }) {
   return (
     <div className="minepenge-widget">
       <div className="widget-header">
-        <h3>MinePenge.dk - {getThemeTitle(theme)}</h3>
-        <a href="https://minepenge.dk" target="_blank" rel="noopener noreferrer">
+        <h3>MinePenge.nu - {getThemeTitle(theme)}</h3>
+        <a href="https://minepenge.nu" target="_blank" rel="noopener noreferrer">
           Se alle artikler →
         </a>
       </div>
@@ -107,7 +107,7 @@ function EmbeddableWidget({ theme = 'su', limit = 3, showSource = true }) {
       </div>
       
       <div className="widget-footer">
-        <p>Powered by <a href="https://minepenge.dk" target="_blank" rel="noopener noreferrer">MinePenge.dk</a></p>
+        <p>Powered by <a href="https://minepenge.nu" target="_blank" rel="noopener noreferrer">MinePenge.nu</a></p>
       </div>
     </div>
   );

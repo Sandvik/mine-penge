@@ -152,6 +152,118 @@ function ArticleCard({ article, selectedTag = null }) {
 
   const formattedTime = formatTime(published_date, publishedAt);
 
+  // Function to make titles more catchy
+  const makeTitleCatchy = (title) => {
+    if (!title) return 'Sådan sparer du 10.000 kr. om året på mad';
+    
+    let catchyTitle = title;
+    
+    // Add emojis based on content
+    const emojiMap = {
+      'budget': '💰',
+      'investering': '📈',
+      'pension': '🏖️',
+      'spare': '💸',
+      'gæld': '💳',
+      'bolig': '🏠',
+      'børn': '👶',
+      'familie': '👨‍👩‍👧‍👦',
+      'studerende': '🎓',
+      'fondsportefølje': '📊',
+      'fonds': '📊',
+      'aktier': '📈',
+      'krypto': '₿',
+      'bitcoin': '₿',
+      'ethereum': 'Ξ',
+      'opsparing': '🏦',
+      'rente': '📊',
+      'skat': '🧾',
+      'forsikring': '🛡️',
+      'mad': '🍽️',
+      'transport': '🚗',
+      'ferie': '✈️',
+      'tips': '💡',
+      'guide': '📖',
+      'tricks': '🎯',
+      'hack': '⚡',
+      'trick': '🎯',
+      'råd': '💡',
+      'advice': '💡',
+      'sådan': '🎯',
+      'hvordan': '❓',
+      'hvorfor': '🤔',
+      'hvad': '❓',
+      'når': '⏰',
+      'hvor': '📍',
+      'hvor meget': '💰',
+      'mange': '💰',
+      'penge': '💰',
+      'kr': '💰',
+      'kroner': '💰',
+      'økonomi': '💼',
+      'privatøkonomi': '💼',
+      'økonomisk': '💼',
+      'frihed': '🕊️',
+      'friheden': '🕊️',
+      'fremtid': '🔮',
+      'fremtiden': '🔮',
+      'sikkerhed': '🔒',
+      'sikkerheden': '🔒',
+      'velstand': '💎',
+      'rigdom': '💎',
+      'succes': '🏆',
+      'vækst': '📈',
+      'gevinst': '🎉',
+      'profit': '💵',
+      'tabs': '📉',
+      'risiko': '⚠️',
+      'sikker': '🛡️',
+      'sikre': '🛡️',
+      'beskyt': '🛡️',
+      'beskyttelse': '🛡️'
+    };
+    
+    // Find the most relevant emoji
+    let bestEmoji = '';
+    let bestScore = 0;
+    
+    Object.entries(emojiMap).forEach(([keyword, emoji]) => {
+      const regex = new RegExp(keyword, 'gi');
+      const matches = (title.match(regex) || []).length;
+      if (matches > bestScore) {
+        bestScore = matches;
+        bestEmoji = emoji;
+      }
+    });
+    
+    // Add catchy prefixes based on content type
+    let prefix = '';
+    const lowerTitle = title.toLowerCase();
+    
+    if (lowerTitle.includes('sådan') || lowerTitle.includes('hvordan')) {
+      prefix = '🎯 ';
+    } else if (lowerTitle.includes('tips') || lowerTitle.includes('tricks') || lowerTitle.includes('råd')) {
+      prefix = '💡 ';
+    } else if (lowerTitle.includes('guide') || lowerTitle.includes('tutorial')) {
+      prefix = '📖 ';
+    } else if (lowerTitle.includes('opdatering') || lowerTitle.includes('status')) {
+      prefix = '📊 ';
+    } else if (lowerTitle.includes('analyse') || lowerTitle.includes('review')) {
+      prefix = '🔍 ';
+    } else if (lowerTitle.includes('sammenligning') || lowerTitle.includes('vs')) {
+      prefix = '⚖️ ';
+    } else if (lowerTitle.includes('fejl') || lowerTitle.includes('mistake')) {
+      prefix = '❌ ';
+    } else if (lowerTitle.includes('succes') || lowerTitle.includes('vinder')) {
+      prefix = '🏆 ';
+    }
+    
+    // Combine prefix, emoji, and title
+    const finalPrefix = prefix || (bestEmoji ? bestEmoji + ' ' : '');
+    
+    return finalPrefix + title;
+  };
+
   return (
     <article className="bg-white rounded-2xl p-6 shadow-soft border border-nordic-200 hover:shadow-lg transition-shadow duration-200 relative">
       {/* Article ID - Top right corner */}
@@ -164,9 +276,12 @@ function ArticleCard({ article, selectedTag = null }) {
       )}
 
       {/* Header */}
-              <div className="mb-4">
-          <h3 className="text-lg font-semibold text-nordic-900 mb-2 leading-tight">
-            {title || 'Sådan sparer du 10.000 kr. om året på mad'}
+              <div className="mb-5">
+          <h3 className="text-xl font-bold text-primary-600 mb-3 leading-tight hover:text-primary-700 transition-all duration-300 cursor-pointer group">
+            <span className="relative">
+              {makeTitleCatchy(title)}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 group-hover:w-full transition-all duration-300"></span>
+            </span>
           </h3>
           <div className="flex items-center text-sm text-nordic-500 space-x-4">
             {formattedTime && (

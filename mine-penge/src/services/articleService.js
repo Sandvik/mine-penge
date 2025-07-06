@@ -343,6 +343,57 @@ class ArticleService {
     };
   }
 
+  // Get related articles based on tags and content similarity
+  getRelatedArticles(articleId, limit = 3) {
+    const currentArticle = this.getArticleById(articleId);
+    if (!currentArticle) return [];
+
+    // Get all articles except the current one
+    const otherArticles = this.articles.filter(article => article.article_id !== articleId);
+    
+    // Score articles based on similarity
+    const scoredArticles = otherArticles.map(article => {
+      let score = 0;
+      
+      // Score based on shared tags
+      if (currentArticle.minepenge_tags && article.minepenge_tags) {
+        const sharedTags = currentArticle.minepenge_tags.filter(tag => 
+          article.minepenge_tags.includes(tag)
+        );
+        score += sharedTags.length * 10; // 10 points per shared tag
+      }
+      
+      // Score based on same audience
+      if (currentArticle.target_audiences && article.target_audiences) {
+        const sharedAudiences = currentArticle.target_audiences.filter(audience => 
+          article.target_audiences.includes(audience)
+        );
+        score += sharedAudiences.length * 5; // 5 points per shared audience
+      }
+      
+      // Score based on same complexity level
+      if (currentArticle.complexity_level === article.complexity_level) {
+        score += 3;
+      }
+      
+      // Score based on same source (but lower weight to avoid too much repetition)
+      if (currentArticle.source === article.source) {
+        score += 1;
+      }
+      
+      return { ...article, score };
+    });
+    
+    // Sort by score (highest first) and return top articles
+    return scoredArticles
+      .sort((a, b) => b.score - a.score)
+      .slice(0, limit)
+      .map(article => {
+        const { score, ...articleWithoutScore } = article;
+        return articleWithoutScore;
+      });
+  }
+
   // Clear cache
   clearCache() {
     this.cache.clear();
@@ -391,6 +442,10 @@ export const getAvailableFilters = () => {
 
 export const getStatistics = () => {
   return articleService.getStatistics();
+};
+
+export const getRelatedArticles = (articleId, limit = 3) => {
+  return articleService.getRelatedArticles(articleId, limit);
 };
 
 export default articleService; 

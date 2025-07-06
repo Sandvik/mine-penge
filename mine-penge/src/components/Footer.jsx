@@ -1,11 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  TrendingUp, 
-  HelpCircle, 
-  Network, 
-  FileText,
-  ExternalLink,
   Mail,
   Phone,
   MapPin
@@ -30,7 +25,7 @@ function Footer() {
             <div className="space-y-2">
               <div className="flex items-center text-sm text-nordic-300">
                 <Mail className="h-4 w-4 mr-2" />
-                <span>info@minepenge.dk</span>
+                <span>info@minepenge.nu</span>
               </div>
               <div className="flex items-center text-sm text-nordic-300">
                 <Phone className="h-4 w-4 mr-2" />
@@ -58,56 +53,25 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-nordic-300 hover:text-white transition-colors">
+                <a href="/om-os" className="text-nordic-300 hover:text-white transition-colors">
                   Om os
                 </a>
               </li>
               <li>
-                <a href="#" className="text-nordic-300 hover:text-white transition-colors">
+                <a href="/kontakt" className="text-nordic-300 hover:text-white transition-colors">
                   Kontakt
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* SEO Tools */}
+          {/* Admin */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">SEO Værktøjer</h4>
+            <h4 className="text-lg font-semibold mb-4">Admin</h4>
             <ul className="space-y-2">
               <li>
-                <Link 
-                  to="/seo-dashboard" 
-                  className="flex items-center text-nordic-300 hover:text-white transition-colors"
-                >
-                  <TrendingUp className="h-4 w-4 mr-2" />
-                  <span>SEO Dashboard</span>
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/landing-pages" 
-                  className="flex items-center text-nordic-300 hover:text-white transition-colors"
-                >
-                  <FileText className="h-4 w-4 mr-2" />
-                  <span>Landing Pages</span>
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/qa-feed" 
-                  className="flex items-center text-nordic-300 hover:text-white transition-colors"
-                >
-                  <HelpCircle className="h-4 w-4 mr-2" />
-                  <span>Q&A Feed</span>
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/internal-links" 
-                  className="flex items-center text-nordic-300 hover:text-white transition-colors"
-                >
-                  <Network className="h-4 w-4 mr-2" />
-                  <span>Intern Linking</span>
+                <Link to="/seo-dashboard" className="text-nordic-300 hover:text-white transition-colors">
+                  Login
                 </Link>
               </li>
             </ul>
@@ -118,7 +82,7 @@ function Footer() {
         <div className="border-t border-nordic-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm text-nordic-400 mb-4 md:mb-0">
-              © 2025 MinePenge.dk. Alle rettigheder forbeholdes.
+              © 2025 MinePenge.nu. Alle rettigheder forbeholdes.
             </div>
             
             <div className="flex space-x-6 text-sm">
