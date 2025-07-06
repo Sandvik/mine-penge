@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navigation from './components/Navigation';
 import Sidebar from './components/Sidebar';
 import ArticleCard from './components/ArticleCard';
 import SearchBar from './components/SearchBar';
@@ -394,13 +393,12 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-nordic-100">
-        <Navigation onOpenCuration={isDebugMode ? () => setCurationPanelOpen(true) : undefined} />
-        
         <div className="flex flex-col lg:flex-row">
           <Sidebar 
             selectedTopics={selectedTopics}
             onTopicChange={handleTopicChange}
             availableTags={availableTags}
+            articles={articles}
           />
           
           <main className="flex-1 min-w-0">

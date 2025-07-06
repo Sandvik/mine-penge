@@ -20,7 +20,7 @@ const HeroSectionAdvanced = ({ statistics = {} }) => {
     }
   };
   return (
-    <section className="relative bg-gradient-to-br from-nordic-50 via-white to-primary-50 overflow-hidden pb-4 lg:pb-6">
+    <section className="relative bg-gradient-to-br from-nordic-50 via-white to-primary-50 overflow-hidden pb-4 lg:pb-6 mt-[50px]">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         {/* Floating geometric shapes */}
