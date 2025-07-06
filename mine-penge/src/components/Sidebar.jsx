@@ -84,6 +84,14 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [] }) {
     }));
   };
 
+  // Helper function to check if a tag is selected
+  const isTagSelected = (tag) => {
+    if (tag === 'Alle tags') {
+      return selectedTopics.includes('Alle tags') || selectedTopics.length === 0;
+    }
+    return selectedTopics.includes(tag);
+  };
+
   return (
     <aside className="w-full lg:w-64 bg-nordic-100 shadow-soft lg:border-r border-nordic-200 p-4 lg:p-6">
       <div className="mb-4 lg:mb-6">
@@ -178,9 +186,15 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [] }) {
                     {tags.map((tag) => (
                       <button
                         key={tag}
-                        onClick={() => onTopicChange(tag)}
+                        onClick={() => {
+                          console.log('=== Sidebar tag clicked ===');
+                          console.log('Tag clicked:', tag);
+                          console.log('isTagSelected:', isTagSelected(tag));
+                          console.log('Calling onTopicChange with:', tag);
+                          onTopicChange(tag);
+                        }}
                         className={`px-2 py-1 rounded-full text-xs font-medium transition-colors ${
-                          (tag === 'Alle tags' && selectedTopics.length === 0) || selectedTopics.includes(tag)
+                          isTagSelected(tag)
                             ? 'bg-primary-600 text-white shadow-sm'
                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-gray-900'
                         }`}

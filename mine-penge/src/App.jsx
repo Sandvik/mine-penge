@@ -10,7 +10,9 @@ import LandingPageGenerator from './pages/LandingPageGenerator';
 import QAFeedGenerator from './pages/QAFeedGenerator';
 import InternalLinkStructure from './pages/InternalLinkStructure';
 import EmbedWidget from './pages/EmbedWidget';
+import CurationPanel from './components/CurationPanel';
 import { fetchArticles, searchArticles, getArticlesByFilter, getStatistics, getAvailableFilters } from './services/articleService';
+import curationService from './services/curationService';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import './index.css';
 
@@ -20,6 +22,7 @@ function App() {
   const [favorites, setFavorites] = useState([]);
   const [selectedTopics, setSelectedTopics] = useState(['Alle tags']);
   const [loading, setLoading] = useState(true);
+  const [curationPanelOpen, setCurationPanelOpen] = useState(false);
   const [pagination, setPagination] = useState({
     currentPage: 1,
     pageSize: 20,
@@ -31,21 +34,87 @@ function App() {
   const [statistics, setStatistics] = useState({});
   const [availableTags, setAvailableTags] = useState([]);
 
+  const isDebugMode = import.meta.env.DEV || import.meta.env.MODE === 'development';
+
   useEffect(() => {
     loadArticles();
   }, []);
 
   // Show articles when articles state changes
   useEffect(() => {
-    if (articles.length > 0 && selectedTopics.includes('Alle tags')) {
+    console.log('=== useEffect triggered ===');
+    console.log('Articles length:', articles.length);
+    console.log('Selected topics:', selectedTopics);
+    console.log('Current page:', pagination.currentPage);
+    console.log('useEffect dependencies changed - articles, selectedTopics, or pagination.currentPage');
+    
+    if (articles.length > 0) {
+      console.log('Calling showCurrentPageArticles from useEffect');
       showCurrentPageArticles();
+    } else {
+      console.log('No articles available, skipping showCurrentPageArticles');
     }
-  }, [articles]);
+  }, [articles, selectedTopics, pagination.currentPage]);
+
+  // Separate useEffect to debug selectedTopics changes
+  useEffect(() => {
+    console.log('=== selectedTopics changed ===');
+    console.log('New selectedTopics:', selectedTopics);
+    console.log('Articles available:', articles.length);
+  }, [selectedTopics]);
 
   // Simple function to show articles for current page
   const showCurrentPageArticles = () => {
+    console.log('=== showCurrentPageArticles START ===');
+    console.log('Articles length:', articles.length);
+    console.log('Selected topics:', selectedTopics);
+    
+    if (articles.length === 0) {
+      console.log('No articles available, returning');
+      return;
+    }
+    
+    // Get all articles from articleService for proper filtering
+    const allArticles = getArticlesByFilter({}, 1, 10000).articles; // Get all articles
+    console.log('Total articles available in service:', allArticles.length);
+    
+    // Filter out blacklisted articles first
+    const nonBlacklistedArticles = curationService.filterArticles(allArticles);
+    console.log('After blacklist filtering:', nonBlacklistedArticles.length);
+    
+    // Apply topic filtering if a specific topic is selected
+    let filteredByTopic = nonBlacklistedArticles;
+    if (selectedTopics.length > 0 && !selectedTopics.includes('Alle tags')) {
+      const selectedTopic = selectedTopics[0];
+      console.log('Filtering by selected topic:', selectedTopic);
+      console.log('Looking for articles with minepenge_tags containing:', selectedTopic.toLowerCase());
+      
+      filteredByTopic = nonBlacklistedArticles.filter(article => {
+        if (article.minepenge_tags && Array.isArray(article.minepenge_tags)) {
+          const hasTag = article.minepenge_tags.some(tag => {
+            const tagLower = tag.toLowerCase();
+            const topicLower = selectedTopic.toLowerCase();
+            
+            // Only use exact match
+            const exactMatch = tagLower === topicLower;
+            
+            if (exactMatch) {
+              console.log('Article matches:', article.title, 'Tag:', tag, 'Topic:', selectedTopic);
+            }
+            return exactMatch;
+          });
+          return hasTag;
+        }
+        return false;
+      });
+      console.log('After topic filtering:', filteredByTopic.length);
+      console.log('Sample filtered articles:', filteredByTopic.slice(0, 3).map(a => ({ title: a.title, tags: a.minepenge_tags })));
+    } else {
+      console.log('No specific topic selected, showing all articles');
+    }
+    
     // Sort articles by date (newest first) and then by source for variety
-    const sortedArticles = [...articles].sort((a, b) => {
+    const sortedArticles = [...filteredByTopic].sort((a, b) => {
       // First sort by date (newest first)
       const dateA = new Date(a.published_date || a.scraped_date || 0);
       const dateB = new Date(b.published_date || b.scraped_date || 0);
@@ -62,16 +131,21 @@ function App() {
     const startIndex = (pagination.currentPage - 1) * pagination.pageSize;
     const endIndex = startIndex + pagination.pageSize;
     const currentPageArticles = sortedArticles.slice(startIndex, endIndex);
+    
+    console.log('Setting filteredArticles to:', currentPageArticles.length, 'articles');
+    console.log('Sample articles:', currentPageArticles.slice(0, 2).map(a => ({ title: a.title, tags: a.minepenge_tags })));
+    
     setFilteredArticles(currentPageArticles);
     
     // Update pagination info
     setPagination(prev => ({
       ...prev,
-      totalArticles: articles.length,
-      totalPages: Math.ceil(articles.length / prev.pageSize),
-      hasNextPage: endIndex < articles.length,
+      totalArticles: filteredByTopic.length,
+      totalPages: Math.ceil(filteredByTopic.length / prev.pageSize),
+      hasNextPage: endIndex < filteredByTopic.length,
       hasPrevPage: pagination.currentPage > 1
     }));
+    console.log('=== showCurrentPageArticles END ===');
   };
 
   // Handle search
@@ -87,24 +161,33 @@ function App() {
     console.log('Searching for:', searchQuery);
     const searchData = searchArticles(searchQuery, pagination.currentPage, pagination.pageSize);
     console.log('Search results:', searchData);
-    setFilteredArticles(searchData.articles || []);
-    setPagination(searchData.pagination || pagination);
+    
+    // Filter blacklisted articles from search results
+    const filteredSearchResults = curationService.filterArticles(searchData.articles || []);
+    setFilteredArticles(filteredSearchResults);
+    
+    // Update pagination with filtered results
+    const updatedPagination = {
+      ...searchData.pagination,
+      totalArticles: filteredSearchResults.length,
+      totalPages: Math.ceil(filteredSearchResults.length / pagination.pageSize)
+    };
+    setPagination(updatedPagination);
   };
 
   // Handle topic change
   const handleTopicChange = (topic) => {
+    console.log('=== handleTopicChange START ===');
+    console.log('Topic clicked:', topic);
+    console.log('Current articles count:', articles.length);
+    console.log('Current selectedTopics:', selectedTopics);
+    
+    console.log('Setting selectedTopics to:', [topic]);
     setSelectedTopics([topic]);
     setPagination(prev => ({ ...prev, currentPage: 1 }));
     
-    if (topic === 'Alle tags') {
-      showCurrentPageArticles();
-    } else {
-      const filterData = getArticlesByFilter({
-        topic: topic.toLowerCase()
-      }, 1, pagination.pageSize);
-      setFilteredArticles(filterData.articles || []);
-      setPagination(filterData.pagination || pagination);
-    }
+    // Let useEffect handle the filtering by calling showCurrentPageArticles
+    console.log('=== handleTopicChange END ===');
   };
 
   const loadArticles = async (page = 1) => {
@@ -122,27 +205,32 @@ function App() {
       console.log('Available audiences:', filters.audiences);
       console.log('Available complexities:', filters.complexities);
       
-      // Fallback to hardcoded tags if no tags found in data
-      const tags = filters.tags && filters.tags.length > 0 ? filters.tags : [
-        'Opsparing',
-        'Investering', 
-        'Gæld',
-        'Budget',
-        'Pension',
-        'Forsikring',
-        'Bolig',
-        'Skatter',
-        'Børn & Familie',
-        'Studerende',
-        'Begynder',
-        'Øvet',
-        'Avanceret'
-      ];
+      // Capitalize tags for display and add some common ones
+      const rawTags = filters.tags && filters.tags.length > 0 ? filters.tags : [];
+      const capitalizedTags = rawTags.map(tag => {
+        // Capitalize first letter and handle special cases
+        if (tag === 'opsparing') return 'Opsparing';
+        if (tag === 'investering') return 'Investering';
+        if (tag === 'gæld') return 'Gæld';
+        if (tag === 'budget') return 'Budget';
+        if (tag === 'pension') return 'Pension';
+        if (tag === 'forsikring') return 'Forsikring';
+        if (tag === 'bolig') return 'Bolig';
+        if (tag === 'skatter') return 'Skatter';
+        if (tag === 'børn') return 'Børn & Familie';
+        if (tag === 'studerende') return 'Studerende';
+        if (tag === 'begynder') return 'Begynder';
+        if (tag === 'øvet') return 'Øvet';
+        if (tag === 'avanceret') return 'Avanceret';
+        
+        // General capitalization
+        return tag.charAt(0).toUpperCase() + tag.slice(1);
+      });
       
-      setAvailableTags(tags);
+      // Remove duplicates and sort
+      const uniqueTags = [...new Set(capitalizedTags)].sort();
       
-      // Show initial articles after state is updated
-      setTimeout(() => showCurrentPageArticles(), 0);
+      setAvailableTags(uniqueTags);
     } catch (error) {
       console.error('Error loading articles:', error);
     } finally {
@@ -151,18 +239,20 @@ function App() {
   };
 
   const handlePageChange = (newPage) => {
-    // Update articles for new page
-    if (selectedTopics.includes('Alle tags')) {
-      setPagination(prev => ({ ...prev, currentPage: newPage }));
-      setTimeout(() => showCurrentPageArticles(), 0);
-    } else {
-      const selectedTag = selectedTopics[0];
-      const filterData = getArticlesByFilter({
-        topic: selectedTag.toLowerCase()
-      }, newPage, pagination.pageSize);
-      setFilteredArticles(filterData.articles || []);
-      setPagination(filterData.pagination || pagination);
-    }
+    console.log('=== handlePageChange START ===');
+    console.log('Changing to page:', newPage);
+    console.log('Selected topics:', selectedTopics);
+    
+    setPagination(prev => ({ ...prev, currentPage: newPage }));
+    
+    // Let useEffect handle the filtering by calling showCurrentPageArticles
+    console.log('=== handlePageChange END ===');
+  };
+
+  // Handle blacklist updates
+  const handleBlacklistUpdate = () => {
+    // Refresh articles when blacklist changes
+    showCurrentPageArticles();
   };
 
   const toggleFavorite = (articleId) => {
@@ -284,10 +374,6 @@ function App() {
           </div>
         </div>
 
-
-
-
-
         {/* How to use section */}
         <div className="bg-white rounded-lg p-6 mb-6 shadow-sm">
           <h2 className="text-2xl font-bold text-nordic-900 mb-4">Sådan bruger du MinePenge</h2>
@@ -325,6 +411,31 @@ function App() {
         {/* Search */}
         <SearchBar onSearch={handleSearch} />
 
+        {/* Selected Tag Indicator */}
+        {selectedTopics.length > 0 && !selectedTopics.includes('Alle tags') && (
+          <div className="mb-4 p-3 bg-primary-50 border border-primary-200 rounded-lg">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <span className="text-primary-700 font-medium">
+                  Viser artikler med tag: 
+                </span>
+                <span className="ml-2 px-3 py-1 bg-primary-600 text-white rounded-full text-sm font-semibold">
+                  {selectedTopics[0]}
+                </span>
+                <span className="ml-2 text-primary-600">
+                  ({pagination.totalArticles} artikler fundet)
+                </span>
+              </div>
+              <button
+                onClick={() => handleTopicChange('Alle tags')}
+                className="text-primary-600 hover:text-primary-700 text-sm font-medium"
+              >
+                Vis alle artikler
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* Articles Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
           {filteredArticles.map((article, index) => (
@@ -333,6 +444,7 @@ function App() {
               article={article}
               isFavorite={favorites.includes(article.article_id)}
               onToggleFavorite={() => toggleFavorite(article.article_id)}
+              selectedTag={selectedTopics.length > 0 && !selectedTopics.includes('Alle tags') ? selectedTopics[0] : null}
             />
           ))}
         </div>
@@ -354,7 +466,7 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-nordic-100">
-        <Navigation />
+        <Navigation onOpenCuration={isDebugMode ? () => setCurationPanelOpen(true) : undefined} />
         
         <div className="flex flex-col lg:flex-row">
           <Sidebar 
@@ -374,6 +486,15 @@ function App() {
             </Routes>
           </main>
         </div>
+        
+        {/* Curation Panel - Only visible in debug mode */}
+        {isDebugMode && (
+          <CurationPanel 
+            isOpen={curationPanelOpen}
+            onClose={() => setCurationPanelOpen(false)}
+            onBlacklistUpdate={handleBlacklistUpdate}
+          />
+        )}
         
         <ScrollToTopButton />
         <Footer />
