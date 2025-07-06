@@ -16,7 +16,7 @@ function SearchBar({ onSearch }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mb-4">
+    <form onSubmit={handleSubmit} className="mb-4 search-container">
       <div className="flex gap-2">
         <input
           type="text"
