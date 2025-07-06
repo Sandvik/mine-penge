@@ -1,8 +1,7 @@
-import React from 'react';
-import { Heart, ExternalLink, Clock, User } from 'lucide-react';
-import UserFeedback from './UserFeedback';
+import React, { useState } from 'react';
+import { ExternalLink, Clock, User } from 'lucide-react';
 
-function ArticleCard({ article, isFavorite = false, onToggleFavorite, selectedTag = null }) {
+function ArticleCard({ article, selectedTag = null }) {
   const { 
     title, 
     summary, 
@@ -16,6 +15,10 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite, selectedTa
     article_id,
     url
   } = article || {};
+
+  // Tooltip state
+  const [showAllTags, setShowAllTags] = useState(false);
+  let tooltipTimeout = null;
 
   // Debug: Log the source field
   console.log('Article source:', source, 'URL:', url, 'for article:', article_id);
@@ -37,6 +40,7 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite, selectedTa
       case 'studerende':
       case 'nybegynder_investering': return '🎓';
       case 'børnefamilie':
+      case 'børnefamilier':
       case 'familieøkonomi': return '👨‍👩‍👧‍👦';
       case 'pensionister':
       case 'pensionist': return '👴';
@@ -54,11 +58,14 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite, selectedTa
       case 'studerende': return 'Studerende';
       case 'nybegynder_investering': return 'Nybegynder';
       case 'børnefamilie': return 'Børnefamilie';
+      case 'børnefamilier': return 'Børnefamilier';
       case 'familieøkonomi': return 'Familieøkonomi';
       case 'pensionister': return 'Pensionister';
       case 'pensionist': return 'Pensionist';
       case 'erhverv': return 'Erhverv';
       case 'investor': return 'Investor';
+      case 'budgetbevidste': return 'Budgetbevidste';
+      case 'økonomi_nybegynder': return 'Økonomi Nybegynder';
       default: return audience.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
     }
   };
@@ -157,8 +164,7 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite, selectedTa
       )}
 
       {/* Header */}
-      <div className="flex items-start justify-between mb-4">
-        <div className="flex-1">
+              <div className="mb-4">
           <h3 className="text-lg font-semibold text-nordic-900 mb-2 leading-tight">
             {title || 'Sådan sparer du 10.000 kr. om året på mad'}
           </h3>
@@ -185,17 +191,6 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite, selectedTa
             )}
           </div>
         </div>
-        <button
-          onClick={onToggleFavorite}
-          className={`p-2 rounded-lg transition-colors ${
-            isFavorite 
-              ? 'text-error-500 bg-error-50 hover:bg-error-100' 
-              : 'text-nordic-400 hover:text-error-500 hover:bg-error-50'
-          }`}
-        >
-          <Heart className={`h-5 w-5 ${isFavorite ? 'fill-current' : ''}`} />
-        </button>
-      </div>
       
       {/* Summary */}
       <p className="text-nordic-700 mb-4 leading-relaxed">
@@ -203,17 +198,15 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite, selectedTa
       </p>
 
       {/* Tags */}
-      <div className="flex flex-wrap gap-2 mb-4">
+      <div className="flex flex-wrap gap-2 mb-4 relative">
         {(minepenge_tags || ['opsparing', 'børnefamilie', 'begynder']).slice(0, 3).map((tag, index) => {
-          // Check if this tag matches the selected tag
           const isSelectedTag = selectedTag && tag.toLowerCase() === selectedTag.toLowerCase();
-          
           return (
-            <span 
+            <span
               key={index}
               className={`px-3 py-1 rounded-full text-xs font-medium transition-all duration-200 ${
-                isSelectedTag 
-                  ? 'bg-primary-600 text-white shadow-md ring-2 ring-primary-300 font-semibold' 
+                isSelectedTag
+                  ? 'bg-primary-600 text-white shadow-md ring-2 ring-primary-300 font-semibold'
                   : index === 0 ? 'bg-primary-100 text-primary-800' :
                     index === 1 ? 'bg-success-100 text-success-800' :
                     getDifficultyColor(tag)
@@ -224,8 +217,34 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite, selectedTa
           );
         })}
         {minepenge_tags && minepenge_tags.length > 3 && (
-          <span className="px-3 py-1 rounded-full text-xs font-medium bg-nordic-100 text-nordic-600">
+          <span
+            className="px-3 py-1 rounded-full text-xs font-medium bg-nordic-100 text-nordic-600 cursor-pointer relative"
+            onMouseEnter={() => {
+              clearTimeout(tooltipTimeout);
+              setShowAllTags(true);
+            }}
+            onMouseLeave={() => {
+              tooltipTimeout = setTimeout(() => setShowAllTags(false), 150);
+            }}
+            tabIndex={0}
+          >
             +{minepenge_tags.length - 3} mere
+            {showAllTags && (
+              <div className="absolute left-0 top-full mt-2 z-20 bg-white border border-nordic-200 rounded-lg shadow-lg p-3 min-w-[180px] max-w-xs text-xs flex flex-wrap gap-2">
+                {minepenge_tags.slice(3).map((tag, idx) => (
+                  <span
+                    key={idx + 3}
+                    className={`px-2 py-1 rounded-full font-medium ${
+                      selectedTag && tag.toLowerCase() === selectedTag.toLowerCase()
+                        ? 'bg-primary-600 text-white'
+                        : 'bg-nordic-100 text-nordic-700'
+                    }`}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
           </span>
         )}
       </div>
@@ -244,11 +263,6 @@ function ArticleCard({ article, isFavorite = false, onToggleFavorite, selectedTa
           Læs mere
           <ExternalLink className="h-4 w-4 ml-1" />
         </a>
-      </div>
-      
-      {/* User Feedback */}
-      <div className="mt-4 pt-4 border-t border-nordic-100">
-        <UserFeedback articleId={article_id} />
       </div>
     </article>
   );
