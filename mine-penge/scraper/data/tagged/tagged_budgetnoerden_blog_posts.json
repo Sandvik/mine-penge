@@ -25,7 +25,7 @@
     "target_audiences_used": [
       "studerende",
       "børnefamilier",
-      "lavindkomstgrupper",
+      "budgetbevidste",
       "nybegynder_investering",
       "økonomi_nybegynder",
       "pensionister"
@@ -41,7 +41,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "pensionister",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -66,7 +66,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.8
@@ -89,7 +89,7 @@
       "summary": "Hvad vil du tage med dig ind i 2025?",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -115,7 +115,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -165,7 +165,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 1.0
@@ -188,7 +188,7 @@
       "summary": "At have et realistisk budget er nøglen til økonomisk stabilitet og succes. Et budget hjælper dig med at få overblik over dine indtægter og udgifter, så du kan planlægge dine penge bedre og undgå økono...",
       "target_audiences": [
         "økonomi_nybegynder",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -216,7 +216,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -239,7 +239,7 @@
       "summary": "Læs med her og hør om fordelene ved Optius app’en",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "børnefamilier"
       ],
       "complexity_level": "begynder",
@@ -262,7 +262,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -285,7 +285,7 @@
       "summary": "Læs om Budgetnørdens 5 dages Challenge lige her",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -310,7 +310,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -332,7 +332,7 @@
       "url": "https://www.budgetnoerden.dk/blog/kender-du-rabatta",
       "summary": "Spar penge når du handler på nettet med bare et enkelt klik.",
       "target_audiences": [
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -348,7 +348,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -371,7 +371,7 @@
       "summary": "Som talnørd er det en fornøjelse at læse en bog om børneopsparing (det \r\nsiger måske sig selv🤪), men jeg vil vove den påstand, at du, uanset \r\nudgangspunkt, også vil blive inspireret til at tage stilling på dine børns \r\npenges vegne, efter du har læst denne bog",
       "target_audiences": [
         "børnefamilier",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "avanceret",
@@ -396,7 +396,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -419,7 +419,7 @@
       "summary": "At have kontrol over sin økonomi starter med et godt budget. Et budget hjælper dig med at holde styr på dine indtægter og udgifter, så du kan planlægge dine penge bedre og undgå økonomisk stress. Her ...",
       "target_audiences": [
         "økonomi_nybegynder",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -449,7 +449,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -494,7 +494,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -517,7 +517,7 @@
       "summary": "Mine 6 bedste tips til at undgå impulsshopping",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -535,7 +535,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -558,7 +558,7 @@
       "summary": "Klar til foråret? Okay, vejret er vi klar til, men hvad med økonomien?",
       "target_audiences": [
         "økonomi_nybegynder",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -585,7 +585,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -607,7 +607,7 @@
       "url": "https://www.budgetnoerden.dk/blog/er-du-p-udkig-efter-ny-bolig",
       "summary": "Har du fundet drømmeboligen, eller er du på udkig efter noget, der passer \r\nbedre til dine behov og krav? Der er en masse, du skal have styr og være \r\nopmærksom på både før, under og efter dit boligkøb.\r\n\r\nEn boligkøbsproces kan være lang og uoverskuelig. Her kan du læse om nogle \r\naf de ting, du skal have styr på eller vide, inden du underskriver \r\nkøbsaftalen og køber din drømmebolig.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -637,7 +637,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -681,7 +681,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -705,7 +705,7 @@
       "target_audiences": [
         "økonomi_nybegynder",
         "børnefamilier",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -732,7 +732,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -755,7 +755,7 @@
       "summary": "Det er sjældent de store beslutninger, der vælter det daglige budget – det \r\ner de små, daglige valg, vi træffer uden at tænke over dem.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -780,7 +780,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -803,7 +803,7 @@
       "summary": "Her får du en helt simple guide til, hvordan du kan få et bedre økonomisk \r\noverblik allerede i dag.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -829,7 +829,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -852,7 +852,7 @@
       "summary": "Jeg har i løbet af de sidste par uger fået startet min investeringsrejse op. Jeg fik nemlig en del penge til min konfirmation, som blev givet til at investere med. Problemet var bare, at jeg ikke vids...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -873,7 +873,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -897,7 +897,7 @@
       "target_audiences": [
         "økonomi_nybegynder",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -924,7 +924,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -947,7 +947,7 @@
       "summary": "Vi har skiftet internetudbyder og sparer 140 kr. per måned de næste 6 \r\nmåneder.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -966,7 +966,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -989,7 +989,7 @@
       "summary": "Det er ikke et spørgsmål om at leve af havregrød og dåsetomater.\r\nDet handler om at bruge sine penge bevidst – så der er mere til det, der \r\nvirkelig betyder noget.\r\n\r\nOg det starter ofte i indkøbskurven.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -1011,7 +1011,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -1033,7 +1033,7 @@
       "url": "https://www.budgetnoerden.dk/blog/efterrsferie-p-budget-sdan-fr-du-mest-for-pengene-i-ferien",
       "summary": "Leder du efter idéer til en billig efterårsferie? Opdag vores tips til, \r\nhvordan du kan planlægge en budgetvenlig ferie med aktiviteter, dagsture og \r\nkreative oplevelser for hele familien",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -1059,7 +1059,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -1082,7 +1082,7 @@
       "summary": "Nytår nærmer sig, og det betyder en ny start – også for din økonomi! Det er den perfekte tid til at drømme stort og tænke over, hvordan dit liv (og din konto) skal se ud i 2025. Vil du skabe mere økon...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -1104,7 +1104,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -1141,7 +1141,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1163,7 +1163,7 @@
       "url": "https://www.budgetnoerden.dk/blog/konomisk-klarhed-for-2024-fik-du-skabt-det-overblik-du-nskede-dig",
       "summary": "Når året rinder ud, er det tid til at se tilbage og overveje, om du har opnået det økonomiske overblik, du drømte om. Økonomisk klarhed handler om at kende din økonomi, vide, hvor pengene går hen, og ...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "pensionister"
       ],
@@ -1188,7 +1188,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -1211,7 +1211,7 @@
       "summary": "5 brugbare tips du kan bruge med det samme",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -1231,7 +1231,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -1281,7 +1281,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -1304,7 +1304,7 @@
       "summary": "Ferie og madglæde kan godt gå hånd i hånd med økonomi. Få tips til madplan, \r\npicnics og billige retter",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -1329,7 +1329,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -1351,7 +1351,7 @@
       "url": "https://www.budgetnoerden.dk/blog/ml-for-2025-sdan-laver-du-en-plan-der-holder",
       "summary": "Et nyt år er på vej, og det betyder, at det er tid til at drømme stort og lægge en plan for, hvordan 2025 kan blive dit bedste år endnu – især økonomisk! Men lad os være ærlige: Det er nemt at lave må...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -1375,7 +1375,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -1427,7 +1427,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -1450,7 +1450,7 @@
       "summary": "Start 2025 med at tage kontrol over din økonomi. Dette blogindlæg guider \r\ndig trin for trin til at sætte realistiske økonomiske mål og skabe et \r\nbudget, der hjælper dig med at nå dem. Vi giver dig også en gratis \r\nbudgetskabelon, som gør det nemt at få styr på indkomst, udgifter og \r\nopsparingsmål.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -1479,7 +1479,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -1530,7 +1530,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -1553,7 +1553,7 @@
       "summary": "Der er noget virkelig fint i at sætte sig ned med den, man deler liv (og eller økonomi) med – og rent faktisk tale om økonomien . Ikke som et “nu skal vi holde møde og fordele skyld og udgifter”-agtig...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -1573,7 +1573,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1597,7 +1597,7 @@
       "target_audiences": [
         "økonomi_nybegynder",
         "pensionister",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -1625,7 +1625,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -1648,7 +1648,7 @@
       "summary": "Automatisering af din opsparing – sådan sparer du op uden at tænke over det",
       "target_audiences": [
         "økonomi_nybegynder",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -1675,7 +1675,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -1698,7 +1698,7 @@
       "summary": "Vil du spare penge på mad uden at gå på kompromis med god smag? Få de \r\nbedste tips til madplaner, indkøb, og budgetvenlige måltider i denne guide \r\ntil et smartere madbudget i 2025. Madbudget Spar penge på mad Lav en \r\nmadplan Reducer madspild Budgetvenlige opskrifter Plantebaseret mad Spar \r\npenge i 2025",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -1725,7 +1725,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -1747,7 +1747,7 @@
       "url": "https://www.budgetnoerden.dk/blog/forvent-det-uventede-hvor-klar-er-din-konomi-til-et-bump-p-vejen",
       "summary": "Ingen af os kan planlægge præcist, hvornår økonomiske kriser rammer. Men vi \r\nkan forberede os på, at de vil komme.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -1778,7 +1778,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -1801,7 +1801,7 @@
       "summary": "I en tid hvor leveomkostningerne stiger, kan der være et behov for og et ønske om, at reducere de faste udgifter. Faste udgifter er de udgifter, du har hver måned. Det kan eksempelvis være husleje, fo...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -1828,7 +1828,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -1861,7 +1861,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1904,7 +1904,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1927,7 +1927,7 @@
       "summary": "Hvordan giver man sine børn gode pengevaner i en digitaliseret verden?",
       "target_audiences": [
         "børnefamilier",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -1957,7 +1957,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1980,7 +1980,7 @@
       "summary": "Hvis du altid venter på det perfekte tidspunkt, kommer det aldrig.",
       "target_audiences": [
         "økonomi_nybegynder",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -2008,7 +2008,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -2031,7 +2031,7 @@
       "summary": "Her er 5 refleksive spørgsmål, der kan guide dig på vej til at tage kontrollen over din økonomi og hjælpe dig med at nå dine økonomiske mål: 1️⃣ Hvor står du økonomisk lige nu? Tag et ærligt kig på di...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -2051,7 +2051,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2073,7 +2073,7 @@
       "url": "https://www.budgetnoerden.dk/blog/drmmer-du-eller-gr-du-noget-ved-det-sdan-tager-du-frste-skridt-mod-en-strkere-konomi",
       "summary": "Hvad er dit næste skridt?",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -2096,7 +2096,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2147,7 +2147,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -2170,7 +2170,7 @@
       "summary": "Måske er du en af dem, som har en dejskraber liggende i køkkenskuffen, og som stort set aldrig har den i brug. Mit gæt er, at det vil ændre sig, når du har læst dette blogindlæg. Det er nemlig sådan, ...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -2191,7 +2191,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2215,7 +2215,7 @@
       "target_audiences": [
         "økonomi_nybegynder",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -2240,7 +2240,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -2264,7 +2264,7 @@
       "target_audiences": [
         "økonomi_nybegynder",
         "børnefamilier",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -2288,7 +2288,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -2310,7 +2310,7 @@
       "url": "https://www.budgetnoerden.dk/blog/fortryder-du-ofte-at-have-brugt-penge-p-noget-du-i-bund-og-grund-ikke-havde-brug-for",
       "summary": "Hvis du gør, så læs med her💛 Det betyder nemlig, at du allerede er godt på vej mod at ændre dine økonomiske vaner💪 Hvis du mærker en trang til at ændre en forbrugsvane, så kan du prøve at gøre følgend...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -2326,7 +2326,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2349,7 +2349,7 @@
       "summary": "At lægge et årsbudget kan virke overvældende , men det er en essentiel del af at sikre økonomisk stabilitet og nå dine økonomiske mål. Et godt budget hjælper dig med at planlægge dine indtægter og udg...",
       "target_audiences": [
         "børnefamilier",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -2377,7 +2377,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 1.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -2400,7 +2400,7 @@
       "summary": "Juletidens typiske dilemmaer og et par løsninger på dem",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "mellem",
@@ -2422,7 +2422,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2445,7 +2445,7 @@
       "summary": "I dag vil jeg dele mine 6 bedste juletips med dig. Julen kan let blive en dyr tid. Måske oplever du også, at den kan blive for dyr. Hvis du tager stilling til hvordan, du gerne vil bruge dine penge, k...",
       "target_audiences": [
         "økonomi_nybegynder",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -2469,7 +2469,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -2510,7 +2510,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -2533,7 +2533,7 @@
       "summary": "Penge kan være et følsomt emne i parforhold, og det er ingen hemmelighed, at økonomi ofte er årsag til konflikter. Men det behøver ikke være sådan! Med lidt planlægning og åbne samtaler kan I skabe en...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -2558,7 +2558,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -2581,7 +2581,7 @@
       "summary": "Foråret handler ikke kun om at få ryddet op i skabe og skuffer – det er også det perfekte tidspunkt til at give din økonomi en kærlig forårsrengøring. Selvom vi alle ved, at det er godt at holde styr ...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -2609,7 +2609,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -2644,7 +2644,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -2667,7 +2667,7 @@
       "summary": "I maj måned har vi gældstema hos Budgetnørden og her er en del af min egen \r\nhistorie med gæld.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -2694,7 +2694,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -2717,7 +2717,7 @@
       "summary": "Hvilke økonomiske udfordringer har du haft i år?",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -2739,7 +2739,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -2762,7 +2762,7 @@
       "summary": "Læs her hvordan du holder dit budget ved lige, så du rent faktisk kan bruge \r\ndet til noget",
       "target_audiences": [
         "økonomi_nybegynder",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -2791,7 +2791,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -2815,7 +2815,7 @@
       "target_audiences": [
         "økonomi_nybegynder",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -2842,7 +2842,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -2864,7 +2864,7 @@
       "url": "https://www.budgetnoerden.dk/blog/investering-for-begyndere-kom-godt-i-gang",
       "summary": "At investere dine penge er en fremragende måde at opbygge formue på og sikre din økonomiske fremtid. For begyndere kan investering dog virke skræmmende og kompliceret. Denne guide vil hjælpe dig med a...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -2891,7 +2891,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -2913,7 +2913,7 @@
       "url": "https://www.budgetnoerden.dk/blog/sdan-opretter-og-vedligeholder-du-en-buffer",
       "summary": "En buffer er en af de mest grundlæggende og vigtigste komponenter i en sund økonomi. Den beskytter dig mod uventede udgifter og giver dig økonomisk tryghed i usikre tider. Her er en guide til, hvordan...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -2942,7 +2942,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -2965,7 +2965,7 @@
       "summary": "Vi oplever stadig en stor interesse for, hvordan man kan få sine penge til at række længere - en oplagt måde at gøre dette på, er ved at spare på eksempelvis sit vandforbrug. Og hvordan gør man så lig...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -2987,7 +2987,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -3009,7 +3009,7 @@
       "url": "https://www.budgetnoerden.dk/blog/sdan-planlgger-du-strre-udgifter-i-god-tid",
       "summary": "Lær, hvordan du planlægger større udgifter i god tid med strategiske tips \r\ntil opsparing, sinking funds og budgettering. Få styr på dine økonomiske \r\nmål og undgå stress og gæld!",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -3037,7 +3037,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -3059,7 +3059,7 @@
       "url": "https://www.budgetnoerden.dk/blog/nordisk-socialisme",
       "summary": "Bogen ‘Nordisk socialisme’ er skrevet af Pelle Dragsted, som er politiker. \r\nNu er det ikke fordi, at det her hos Budgetnørden skal handle om politik, \r\nmen jeg fik nu alligevel lyst til at lave et lille skriv om denne bog. Jeg \r\nhar selv hørt den med stor interesse, og jeg tror faktisk, jeg er nødt til \r\nat høre den igen.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -3081,7 +3081,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -3104,7 +3104,7 @@
       "summary": "Sommeren frister pengepungen – her får du 4 enkle tips til at bevare \r\noverblikket, selv når hverdagen er sat på pause. Gratis budgetskabelon \r\ninkl.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -3131,7 +3131,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -3154,7 +3154,7 @@
       "summary": "Det kan være en udfordring, at vende tilbage efter ferien. At finde tilbage til de gode vaner og få rytmen ind i hverdagsøkonomien igen. Jeg har samlet nogle ret enkle tips, du kan bruge til at få sty...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -3177,7 +3177,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -3201,7 +3201,7 @@
       "target_audiences": [
         "økonomi_nybegynder",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -3228,7 +3228,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -3250,7 +3250,7 @@
       "url": "https://www.budgetnoerden.dk/blog/gld",
       "summary": "På det seneste har vi haft et tema om GÆLD kørende på Instagram. Gæld er for mange noget, som har store følelser med sig. Mange oplever det som skamfuldt at have gæld, eller måske endda at det er deci...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "børnefamilier"
       ],
@@ -3278,7 +3278,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3300,7 +3300,7 @@
       "url": "https://www.budgetnoerden.dk/blog/ryd-op-i-din-konomi-og-f-ro-p",
       "summary": "For økonomisk rod stresser mere, end vi tror.\r\nDe løse ender. Uvisheden. Det der ligger i baghovedet og siger \"det burde \r\njeg lige få styr på\".\r\nDet stjæler energi.\r\nOg den energi kan du bruge på noget meget bedre.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -3321,7 +3321,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3345,7 +3345,7 @@
       "target_audiences": [
         "økonomi_nybegynder",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -3373,7 +3373,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -3396,7 +3396,7 @@
       "summary": "Oplever du konflikter i dit parforhold? Læs om fire almindelige problemer, \r\nsom par ofte står overfor, og få konkrete løsninger til, hvordan I kan \r\nstyrke jeres forhold gennem åben kommunikation, samarbejde og forståelse.",
       "target_audiences": [
         "børnefamilier",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -3418,7 +3418,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -3441,7 +3441,7 @@
       "summary": "Økonomi er et enormt vigtigt aspekt af ethvert parforhold. At have åbne og ærlige samtaler om penge kan hjælpe med at styrke jeres forhold og forhindre økonomiske konflikter. Her er fire spørgsmål, du...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -3470,7 +3470,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -3493,7 +3493,7 @@
       "summary": "Vil du gerne sænke dit forbrug, og få mere luft i økonomien? Så har jeg 10 nemme indkøbstips, der kan redde dit budget. Lav en indkøbsliste . Skriv en liste over de varer, du har brug for, før du går ...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -3518,7 +3518,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -3540,7 +3540,7 @@
       "url": "https://www.budgetnoerden.dk/blog/har-du-styr-p-forsikringerne",
       "summary": "Indeholder affiliate links Der kan være penge at spare på netop forsikringer. For nogle mere end andre selvfølgelig. Jeg laver et forsikringstjek en gang om året og har sat en kalendernotifikation til...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -3564,7 +3564,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -3612,7 +3612,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -3635,7 +3635,7 @@
       "summary": "Jeg startede med at investere i crowdlending for lidt under et år siden og \r\njeg har i et stykke tid gerne ville udvide min portefølje. Bl.a. fordi der \r\ner kommet mange nye investorer til på crowdlendingmarkedet og det ind \r\nimellem kan være svært at komme med på nogle af lånene.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -3661,7 +3661,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -3684,7 +3684,7 @@
       "summary": "Jeg synes, at ordet ‘månedsopsparing’ er lidt misvisende, og i starten \r\nforstod jeg heller ikke, hvad det egentlig var.\r\n\r\nLad mig derfor prøve at forklare, hvad en månedsopsparing er.",
       "target_audiences": [
         "pensionister",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -3710,7 +3710,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 1.0
@@ -3733,7 +3733,7 @@
       "summary": "Budgettering er et af de vigtigste skridt til økonomisk stabilitet, og en effektiv metode er et såkaldt zero-based budget - altså et nulbaseret budget. Men hvad er nulbaseret budgettering egentlig, og...",
       "target_audiences": [
         "økonomi_nybegynder",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -3761,7 +3761,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -3784,7 +3784,7 @@
       "summary": "Jeg synes, han har mange kloge, spændende og vedkommende refleksioner i \r\nbogen her. Faktisk synes jeg, det er så god, at jeg har givet den i gave \r\ntil en, jeg har kær. Morten Albæk har selv indtalt bogen, hvilket jeg \r\nsynes, giver den en helt særlig karakter. Han er en dygtig indlæser og \r\nformidler. Hans indlæsning af bogen gør, at hvert eneste ord får netop den \r\nbetoning, han har tiltænkt den. Det er jeg vild med.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -3801,7 +3801,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -3825,7 +3825,7 @@
       "target_audiences": [
         "økonomi_nybegynder",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -3847,7 +3847,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -3870,7 +3870,7 @@
       "summary": "Leder du efter måder at spare penge på mad, uden at det går ud over smagen? \r\nOpdag 5 effektive strategier til at optimere dit madbudget og reducere dine \r\nudgifter – uden at gå på kompromis med dine måltider. Læs mere og få tips \r\ntil, hvordan du kan gøre dine madindkøb smartere!",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -3898,7 +3898,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -3921,7 +3921,7 @@
       "summary": "Der findes et hav af forskellige metoder og det vigtigste er, at du finder en som passer til dit temperament og som du bliver ved med at bruge, så dit budget kan blive din bedste (økonomiske) ven👏 Beg...",
       "target_audiences": [
         "økonomi_nybegynder",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "børnefamilier"
       ],
       "complexity_level": "begynder",
@@ -3951,7 +3951,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -4000,7 +4000,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -4023,7 +4023,7 @@
       "summary": "Gæld kan være en tung byrde, og det kan være svært at holde styr på flere forskellige lån og kreditter. Samlelån er en metode, hvor man samler flere gældsposter til én enkelt betaling, ofte med en lav...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -4050,7 +4050,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -4072,7 +4072,7 @@
       "url": "https://www.budgetnoerden.dk/blog/er-du-chef-over-dine-penge-eller-styrer-de-dig",
       "summary": "Du får løn. Du tænker, at denne måned bliver anderledes – du vil have styr \r\npå dit forbrug, lægge lidt ekstra til side og undgå de små unødvendige køb.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -4103,7 +4103,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -4126,7 +4126,7 @@
       "summary": "Der er mange måder at spare på. For nogle giver det mening at spare på noget - for andre giver det mening at spare på noget andet. At spare på strømmen er én måde at spare på. Men hvordan sparer man p...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -4147,7 +4147,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -4170,7 +4170,7 @@
       "summary": "At opbygge en * stor * opsparing kan virke som en uoverskuelig opgave, men med de rette strategier kan du nå dine økonomiske mål hurtigere, end du måske tror. Her er nogle smarte tips til, hvordan du ...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -4197,7 +4197,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -4219,7 +4219,7 @@
       "url": "https://www.budgetnoerden.dk/blog/bliv-klar-til-2024",
       "summary": "Bliv klar til dit bedste økonomiske år i 2024 med disse 5 tips fra \r\nBudgetnørden.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "nybegynder_investering"
       ],
@@ -4247,7 +4247,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -4270,7 +4270,7 @@
       "summary": "Du kan få styr på din gæld, og det behøver ikke at være uoverskueligt. Med \r\ndenne guide giver jeg dig konkrete trin til at få kontrol over din gæld og \r\nskabe mere ro i økonomien i 2025.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -4297,7 +4297,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -4320,7 +4320,7 @@
       "summary": "5 trin til større økonomisk tryghed",
       "target_audiences": [
         "økonomi_nybegynder",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -4345,7 +4345,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -4367,7 +4367,7 @@
       "url": "https://www.budgetnoerden.dk/blog/slg-ud-investr-pengene",
       "summary": "Jeg investerer selv via. Nordnets månedsopsparing hver måned, hvor man kan \r\ninvestere for blot 100 kr. ad gangen, og sparer kurtagen (det handelsgebyr, \r\nder ellers er ved handler). Det er en rigtig fin og billig måde at komme \r\nigang på, synes jeg. Hvis det vækker din interesse, så opret dig og tag et \r\nkig på det.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -4398,7 +4398,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -4421,7 +4421,7 @@
       "summary": "At have gæld kan være stressende og føles som en tung byrde, men der er strategier, du kan bruge til at betale den hurtigere af og komme tilbage på sporet mod økonomisk frihed. Her er nogle effektive ...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -4448,7 +4448,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -4470,7 +4470,7 @@
       "url": "https://www.budgetnoerden.dk/blog/guide-til-frstegangskbere-af-bolig-sdan-kommer-du-i-gang",
       "summary": "At købe sin første bolig er en stor milepæl, men det kan også være overvældende og fyldt med spørgsmål. Hvor skal man starte? Hvad skal man være opmærksom på? I denne guide vil vi tage dig igennem de ...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -4498,7 +4498,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -4520,7 +4520,7 @@
       "url": "https://www.budgetnoerden.dk/blog/hvad-er-en-investeringsfond",
       "summary": "Investering kan være komplekst. Jeg vil forsøge at gøre det komplicerede enkelt her, hvor jeg fortæller om, hvad en investeringsfond er for noget. Jeg håber, det lykkes. Hvad er en investeringfond? Of...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -4548,7 +4548,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -4572,7 +4572,7 @@
       "target_audiences": [
         "økonomi_nybegynder",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -4600,7 +4600,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0

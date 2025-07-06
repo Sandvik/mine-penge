@@ -13,7 +13,7 @@ function EmbedWidget() {
               MinePenge.dk Widget
             </h1>
             <p className="text-lg text-nordic-600">
-              Del relevante artikler om personlig økonomi på din hjemmeside
+              Del relevante artikler om personlig Økonomi på din hjemmeside
             </p>
           </div>
 

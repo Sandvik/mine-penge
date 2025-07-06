@@ -10,7 +10,7 @@
     "source": "Mitteldorf Blog",
     "url": "https://mitteldorf.dk/blog/aaret-der-gik-2021/",
     "target_audiences": [
-      "lavindkomstgrupper",
+      "budgetbevidste",
       "økonomi_nybegynder",
       "studerende"
     ],
@@ -37,7 +37,7 @@
     "confidence_scores": {
       "studerende": 0.67,
       "børnefamilier": 0.29,
-      "lavindkomstgrupper": 0.75,
+      "budgetbevidste": 0.75,
       "nybegynder_investering": 0.57,
       "økonomi_nybegynder": 0.75,
       "pensionister": 0.57

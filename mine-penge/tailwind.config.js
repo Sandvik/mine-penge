@@ -87,10 +87,10 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
-        display: ['Poppins', 'sans-serif'],
-        modern: ['Montserrat', 'sans-serif'],
+        sans: ['Outfit', 'system-ui', 'sans-serif'],
+        serif: ['Cormorant Garamond', 'serif'],
+        display: ['Inter', 'sans-serif'],
+        modern: ['Albert Sans', 'sans-serif'],
       },
       borderRadius: {
         'xl': '1rem',

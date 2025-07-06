@@ -25,7 +25,7 @@
     "target_audiences_used": [
       "studerende",
       "børnefamilier",
-      "lavindkomstgrupper",
+      "budgetbevidste",
       "nybegynder_investering",
       "økonomi_nybegynder",
       "pensionister"
@@ -39,7 +39,7 @@
       "url": "https://www.nordnet.dk/blog/opdatering-om-nedlukning-af-nordnet-i-dag-11-februar-2025/",
       "summary": "Problemets årsag blev efter nedlukningen hurtigt identificeret. Årsagen var en softwarekomponent, der fejlede i forbindelse med loginprocessen. Komponenten",
       "target_audiences": [
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -58,7 +58,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -82,7 +82,7 @@
       "target_audiences": [
         "økonomi_nybegynder",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -104,7 +104,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -126,7 +126,7 @@
       "url": "https://www.nordnet.dk/blog/nordnet-lancerer-handel-pa-tre-nye-borser",
       "summary": "Fra i dag er det muligt for Nordnets kunder at handle aktier på børserne i Italien, Schweiz og Østrig, hvor man finder flere velkendte selskaber.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -152,7 +152,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -186,7 +186,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -208,7 +208,7 @@
       "url": "https://www.nordnet.dk/blog/kinesiske-teknologigiganter",
       "summary": "De seneste år har Kina udviklet sig fra en økonomi domineret af traditionel industriel produktion til en mere moderne, serviceorienteret økonomi drevet af",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "børnefamilier"
       ],
@@ -237,7 +237,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -282,7 +282,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -310,7 +310,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -332,7 +332,7 @@
       "url": "https://www.nordnet.dk/blog/nordnets-egne-indeksfonde-skifter-indeks",
       "summary": "Hos Nordnet arbejder vi hele tiden på at forbedre og udvikle vores egne fonde. Derfor skifter nogle af Nordnets egne fonde nu indeks.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -356,7 +356,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -378,7 +378,7 @@
       "url": "https://www.nordnet.dk/blog/alt-du-skal-vide-om-skat",
       "summary": "Skat kan være en svær størrelse, når det kommer til investering. Derfor har vi lavet en video, som forklarer alt det, som du skal have styr på, når det kommer",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "pensionister"
       ],
@@ -406,7 +406,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -428,7 +428,7 @@
       "url": "https://www.nordnet.dk/blog/investeringsundersogelsen-2025",
       "summary": "For noget tid siden fortalte vi, at vi ville undersøge, hvordan danskerne investerer - og hvad vidensniveauet blandt de private investorer er. Det er nu",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -458,7 +458,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -499,7 +499,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -521,7 +521,7 @@
       "url": "https://www.nordnet.dk/blog/nu-bliver-nordnet-danmark-indeks-beskattet-som-aktieindkomst/",
       "summary": "I 2024 har ingen af Nordnets fonde være at finde på Skats positivliste, men det har ændret sig. Vi er nemlig glade for at kunne fortælle, at Nordnet Danmark",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "børnefamilier"
       ],
@@ -549,7 +549,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -587,7 +587,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -609,7 +609,7 @@
       "url": "https://www.nordnet.dk/blog/alt-du-skal-vide-om-udbytte",
       "summary": "Man skal altså senest eje og købe aktien på generalforsamlingsdagen. Ejer man ikke aktien på generalforsamlingsdagen, har man IKKE ret til udbytte.",
       "target_audiences": [
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -626,7 +626,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -649,7 +649,7 @@
       "summary": "Økonomi kan være en svær størrelse. Det er komplekst, og det er hele tiden i udvikling og forandring. For at hjælpe flere med at blive klogere på økonomiens",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -677,7 +677,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -717,7 +717,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -739,7 +739,7 @@
       "url": "https://www.nordnet.dk/blog/hvad-skal-man-investeringer",
       "summary": "Et første halvår med meget høj bølgegang på de globale finansmarkeder er overstået, og spørgsmålet er, hvad man som investor skal gøre med sin portefølje og",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -767,7 +767,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -789,7 +789,7 @@
       "url": "https://www.nordnet.dk/blog/20-mest-populare-pa-aktiesparekontoen",
       "summary": "135.000. Det er antallet af aktiesparekonti hos Nordnet. Med 550.000 aktive kunder på landsplan betyder det, at knap hver fjerde af vores kunder har en",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -815,7 +815,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -853,7 +853,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -889,7 +889,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -941,7 +941,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -963,7 +963,7 @@
       "url": "https://www.nordnet.dk/blog/novo-nordisk-staerke-data-kan-vende-stemningen",
       "summary": "Novo Nordisk har på ADA-konferencen i Chicago fremlagt en stribe overbevisende datasæt. Over tid er det sandsynligt, at investorerne igen vil se Novo Nordisk",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -987,7 +987,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1009,7 +1009,7 @@
       "url": "https://www.nordnet.dk/blog/udvikling-blandt-kvinder-2025",
       "summary": "drig har antallet af kvindelige kunder været højere, end det var i 2024. Alligevel viser en ny rundspørge, at færre kvinder føler, at de har økonomisk tryghed til at træffe en livsændrende beslutning. Den udvikling skal vi holde øje med.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -1034,7 +1034,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -1056,7 +1056,7 @@
       "url": "https://www.nordnet.dk/blog/de-3-aktier-i-sp-500-med-mest-potentiale-lige-nu",
       "summary": "Se, hvilke tre aktier AI-modellen har vægtet tungest blandt sine 25 udvalgte i juli, og hvad Richard Feynman og probabilistiske modeller har med investering at gøre? Alt dette besvarer AI Alpha Lab i dette indlæg.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -1083,7 +1083,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -1117,7 +1117,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1167,7 +1167,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 1.0
@@ -1189,7 +1189,7 @@
       "url": "https://www.nordnet.dk/blog/7-nye-features-hos-nordnet-saadan-bruger-du-dem",
       "summary": "Hos Nordnet arbejder vi hver dag på at gøre det nemmere, bedre og ikke mindst sjovere at investere. Et led i det er blandt andet at opdatere vores platform og",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -1216,7 +1216,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -1256,7 +1256,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1278,7 +1278,7 @@
       "url": "https://www.nordnet.dk/blog/saadan-opretter-du-en-aktiesparekonto",
       "summary": "Sådan opretter du en aktiesparekonto hos Nordnet. Step-by-step guide med Sarah Ophelia Møss.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -1296,7 +1296,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1318,7 +1318,7 @@
       "url": "https://www.nordnet.dk/blog/novo-nordisk-fra-darling-til-skepsis/",
       "summary": "12 måneder er gået, siden Novo Nordisk var investorernes darling. Markedsværdien oversteg 4.000 mia., aktiekursen var over 1.000, og udsigterne til yderligere",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -1346,7 +1346,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1383,7 +1383,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1405,7 +1405,7 @@
       "url": "https://www.nordnet.dk/blog/novo-nordisk-fra-darling-til-skepsis",
       "summary": "12 måneder er gået, siden Novo Nordisk var investorernes darling. Markedsværdien oversteg 4.000 mia., aktiekursen var over 1.000, og udsigterne til yderligere",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -1433,7 +1433,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1455,7 +1455,7 @@
       "url": "https://www.nordnet.dk/blog/bull-og-bear-certifikater",
       "summary": "https://www.youtube.com/watch?v=op8uWjUNQJA",
       "target_audiences": [
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -1471,7 +1471,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1493,7 +1493,7 @@
       "url": "https://www.nordnet.dk/blog/nordens-top-10-uge-26-2025",
       "summary": "Torsdag d. 26. juni er der fire nye aktier i Nordens top-10. Listen består nu af én dansk, fem norske og fire svenske aktier. Se de tekniske analyser og tendenser.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -1520,7 +1520,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1543,7 +1543,7 @@
       "summary": "Hos Nordnet har vi oplevet, at interessen for investering de seneste år er steget – en tendens, som kun fortsætter.",
       "target_audiences": [
         "pensionister",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -1568,7 +1568,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -1591,7 +1591,7 @@
       "summary": "Når Nordnets pensionskunder fremover åbner PensionsInfo, vil de som noget nyt blive mødt med data fra Nordnet. Startende i dag, leverer Nordnet data til",
       "target_audiences": [
         "pensionister",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -1618,7 +1618,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.8
@@ -1640,7 +1640,7 @@
       "url": "https://www.nordnet.dk/blog/nordnet-lancerer-handel-i-formarkedet-i-amerikanske-aktier",
       "summary": "I dag kan vi endelig løfte sløret for en stor nyhed. Fremover bliver det nemlig muligt at handle i formarkedet på de amerikanske børser. For dig som investor",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -1664,7 +1664,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1686,7 +1686,7 @@
       "url": "https://www.nordnet.dk/blog/7-nye-features-hos-nordnet-saadan-bruger-du-dem/",
       "summary": "Hos Nordnet arbejder vi hver dag på at gøre det nemmere, bedre og ikke mindst sjovere at investere. Et led i det er blandt andet at opdatere vores platform og",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -1713,7 +1713,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -1749,7 +1749,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1771,7 +1771,7 @@
       "url": "https://www.nordnet.dk/blog/nordnet-er-den-tredje-mest-populaere-app-i-danmark",
       "summary": "Interessen for investering vokser fortsat. I en helt ny og uafhængig rapport fra tech-virksomheden Framna, er Nordnet rangeret som den tredjemest populære app",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -1798,7 +1798,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -1820,7 +1820,7 @@
       "url": "https://www.nordnet.dk/blog/afkast-andet-halvaar-2025",
       "summary": "Hvor meget kan jeg tjene på mine investinger? Det spørgsmål har du sikkert stillet dig selv. Vi har regnet på de seneste tal fra Rådet for Afkastforventninger.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "pensionister",
         "nybegynder_investering"
       ],
@@ -1848,7 +1848,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -1870,7 +1870,7 @@
       "url": "https://www.nordnet.dk/blog/skal-investering-pa-skoleskemaet",
       "summary": "I Nordnet vil vi gerne demokratisere investering ved at uddanne og inspirere danskerne til at gå mere op i deres opsparing og økonomi. Det gælder for alle",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -1900,7 +1900,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -1922,7 +1922,7 @@
       "url": "https://www.nordnet.dk/blog/ny-fond-med-fokus-pa-europaeisk-forsvar",
       "summary": "Nu kan du finde en helt ny temafond på Nordnet. Sparindex har lanceret INDEX Europa Forsvar, som er en indeksfond med fokus udelukkende på europæiske forsvarsaktier. Læs mere om, hvilke muligheder det giver dig.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -1947,7 +1947,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1969,7 +1969,7 @@
       "url": "https://www.nordnet.dk/blog/optakt-til-q2-bekraefter-regnskab",
       "summary": "Kan life science og de grønne aktier gøre den skuffende kursudvikling til skamme, og kan bankerne i retfærdiggøre de flotte halvårsafkast i en tid, hvor",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -1998,7 +1998,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2032,7 +2032,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -2082,7 +2082,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -2104,7 +2104,7 @@
       "url": "https://www.nordnet.dk/blog/events",
       "summary": "Se mere om kommende og tidligere events.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -2133,7 +2133,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.8
@@ -2165,7 +2165,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -2187,7 +2187,7 @@
       "url": "https://www.nordnet.dk/blog/investering-i-urolige-tider",
       "summary": "Før vi når til de tre råd, vil jeg dog lige slå et slag for det vigtigste grundlag for dine investeringer; nemlig din plan.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -2215,7 +2215,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -2237,7 +2237,7 @@
       "url": "https://www.nordnet.dk/blog/fokus-paa-det-franske-marked-luksus-og-industri",
       "summary": "Som kunde i Nordnet kan du nu investere på flere nye europæiske markeder. Et af dem er det franske. Vi gennemgår, hvad det franske marked egentligt er kendt for, og hvilke nye muligheder det giver dig.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -2264,7 +2264,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -2286,7 +2286,7 @@
       "url": "https://www.nordnet.dk/blog/hold-oje-med-valuta",
       "summary": "Valutakurser kan være en overset faktor, når man investerer. Det har det i hvert fald været for mig. Størstedelen af Nordnets danske kunder har da også en",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -2313,7 +2313,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -2335,7 +2335,7 @@
       "url": "https://www.nordnet.dk/blog/det-betyder-dollar-faldet-for-dit-afkast",
       "summary": "De amerikanske aktier har på ny sat rekord. Alligevel vil man som dansk investor formentlig have tabt penge i år. For dollarkursen er faldet over for den",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -2362,7 +2362,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0

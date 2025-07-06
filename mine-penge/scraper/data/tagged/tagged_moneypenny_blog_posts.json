@@ -25,7 +25,7 @@
     "target_audiences_used": [
       "studerende",
       "børnefamilier",
-      "lavindkomstgrupper",
+      "budgetbevidste",
       "nybegynder_investering",
       "økonomi_nybegynder",
       "pensionister"
@@ -40,7 +40,7 @@
       "summary": "Her på Moneypennybloggen opdaterer jeg løbende status i mine fondsporteføljer.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -66,7 +66,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -89,7 +89,7 @@
       "summary": "// Dette er det andet indlæg i Moneypenny’s serie “Investering for Unge”, hvor jeg vil dele min egen rejse med det formål, at inspirere flere unge til at begynde at investere. Derudover håber jeg, at det også vil hjælpe forældre, eller andre nærtstående til unge mennesker, med at finde ud af, hvordan man bedst kan introducere investering til unge. //",
       "target_audiences": [
         "børnefamilier",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "pensionister"
       ],
       "complexity_level": "mellem",
@@ -120,7 +120,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 1.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.8
@@ -169,7 +169,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -191,7 +191,7 @@
       "url": "https://moneypennyandmore.dk/blog/boger-mofibo",
       "summary": "Her finder du vores bedste tips på bøger at lytte til for at blive klogere på økonomi og investering! :) ",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -222,7 +222,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -244,7 +244,7 @@
       "url": "https://moneypennyandmore.dk/blog/udbyttesaesongen-starter-nu-dette-skal-du-have-styr-pa",
       "summary": "Med en udbyttestrategi kan du, som investor, se frem til en en løbende passiv indtægt. Lige nu står vi midt i udbyttesæsonen, hvor vi får information fra selskaberne om deres kommende udbytte for regnskabsåret 2022 (som vi investorer så får som udbytte i 2023). Indtil nu, har vi set en del ”lønforhøjelser” til porteføljen, ikke mindst fra selskaber som Mærsk, DSV og Carlsberg, som jeg har skrevet om tidligere. Selvom jeg er vild med udbytteaktier, så er der nogle ting man skal kende, når man går efter udbytteaktier.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -270,7 +270,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -292,7 +292,7 @@
       "url": "https://moneypennyandmore.dk/blog/udbytteaktier-hvordan-finder-man-verdens-mest-stabile",
       "summary": "I dette indlæg vil jeg beskrive de amerikanske \"Dividend Aristocrats\" og \"Dividend Kings\". Jeg investerer ikke selv aktivt i disse endnu, jeg fokuserer meget på REITs, men har ejet Procter & Gamble og kommer helt sikkert til at inkludere en eller flere af Dividend Kings eller Aristocrats i min egen udbytteportefølje på et tidspunkt.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -317,7 +317,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -340,7 +340,7 @@
       "summary": "Hvis du ikke allerede er medlem af Forbrugsforeningen, vil vi anbefale dig at regne på, om ikke også det kan svare sig for dig. Så du kan spare penge på alt det, du alligevel køber.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -369,7 +369,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -391,7 +391,7 @@
       "url": "https://moneypennyandmore.dk/blog/hvad-er-udbytte",
       "summary": "I dette indlæg får du information om hvad udbytte og direkte afkast er for noget. ",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -419,7 +419,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -442,7 +442,7 @@
       "summary": "Mange spørgsmål som kommer inde i Moneypennygruppen, og også på vores mail, handler om man skal købe for en hel pose penge med det samme eller sprede det ud over tid. Her findes der enlig to svar ifølge mig. Det giver matematisk set bedst mening at gå ind med det hele på én gang - HVIS du er langsigtet.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -466,7 +466,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -489,7 +489,7 @@
       "summary": "I dette indlæg vil jeg forklare for dig hvad en gratis-portefølje er. Hvorfor jeg har startet en og hvorfor jeg håber den kan inspirere dig til at begynde din investeringsrejse uden, at føle du skal have mange penge inden du går i gang!",
       "target_audiences": [
         "økonomi_nybegynder",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -515,7 +515,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -538,7 +538,7 @@
       "summary": "Mit absolut bedste bud, på den strategi som vil virke for den private investor, – LBB strategien fungerer for alle.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "mellem",
@@ -565,7 +565,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -589,7 +589,7 @@
       "target_audiences": [
         "studerende",
         "økonomi_nybegynder",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -616,7 +616,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -640,7 +640,7 @@
       "target_audiences": [
         "pensionister",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -666,7 +666,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 1.0
@@ -688,7 +688,7 @@
       "url": "https://moneypennyandmore.dk/blog/gaeld",
       "summary": "De fleste vil på et eller andet tidspunkt i deres liv opleve at have gæld, hvis de er som de fleste. Ikke al gæld er dårlig gæld. Men gæld kan binde én og begrænse én. Jeg tænkte derfor at jeg ville dele et par konkrete måder man kan håndtere sin gæld på, på en mere aggressiv måde, når man virkelig har fået NOK af sin gæld. Jeg vil komme omkring Dave Ramseys \"7 babysteps\", sneboldsmetoden, lavinemetoden og appen DebtPayoffPlanner.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -718,7 +718,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -742,7 +742,7 @@
       "target_audiences": [
         "økonomi_nybegynder",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -768,7 +768,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -791,7 +791,7 @@
       "summary": "I dette indlæg vil jeg give dig en update fra min gratisportefølje / gratis-portefølje for september måned 2022. ",
       "target_audiences": [
         "økonomi_nybegynder",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -817,7 +817,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -840,7 +840,7 @@
       "summary": "// Dette er det første indlæg i Moneypenny’s serie “Investering for Unge”, hvor jeg vil dele min egen rejse med det formål, at inspirere flere unge til at begynde at investere. Derudover håber jeg, at det også vil hjælpe forældre, eller andre nærtstående til unge mennesker, med at finde ud af, hvordan man bedst kan introducere investering til unge. //",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -868,7 +868,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -890,7 +890,7 @@
       "url": "https://moneypennyandmore.dk/blog/aldersopsparing",
       "summary": "Der er kommet mere og mere fokus på Aldersopsparingen, hvor bl.a. Politiken har været ved at skrive om den \"hemmelige\" form for opsparing.Aldersopsparing er en form for pensionsopsparing, ligesom du måske har hørt om ratepensioner og arbejdsmarkedspensioner. De forskellige pensioner har forskellige fordele og ulemper, og det er godt at sætte sig ind i hvornår den enkelte kan være en fordel og en ulempe.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "pensionister",
         "nybegynder_investering"
       ],
@@ -917,7 +917,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 1.0
@@ -941,7 +941,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -967,7 +967,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1017,7 +1017,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -1039,7 +1039,7 @@
       "url": "https://moneypennyandmore.dk/blog/status-2025-min-lysa-tyv-har-snuppet-11.849-kr.-og-givet-et-afkast-pa-47.03",
       "summary": "UPDATE Lysaportefølje Januar 2025.LYSA er Danmarks billigste robo-advisor og derfor er det den robot, som jeg har valgt at teste. Jeg startede i april 2021 med 200 kr. pr. måned - det hele sker helt automatisk. Her er en status over min portefølje og et tilbud til dig som læser med :)",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "økonomi_nybegynder"
       ],
@@ -1067,7 +1067,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -1089,7 +1089,7 @@
       "url": "https://moneypennyandmore.dk/blog/start-med-en-strategi-og-skriv-den-ned",
       "summary": "Før jeg købte de første aktier, brugte jeg et par år på at læse bøger om investeringer, gå på kurser hos Dansk Aktionærforening m.m. At det tog så lang tid at komme i gang, skyldes - ud over ønsket om at lære en masse, inden jeg risikerede mine hårdt tjente penge.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "pensionister"
       ],
@@ -1117,7 +1117,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.4
@@ -1168,7 +1168,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 1.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.8
@@ -1191,7 +1191,7 @@
       "summary": "Til nybegynderen: Investering – sådan kommer du igang!Når det kommer til investering, så er det for mange en ret stor tærskel, man skal over, inden man kommer i gang – ja endda også det er at tage sig tiden og turde at begynde at læse om det. Mange synes nemlig det virker så svært, tørt og uoverskueligt. Så, hvor er du SEJ, at du har klikket dig ind på dette indlæg! Jeg håber, at dette indlæg vil \"crush some myths\" for dig 🙂 Du har nu allerede taget det første skridt! Stærkt! ",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "mellem",
@@ -1218,7 +1218,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -1240,7 +1240,7 @@
       "url": "https://moneypennyandmore.dk/blog/realty-income-kober-vereit",
       "summary": "Lidt korte news til alle jer som ejer Realty Income. Jeg ejer den selv i min udbytteportefølje og vil kort forklare hvad der er sket. Dem som ejer den, har nemlig lige pludseligt fået en ny aktie som hedder Orion Office REIT. Hvorfor?",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -1264,7 +1264,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1287,7 +1287,7 @@
       "summary": "I dette indlæg vil jeg dykke lidt ned i et spørgsmål som jeg ser ret ofte. Nemlig hvor meget man har brug for, for at være økonomisk fri, eller økonomisk uafhængig.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -1315,7 +1315,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1337,7 +1337,7 @@
       "url": "https://moneypennyandmore.dk/blog/de-bedste-aktier-de-6-forste-maneder-af-2022",
       "summary": "De bedste aktier det første halve år af 2022! Det første halve år af 2022 har givet investorer lidt af en bitter smag i munden. Usikkerheden er stadig høj, OMXC25 er nede med -19.6% men der er dog nogle aktier, som alligevel har klaret sig godt.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -1366,7 +1366,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1388,7 +1388,7 @@
       "url": "https://moneypennyandmore.dk/blog/forsta-og-optimer-yield-on-cost-yoc-din-personlige-udbytteprocent",
       "summary": "Når man investerer i udbytteaktier, er målet ofte at opbygge en stabil og voksende passiv indkomst over tid. En vigtig nøglemetrik til at følge op på din udbytteportefølje er \"Yield on Cost\" (YoC), eller på dansk, din egen udbytteprocent. I dette blogindlæg går jeg igennem, hvad YoC er, hvorfor det er vigtigt, og hvordan du kan bruge det til at måle og optimere din portefølje.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -1414,7 +1414,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1436,7 +1436,7 @@
       "url": "https://moneypennyandmore.dk/blog/tag-styringen",
       "summary": "Det handler om at få kontrollen over din økonomi, så du styrer den. Den skal ikke styre dig. Så hvis du først lige nu er igang med at få kontrollen over din økonomi, så er der her nogle tips som kan hjælpe dig på vej til at tage styringen over dine penge.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -1465,7 +1465,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -1487,7 +1487,7 @@
       "url": "https://moneypennyandmore.dk/blog/jeg-tor-naesten-ikke-hvordan-far-jeg-mod-pa-det",
       "summary": "// Dette er det tredje indlæg i Moneypenny’s serie “Investering for Unge”, hvor jeg vil dele min egen rejse med det formål, at inspirere flere unge til at begynde at investere. Derudover håber jeg, at det også vil hjælpe forældre, eller andre nærtstående til unge mennesker, med at finde ud af, hvordan man bedst kan introducere investering til unge. //",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -1516,7 +1516,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -1567,7 +1567,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 1.0
@@ -1589,7 +1589,7 @@
       "url": "https://moneypennyandmore.dk/blog/fa-styr-pa-din-okonomi-og-investeringer-med-apps",
       "summary": "Jeg er helt vild med op til flere økonomi-apps, som letter min hverdag ufatteligt meget. De giver mig overblik og indsigt i min økonomi og investeringer på en hurtig og lettilgængelig måde og der kommer stadig flere apps.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -1616,7 +1616,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -1638,7 +1638,7 @@
       "url": "https://moneypennyandmore.dk/blog/min-forste-investering-med-investeringsroboten-lysa-update",
       "summary": "Jeg har nu en automatisk overførsel fra min bank til Lysa hver måned. Lige som med Nordnets Månedsopsparing (men har liidt mere hos Nordnet :)). Nu tester jeg dette, fordi jeg vil give lidt information til dig som er usikker, og fordi det giver mig endnu mere risikospredning end hvad jeg allerede har :) Og så synes jeg det er så godt med konkurrence på gebyrerne, da de nu er de billigste på det danske marked.Lysa er virkelig nemt for den som ikke gider, at bruge så meget tid på sine investeringer. :)",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -1659,7 +1659,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1682,7 +1682,7 @@
       "summary": "I dette indlæg tager jeg lige temperaturen på Novo Nordisk (Januar 2025)",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -1708,7 +1708,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1756,7 +1756,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -1778,7 +1778,7 @@
       "url": "https://moneypennyandmore.dk/blog/reitssomgiverudbyttehvermaned",
       "summary": "En af de bedste ting ved REITs (i min optik) er, at det er selskaber som kan give udbytte meget hyppigt. Så ofte som hver måned. Mange amerikanske selskaber, inklusiv mange REITs, giver udbytte hvert kvartal. Kvartalsvis udbyttebetaling er normalt for REITs, og nogle giver så ofte som hver måned.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -1805,7 +1805,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -1827,7 +1827,7 @@
       "url": "https://moneypennyandmore.dk/blog/tre-danske-aktier-som-oget-sit-udbytte-med-over-10",
       "summary": "Tre danske aktier som har øget deres udbytte med over 10%",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -1854,7 +1854,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1876,7 +1876,7 @@
       "url": "https://moneypennyandmore.dk/blog/lysaupdate2022",
       "summary": "LYSA er Danmarks billigste robo-advisor og derfor er det den robot, som jeg selv har valgt at teste. Jeg startede i april 2021 med 200 kr. pr. måned - det hele helt automatiskt. Her er en status over min portefølje og et tilbud til dig som læser med :)",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "økonomi_nybegynder"
       ],
@@ -1905,7 +1905,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -1956,7 +1956,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.8
@@ -1978,7 +1978,7 @@
       "url": "https://moneypennyandmore.dk/blog/carlsberg-og-dsv-holder-fast-pa-deres-pladser-pa-listen-over-danske-udbyttearistokrater",
       "summary": "Opdatering for udbyttesæsonen 2024: Carlsberg og DSV bevarer deres pladser på listen over danske udbyttearistokrater, mens Ørsted er faldet ud!",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -2005,7 +2005,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -2029,7 +2029,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -2055,7 +2055,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -2077,7 +2077,7 @@
       "url": "https://moneypennyandmore.dk/blog/hvad-er-et-indeks-og-hvilke-typer-findes-der",
       "summary": "At investere i indeks er den nemmeste måde at være investor på. Og historisk data fortæller, at det faktisk også oftest er den bedste måde... Her dykker vi ned i, hvad et indeks er, og forskellene mellem Gross Index (GI), Price Index (PI) og Capped Index (CAP).",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -2104,7 +2104,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2126,7 +2126,7 @@
       "url": "https://moneypennyandmore.dk/blog/hvad-er-en-investeringsforening",
       "summary": "Jeg havde lidt svært ved, at adskille investeringsforening og investeringsfond da jeg begyndte at investere. I dette indlæg vil jeg forklare hvad disse er for noget og hvad forskellen er på de to. Jeg vil også komme lidt ind på hvad passiv og aktiv forvaltning er for noget, og give eksempel på hvad man kan bruge hjemmesiden Morningstar til. Det er nemlig et virkeligt godt sted at finde information på, når man vil lære sig mere om investeringsfonde.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -2154,7 +2154,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -2205,7 +2205,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2227,7 +2227,7 @@
       "url": "https://moneypennyandmore.dk/blog/kan-man-time-markedet",
       "summary": "Er det virkelig er den rette tid at begynde med investering nu? Skal man vente? Jeg tror ikke, jeg kan time markedet - og her forstæller jeg hvorfor. ",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -2252,7 +2252,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -2275,7 +2275,7 @@
       "summary": "Som nr. 1 vil jeg opdatere dig om at LYSA nu har presset priserne endnu mere, fra maks 0.378% i ÅOP til maks 0.356% i ÅOP (Lysa tager så 0.15% - 0.24% per år). De var billigst til at starte med, men udfordrer nu sine konkurrenter her i DK endnu mere. :)",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -2299,7 +2299,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -2348,7 +2348,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.8
@@ -2372,7 +2372,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -2397,7 +2397,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -2421,7 +2421,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "pensionister",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -2447,7 +2447,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.8
@@ -2469,7 +2469,7 @@
       "url": "https://moneypennyandmore.dk/blog/hvad-er-xdagen",
       "summary": "Hvornår skal jeg eje aktien for at få udbytte? Dette er x-dagen og sådan fungerer den.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -2495,7 +2495,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -2544,7 +2544,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2567,7 +2567,7 @@
       "summary": "I Moneypennygruppen på facebook kommer der jævnlig spørgsmål omkring det at spare op på en SU. Og det er jo et vigtigt spørgsmål, når man har et ønske om, at spare op samtidigt med at man har en lav indkomst i en korter eller længere periode i sit liv. Vi bad Signe Fejerskov om at skrive et gæsteindlæg omkring dette. For hvem er bedre til at give gode råd, end én der selv gør lige præcis det - nemlig sparer op, og oven i købet investerer, på en SU. Hvis du kender nogen du synes der skal læse om dette, så kan du nemt forwarde indlægget som mail eller dele på facebook via ikonerne længst nede i indlægget.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -2595,7 +2595,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -2617,7 +2617,7 @@
       "url": "https://moneypennyandmore.dk/blog/hvad-er-valoerdag",
       "summary": "Valørdag - hvad er det? Hvad skal man som investor være opmærksom på?",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -2641,7 +2641,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -2664,7 +2664,7 @@
       "summary": "I dette indlæg vil jeg gennemgå hvorfor det faktisk kan være en rigtig god idé at starte sin investeringsrejse i krisetider. ",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -2690,7 +2690,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -2713,7 +2713,7 @@
       "summary": "I Moneypennygruppen på facebook er der lige nu mange som spørger omkring Aktiesparekontoen (ASK), nok fordi Nordnet er ved at lancere sin ASK her den 23. november. Saxo har allerede haft den i lang tid. :) Spørgsmålene går ofte på, hvorfor man overhovedet skal have en ASK, om det kan svare sig ifht et depot. Derfor har jeg lavet nogle beregninger i Excel for at illustrere, hvordan man kan tænke.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -2739,7 +2739,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -2761,7 +2761,7 @@
       "url": "https://moneypennyandmore.dk/blog/nordnets-nye-indeksfonde-og-mine-tanker-om-disse",
       "summary": "Nordnet lancerer 4 nye indeksfonde, som er de billigste i Danmark blandt de danske fonde. Mellem 0.2-0.4% vil de ligge på, hvilket betyder, at det vil blive nogle af, hvis ikke DE billigste indeksfonde på det danske marked. Selvfølgelig findes der ETF'er som er lidt billigere, men der har du også valutaveksling og kurtage. Nordnets nye indeksfonde er helt kurtagefrie, hvilket jeg som svensker synes er på tide (i Sverige betaler vi kun kurtage for aktier og ikke for investeringsfonde)! ;)",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -2789,7 +2789,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -2841,7 +2841,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2864,7 +2864,7 @@
       "summary": "Gæsteindlæg af Jacob Fredsøe:Og hvorfor mener en af investerings-guruerne så at det er så vigtigt at holde fast, selvom det nogle gange går ned? Nogle gange rigtig, rigtig meget ned. Inden jeg begynder at grave ned i det, så tillad mig at introducere mig selv.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -2884,7 +2884,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -2906,7 +2906,7 @@
       "url": "https://moneypennyandmore.dk/blog/om-at-finde-sin-penge-balance",
       "summary": "Så hvad handler økonomi om for dig? Når du tænker på økonomi, hvad er det for følelser som kommer op? For mig var økonomi noget ”hårdt” og meget kedeligt.. noget man bare skulle. Investering var endnu værre, det virkede svært og uoverskueligt. I dag indebærer økonomi og investering noget meget mere blødt for mig. Økonomi og penge betyder for mig i dag frihed, uafhængighed og en følelse af kontrol.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -2935,7 +2935,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -2957,7 +2957,7 @@
       "url": "https://moneypennyandmore.dk/blog/hvad-boer-man-taenke-over-ved-en-borsnedgang",
       "summary": "Det er lidt vildt ja - og man skal også huske, at dette er en historisk hurtig tilbagevending af markedet. Som oftest går markedet, når det er et ”bjørnemarked” (bear market, dvs. en nedadgående trend på markedet), ned med ca. -34,3% og bliver ved i 11,7 måneder og det tager tid at komme op igen. Under Corona var vi oppe igen omkring juni måned, altså utroligt hurtigt.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -2976,7 +2976,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -3000,7 +3000,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "pensionister",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -3026,7 +3026,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.8
@@ -3050,7 +3050,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -3076,7 +3076,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -3099,7 +3099,7 @@
       "summary": "I denne artikel udforsker vi \"underconsumption core trend\" – en bevægelse, hvor flere vælger at reducere deres forbrug og i stedet fokusere på det, der virkelig betyder noget. Er det virkelig en ny trend, eller er det bare en tilbagevenden til noget helt almindeligt, som vi har glemt i vores stræben efter mere? Vi ser på, hvordan du kan blive en del af denne trend og reflektere over, om det i virkeligheden blot handler om sund fornuft.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -3124,7 +3124,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3147,7 +3147,7 @@
       "summary": "Fødselsdagsgoder - Dette kan du eller dit barn få gratis på fødselsdagen! Her har jeg samlet 11 steder med gratis fødselsdagsgaver og tilbud! Og i alt 18 steder, som måske kunne bruges for at få gode tilbud og rabatter!",
       "target_audiences": [
         "børnefamilier",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -3176,7 +3176,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3199,7 +3199,7 @@
       "summary": "Her er et indlæg om en bestemt type aktier, som jeg er ret vild med. De giver nemlig, i mange tilfælde, udbytte hver måned. Via disse 'ejendomsaktier', som også kaldes for REITs, kan du få et højt, direkte afkast og få en diversificering i ejendomme. Faktisk kan man sige, at du får en del af forskellige amerikanske ejendomsporteføljer.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "mellem",
@@ -3225,7 +3225,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -3248,7 +3248,7 @@
       "summary": "I maj 2023 startede jeg en test for at minimere min mobilregning. Jeg følte, at jeg var lidt for fastlåst (og doven) og betalte for meget. Nu ville jeg se, hvor billigt jeg kunne gøre det. I forbindelse med min undersøgelse fandt jeg det billigste abonnement, jeg indtil nu har fået øje på... Følg med! :)",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -3277,7 +3277,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3300,7 +3300,7 @@
       "summary": "Jeg er jo svensk og derfor vil der nok, udover det sproglige ;D, komme et par indlæg hist og pist som fokuserer lidt på nabolandet Sverige. Et indlæg jeg har villet skrive i lang tid, er et indlæg om de aktier som vi i Sverige plejer at anbefale som de bedste nybegynderaktier. Ja, udover en fond selvfølgelig - en global passiv fond er en virkelig god start :). Det er nemlig de \"svenske investmentbolag\"!",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -3327,7 +3327,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3351,7 +3351,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "mellem",
       "minepenge_tags": [
@@ -3377,7 +3377,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3399,7 +3399,7 @@
       "url": "https://moneypennyandmore.dk/blog/status-marts-2025-min-lysa-tyv-ligger-pa-38.8-siden-start",
       "summary": "UPDATE Lysaportefølje ultimo Marts 2025. LYSA er Danmarks billigste robo-advisor og derfor er det den robot, som jeg har valgt at teste. Jeg startede i april 2021 med 200 kr. pr. måned - det hele sker helt automatisk. Her er en status over min portefølje og et tilbud til dig som læser med :)",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "økonomi_nybegynder"
       ],
@@ -3427,7 +3427,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -3449,7 +3449,7 @@
       "url": "https://moneypennyandmore.dk/blog/dette-betyder-tallene-pa-din-side-pa-nordnet",
       "summary": "Her kan du lære hvad de forskellige tal betyder, når du er logget ind på Nordnet.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -3471,7 +3471,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -3495,7 +3495,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "økonomi_nybegynder",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -3519,7 +3519,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -3570,7 +3570,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -3592,7 +3592,7 @@
       "url": "https://moneypennyandmore.dk/blog/hvor-meget-falder-aktiekursen-efter-udbytte",
       "summary": "Hvordan reagerer aktiekursen egentlig, når udbyttet kommer? Det er et meget almindeligt spørgsmål.. og svaret... Ja, ikke helt så nemt :)",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "pensionister"
       ],
@@ -3620,7 +3620,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.4
@@ -3643,7 +3643,7 @@
       "summary": "Udbyttesæsonen 2025 er på vej! Vær opmærksom på disse ting!Udbytte kan jo komme når som helst på året. Men foråret er kendt som \"udbyttesæsonen\". Og her i Danmark er februar en god måned udbyttemæssigt, hvor mange danske fonde giver udbytte.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -3670,7 +3670,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3693,7 +3693,7 @@
       "summary": "Her giver jeg fire grunde til at elske REITs :)",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -3719,7 +3719,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -3742,7 +3742,7 @@
       "summary": "HURRA! Jeg har næsten fordoblet mit udbytte i 2022! Læs mere om hvordan jeg gjorde det, lige her. ",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -3767,7 +3767,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -3789,7 +3789,7 @@
       "url": "https://moneypennyandmore.dk/blog/sadan-far-du-manedligt-udbytte-med-reits-ejendomsinvestering-uden-mursten",
       "summary": "Vil du gerne have en passiv indkomst – men uden at skulle købe, renovere eller udleje fysiske ejendomme selv? – Så er REITs måske noget for dig.REITs er en smart måde at få del i afkastet fra ejendomsmarkedet – helt uden at eje mursten. I dette indlæg forklarer vi, hvad REITs er, hvordan du kan investere i dem, og hvorfor jeg elsker dem.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -3816,7 +3816,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -3840,7 +3840,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "pensionister",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -3865,7 +3865,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.8
@@ -3887,7 +3887,7 @@
       "url": "https://moneypennyandmore.dk/blog/denne-aktie-har-oget-sit-udbytte",
       "summary": "Opdatering for udbyttesæsonen 2024: Flere selskaber offentliggør regnskaber. Rockwool beholder sin plads på listen over danske udbyttearistokrater.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -3913,7 +3913,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -3961,7 +3961,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.8
@@ -3984,7 +3984,7 @@
       "summary": "I dette indlæg har jeg samlet de 5 sparetip jeg synes bedst om, og 28 andre sparetip som måske kan give lidt inspiration :). Mine 5 favoritter, har hjulpet mig med at øge min opsparingsgrad betydeligt. Når du er begyndt at kontrollere din økonomi, og hvor du kan spare, bliver du automatisk mere bevidst omkring din økonomi og bliver mere sparsommelig. \"Mange bække små” er faktisk sandt - du kan spare meget op, flere steder fra, som faktisk bliver til noget! Det er ikke de store indkomster, der skaber millionæren, det er de små udgifter. :)",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -4012,7 +4012,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -4035,7 +4035,7 @@
       "summary": "HURRA! 37.8% udbyttevækst 2022-2023!  Læs mere om hvordan jeg gjorde det, lige her. ",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -4061,7 +4061,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -4083,7 +4083,7 @@
       "url": "https://moneypennyandmore.dk/blog/lysaupdate2024-maj",
       "summary": "UPDATE Lysaportefølje Maj 2024.LYSA er Danmarks billigste robo-advisor og derfor er det den robot, som jeg har valgt at teste. Jeg startede i april 2021 med 200 kr. pr. måned - det hele sker helt automatisk. Her er en status over min portefølje og et tilbud til dig som læser med :)",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "økonomi_nybegynder"
       ],
@@ -4111,7 +4111,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -4134,7 +4134,7 @@
       "summary": "De seneste par dage har børsen faldet ret voldsomt. Dette er grundet en rædsel for at coronaviruset kan give en global økonomisk \"slow-down\".",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -4157,7 +4157,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -4180,7 +4180,7 @@
       "summary": "Her viser jeg dig, hvordan du kan finde ud af, hvilke aktier der giver det bedste udbytte (direkte afkast).",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -4205,7 +4205,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -4228,7 +4228,7 @@
       "summary": "Mange som er nye indenfor investering går ofte med spørgsmålet om de har penge nok til at begynde at investere. ”Er det virkelig nok ,at jeg ”kun” har 500 kroner, eller måske kun 100 kroner?”.Mit svar er et rungende JA. Husk at hver krone tæller, og du er bare så mega sej at du har taget valget om at komme i gang! Små skridt er også skridt, og du vil som investor vokse i præcis det tempo som føles bedst for dig, og det samme med din portefølje. Det at du er startet er f.a.n.t.a.s.t.i.s.k.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -4255,7 +4255,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -4278,7 +4278,7 @@
       "summary": "I Moneypenny har vi de sidste mange uger haft mange spørgsmål om hvad tegningsretter er og hvordan de fungerer. Her tænkte jeg derfor skrive et kort indlæg for at forklare hvordan det fungerer og give links til gode steder hvor du kan lære mere. :)",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -4307,7 +4307,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -4329,7 +4329,7 @@
       "url": "https://moneypennyandmore.dk/blog/mit-lysa-bekendtskab",
       "summary": "Mit bekendtskab med Lysa = 20,75% i afkast!",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "pensionister"
       ],
@@ -4357,7 +4357,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -4381,7 +4381,7 @@
       "target_audiences": [
         "økonomi_nybegynder",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -4406,7 +4406,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -4428,7 +4428,7 @@
       "url": "https://moneypennyandmore.dk/blog/nyhed-fra-lysa-fra-2025-beskattes-din-lysa-gevinst-som-aktieindkomst",
       "summary": "Ja, Lysa har gjort det igen! De har lyttet til os kunder, og fra den 1. januar 2025 vil afkastet fra Lysa Global Equity Broad blive beskattet som aktieindkomst i stedet for kapitalindkomst. Det betyder lavere skat for rigtig mange danske Lysa-kunder! 🎯",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -4457,7 +4457,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -4480,7 +4480,7 @@
       "summary": "I dette indlæg lærer du mere om kontotypen Aktiesparekonto!",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -4506,7 +4506,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -4530,7 +4530,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "økonomi_nybegynder",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -4556,7 +4556,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -4579,7 +4579,7 @@
       "summary": "Nordnets Månedsopsparing er en service, som investeringsplatformen Nordnet tilbyder. I dette skriv vil jeg komme ind på hvad Månedsopsparingen er og sætte den lidt i kontekst til investeringsverdenen, så du får en bedre ide om hvornår Månedsopsparingen kan være en god løsning for dig :)",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -4606,7 +4606,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -4628,7 +4628,7 @@
       "url": "https://moneypennyandmore.dk/blog/betaler-min-aktie-udbytte",
       "summary": "\"Betaler aktien udbytte?\" er et af de mange spørgsmål omkring udbytte. Der findes en del forskellige måder at finde ud af lige præcis dét. Jeg tænkte derfor at jeg ville samle mine bedste tips her! På den måde kan du vælge din egen favorit og rigtig komme igang med at udvælge nogle udbytteaktier til porteføljen :)",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -4657,7 +4657,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -4708,7 +4708,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -4758,7 +4758,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -4782,7 +4782,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -4808,7 +4808,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -4832,7 +4832,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -4858,7 +4858,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -4881,7 +4881,7 @@
       "summary": "Saxo har lanceret et nyt produkt - Månedsopsparing. I denne artikel vil jeg præsentere produktet og sammenligne det med Nordnets Månedsopsparing.",
       "target_audiences": [
         "pensionister",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -4907,7 +4907,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.8
@@ -4929,7 +4929,7 @@
       "url": "https://moneypennyandmore.dk/blog/vi-burde-fyre-os-selv",
       "summary": "Og så måske alligevel ikke. – Nysgerrig på hvorfor?",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -4957,7 +4957,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -4979,7 +4979,7 @@
       "url": "https://moneypennyandmore.dk/blog/all-time-high-skal-jeg-ga-ind-i-markedet-med-mine-penge-nu",
       "summary": "All Time High - skal jeg gå ind i markedet med mine penge nu? Der er SÅ mange ATH's (All Time Highs) i aktiemarkedets historie... altså, i et bull marked (et marked som går opad - \"tyren stanger opad\") så vil der jo være rigtigt mange ATH's, - hvordan skal vi ellers fortsætte opad? Med det sagt, så vil der selvfølgelig altid være en All time high som er den sidste inden en større eller mindre korrektion (nedgang af markedet).",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -5002,7 +5002,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -5025,7 +5025,7 @@
       "summary": "Flere selskaber tilbyder frynsegoder til aktionærer som rabatter, events og fordele. Læs med for eksempler fra Danmark, Sverige og udlandet!",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -5054,7 +5054,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -5078,7 +5078,7 @@
       "target_audiences": [
         "økonomi_nybegynder",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -5105,7 +5105,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0

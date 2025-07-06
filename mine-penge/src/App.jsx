@@ -19,7 +19,7 @@ import './index.css';
 function App() {
   const [articles, setArticles] = useState([]);
   const [filteredArticles, setFilteredArticles] = useState([]);
-  const [favorites, setFavorites] = useState([]);
+
   const [selectedTopics, setSelectedTopics] = useState(['Alle tags']);
   const [loading, setLoading] = useState(true);
   const [curationPanelOpen, setCurationPanelOpen] = useState(false);
@@ -255,13 +255,7 @@ function App() {
     showCurrentPageArticles();
   };
 
-  const toggleFavorite = (articleId) => {
-    setFavorites(prev => 
-      prev.includes(articleId) 
-        ? prev.filter(id => id !== articleId)
-        : [...prev, articleId]
-    );
-  };
+
 
   const PaginationControls = () => {
     if (pagination.totalPages <= 1) return null;
@@ -442,8 +436,6 @@ function App() {
             <ArticleCard
               key={article.article_id || index}
               article={article}
-              isFavorite={favorites.includes(article.article_id)}
-              onToggleFavorite={() => toggleFavorite(article.article_id)}
               selectedTag={selectedTopics.length > 0 && !selectedTopics.includes('Alle tags') ? selectedTopics[0] : null}
             />
           ))}

@@ -25,7 +25,7 @@
     "target_audiences_used": [
       "studerende",
       "børnefamilier",
-      "lavindkomstgrupper",
+      "budgetbevidste",
       "nybegynder_investering",
       "økonomi_nybegynder",
       "pensionister"
@@ -39,7 +39,7 @@
       "url": "https://ungmedpenge.dk/investeringsmuligheder/",
       "summary": "Står du med penge på lommen og vil gerne i gang med investering, så har jeg i denne artikel samlet en lang række investeringsmuligheder, som du kan tage et kig på. Med negative renter i banken, så har...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -65,7 +65,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -92,7 +92,7 @@
       "summary": "Temperaturen stiger for tiden, og det samme gør porteføljen. Vi er godt på vej ind i sommeren, og det lader til, at de fine takter for mine investeringer fortsætter. Aktierne i min portefølje er stadi...",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -119,7 +119,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -146,7 +146,7 @@
       "summary": "Som et af vores nabolande, så er det bestemt interessant at kigge mod det svenske aktiemarked, hvis du mangler nye aktier til din portefølje. Aktiekulturen er noget større end i Danmark, og derfor er ...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "mellem",
       "minepenge_tags": [
@@ -171,7 +171,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -197,7 +197,7 @@
       "summary": "I denne artikel vil jeg gennemgå de to mest prominente online børsmæglere i Danmark – Saxo Bank og Nordnet. Platformene har en del forskellige funktioner, og jeg vil i denne artikel komme ind på de fo...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "mellem",
@@ -222,7 +222,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -248,7 +248,7 @@
       "url": "https://ungmedpenge.dk/shorting-af-aktier/",
       "summary": "Det er naturligt, at du kan tjene penge på aktiemarkedet, hvis dine aktier stiger. Hvad hvis du også kan tjene penge, når dine aktier falder? Shorting af aktier er en avanceret investeringsform, der g...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -275,7 +275,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -301,7 +301,7 @@
       "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-december-2021/",
       "summary": "Så blev det sidste måned i 2021, og det er tid til at gøre porteføljen op. I december 2021 formåede jeg at nå mit mål for 2021 – og endda med en god buffer. I denne måned er der blevet købt ind i én e...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -330,7 +330,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 1.0
@@ -359,7 +359,7 @@
       "target_audiences": [
         "studerende",
         "børnefamilier",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -385,7 +385,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -411,7 +411,7 @@
       "url": "https://ungmedpenge.dk/aktiestrategi/",
       "summary": "Hvis du er ny inden for investering i aktier, så kan det være meget uoverskueligt at komme i gang. Der findes mange forskellige aktiestrategier, som du vælge for at investere dine penge bedst muligt. ...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -440,7 +440,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -493,7 +493,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -547,7 +547,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -573,7 +573,7 @@
       "url": "https://ungmedpenge.dk/anmeldelse-af-saxoinvestor/",
       "summary": "SaxoInvestor er en del af Saxo Bank og er blandt de mest populære platforme i Danmark til aktiehandel. Det er en simpel og overskuelig platform, der tilbyder lav kurtage på mange forskellige markeder....",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -599,7 +599,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -626,7 +626,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -653,7 +653,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -680,7 +680,7 @@
       "url": "https://ungmedpenge.dk/investering-i-sommerhus/",
       "summary": "For mange mennesker er et sommerhus til eget brug, men det kan faktisk være en god investering at udleje sit sommerhus. Favorable skattevilkår gør det interessant at kigge på sommerhuse som en alterna...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -708,7 +708,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -735,7 +735,7 @@
       "summary": "Mange mennesker er ikke klar over, hvad en nødopsparing er, og hvorfor det er så vigtigt at have en. I denne artikel vil jeg komme ind på, hvad forskellen på en nødopsparing og en almindelig opsparing...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -763,7 +763,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -789,7 +789,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -811,7 +811,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -862,7 +862,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -915,7 +915,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.4
@@ -941,7 +941,7 @@
       "url": "https://ungmedpenge.dk/page/7/",
       "summary": "Ung fyr, der lærer fra sig omkring alt indenfor økonomi, finans, investering, ungdom, og alt hvad det nu indebærer.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -959,7 +959,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -983,7 +983,7 @@
       "url": "https://ungmedpenge.dk/aktiespil/",
       "summary": "Hvis du gerne vil prøve at investere i aktier uden at have risikoen, så er aktiespil en god mulighed for at prøve det af. Her får du mulighed for at prøve suset af med investere i en raket uden, at du...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -1010,7 +1010,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1035,7 +1035,7 @@
       "url": "https://ungmedpenge.dk/livrente/",
       "summary": "Når du sparer op til din pension, så kan du komme i en situation, hvor du ikke har sparet nok op, hvis du lever længere end forventet. Med en livrente løber du aldrig tør for udbetalinger under din pe...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "pensionister",
         "økonomi_nybegynder"
       ],
@@ -1064,7 +1064,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 1.0
@@ -1104,7 +1104,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1158,7 +1158,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -1207,7 +1207,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -1233,7 +1233,7 @@
       "url": "https://ungmedpenge.dk/page/2/",
       "summary": "Ung fyr, der lærer fra sig omkring alt indenfor økonomi, finans, investering, ungdom, og alt hvad det nu indebærer.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -1251,7 +1251,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -1293,7 +1293,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1341,7 +1341,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1390,7 +1390,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -1444,7 +1444,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -1470,7 +1470,7 @@
       "url": "https://ungmedpenge.dk/page/6/",
       "summary": "Ung fyr, der lærer fra sig omkring alt indenfor økonomi, finans, investering, ungdom, og alt hvad det nu indebærer.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -1488,7 +1488,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -1535,7 +1535,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1562,7 +1562,7 @@
       "summary": "Porteføljen vokser med næsten 15.000 kroner i denne måned. Aktiemarkedet buldrer derudaf, og det har også positivt effekt på porteføljen. Dog trækker en faldende dollarkurs i den forkerte retning, så ...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -1588,7 +1588,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1614,7 +1614,7 @@
       "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-maj-2022/",
       "summary": "Maj 2022 er den måned indtil videre, hvor jeg har været mest aktiv på aktiemarkedet. I alt har jeg foretaget syv handler bestående af tre frasalg og hele fire indkøb. Det er ny rekord! Porteføljen run...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -1642,7 +1642,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -1688,7 +1688,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1714,7 +1714,7 @@
       "url": "https://ungmedpenge.dk/aktiesparekonto/",
       "summary": "For at fremme den private opsparing i aktier blev der i 2019 etableret etableret et nyt koncept til investering kaldet aktiesparekontoen. En aktiesparekonto giver dig mulighed for en lavere beskatning...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -1741,7 +1741,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -1794,7 +1794,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -1820,7 +1820,7 @@
       "url": "https://ungmedpenge.dk/hvad-er-et-aktiesplit/",
       "summary": "Et aktiesplit betyder, at en aktie bliver splittet i flere aktier. I denne korte artikel vil jeg gennemgå, hvad et aktiesplit er, samt hvad det betyder for en aktie at blive splittet. Annoncerer et se...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -1837,7 +1837,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1864,7 +1864,7 @@
       "target_audiences": [
         "studerende",
         "børnefamilier",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -1891,7 +1891,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 1.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -1926,7 +1926,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1949,7 +1949,7 @@
       "summary": "Den typiske måde at tjene penge på aktier er gennem kursstigninger over tid. En anden tilgang, som du mange overser, er, at nogle selskaber også betaler udbytte . Udbytte er en del af virksomhedens ov...",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "mellem",
@@ -1976,7 +1976,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2003,7 +2003,7 @@
       "summary": "Inden for det seneste stykke tid er der vokset en større interesse op inden for forskellige gaming aktier. I denne artikel vil jeg gennemgå forskellige aktier inden for gaming samt hvad du skal være o...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -2022,7 +2022,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -2068,7 +2068,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -2094,7 +2094,7 @@
       "summary": "I denne guide vil jeg fortælle dig, hvordan du hurtigt og nemt kan spare penge, når du køber tøj og andre ting på ASOS. Mange unge mennesker bruger en masse penge på tøj derinde, og det giver god meni...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -2119,7 +2119,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2168,7 +2168,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2197,7 +2197,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -2222,7 +2222,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2273,7 +2273,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -2325,7 +2325,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2352,7 +2352,7 @@
       "summary": "Selvom aktiemarkedet i Finland ikke fylder meget på verdensmarkederne, så kan det alligevel være interessant at kigge i retningen af vores nordiske samarbejdspartner, når der skal findes nye investeri...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -2380,7 +2380,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -2406,7 +2406,7 @@
       "summary": "Hver gang du køber og sælger et værdipapir, så er der en omkostning. Denne omkostning kaldes kurtage , og den betales både ved køb og salg af værdipapirer som aktier, investeringsforeninger , obligati...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -2430,7 +2430,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -2479,7 +2479,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -2528,7 +2528,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -2554,7 +2554,7 @@
       "summary": "Tyskland er den største økonomi i Europa, og derfor finder du også en del af de helt store selskaber, der har base i Tyskland. Af samme årsag finder du også en masse aktier, der er af en helt anden st...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -2581,7 +2581,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -2608,7 +2608,7 @@
       "summary": "I et land som Danmark er samfundet bygget op på, at vi alle betaler skat. Derfor betales der også skat på aktier, hvilket man bør have for øje, når man investerer. Det gælder om at skatteoptimere mest...",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -2634,7 +2634,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -2660,7 +2660,7 @@
       "url": "https://ungmedpenge.dk/online-investering/",
       "summary": "Tiderne hvor du ringede til din bankmand for at købe aktier er langt forbi, og nu til dags foregår det mest investering digitalt. Det sker både gennem investeringsplatforme og banker, hvor du kan hand...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -2688,7 +2688,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -2715,7 +2715,7 @@
       "target_audiences": [
         "studerende",
         "økonomi_nybegynder",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -2742,7 +2742,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -2792,7 +2792,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -2817,7 +2817,7 @@
       "url": "https://ungmedpenge.dk/page/8/",
       "summary": "Ung fyr, der lærer fra sig omkring alt indenfor økonomi, finans, investering, ungdom, og alt hvad det nu indebærer.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -2835,7 +2835,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2888,7 +2888,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -2916,7 +2916,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -2942,7 +2942,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -2995,7 +2995,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -3021,7 +3021,7 @@
       "url": "https://ungmedpenge.dk/page/3/",
       "summary": "Ung fyr, der lærer fra sig omkring alt indenfor økonomi, finans, investering, ungdom, og alt hvad det nu indebærer.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -3039,7 +3039,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -3092,7 +3092,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.4
@@ -3136,7 +3136,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -3161,7 +3161,7 @@
       "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-januar-2024/",
       "summary": "Januar har været en effektiv måned, og det betyder, at jeg er kommet et godt stykke længere med lejligheden end forventet. Der er blandt andet skudt gang i køkken-projektet, som jeg glæder mig meget t...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -3189,7 +3189,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -3216,7 +3216,7 @@
       "summary": "Der er sket store fremskridt i lejligheden, og samtidig også nyhed, der kommer til at nedbringe min boligudgift det næste stykke tid. En refinansiering kommer dermed stille og roligt tættere på. Samti...",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -3244,7 +3244,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.4
@@ -3272,7 +3272,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -3293,7 +3293,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3318,7 +3318,7 @@
       "url": "https://ungmedpenge.dk/aktier-for-begyndere/",
       "summary": "Stor guide til investering i aktier, hvor du kan blive klogere på alle elementerne af aktie. Jeg klæder dig på til at købe din første aktie.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -3346,7 +3346,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -3380,7 +3380,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -3429,7 +3429,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3455,7 +3455,7 @@
       "summary": "Renoveringen har ikke fået helt så meget opmærksomhed denne måned, men til gengæld har der været masser af spændende udvikling på bloggen. Det omfatter flere nye funktioner og opdateret indhold samt s...",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -3483,7 +3483,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3510,7 +3510,7 @@
       "summary": "En november måned med et stort forbrug er overstået, og jeg kigger frem imod juletiden. Aktiemarkedet har haft lidt hårde tider den seneste måneds tid, men jeg kommer nogenlunde ud på den anden side. ...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -3536,7 +3536,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -3563,7 +3563,7 @@
       "url": "https://ungmedpenge.dk/graeske-aktier/",
       "summary": "Den græske økonomi har i det seneste årti gennemgået en lang periode med store problemer med afvikling af statsgælden i landet. Efter en længere periode med hjælp og støtte fra EU var Grækenland i 201...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -3592,7 +3592,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -3617,7 +3617,7 @@
       "url": "https://ungmedpenge.dk/etoro-vs-saxo-bank/",
       "summary": "I Danmark er Saxo Bank, der står bag SaxoInvestor, en af de mest populære platforme til aktiehandel. Hvordan måler de sig op mod en af de hurtigst voksende platforme i form af eToro? I denne artikel f...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -3644,7 +3644,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -3670,7 +3670,7 @@
       "summary": "De store fremskridt med lejlighedsrenoveringen fortsætter, og målsætningen om en refinansering i forbindelse med opdatering for januar 2025 er stadig intakt. Målet rykker tættere på. Der er også sket ...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -3698,7 +3698,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -3726,7 +3726,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -3752,7 +3752,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3779,7 +3779,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -3804,7 +3804,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3850,7 +3850,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3876,7 +3876,7 @@
       "summary": "Investeringsforeninger er efterhånden blivet en rigtig populær måde at investere på. Det er en simpel og nem måde at investere på, så populariteten er helt berettiget. Det er en god måde at investere ...",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -3902,7 +3902,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3957,7 +3957,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -4012,7 +4012,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -4039,7 +4039,7 @@
       "summary": "I denne måned tager porteføljen et stort skridt i den rigtige retning efter to mindre gode måneder. Porteføljen er dermed tilbage på det højeste niveau nogensinde. Foruden porteføljens positive udvikl...",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -4067,7 +4067,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -4094,7 +4094,7 @@
       "summary": "Mange danskere foretrækker at investere i danske aktier, da det er velkendte selskaber, som er nemmere at forholde sig til. Det er selskaber, som vi møder i vores dagligdag blandt andet gennem nyheder...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -4122,7 +4122,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -4148,7 +4148,7 @@
       "summary": "Denne opdatering handler om en måned, der uden tvivl vil gå over i historiebøgerne. COVID19 har taget toppen af aktiemarkedet på ekstremt kort tid, og porteføljen har aldrig været hårdere ramt. Udover...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -4174,7 +4174,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -4201,7 +4201,7 @@
       "summary": "I denne artikel kan du læse min anmeldelse af crowdlending-platformen Mintos. Mintos er en af de største crowdlending-platforme på markedet. Den er af mange anset som det bedste sted at starte sit eve...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -4229,7 +4229,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -4283,7 +4283,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -4334,7 +4334,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -4360,7 +4360,7 @@
       "summary": "De sidste 2 måneder har ikke været fantastiske, når jeg kigger på de afkast, som jeg har haft. Faldet af Envestio i sidste måned samt Corona-virussens indtog på aktiemarkeder her i februar 2020 har me...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -4386,7 +4386,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -4412,7 +4412,7 @@
       "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-september-2022/",
       "summary": "De usikre markeder fortsætter ind i september 2022, hvor der sker et markant fald i porteføljen. Denne måned triller lige præcis ind som nummer et på listen over de dårligste måneder i min porteføljes...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -4440,7 +4440,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -4466,7 +4466,7 @@
       "url": "https://ungmedpenge.dk/anmeldelse-af-revolut/",
       "summary": "Har du mange betalinger i forskellige valutaer eller overførsler til udlandet, så er du sikkert bekendt med, at det hurtigt kan blive dyrt i gebyrer, hvis man ikke tænker sig om. I denne artikel kan d...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -4493,7 +4493,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -4518,7 +4518,7 @@
       "summary": "Usikkerhederne er stadig til at føle på aktiemarkederne, men det dulmer lidt af i denne måned. Min portefølje tager et markant løft opad med den højeste nominelle stigning nogensinde. Kombineret med m...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -4545,7 +4545,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -4574,7 +4574,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "børnefamilier",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -4600,7 +4600,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -4628,7 +4628,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "mellem",
       "minepenge_tags": [
@@ -4653,7 +4653,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -4705,7 +4705,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -4758,7 +4758,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -4811,7 +4811,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -4857,7 +4857,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -4882,7 +4882,7 @@
       "url": "https://ungmedpenge.dk/investering-i-solceller/",
       "summary": "Solenergi bliver mere og mere populært, og hele verdenen over bliver der sat flere og flere solcellepaneler op, der skal bidrage til den grønne omstilling. Derfor er det også naturligt, at der er fler...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -4906,7 +4906,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -4932,7 +4932,7 @@
       "summary": "Stor oversigt med alle danske aktier med aktionærfordele i 2020. Find fordele fra selskaber som Tivoli, SAS og mange andre.",
       "target_audiences": [
         "børnefamilier",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -4959,7 +4959,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -4986,7 +4986,7 @@
       "summary": "Fossile brændstoffer bliver mindre og mindre populære, mens vedvarende energi vinder kraftigt frem i øjeblikket. Solenergi er bestemt en af de spændende muligheder for vedvarende energi i fremtiden. V...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -5013,7 +5013,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -5067,7 +5067,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -5118,7 +5118,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -5171,7 +5171,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -5197,7 +5197,7 @@
       "url": "https://ungmedpenge.dk/aktie-platform/",
       "summary": "Det kan være svært at overskue hvilken aktie platform, du bør vælge. Der er mange fordele og ulemper, og det kan svært at danne sig det store overblik over, hvor det bedste sted at handle aktier er. S...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -5225,7 +5225,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -5264,7 +5264,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -5289,7 +5289,7 @@
       "url": "https://ungmedpenge.dk/page/4/",
       "summary": "Ung fyr, der lærer fra sig omkring alt indenfor økonomi, finans, investering, ungdom, og alt hvad det nu indebærer.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -5307,7 +5307,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -5331,7 +5331,7 @@
       "url": "https://ungmedpenge.dk/page/10/",
       "summary": "Ung fyr, der lærer fra sig omkring alt indenfor økonomi, finans, investering, ungdom, og alt hvad det nu indebærer.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -5349,7 +5349,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -5400,7 +5400,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -5450,7 +5450,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -5476,7 +5476,7 @@
       "summary": "Hvis du gerne vil i gang med investering med aktier , så har du behov for nogle værktøjer, der kan hjælpe dig med at udvælge de aktier, der passer til dine kriterier. Der findes mange forskellige meto...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -5504,7 +5504,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -5530,7 +5530,7 @@
       "summary": "Ferieperioden er over os, og det betyder, at der har været ekstra tid at finde til at istandsætte min lejlighed. Dermed er der sket et stor skridt i den rigtige retning. På portefølje-fronten er der f...",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -5557,7 +5557,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.4
@@ -5583,7 +5583,7 @@
       "url": "https://ungmedpenge.dk/ethereum/",
       "summary": "Ethereum er en decentraliseret, open-source teknologi, der fungerer som platform for mange aktiviteter i verdenen for kryptovaluta. Det har blandt andet gjort, at valutaen Ether, der er knyttet op på ...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -5610,7 +5610,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -5661,7 +5661,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -5686,7 +5686,7 @@
       "url": "https://ungmedpenge.dk/fly-aktier/",
       "summary": "Da COVID-19 indtraf havde det en ekstrem påvirkning på flytrafikken og rejser generelt. Det medførte, at flyselskaberne fik tæsk på aktiemarkedet, da der var lange udsigter til den fremtidige indtjeni...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -5709,7 +5709,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -5752,7 +5752,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -5778,7 +5778,7 @@
       "summary": "Marts 2022 er indtil videre den bedste måned nogensinde, når der kigges på det nominelle afkast. En stigning på lidt over 30.000 kr. i denne måned er voldsomt, og det gør også, at porteføljen tager et...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -5805,7 +5805,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -5837,7 +5837,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -5860,7 +5860,7 @@
       "summary": "Vejret bliver varmere, og det kan ses på aktiemarkedet. I denne måned vokser porteføljen ganske fortrinligt samtidig med, at der bliver sat penge til side igen. Jeg holder for tiden et højt niveau i f...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -5886,7 +5886,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -5940,7 +5940,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.4
@@ -5995,7 +5995,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -6050,7 +6050,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -6078,7 +6078,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -6104,7 +6104,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -6131,7 +6131,7 @@
       "summary": "USA er den største økonomi i verden, og det er også her, at du finder de absolut største aktieselskaber på hele kloden. Amerikanske aktier fylder rigtig meget, og det er mange gange også dem, der sætt...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -6158,7 +6158,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -6184,7 +6184,7 @@
       "url": "https://ungmedpenge.dk/vaben-aktier/",
       "summary": "Aktier i forsvarsindustrien er blevet markant mere populære som følge af den seneste tids globale uroligheder. Denne udvikling påvirker både aktiekurserne og forventningerne til selskabernes fremtid. ...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -6211,7 +6211,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -6249,7 +6249,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -6275,7 +6275,7 @@
       "summary": "Oktober 2020 blev første måned i meget lang tid, hvor der ikke bliver tilføjet ekstra midler til porteføljen. Det er der en god årsag til, som du kan læse mere til i opdateringen. Samtidig så er der o...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -6302,7 +6302,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -6328,7 +6328,7 @@
       "url": "https://ungmedpenge.dk/obligationer-for-begyndere/",
       "summary": "Når aktiemarkedet buldrer derudaf, så er der ikke mange, der spekulerer over, at markedet pludselig kan stikke nedad igen. Da det er uundgåeligt, at det vil ske på et tidspunkt, så er det rigtig fornu...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -6355,7 +6355,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -6382,7 +6382,7 @@
       "summary": "Sommeren er ved at være over os, men aktierne fortsætter op. I denne måned laver vokser min aktieportefølje med næsten 5 %. De høje indbetalinger fortsætter, så det store billede ser rigtig godt ud. I...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -6409,7 +6409,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -6463,7 +6463,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -6489,7 +6489,7 @@
       "url": "https://ungmedpenge.dk/anmeldelse-af-etoro/",
       "summary": "En af de mest voksende platforme i øjeblikket er eToro. Platformen har opnået en stor popularitet grundet blandt andet lav kurtage og copytrading. Det lyder rigtig fint, men er platformen den rigtige ...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -6516,7 +6516,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -6544,7 +6544,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "pensionister",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -6571,7 +6571,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 1.0
@@ -6596,7 +6596,7 @@
       "url": "https://ungmedpenge.dk/investering-i-biler/",
       "summary": "Det er alment kendt, at en bil aldrig er nogen god investering. Det løbende værditab gør, at det er enormt svært at få pengene igen på en bil, også selvom den blot er trillet ud over kantstenen. Der e...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -6626,7 +6626,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -6673,7 +6673,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -6726,7 +6726,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -6754,7 +6754,7 @@
       "target_audiences": [
         "økonomi_nybegynder",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -6781,7 +6781,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -6807,7 +6807,7 @@
       "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-november-2023/",
       "summary": "Efter et par måneder med negativt fortegn, så tager porteføljen en rigtig positiv drejning i denne måned. Det medfører faktisk, at jeg trods et sløvt 2023 er forholdsvist tæt på at komme i mål med min...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -6835,7 +6835,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -6864,7 +6864,7 @@
       "target_audiences": [
         "studerende",
         "børnefamilier",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -6892,7 +6892,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 1.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -6945,7 +6945,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -6999,7 +6999,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -7028,7 +7028,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "mellem",
       "minepenge_tags": [
@@ -7054,7 +7054,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -7109,7 +7109,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -7136,7 +7136,7 @@
       "summary": "Grænserne for minusrenter bliver lavere og lavere rundt omkring, og det har aldrig været så urentabelt at have pengene stående på en bankkonto, som det er nu. Derfor kan man med fordel overveje, om ma...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -7165,7 +7165,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -7208,7 +7208,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -7234,7 +7234,7 @@
       "url": "https://ungmedpenge.dk/dogecoin/",
       "summary": "Indtil 2021 var der ikke mange, der havde hørt om Dogecoin. En stor interesse fra Elon Musk gjorde dog, at den såkaldte meme-coin blev utrolig populær, og efterfølgende voksede sig til en af de størst...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -7260,7 +7260,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -7285,7 +7285,7 @@
       "url": "https://ungmedpenge.dk/reit/",
       "summary": "REITs er bestemt interessante, hvis man gerne vil eksponere sin portefølje mod fast ejendom. I denne artikel kan du blive klogere på, hvad en REIT er, og hvorvidt du bør investere i disse ejendomssels...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -7312,7 +7312,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -7365,7 +7365,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -7391,7 +7391,7 @@
       "summary": "Alternative investeringsformer er normalt typer af investering, der ikke falder ind under aktier eller obligationer. Alt uden for dette område betragtes som en alternativ investering. Af de lidt størr...",
       "target_audiences": [
         "børnefamilier",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -7418,7 +7418,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -7444,7 +7444,7 @@
       "url": "https://ungmedpenge.dk/page/16/",
       "summary": "Ung fyr, der lærer fra sig omkring alt indenfor økonomi, finans, investering, ungdom, og alt hvad det nu indebærer.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -7462,7 +7462,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -7487,7 +7487,7 @@
       "summary": "I denne måned har der været en større rokering i porteføljen, hvor jeg har reduceret mine midler i crowdlending. Samtidig er der blevet bidraget godt til porteføljen, som har gjort, at jeg har nået en...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "mellem",
@@ -7514,7 +7514,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -7541,7 +7541,7 @@
       "url": "https://ungmedpenge.dk/flytte-hjemmefra-budget/",
       "summary": "Når man som ung skal til at flytte hjemmefra, så kan det være en rigtig stor mundfuld. En af de ting, der fylder rigtig meget er økonomien. Specielt indskud og forudbetalt husleje kan være en rigtig s...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "økonomi_nybegynder"
       ],
@@ -7567,7 +7567,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -7592,7 +7592,7 @@
       "url": "https://ungmedpenge.dk/page/11/",
       "summary": "Ung fyr, der lærer fra sig omkring alt indenfor økonomi, finans, investering, ungdom, og alt hvad det nu indebærer.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -7610,7 +7610,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -7635,7 +7635,7 @@
       "summary": "Investeringsrobotterne er stormet ind på det danske investeringsmarked. June er Danske Banks svar på en robot, der automatisk investerer dine penge for dig. Til sammenligning er Nordnet den største in...",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -7662,7 +7662,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -7687,7 +7687,7 @@
       "url": "https://ungmedpenge.dk/passiv-investering/",
       "summary": "Flere og flere får øjnene op for passiv investering, og der er der flere gode årsager. Der er i mange tilfælde en virkelig effektiv måde at investere på, som giver dig rigtig mange fordele. Når man ta...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -7715,7 +7715,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -7751,7 +7751,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -7802,7 +7802,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -7856,7 +7856,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -7908,7 +7908,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -7962,7 +7962,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.4
@@ -8017,7 +8017,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -8042,7 +8042,7 @@
       "url": "https://ungmedpenge.dk/cagr-compound-annual-growth-rate/",
       "summary": "Når du investere dine penge, så kan det være svært at sammenligne afkast. CAGR eller Compound Annual Growth Rate kan hjælpe dig med at beregne det præcise afkast på din investering . Indholdsfortegnel...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -8067,7 +8067,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -8093,7 +8093,7 @@
       "summary": "Er du træt af, at at se hvordan du ikke får nogen rente for pengenne på din konto? Se hvordan du kan få op til 5 % i rente på dit indestående her!",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -8120,7 +8120,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -8149,7 +8149,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "økonomi_nybegynder",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "mellem",
       "minepenge_tags": [
@@ -8175,7 +8175,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -8201,7 +8201,7 @@
       "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-april-2025/",
       "summary": "Totalværdi 771.932 kr. +63.958 kr. Afkast +8,3 % +44.936 kr. 85 % Porteføljens udvikling I januar 2023 satte jeg et mål for 2023 på 800.000 kr. Det vil kræve en forøgelse af porteføljen på 9.500 kr. o...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -8230,7 +8230,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -8279,7 +8279,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -8304,7 +8304,7 @@
       "url": "https://ungmedpenge.dk/page/9/",
       "summary": "Ung fyr, der lærer fra sig omkring alt indenfor økonomi, finans, investering, ungdom, og alt hvad det nu indebærer.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -8322,7 +8322,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -8348,7 +8348,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -8370,7 +8370,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -8395,7 +8395,7 @@
       "url": "https://ungmedpenge.dk/anmeldelse-af-coinbase/",
       "summary": "Selvom kryptovaluta kan være et uoverskueligt emne, så findes der trods alt platforme, der formår at gøre det lige så nemt (hvis ikke nemmere) end at handle aktier. En af disse platforme er Coinbase. ...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -8422,7 +8422,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -8476,7 +8476,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 1.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -8502,7 +8502,7 @@
       "url": "https://ungmedpenge.dk/bedste-investeringsplatform/",
       "summary": "Er du ny til investering, så kan det godt være svært at overskue hvilken investeringsplatform for dig, der er den rette. Det afhænger af dit behov, og derfor er der ikke et entydigt svar. I denne arti...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -8530,7 +8530,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -8577,7 +8577,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -8623,7 +8623,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -8670,7 +8670,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -8696,7 +8696,7 @@
       "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-august-2024/",
       "summary": "Der er meget på tegnebrættet for tiden, og derfor bliver opdateringen for juli og august 2024 slået sammen til en. Sommerferien er gået med spændende oplevelser, og derfor har der været mindre tid til...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -8725,7 +8725,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -8751,7 +8751,7 @@
       "url": "https://ungmedpenge.dk/udenlandsk-udbytteskat/",
       "summary": "Investerer du i udenlandske udbytteaktier eller udbyttebetalende investeringsforeninger, så har du sikkert oplevet, at skatten kan være ret svær at finde ud af. I denne artikel vil jeg prøve at klarlæ...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -8778,7 +8778,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -8827,7 +8827,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -8852,7 +8852,7 @@
       "url": "https://ungmedpenge.dk/fundamental-analyse/",
       "summary": "En af de mest anvendte metoder til analyse af aktier er fundamental analyse . Det er ligeledes denne metode som verdens mest velkendte investor, Warren Buffet, benytter sig af, når han investerer i vi...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -8879,7 +8879,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -8904,7 +8904,7 @@
       "url": "https://ungmedpenge.dk/ratepension/",
       "summary": "Ratepensionen er en pensionsopsparing, der bliver udbetalt i månedlige rater. Det er derfor en oplagt opsparing til at supplere ens folkepension med, da den giver dig en løbende indtægt. Samtidig er d...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "pensionister",
         "nybegynder_investering"
       ],
@@ -8933,7 +8933,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 1.0
@@ -8960,7 +8960,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -8982,7 +8982,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -9007,7 +9007,7 @@
       "url": "https://ungmedpenge.dk/bedste-aktier/",
       "summary": "Som investor er man selvfølgelig altid interesseret i at finde den bedste investeringsmulighed, der kan genere det bedste afkast. Dette gør sig også gældende som aktieinvestor og den evige kamp om at ...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -9026,7 +9026,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -9052,7 +9052,7 @@
       "url": "https://ungmedpenge.dk/anmeldelse-af-nordnet/",
       "summary": "Nordnet er en af de mest populære platforme i Danmark, og platformen er flere gange blevet kåret til Årets børsmægler. Populariteten er slet ikke uberettiget. På rigtig mange parametre er Nordnet konk...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "pensionister"
       ],
@@ -9080,7 +9080,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 1.0
@@ -9125,7 +9125,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -9170,7 +9170,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -9224,7 +9224,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -9250,7 +9250,7 @@
       "summary": "Aktiemarkedet går stadig ikke i den rigtige retning, og porteføljen ser for tredje måned i træk et negativt afkast. Det koster på totalværdien, og målet for 2023 falder længere og længere væk. Den iga...",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -9278,7 +9278,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -9304,7 +9304,7 @@
       "url": "https://ungmedpenge.dk/indeksfonde/",
       "summary": "Index investering er inden for de sidste par år blevet rigtig populært. Flere og flere almindelige investorer får øjnene op for, hvor nemt investering kan være, hvis du vælger at investere i indeksfon...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -9331,7 +9331,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -9369,7 +9369,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -9393,7 +9393,7 @@
       "url": "https://ungmedpenge.dk/page/5/",
       "summary": "Ung fyr, der lærer fra sig omkring alt indenfor økonomi, finans, investering, ungdom, og alt hvad det nu indebærer.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -9411,7 +9411,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -9463,7 +9463,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -9489,7 +9489,7 @@
       "summary": "Degiro bliver mere og mere velkendt blandt de danske investorer grundet lave omkostninger og en brugervenlig platform, men har endnu opnået den store popularitet. Til sammenligning er Nordnet den stør...",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -9515,7 +9515,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -9562,7 +9562,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -9587,7 +9587,7 @@
       "url": "https://ungmedpenge.dk/nft-investering/",
       "summary": "Nogle NFT’er er på det seneste blevet ekstremt populært, og de digitale kunstværker bliver solgt for priser, der ligger langt over en million kroner. Det er svært at forstå, hvad konceptet er, men i d...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -9616,7 +9616,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -9641,7 +9641,7 @@
       "summary": "Det kan mange gange være svært at finde nye aktier, som man gerne vil investere i. Man vil altid gerne finde aktier med potentiale, men det kræver, at man kender til dem. I denne artikel vil jeg fortæ...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -9663,7 +9663,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -9714,7 +9714,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -9768,7 +9768,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -9795,7 +9795,7 @@
       "url": "https://ungmedpenge.dk/fodboldaktier/",
       "summary": "Som oftest så går man som investor forbi forskellige fodboldaktier, da der ofte ikke er fokus på selve virksomheden, men nærmere følelserne omkring klubben. Mange fans vælger at købe disse aktier for ...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -9818,7 +9818,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -9863,7 +9863,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -9889,7 +9889,7 @@
       "summary": "I denne måned falder den totale værdi for porteføljen trods et positivt afkast. Jeg har nemlig haft en større omkostning, som jeg fortæller mere om i denne opdatering. Det er snart sommerferie, men de...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -9916,7 +9916,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -9962,7 +9962,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -10014,7 +10014,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -10067,7 +10067,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -10119,7 +10119,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -10145,7 +10145,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "økonomi_nybegynder",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -10170,7 +10170,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -10198,7 +10198,7 @@
       "target_audiences": [
         "økonomi_nybegynder",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -10225,7 +10225,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -10252,7 +10252,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "økonomi_nybegynder",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -10279,7 +10279,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -10333,7 +10333,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -10359,7 +10359,7 @@
       "url": "https://ungmedpenge.dk/value-aktier/",
       "summary": "Når man investerer i value aktier, så har man fokus på at finde aktier, der har en større værdi end prisen afspejler. Det er dog ikke lige til at finde ud af, da det kræver en analyse af det pågældend...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -10387,7 +10387,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -10439,7 +10439,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -10489,7 +10489,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -10536,7 +10536,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -10588,7 +10588,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -10614,7 +10614,7 @@
       "summary": "Rigtig mange unge mennesker som mig selv bruger rigtig mange af deres penge på at gå i byen. Det kan hurtigt ende med at løbe løbsk, hvilket jeg vil prøve at sætte lidt i perspektiv i dette indlæg. I ...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "børnefamilier"
       ],
       "complexity_level": "begynder",
@@ -10645,7 +10645,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -10671,7 +10671,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -10697,7 +10697,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -10750,7 +10750,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -10775,7 +10775,7 @@
       "url": "https://ungmedpenge.dk/teknisk-analyse/",
       "summary": "Måske har du hørt om daytradere og undret dig over, hvordan de gør? Teknisk analyse er en metode til at analysere værdipapirer med det formål at forudsige, hvilke bevægelser kursen vil lave i fremtide...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -10804,7 +10804,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -10859,7 +10859,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -10884,7 +10884,7 @@
       "url": "https://ungmedpenge.dk/boeger-om-investering-og-privatoekonomi/",
       "summary": "Bøger om aktiehandel, investering, privatøkonomi, teknisk analyse og meget andet. Se min store liste her",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -10912,7 +10912,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -10938,7 +10938,7 @@
       "summary": "Efter en turbulent måned i marts 2020, fulgte endnu en turbulent måned i april. April var dog afkastmæssigt en langt bedre måned, men marts viste, hvor hurtigt det også kan gå den anden vej. Jeg udvid...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -10965,7 +10965,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -11019,7 +11019,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -11044,7 +11044,7 @@
       "url": "https://ungmedpenge.dk/daytrading-for-begyndere/",
       "summary": "En af de mest kendte strategier inden for aktiehandel er “køb-og-behold”-strategien. Her køber man et aktie med henblik på at holde dine positioner lang tid i markedet. Her er daytrading meget anderle...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -11073,7 +11073,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -11123,7 +11123,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -11149,7 +11149,7 @@
       "summary": "Porteføljen tager et mindre dyk i denne måned, hvor crowdlending trækker rigtig meget ned. Her er jeg nødsaget til at lave en større afskrivning. Generelt set ser porteføljen stagnerende ud i øjeblikk...",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -11177,7 +11177,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -11229,7 +11229,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -11279,7 +11279,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -11307,7 +11307,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -11332,7 +11332,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -11373,7 +11373,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -11398,7 +11398,7 @@
       "summary": "P/E-tallet bruges ofte, når man som investorer overvejer at investere i en aktie. Når vi taler om investering i aktier , er det et nøgletal, der kan bruges som udgangspunkt for, om en aktie er dyr ell...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -11421,7 +11421,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -11446,7 +11446,7 @@
       "url": "https://ungmedpenge.dk/etoro-vs-nordnet/",
       "summary": "Nordnet er af af de absolut største platforme til aktiehandel i Danmark, men hvordan måler de sig op imod den nye, voksende spiller eToro? I denne artikel finder du en sammenligning af eToro vs Nordne...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -11472,7 +11472,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -11497,7 +11497,7 @@
       "url": "https://ungmedpenge.dk/investeringsstrategi/",
       "summary": "Inden du begynder på at investere dine penge, så er det vigtigt, at du har styr på din investeringsstrategi. Inden du beslutter dig for hvilken strategi du vil følge, så bør du gøre dig nogle tanker o...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -11521,7 +11521,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -11571,7 +11571,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -11625,7 +11625,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -11651,7 +11651,7 @@
       "summary": "Økonomisk uafhængighed og FIRE har i de seneste år opnået en betydelig interesse. Det er ikke uden årsag. FIRE-konceptet er rigtig interessant, og finansiel uafhængighed er tættere på, end mange af os...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -11678,7 +11678,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -11705,7 +11705,7 @@
       "summary": "Afkastet ser rigtig godt ud for februar måned, hvor porteføljen præsterer et positivt afkast for 4. måned i træk. Det betyder også, at porteføljen det seneste stykke tid har taget et stort skridt i de...",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -11733,7 +11733,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.4
@@ -11788,7 +11788,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -11816,7 +11816,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "mellem",
       "minepenge_tags": [
@@ -11843,7 +11843,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -11895,7 +11895,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -11921,7 +11921,7 @@
       "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-februar-2022/",
       "summary": "Situationen i Ukraine har haft sin indflydelse på aktiemarkedet, og aktieporteføljen tager et ret stort fald i denne måned. En del aktier er rigtig hårdt ramt. Samtidig sker der en mindre rokering i p...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -11949,7 +11949,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -11985,7 +11985,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -12007,7 +12007,7 @@
       "url": "https://ungmedpenge.dk/investeringsradgiver/",
       "summary": "Går du i banken for at spørge om gode råd til investering, så kan du være helt sikker på, at du bliver anbefalet et af bankens produkter. Det er dog ikke altid, at det er den bedste løsning for dig. A...",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "økonomi_nybegynder"
       ],
@@ -12037,7 +12037,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -12063,7 +12063,7 @@
       "summary": "Renters rente er noget, der kan gøre investering til en drøm. Det er en snebold, der ruller sig større og større. Når du skal til at begynde at investere kan det være rigtig sjovt at kigge på, hvad pe...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -12086,7 +12086,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -12111,7 +12111,7 @@
       "summary": "Sommerferien er overstået, og hverdagen er startet igen. Det har været en stille og rolig opstart, men det kan bestemt ikke ses på tallene. Tallene udvikler sig i den rigtige retning, og i næste måned...",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -12138,7 +12138,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -12165,7 +12165,7 @@
       "summary": "Selvom der ikke bliver tilføjet midler til porteføljen for tiden, så sker der alligevel en større rokering i porteføljen. Det sker for at opnå en højere spredning på mine aktier med et begrænset beløb...",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -12192,7 +12192,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -12219,7 +12219,7 @@
       "summary": "Lunar er en bank, der er udelukkende opererer digitalt. Det er et dansk startup, der prøver at gøre op med det traditionelle bankmarked i Danmark. Lunar hed tidligere Lunar Way, men har senere skiftet...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -12247,7 +12247,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -12284,7 +12284,7 @@
       "confidence_scores": {
         "studerende": 0.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0

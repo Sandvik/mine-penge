@@ -13,6 +13,7 @@ from collections import Counter
 import hashlib
 from typing import Dict, List, Tuple, Any
 import logging
+import openai
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -21,10 +22,11 @@ logger = logging.getLogger(__name__)
 class ContentTagger:
     """Automatisk kategorisering og tagging af økonomiblog artikler"""
     
-    def __init__(self, config_file="tag_config.json"):
+    def __init__(self, config_file: str = "tag_config.json"):
         """Initialiserer tagger med konfiguration fra fil"""
         self.config_file = config_file
-        self.load_config()
+        self.config = self.load_config()
+        self.client = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
         
     def load_config(self):
         """Indlæser konfiguration fra JSON fil"""
@@ -72,7 +74,7 @@ class ContentTagger:
         self.target_audiences = {
             "studerende": ["su", "studielån", "studerende", "universitet", "billig", "spare", "budget"],
             "børnefamilier": ["børn", "familie", "børneopsparing", "familieøkonomi", "husholdning"],
-            "lavindkomstgrupper": ["billig", "spare", "budget", "gæld", "rådgivning", "grundlæggende"],
+            "budgetbevidste": ["billig", "spare", "budget", "gæld", "rådgivning", "grundlæggende"],
             "nybegynder_investering": ["begynder", "første gang", "grundlæggende", "investering", "aktiesparekonto", "etf"],
             "økonomi_nybegynder": ["budget", "opsparing", "grundlæggende", "tips", "guide", "råd"],
             "pensionister": ["pension", "pensionist", "senior", "aldersopsparing", "livrente"]

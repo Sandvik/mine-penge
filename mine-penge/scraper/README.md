@@ -70,8 +70,8 @@ Konfigurerbar fil med alle tags, målgrupper og indstillinger.
 
 ### Målgrupper
 - **Studerende** - Budget på SU, studielån, billige løsninger
-- **Børnefamilier** - Børneopsparing, familiebudget, uddannelsesopsparing
-- **Lavindkomstgrupper** - Grundlæggende budget, gældsrådgivning, besparelser
+- **børnefamilier** - Børneopsparing, familiebudget, uddannelsesopsparing
+- **Personer med beskedne økonomiske forhold** - Grundlæggende budget, gældsrådgivning, besparelser
 - **Nybegyndere i investering** - Grundlæggende aktie/fond viden, første investering
 - **Økonomi/opsparing nybegyndere** - Budget basics, opsparingstyper, bankrelateret
 - **Pensionister** - Pensionsplanlægning, aldersopsparing
@@ -154,14 +154,14 @@ Systemet analyserer artikel indhold og:
       "source": "Mitteldorf Blog",
       "url": "https://mitteldorf.dk/blog/aaret-der-gik-2021/",
       "summary": "Vi ser tilbage på året der er gået og hvad 2022 vil bringe her på bloggen.",
-      "target_audiences": ["lavindkomstgrupper", "økonomi_nybegynder", "studerende"],
+      "target_audiences": ["budgetbevidste", "økonomi_nybegynder", "studerende"],
       "complexity_level": "begynder",
       "minepenge_tags": ["udbytte", "afkast", "investering", "portefølje", "aktier"],
       "tag_categories": ["Bank & Betaling", "Investering & Aktier", "Pension"],
       "confidence_scores": {
         "studerende": 0.67,
         "børnefamilier": 0.29,
-        "lavindkomstgrupper": 0.75,
+        "budgetbevidste": 0.75,
         "nybegynder_investering": 0.57,
         "økonomi_nybegynder": 0.75,
         "pensionister": 0.57

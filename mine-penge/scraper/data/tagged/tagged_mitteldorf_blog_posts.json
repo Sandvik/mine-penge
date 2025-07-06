@@ -25,7 +25,7 @@
     "target_audiences_used": [
       "studerende",
       "børnefamilier",
-      "lavindkomstgrupper",
+      "budgetbevidste",
       "nybegynder_investering",
       "økonomi_nybegynder",
       "pensionister"
@@ -39,7 +39,7 @@
       "url": "https://mitteldorf.dk/blog/spred-din-risiko-finanshuset/",
       "summary": "Gæsteindlæg om risiko og investeringspleje, af Kim Valentin fra Finanshuset i Fredensborg.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -68,7 +68,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -96,7 +96,7 @@
       "url": "https://mitteldorf.dk/blog/faa-overblik-over-hvor-pengene-forsvinder-hen",
       "summary": "At få overblik over sin privatøkonomi kan være svært, men med hjælp fra et diagram kan vi se tendenser og følge vores penge meget lettere. Sådan kan vi også let se, hvor vi kan spare penge.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -126,7 +126,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -156,7 +156,7 @@
       "summary": "Hvad er en god investering? Skal man fokusere på value eller vækst? Efter at læst Warren Buffetts Letter to Shareholders fra 1992, giver det kun mening at glemme disse to grupper. For hvad er fornuftig investering hvis ikke det er at finde selskaber med en høj værdi og fornuftig vækst, som er billigt prissat?",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -184,7 +184,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -213,7 +213,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "pensionister",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -239,7 +239,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -268,7 +268,7 @@
       "summary": "På denne blog vil jeg én gang eller to gange om måneden fortælle om mine bedrifter med penge og investering, og de erfaringer jeg har gjort mig.",
       "target_audiences": [
         "pensionister",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -296,7 +296,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -324,7 +324,7 @@
       "url": "https://mitteldorf.dk/blog/aaret-der-gik-2020",
       "summary": "Vi ser tilbage på året der er gået og hvad 2021 vil bringe her på bloggen.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -352,7 +352,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -380,7 +380,7 @@
       "url": "https://mitteldorf.dk/blog/mr-market-er-paa-spil-igen",
       "summary": "Howard Marks er en af mine investerings-idoler, og når han udsender nye memo's er de absolut værd at lytte til. Her er hans kommentarer om de seneste op- og nedture på markedet.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -411,7 +411,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -440,7 +440,7 @@
       "summary": "Warren Buffett er både en lykkelig og meget successfuld mand. Og det er ikke fordi han er rig. Læs hans 12 bedste råd om at leve et godt liv.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -468,7 +468,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -524,7 +524,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -553,7 +553,7 @@
       "url": "https://mitteldorf.dk/blog/saadan-kan-du-spare-mere-op-i-aar/",
       "summary": "Vi vil alle gerne spare flere penge op hvert år, men det er ofte svært at se, hvor vi kan finde pengene. Det er måske slet ikke så svært som du tror.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -580,7 +580,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -611,7 +611,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -639,7 +639,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -668,7 +668,7 @@
       "url": "https://mitteldorf.dk/blog/6-budgettyper",
       "summary": "Lige meget hvor meget du tjener, er et godt budget fundamentet for en god og sikker privatøkonomi.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -697,7 +697,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -726,7 +726,7 @@
       "url": "https://mitteldorf.dk/blog/aaret-der-gik-2022/",
       "summary": "Vi ser tilbage på året der er gået og hvad 2023 vil bringe for mig.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -754,7 +754,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -783,7 +783,7 @@
       "url": "https://mitteldorf.dk/blog/berkshire-1-billon-dollar",
       "summary": "Berkshire Hathaway er nu USA's mest dyrebare ikke-teknologi selskab, alt sammen sket på grund af meget fornuftige investeringer.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -813,7 +813,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -868,7 +868,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -923,7 +923,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -953,7 +953,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -975,7 +975,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1032,7 +1032,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1060,7 +1060,7 @@
       "summary": "12 fejl du helst skal undgå mens du stadig er ung for at sikre dig en god og sikker fremtid.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -1090,7 +1090,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -1120,7 +1120,7 @@
       "summary": "Price/Earnings er et de mest brugte, men også misvisende nøgletal.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -1145,7 +1145,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1175,7 +1175,7 @@
       "target_audiences": [
         "studerende",
         "børnefamilier",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -1203,7 +1203,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1230,7 +1230,7 @@
       "url": "https://mitteldorf.dk/blog/kindle/",
       "summary": "Min Kindle er en af de bedste ting jeg nogensinde har fået fat i. Jeg læser rigtig meget og den er helt perfekt folk som mig. Især hvis du ofte læser udenfor, eller rejser og er på farten, uden at ville slæbe tunge bøger med dig.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "børnefamilier"
       ],
@@ -1259,7 +1259,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1286,7 +1286,7 @@
       "url": "https://mitteldorf.dk/blog/freedom24/",
       "summary": "Freedom24 er en ny børsmægler på vej ind på det nordiske marked. De tilbyder gratis ugentlige analyser og har et enormt udvalg af aktier. Med Freedom app'en kan du super let handle aktier i USA, Europa og Asien.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -1314,7 +1314,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -1342,7 +1342,7 @@
       "url": "https://mitteldorf.dk/blog/lysa",
       "summary": "Lysa er en svensk-startet investeringsrobot med rigtig lave omkostninger. Lysa er transparente med deres priser, og vil gøre det så billigt som muligt for deres kunder.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -1370,7 +1370,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -1399,7 +1399,7 @@
       "summary": "Vi ser tilbage på kvartalet der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -1427,7 +1427,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -1473,7 +1473,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1499,7 +1499,7 @@
       "url": "https://mitteldorf.dk/blog/6-maader-vi-bliver-fanget-af-vores-investeringer/",
       "summary": "Investering er ikke let, og der er mange huller man kan falde i hen ad vejen. Her er nogle af de ting jeg har gjort lært af, og som jeg vil give videre.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -1528,7 +1528,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -1557,7 +1557,7 @@
       "url": "https://mitteldorf.dk/blog/bliv-hurtigere-rig-med-snebolds-effekten/",
       "summary": "Snebolds-effekten dækker over princippet om renters rente. Hvis du kan få din snebold til at trille, bliver du snart meget rig.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -1586,7 +1586,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1643,7 +1643,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -1700,7 +1700,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -1728,7 +1728,7 @@
       "url": "https://mitteldorf.dk/blog/nye-priser-hos-saxo-2024",
       "summary": "Saxo sænker handelspriserne i 2024 og er efterhånden meget konkurrencedygtige.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -1755,7 +1755,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -1783,7 +1783,7 @@
       "summary": "Vi ser tilbage på kvartalet der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -1811,7 +1811,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -1864,7 +1864,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1918,7 +1918,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -1974,7 +1974,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -2002,7 +2002,7 @@
       "summary": "FI Scouts er en app jeg har udviklet med MindingMyThirties, en FIRE-blogger fra USA. FI Scouts lader dig holde styr på din rejse på FIRE på en meget let måde.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -2030,7 +2030,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2060,7 +2060,7 @@
       "summary": "Da Warren Buffett var ung bestemte han sig for at blive millionær inden han blev 30 år. Den slags kræver at man arbejder for det, sparer op og laver nogle gode investeringer. Det gjorde han absolut godt. Læs her hvordan Warren kom fra start, og se om du kan gøre det efter.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "mellem",
@@ -2088,7 +2088,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -2117,7 +2117,7 @@
       "url": "https://mitteldorf.dk/blog/lev-et-liv-uden-overforbrug",
       "summary": "Hvordan kan vi leve et liv uden at have alt for mange ting? Hvordan kan vi gøre det til en livsstil?",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -2146,7 +2146,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -2175,7 +2175,7 @@
       "target_audiences": [
         "økonomi_nybegynder",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -2199,7 +2199,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2227,7 +2227,7 @@
       "url": "https://mitteldorf.dk/blog/kvartalsopgoerelse-1-kvartal-2023",
       "summary": "Vi ser tilbage på kvartalet der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -2255,7 +2255,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -2284,7 +2284,7 @@
       "summary": "Vi vil alle gerne spare penge, og de skulle helst ende og blive i pengekrukken. Her er et udvalg af tips og råd om, hvordan du kan spare flere penge.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -2312,7 +2312,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -2341,7 +2341,7 @@
       "url": "https://mitteldorf.dk/blog/unoterede-aktier",
       "summary": "Unoterede aktier er aktier i selskaber der ikke handles på en offentlig børs.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -2368,7 +2368,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -2396,7 +2396,7 @@
       "summary": "Price/Earnings er et de mest brugte, men også misvisende nøgletal.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -2421,7 +2421,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -2450,7 +2450,7 @@
       "summary": "Vi ser tilbage på kvartalet der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -2477,7 +2477,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -2506,7 +2506,7 @@
       "url": "https://mitteldorf.dk/blog/smarte-mennesker-tager-forkerte-beslutninger",
       "summary": "Rigdom og succes er ikke noget der er eksklusivt for højt intelligente mennesker. Tværtimod, vi kan opnå formidable resultater, uden ekstraordinært talent. Er du holdt tilbage af over-komplicere tingene?",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -2535,7 +2535,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2563,7 +2563,7 @@
       "url": "https://mitteldorf.dk/blog/kvartalsopgoerelse-2-kvartal-2021",
       "summary": "Vi ser tilbage på kvartalet der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "pensionister"
       ],
@@ -2591,7 +2591,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -2646,7 +2646,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -2701,7 +2701,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -2728,7 +2728,7 @@
       "summary": "Fra bogen The Richest Man of Babylon er her historien om de fem love om penge. Den er både underholdende og meget lærerig, også for børnene.",
       "target_audiences": [
         "børnefamilier",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -2756,7 +2756,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2783,7 +2783,7 @@
       "url": "https://mitteldorf.dk/blog/mr-market-er-paa-spil-igen/",
       "summary": "Howard Marks er en af mine investerings-idoler, og når han udsender nye memo's er de absolut værd at lytte til. Her er hans kommentarer om de seneste op- og nedture på markedet.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -2814,7 +2814,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -2843,7 +2843,7 @@
       "summary": "Har du for mange ting i hjemmet kan det være en god idé at få ryddet godt og grundigt op i det hele, og få ny energi. Men det er svært at gøre det hele på én gang. Læs med her, hvordan du kan komme i gang uden det bliver uoverskueligt.",
       "target_audiences": [
         "børnefamilier",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -2867,7 +2867,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -2917,7 +2917,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -2946,7 +2946,7 @@
       "url": "https://mitteldorf.dk/blog/i-dag-er-jeg-gaeldfri/",
       "summary": "Det føles fantastisk befriende at være gældfri. Det er første skridt mod målet om, selv at bestemme.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -2974,7 +2974,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3027,7 +3027,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -3055,7 +3055,7 @@
       "summary": "Et tilbageblik på kvartalet der er gået.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -3082,7 +3082,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -3111,7 +3111,7 @@
       "url": "https://mitteldorf.dk/blog/berkshire-hathaway-annual-meeting-2021/",
       "summary": "Alle selskaber afholder hvert år deres generalforsamling hvor aktionærerne kan komme og stille spørgsmål. Warren og Charlie har brugt næsten 4 timer på at besvare aktionærernes spørgsmål. Her er hvad du bør tage med dig.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -3140,7 +3140,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3190,7 +3190,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -3241,7 +3241,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -3268,7 +3268,7 @@
       "url": "https://mitteldorf.dk/blog/flyselskaber-er-ikke-en-god-investering/",
       "summary": "Flyselskaber kan være en god investering, men branchen er meget afhængig af kapital og udsat for katastrofer.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -3297,7 +3297,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3354,7 +3354,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3381,7 +3381,7 @@
       "url": "https://mitteldorf.dk/blog/investering-kraever-et-saerligt-temperament/",
       "summary": "Guy Spier har været en stor inspiration. Se her nogle af de ting som gjorde et kæmpe indtryk på mig, og som jeg mener du skal tænke over, når du selv bevæger dig ud i livet og på markederne.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -3410,7 +3410,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -3438,7 +3438,7 @@
       "url": "https://mitteldorf.dk/blog/investering-kraever-et-saerligt-temperament",
       "summary": "Guy Spier har været en stor inspiration. Se her nogle af de ting som gjorde et kæmpe indtryk på mig, og som jeg mener du skal tænke over, når du selv bevæger dig ud i livet og på markederne.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -3467,7 +3467,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -3495,7 +3495,7 @@
       "url": "https://mitteldorf.dk/blog/kvartalsopgoerelse-2-kvartal-2021/",
       "summary": "Vi ser tilbage på kvartalet der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "pensionister"
       ],
@@ -3523,7 +3523,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -3553,7 +3553,7 @@
       "summary": "I september 2019 skrev jeg et gæsteindlæg til Jane's blog Project Handmade, om mine tanker om FIRE.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -3582,7 +3582,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -3613,7 +3613,7 @@
       "target_audiences": [
         "studerende",
         "pensionister",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -3639,7 +3639,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -3668,7 +3668,7 @@
       "url": "https://mitteldorf.dk/blog/faa-orden-i-oekonomien/",
       "summary": "Privatøkonomien kan nemt blive uoverskuelig, og så er det meget svært at gøre noget ved det. Få her nogle gode konkrete råd til at få rettet op på det hele.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -3697,7 +3697,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -3748,7 +3748,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3777,7 +3777,7 @@
       "url": "https://mitteldorf.dk/blog/berkshire-1-billon-dollar/",
       "summary": "Berkshire Hathaway er nu USA's mest dyrebare ikke-teknologi selskab, alt sammen sket på grund af meget fornuftige investeringer.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -3807,7 +3807,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -3834,7 +3834,7 @@
       "summary": "Bør du bruge de sidste dage af året på at skatteoptimere og sælge dine aktier med tab, for at købe dem tilbage senere?",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -3861,7 +3861,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -3918,7 +3918,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -3947,7 +3947,7 @@
       "target_audiences": [
         "studerende",
         "pensionister",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -3972,7 +3972,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -4028,7 +4028,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -4058,7 +4058,7 @@
       "summary": "Vi ser tilbage på kvartalet der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -4084,7 +4084,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -4113,7 +4113,7 @@
       "url": "https://mitteldorf.dk/blog/2023-2-kvartal-kvartalsopgoerelse",
       "summary": "Vi ser tilbage på kvartalet der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -4141,7 +4141,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -4169,7 +4169,7 @@
       "url": "https://mitteldorf.dk/blog/saadan-investerer-jeg-interview-tv2/",
       "summary": "I september 2018 deltog jeg i et interview Live på TV2 News og fortalte om mine oplevelser som privatinvestor.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "økonomi_nybegynder"
       ],
@@ -4198,7 +4198,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -4228,7 +4228,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -4254,7 +4254,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.4
@@ -4284,7 +4284,7 @@
       "summary": "FI Scouts er en app jeg har udviklet med MindingMyThirties, en FIRE-blogger fra USA. FI Scouts lader dig holde styr på din rejse på FIRE på en meget let måde.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -4312,7 +4312,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -4342,7 +4342,7 @@
       "summary": "Dette er min personlige historie om, hvordan jeg blev interesseret i investering, og hvad jeg har lært undervejs.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -4370,7 +4370,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -4397,7 +4397,7 @@
       "url": "https://mitteldorf.dk/blog/aaret-der-gik-2021",
       "summary": "Vi ser tilbage på året der er gået og hvad 2022 vil bringe her på bloggen.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -4425,7 +4425,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -4455,7 +4455,7 @@
       "summary": "Et tilbageblik på kvartalet der er gået.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -4481,7 +4481,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -4510,7 +4510,7 @@
       "url": "https://mitteldorf.dk/blog/hvor-mange-aktier-boer-jeg-have/",
       "summary": "Diversificering. Alle én i en kurv. Hvad er den bedste mængde forskellige aktier at have?",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -4539,7 +4539,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -4596,7 +4596,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -4624,7 +4624,7 @@
       "url": "https://mitteldorf.dk/blog/9-grunde-til-berkshire-hathaway-er-verdens-bedste-investering/",
       "summary": "Berkshire Hathaway kan på mange måder være den bedste invstering i dit liv. De har opnået et fænomenalt afkast gennem 50 år, Warren Buffett og Charlie Munger driver den som ingen anden virksomhedsleder. Her er 9 grunde til du bør overveje at investere.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -4651,7 +4651,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -4679,7 +4679,7 @@
       "url": "https://mitteldorf.dk/blog/lysa/",
       "summary": "Lysa er en svensk-startet investeringsrobot med rigtig lave omkostninger. Lysa er transparente med deres priser, og vil gøre det så billigt som muligt for deres kunder.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -4707,7 +4707,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -4736,7 +4736,7 @@
       "summary": "Der er rigtig mange teorier om investering, og mange af dem er sande. Men nogle fungerer simpelthen ikke i praksis og er noget vrøvl. Vi ser nærmere på tre af dem her.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "pensionister"
       ],
       "complexity_level": "begynder",
@@ -4765,7 +4765,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -4795,7 +4795,7 @@
       "target_audiences": [
         "økonomi_nybegynder",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -4819,7 +4819,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -4846,7 +4846,7 @@
       "summary": "Vi ser tilbage på kvartalet der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -4872,7 +4872,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -4903,7 +4903,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -4929,7 +4929,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -4984,7 +4984,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -5012,7 +5012,7 @@
       "url": "https://mitteldorf.dk/blog/2023-2-kvartal-kvartalsopgoerelse/",
       "summary": "Vi ser tilbage på kvartalet der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -5040,7 +5040,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -5069,7 +5069,7 @@
       "summary": "Der er rigtig mange teorier om investering, og mange af dem er sande. Men nogle fungerer simpelthen ikke i praksis og er noget vrøvl. Vi ser nærmere på tre af dem her.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "pensionister"
       ],
       "complexity_level": "begynder",
@@ -5098,7 +5098,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -5126,7 +5126,7 @@
       "url": "https://mitteldorf.dk/blog/aaret-der-gik-2023",
       "summary": "Vi ser tilbage på året der er gået og hvad 2024 vil bringe for mig.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -5155,7 +5155,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -5185,7 +5185,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -5208,7 +5208,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -5237,7 +5237,7 @@
       "summary": "Lars Tvedes nye bog har fået en masse opmærksomhed, og den er også værd at læse. Han giver et godt indblik i sin egen karriere, og fortæller hvad enhver investor bør vide.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -5263,7 +5263,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -5290,7 +5290,7 @@
       "url": "https://mitteldorf.dk/blog/6-maader-vi-bliver-fanget-af-vores-investeringer",
       "summary": "Investering er ikke let, og der er mange huller man kan falde i hen ad vejen. Her er nogle af de ting jeg har gjort lært af, og som jeg vil give videre.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -5319,7 +5319,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -5375,7 +5375,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -5403,7 +5403,7 @@
       "url": "https://mitteldorf.dk/blog/kvartalsopgoerelse-1-kvartal-2020/",
       "summary": "Vi ser tilbage på kvartalet der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -5431,7 +5431,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -5460,7 +5460,7 @@
       "summary": "Vi vil alle gerne spare penge, og de skulle helst ende og blive i pengekrukken. Her er et udvalg af tips og råd om, hvordan du kan spare flere penge.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -5488,7 +5488,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -5518,7 +5518,7 @@
       "summary": "Når aktiepriserne falder er der ofte panik. Men det er der ingen grund til, for det er kun en godt ting for dig.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -5538,7 +5538,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -5566,7 +5566,7 @@
       "summary": "12 fejl du helst skal undgå mens du stadig er ung for at sikre dig en god og sikker fremtid.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -5596,7 +5596,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -5625,7 +5625,7 @@
       "url": "https://mitteldorf.dk/blog/skak-renters-rente/",
       "summary": "Hvad har Skak og renters rente med hinanden at gøre? En Indisk kejser kom til at forstå dette efter at have mistet hele sin formue.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -5655,7 +5655,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -5684,7 +5684,7 @@
       "summary": "Vi ser tilbage på kvartalet der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -5712,7 +5712,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.4
@@ -5742,7 +5742,7 @@
       "summary": "Dette er anden del af min personlige historie om, hvordan jeg blev interesseret i investering, og hvad jeg har lært undervejs.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "mellem",
@@ -5770,7 +5770,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -5800,7 +5800,7 @@
       "summary": "Mr. Market er opfundet af Benjamin Graham, og skal forestille aktiemarkedet som en vanvittig person, som du konstant skal udnytte hvis du vil. Mr. Market er en utrolig vigtigt idé at lære om, hvis du skal være en fornuftig investor.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -5828,7 +5828,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -5856,7 +5856,7 @@
       "url": "https://mitteldorf.dk/blog/spred-din-risiko-finanshuset",
       "summary": "Gæsteindlæg om risiko og investeringspleje, af Kim Valentin fra Finanshuset i Fredensborg.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -5885,7 +5885,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -5915,7 +5915,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "pensionister",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -5941,7 +5941,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -5970,7 +5970,7 @@
       "summary": "Dette er anden del af min personlige historie om, hvordan jeg blev interesseret i investering, og hvad jeg har lært undervejs.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "mellem",
@@ -5998,7 +5998,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -6028,7 +6028,7 @@
       "summary": "Når virksomheder betaler et udbytte sker det efter x-dagen. Men hvad er det overhovedet?",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -6055,7 +6055,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -6081,7 +6081,7 @@
       "summary": "Vi ser tilbage på kvartalet der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -6109,7 +6109,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.4
@@ -6167,7 +6167,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -6198,7 +6198,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -6220,7 +6220,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -6247,7 +6247,7 @@
       "url": "https://mitteldorf.dk/blog/7-raad-til-investorer-i-2023/",
       "summary": "Her er 7 af de bedste råd jeg kan give dig som investor i 2023.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -6275,7 +6275,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -6303,7 +6303,7 @@
       "url": "https://mitteldorf.dk/blog/margin-of-safety/",
       "summary": "At have en margin of safety handler om at købe gode selskaber for mindre end de er værd for at forhindre fejl og at vi taber penge på en dårlig beslutning. Dette er den vigtigste lektion for fornuftige investorer. Læs her hvordan du sikrer dig mod store tab.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -6328,7 +6328,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -6356,7 +6356,7 @@
       "url": "https://mitteldorf.dk/blog/flyselskaber-er-ikke-en-god-investering",
       "summary": "Flyselskaber kan være en god investering, men branchen er meget afhængig af kapital og udsat for katastrofer.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -6385,7 +6385,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -6414,7 +6414,7 @@
       "summary": "Ville du kunne leve med kun 100 personlige ejendele? Bogen '100 Thing Challenge' handler om hvordan det kan lade sig gøre.",
       "target_audiences": [
         "børnefamilier",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -6443,7 +6443,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -6471,7 +6471,7 @@
       "url": "https://mitteldorf.dk/blog/budgetter-er-nemme-med-50-30-20-reglen/",
       "summary": "50-30-20 reglen gør det meget let at komme igang med et budget. Den kombinerer en masse fleksibilitet med et virkelig simpelt system.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -6502,7 +6502,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -6531,7 +6531,7 @@
       "url": "https://mitteldorf.dk/blog/kvartalsopgoerelse-1-kvartal-2023/",
       "summary": "Vi ser tilbage på kvartalet der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -6559,7 +6559,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -6589,7 +6589,7 @@
       "target_audiences": [
         "studerende",
         "børnefamilier",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -6617,7 +6617,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -6671,7 +6671,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -6697,7 +6697,7 @@
       "url": "https://mitteldorf.dk/blog/warren-buffett-letter-2020",
       "summary": "Hvert år, i februar, udsender Berkshire Hathaway deres årsrapport og hermed også Warren Buffetts berømte Letter to Shareholders.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -6725,7 +6725,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -6753,7 +6753,7 @@
       "url": "https://mitteldorf.dk/blog/think-like-a-billionaire",
       "summary": "Donald Trump har skrevet flere bøger i sin livstid. Dette er den første (og nok sidste) jeg kommer til at læse. Her er hans tips til hvordan man tænker som en milliardær.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "nybegynder_investering"
       ],
@@ -6783,7 +6783,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -6811,7 +6811,7 @@
       "url": "https://mitteldorf.dk/blog/7-raad-til-investorer-i-2023",
       "summary": "Her er 7 af de bedste råd jeg kan give dig som investor i 2023.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -6839,7 +6839,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -6867,7 +6867,7 @@
       "url": "https://mitteldorf.dk/blog/aktieklasser/",
       "summary": "Mange selskaber opdeler deres aktier i flere såkaldte klasser. Disse giver for eksempel andre handels- eller stemmerettigheder, eller et andet udbytte.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -6895,7 +6895,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -6922,7 +6922,7 @@
       "url": "https://mitteldorf.dk/blog/aktieklasser",
       "summary": "Mange selskaber opdeler deres aktier i flere såkaldte klasser. Disse giver for eksempel andre handels- eller stemmerettigheder, eller et andet udbytte.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -6950,7 +6950,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -6977,7 +6977,7 @@
       "url": "https://mitteldorf.dk/blog/kvartalsopgoerelse-1-kvartal-2021",
       "summary": "Vi ser tilbage på kvartalet der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -7006,7 +7006,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -7037,7 +7037,7 @@
       "target_audiences": [
         "børnefamilier",
         "nybegynder_investering",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -7064,7 +7064,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 1.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -7093,7 +7093,7 @@
       "summary": "Guy Spier er en dygtig investor, fordi han lærer af sine fejl, skriver reglerne dem ned, og bruger dem når han tager nye beslutninger. Hans checkliste er på over 80 punkter. Få 4 af dem her.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -7121,7 +7121,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -7149,7 +7149,7 @@
       "url": "https://mitteldorf.dk/blog/6-budgettyper/",
       "summary": "Lige meget hvor meget du tjener, er et godt budget fundamentet for en god og sikker privatøkonomi.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -7178,7 +7178,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -7207,7 +7207,7 @@
       "url": "https://mitteldorf.dk/blog/unoterede-aktier/",
       "summary": "Unoterede aktier er aktier i selskaber der ikke handles på en offentlig børs.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -7234,7 +7234,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -7261,7 +7261,7 @@
       "url": "https://mitteldorf.dk/blog/aaret-der-gik-2022",
       "summary": "Vi ser tilbage på året der er gået og hvad 2023 vil bringe for mig.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -7289,7 +7289,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -7318,7 +7318,7 @@
       "url": "https://mitteldorf.dk/blog/nye-priser-hos-saxo-2024/",
       "summary": "Saxo sænker handelspriserne i 2024 og er efterhånden meget konkurrencedygtige.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -7345,7 +7345,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -7374,7 +7374,7 @@
       "target_audiences": [
         "økonomi_nybegynder",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -7398,7 +7398,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -7451,7 +7451,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -7478,7 +7478,7 @@
       "url": "https://mitteldorf.dk/blog/undgaa-koebefristelser-og-overforbrug-i-hverdagen/",
       "summary": "Er du god til at få lidt for mange ting med i indkøbskurven? Føler du dig lidt snydt når du forlader butikken, eller fortryder dit køb? Butikkerne ved det og udnytter vores følelser til at få os til at bruge flere penge. Men ved at være bekendt med det kan vi undgå det.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "økonomi_nybegynder"
       ],
@@ -7506,7 +7506,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -7535,7 +7535,7 @@
       "summary": "Inflation og høje renter er din værste fjende, især hvis du investerer. Har du en stor opsparing er det godt med høje renter, men inflationen skal vi alle holde øje med.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -7564,7 +7564,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -7592,7 +7592,7 @@
       "url": "https://mitteldorf.dk/blog/aaret-der-gik-2023/",
       "summary": "Vi ser tilbage på året der er gået og hvad 2024 vil bringe for mig.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -7621,7 +7621,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -7649,7 +7649,7 @@
       "url": "https://mitteldorf.dk/blog/faa-overblik-over-hvor-pengene-forsvinder-hen/",
       "summary": "At få overblik over sin privatøkonomi kan være svært, men med hjælp fra et diagram kan vi se tendenser og følge vores penge meget lettere. Sådan kan vi også let se, hvor vi kan spare penge.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -7679,7 +7679,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -7709,7 +7709,7 @@
       "summary": "Et tilbageblik på kvartalet der er gået.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -7735,7 +7735,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -7764,7 +7764,7 @@
       "url": "https://mitteldorf.dk/blog/hvor-mange-aktier-boer-jeg-have",
       "summary": "Diversificering. Alle én i en kurv. Hvad er den bedste mængde forskellige aktier at have?",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -7793,7 +7793,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -7820,7 +7820,7 @@
       "url": "https://mitteldorf.dk/blog/budgetter-er-nemme-med-50-30-20-reglen",
       "summary": "50-30-20 reglen gør det meget let at komme igang med et budget. Den kombinerer en masse fleksibilitet med et virkelig simpelt system.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -7851,7 +7851,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -7881,7 +7881,7 @@
       "summary": "Når virksomheder betaler et udbytte sker det efter x-dagen. Men hvad er det overhovedet?",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -7908,7 +7908,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -7935,7 +7935,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "mellem",
       "minepenge_tags": [
@@ -7961,7 +7961,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -8016,7 +8016,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -8046,7 +8046,7 @@
       "summary": "Fornuftig investering indebærer at vi går meget i dybden med de selskaber vi vil investere i, og kun køber dem til en fair pris.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "mellem",
@@ -8073,7 +8073,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -8102,7 +8102,7 @@
       "summary": "Se hvordan du selv kan udregne dit afkast, og tage højde for ind- og udbetalinger. Det er især praktisk at kunne hvis du har flere depoter og skal finde dit samlede afkast.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -8126,7 +8126,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -8153,7 +8153,7 @@
       "url": "https://mitteldorf.dk/blog/eps",
       "summary": "EPS, eller indtjening pr. aktie viser hvor mange penge et selskab tjener for hver aktie.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -8176,7 +8176,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -8230,7 +8230,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -8280,7 +8280,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -8307,7 +8307,7 @@
       "url": "https://mitteldorf.dk/blog/saadan-kan-du-spare-mere-op-i-aar",
       "summary": "Vi vil alle gerne spare flere penge op hvert år, men det er ofte svært at se, hvor vi kan finde pengene. Det er måske slet ikke så svært som du tror.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -8334,7 +8334,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -8363,7 +8363,7 @@
       "url": "https://mitteldorf.dk/blog/warren-buffett-letter-2020/",
       "summary": "Hvert år, i februar, udsender Berkshire Hathaway deres årsrapport og hermed også Warren Buffetts berømte Letter to Shareholders.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -8391,7 +8391,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -8420,7 +8420,7 @@
       "summary": "Da Warren Buffett var ung bestemte han sig for at blive millionær inden han blev 30 år. Den slags kræver at man arbejder for det, sparer op og laver nogle gode investeringer. Det gjorde han absolut godt. Læs her hvordan Warren kom fra start, og se om du kan gøre det efter.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "mellem",
@@ -8448,7 +8448,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -8478,7 +8478,7 @@
       "summary": "Warren Buffett og Charlie Munger har givet masser af lektioner til deres ejere gennem tiden. Her er nogle af de vigtigste punkter i mine øjne.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -8505,7 +8505,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -8534,7 +8534,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "mellem",
       "minepenge_tags": [
@@ -8560,7 +8560,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -8588,7 +8588,7 @@
       "summary": "Et tilbageblik på kvartalet der er gået.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -8615,7 +8615,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -8644,7 +8644,7 @@
       "url": "https://mitteldorf.dk/blog/invester-som-en-ejer/",
       "summary": "I denne artikel ser vi nærmere på, hvad vi som investorer kan se efter for at vurdere ledelsen i selskabet og den måde de driver det på.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -8674,7 +8674,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -8703,7 +8703,7 @@
       "summary": "Fornuftig investering indebærer at vi går meget i dybden med de selskaber vi vil investere i, og kun køber dem til en fair pris.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "mellem",
@@ -8730,7 +8730,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -8759,7 +8759,7 @@
       "summary": "Warren Buffet har altid en masse livsvisdom at dele ud af. Her er 3 af hans fundamentale principper, jeg selv prøver at leve efter.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -8787,7 +8787,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -8814,7 +8814,7 @@
       "url": "https://mitteldorf.dk/blog/aaret-der-gik-2019/",
       "summary": "Vi ser tilbage på året der er gået og hvad 2020 vil bringe her på bloggen.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "pensionister"
       ],
@@ -8843,7 +8843,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -8872,7 +8872,7 @@
       "url": "https://mitteldorf.dk/blog/markedskapital",
       "summary": "Markedskapitalen, eller børsværdi, angiver den samlede pris for et børsnoteret selskab.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -8895,7 +8895,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -8921,7 +8921,7 @@
       "summary": "Sælg i maj og bliv væk - Betyder det noget? Dette indlæg kan indeholde links til produkter, hvor jeg modtager en provision af salget. Jeg anbefaler kun produkter og services af højeste kvalitet, som j...",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -8950,7 +8950,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -8976,7 +8976,7 @@
       "url": "https://mitteldorf.dk/blog/berkshire-hathaway-annual-meeting-2021",
       "summary": "Alle selskaber afholder hvert år deres generalforsamling hvor aktionærerne kan komme og stille spørgsmål. Warren og Charlie har brugt næsten 4 timer på at besvare aktionærernes spørgsmål. Her er hvad du bør tage med dig.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -9005,7 +9005,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -9033,7 +9033,7 @@
       "url": "https://mitteldorf.dk/blog/8-investeringsregler-guy-spier/",
       "summary": "Guy Spier er en investor som gladeligt deler ud af sine gode råd og erfaringer. Han har skrevet bogen 'The Education of a Value Investor', hvor han blandt andet deler 8 regler til at tage bedre beslutninger.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -9063,7 +9063,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -9114,7 +9114,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -9141,7 +9141,7 @@
       "url": "https://mitteldorf.dk/blog/aaret-der-gik-2020/",
       "summary": "Vi ser tilbage på året der er gået og hvad 2021 vil bringe her på bloggen.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -9169,7 +9169,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -9198,7 +9198,7 @@
       "summary": "Din opsparingsrate er måske det mest vigtige tal at holde øje med for at opnå økonomik frihed. Det fortæller hvor stor en del af din indkomst du sparer op hver måned.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -9226,7 +9226,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -9257,7 +9257,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "børnefamilier",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -9286,7 +9286,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -9315,7 +9315,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -9341,7 +9341,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -9395,7 +9395,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -9423,7 +9423,7 @@
       "summary": "Inflation og høje renter er din værste fjende, især hvis du investerer. Har du en stor opsparing er det godt med høje renter, men inflationen skal vi alle holde øje med.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -9452,7 +9452,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -9482,7 +9482,7 @@
       "target_audiences": [
         "studerende",
         "børnefamilier",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -9509,7 +9509,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 1.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -9563,7 +9563,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -9619,7 +9619,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -9645,7 +9645,7 @@
       "url": "https://mitteldorf.dk/blog/tag-kontrol-over-din-oekonomi/",
       "summary": "At have god kontrol over din privatøkonomi hjælper dig til at leve et sikkert og godt liv hvor der er plads til drømme og store mål. Her ser vi på nogle punkter du bør tænke over, der kan inspirere dig til at få et bedre overblik.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -9674,7 +9674,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -9703,7 +9703,7 @@
       "summary": "Hvert år, i februar, udsender Berkshire Hathaway deres årsrapport og hermed også Warren Buffetts berømte Letter to Shareholders.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -9731,7 +9731,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -9758,7 +9758,7 @@
       "url": "https://mitteldorf.dk/blog/kvartalsopgoerelse-3-kvartal-2022/",
       "summary": "Vi ser tilbage på kvartalet der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -9786,7 +9786,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -9815,7 +9815,7 @@
       "url": "https://mitteldorf.dk/blog/kvartalsopgoerelse-3-kvartal-2022",
       "summary": "Vi ser tilbage på kvartalet der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -9843,7 +9843,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -9899,7 +9899,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -9925,7 +9925,7 @@
       "url": "https://mitteldorf.dk/blog/invester-som-en-ejer",
       "summary": "I denne artikel ser vi nærmere på, hvad vi som investorer kan se efter for at vurdere ledelsen i selskabet og den måde de driver det på.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -9955,7 +9955,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -9983,7 +9983,7 @@
       "url": "https://mitteldorf.dk/blog/eps/",
       "summary": "EPS, eller indtjening pr. aktie viser hvor mange penge et selskab tjener for hver aktie.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -10006,7 +10006,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -10034,7 +10034,7 @@
       "target_audiences": [
         "nybegynder_investering",
         "studerende",
-        "lavindkomstgrupper"
+        "budgetbevidste"
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
@@ -10060,7 +10060,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -10110,7 +10110,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -10166,7 +10166,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -10195,7 +10195,7 @@
       "url": "https://mitteldorf.dk/blog/the-richest-man-in-babylon/",
       "summary": "En af de mest hyggelige historier om privatøkonomi, som er glimrende som godnat-læsning til børnene. Bogen her er både sjov og ualmindelig lærerig.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -10224,7 +10224,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.8,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -10282,7 +10282,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -10310,7 +10310,7 @@
       "url": "https://mitteldorf.dk/blog/kvartalsopgoerelse-1-kvartal-2021/",
       "summary": "Vi ser tilbage på kvartalet der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -10339,7 +10339,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -10368,7 +10368,7 @@
       "url": "https://mitteldorf.dk/blog/lev-et-liv-uden-overforbrug/",
       "summary": "Hvordan kan vi leve et liv uden at have alt for mange ting? Hvordan kan vi gøre det til en livsstil?",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "nybegynder_investering"
       ],
@@ -10397,7 +10397,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -10446,7 +10446,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -10500,7 +10500,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -10528,7 +10528,7 @@
       "summary": "Se hvordan du selv kan udregne dit afkast, og tage højde for ind- og udbetalinger. Det er især praktisk at kunne hvis du har flere depoter og skal finde dit samlede afkast.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -10552,7 +10552,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -10580,7 +10580,7 @@
       "summary": "Bonden og guldægget. Du har måske hørt historien. Hvorfor betyder det noget at spare op? Kan vi ikke bare bruge hvad vi har? Hvis du ønsker at blive velhavende og fri, så er en sund opsparing det vigtigste skridt.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -10607,7 +10607,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -10636,7 +10636,7 @@
       "summary": "Warren Buffet har altid en masse livsvisdom at dele ud af. Her er 3 af hans fundamentale principper, jeg selv prøver at leve efter.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -10664,7 +10664,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -10691,7 +10691,7 @@
       "url": "https://mitteldorf.dk/blog/freedom24",
       "summary": "Freedom24 er en ny børsmægler på vej ind på det nordiske marked. De tilbyder gratis ugentlige analyser og har et enormt udvalg af aktier. Med Freedom app'en kan du super let handle aktier i USA, Europa og Asien.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -10719,7 +10719,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -10748,7 +10748,7 @@
       "summary": "Vi ser tilbage på måneden der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "pensionister"
       ],
       "complexity_level": "begynder",
@@ -10775,7 +10775,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -10803,7 +10803,7 @@
       "url": "https://mitteldorf.dk/blog/think-like-a-billionaire/",
       "summary": "Donald Trump har skrevet flere bøger i sin livstid. Dette er den første (og nok sidste) jeg kommer til at læse. Her er hans tips til hvordan man tænker som en milliardær.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "nybegynder_investering"
       ],
@@ -10833,7 +10833,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -10883,7 +10883,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -10910,7 +10910,7 @@
       "summary": "Bør du bruge de sidste dage af året på at skatteoptimere og sælge dine aktier med tab, for at købe dem tilbage senere?",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -10937,7 +10937,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -10966,7 +10966,7 @@
       "url": "https://mitteldorf.dk/blog/invester-i-livet/",
       "summary": "Invester i livet er en ny bog om minimalisme og investering, og hvordan vi ved fysisk og mental oprydning kan få plads og råd til de drømme vi har.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "økonomi_nybegynder"
       ],
@@ -10995,7 +10995,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -11049,7 +11049,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -11079,7 +11079,7 @@
       "summary": "Vi ser tilbage på måneden der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -11106,7 +11106,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -11134,7 +11134,7 @@
       "url": "https://mitteldorf.dk/blog/warren-buffetts-9-regler-om-virksomhedsledelse/",
       "summary": "Warren Buffett er ikke blot verdens bedste investor. Mange vil mene han også er en af de bedste virksomhedsledere.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -11164,7 +11164,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -11191,7 +11191,7 @@
       "url": "https://mitteldorf.dk/blog/the-superinvestors-of-graham-and-doddsville/",
       "summary": "Warren Buffett har skrevet meget få ting, men denne fortælling er én af de bedste og vigtigste. Han fortæller hvorfor effektive markeder ikke er sandt, på en vikelig underholdende måde.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -11213,7 +11213,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -11262,7 +11262,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -11288,7 +11288,7 @@
       "url": "https://mitteldorf.dk/blog/aaret-der-gik-2021/",
       "summary": "Vi ser tilbage på året der er gået og hvad 2022 vil bringe her på bloggen.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder",
         "studerende"
       ],
@@ -11316,7 +11316,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.4
@@ -11372,7 +11372,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -11428,7 +11428,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.4
@@ -11457,7 +11457,7 @@
       "url": "https://mitteldorf.dk/blog/smarte-mennesker-tager-forkerte-beslutninger/",
       "summary": "Rigdom og succes er ikke noget der er eksklusivt for højt intelligente mennesker. Tværtimod, vi kan opnå formidable resultater, uden ekstraordinært talent. Er du holdt tilbage af over-komplicere tingene?",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -11486,7 +11486,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.67,
         "pensionister": 0.0
@@ -11542,7 +11542,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.0,
+        "budgetbevidste": 0.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -11570,7 +11570,7 @@
       "summary": "Første trin mod økonomisk frihed er at blive gældfri, men det kan være en kamp. Her får du konkrete råd til at gøre det lettere.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "økonomi_nybegynder"
       ],
       "complexity_level": "begynder",
@@ -11596,7 +11596,7 @@
       "confidence_scores": {
         "studerende": 1.0,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 1.0,
         "pensionister": 0.0
@@ -11625,7 +11625,7 @@
       "summary": "Mit mål om økonomisk uafhængighed kunne jeg have nået for længe siden hvis bare jeg tog de rigtige beslutninger. Hør hvordan jeg begik den største fejl mit liv, og solgte Bitcoin i $30.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -11652,7 +11652,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -11678,7 +11678,7 @@
       "summary": "Lars Tvedes nye bog har fået en masse opmærksomhed, og den er også værd at læse. Han giver et godt indblik i sin egen karriere, og fortæller hvad enhver investor bør vide.",
       "target_audiences": [
         "studerende",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -11704,7 +11704,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -11732,7 +11732,7 @@
       "summary": "Vi ser tilbage på kvartalet der er gået. Forhåbentlig er jeg kommet tættere på målet om økonomisk uafhængighed.",
       "target_audiences": [
         "nybegynder_investering",
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende"
       ],
       "complexity_level": "begynder",
@@ -11759,7 +11759,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 1.0,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.4
@@ -11788,7 +11788,7 @@
       "url": "https://mitteldorf.dk/blog/kindle",
       "summary": "Min Kindle er en af de bedste ting jeg nogensinde har fået fat i. Jeg læser rigtig meget og den er helt perfekt folk som mig. Især hvis du ofte læser udenfor, eller rejser og er på farten, uden at ville slæbe tunge bøger med dig.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "studerende",
         "børnefamilier"
       ],
@@ -11817,7 +11817,7 @@
       "confidence_scores": {
         "studerende": 0.86,
         "børnefamilier": 0.4,
-        "lavindkomstgrupper": 1.0,
+        "budgetbevidste": 1.0,
         "nybegynder_investering": 0.33,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0
@@ -11844,7 +11844,7 @@
       "url": "https://mitteldorf.dk/blog/markedskapital/",
       "summary": "Markedskapitalen, eller børsværdi, angiver den samlede pris for et børsnoteret selskab.",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering"
       ],
       "complexity_level": "begynder",
@@ -11867,7 +11867,7 @@
       "confidence_scores": {
         "studerende": 0.29,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.33,
+        "budgetbevidste": 0.33,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.0,
         "pensionister": 0.0
@@ -11892,7 +11892,7 @@
       "url": "https://mitteldorf.dk/blog/gaeld-eller-opsparing/",
       "summary": "Hvad skal du betale til først hvis du har gæld men også vil spare op og investere dine penge?",
       "target_audiences": [
-        "lavindkomstgrupper",
+        "budgetbevidste",
         "nybegynder_investering",
         "studerende"
       ],
@@ -11919,7 +11919,7 @@
       "confidence_scores": {
         "studerende": 0.57,
         "børnefamilier": 0.0,
-        "lavindkomstgrupper": 0.67,
+        "budgetbevidste": 0.67,
         "nybegynder_investering": 0.67,
         "økonomi_nybegynder": 0.33,
         "pensionister": 0.0

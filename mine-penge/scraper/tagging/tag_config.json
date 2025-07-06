@@ -72,28 +72,101 @@
   },
   "target_audiences": {
     "studerende": [
-      "su", "studielån", "studerende", "universitet", "billig", 
-      "spare", "budget", "studie", "uddannelse"
+      "SU",
+      "studielån",
+      "studerende",
+      "universitet",
+      "højskole",
+      "uddannelse",
+      "første job",
+      "studiebolig",
+      "studierabat",
+      "ungdom",
+      "yngre",
+      "start på livet"
     ],
-    "børnefamilier": [
-      "børn", "familie", "børneopsparing", "familieøkonomi", 
-      "husholdning", "familiebudget", "børnefamilie"
-    ],
-    "lavindkomstgrupper": [
-      "billig", "spare", "budget", "gæld", "rådgivning", 
-      "grundlæggende", "lav indkomst", "økonomisk hjælp"
-    ],
-    "nybegynder_investering": [
-      "begynder", "første gang", "grundlæggende", "investering", 
-      "aktiesparekonto", "etf", "starte med investering"
-    ],
-    "økonomi_nybegynder": [
-      "budget", "opsparing", "grundlæggende", "tips", "guide", 
-      "råd", "første gang", "nybegynder"
+    "børnefamilie": [
+      "familie",
+      "børn",
+      "børneopsparing",
+      "familieøkonomi",
+      "forældre",
+      "børnefamilie",
+      "børnefamilier",
+      "børnepenge",
+      "børnetilskud",
+      "familiebudget",
+      "børneopsparing",
+      "uddannelsesopsparing"
     ],
     "pensionister": [
-      "pension", "pensionist", "senior", "aldersopsparing", 
-      "livrente", "ældre", "pensionering"
+      "pension",
+      "pensionist",
+      "pensionister",
+      "alderdom",
+      "senior",
+      "pensionering",
+      "folkepension",
+      "aldersopsparing",
+      "ratepension",
+      "livrente",
+      "ældre",
+      "seniorer"
+    ],
+    "erhverv": [
+      "virksomhed",
+      "erhverv",
+      "business",
+      "investering",
+      "aktier",
+      "fonde",
+      "portefølje",
+      "trading",
+      "daytrading",
+      "investor",
+      "investorer",
+      "professionel"
+    ],
+    "budgetbevidste": [
+      "billig",
+      "spare",
+      "budget",
+      "gæld",
+      "rådgivning",
+      "grundlæggende",
+      "beskeden",
+      "økonomisk udfordret",
+      "lav indkomst",
+      "begrænset økonomi",
+      "spare penge",
+      "billige løsninger",
+      "økonomisk rådgivning",
+      "gældsrådgivning",
+      "budgetrådgivning"
+    ],
+    "nybegynder_investering": [
+      "første investering",
+      "nybegynder",
+      "start investering",
+      "aktier for nybegyndere",
+      "fonde for nybegyndere",
+      "investering første gang",
+      "start på aktiemarkedet",
+      "investering nybegynder",
+      "første aktier",
+      "investering grundlæggende"
+    ],
+    "økonomi_nybegynder": [
+      "budget basics",
+      "økonomi nybegynder",
+      "grundlæggende økonomi",
+      "start med budget",
+      "første budget",
+      "økonomi for nybegyndere",
+      "budget for nybegyndere",
+      "grundlæggende opsparing",
+      "økonomi start",
+      "budget start"
     ]
   },
   "complexity_indicators": {
