@@ -6,10 +6,16 @@ const HeroSectionAdvanced = ({ statistics = {} }) => {
   const scrollToSearch = () => {
     const searchBar = document.querySelector('.search-container') || document.querySelector('input[type="text"]');
     if (searchBar) {
-      searchBar.scrollIntoView({ 
-        behavior: 'smooth', 
-        block: 'center' 
+      // Scroll til søgebaren og placér den 100px fra toppen
+      const searchBarRect = searchBar.getBoundingClientRect();
+      const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const targetScrollTop = currentScrollTop + searchBarRect.top - 100;
+      
+      window.scrollTo({
+        top: targetScrollTop,
+        behavior: 'smooth'
       });
+      
       // Focus på søgefeltet
       setTimeout(() => {
         const searchInput = searchBar.querySelector('input[type="text"]') || searchBar;
