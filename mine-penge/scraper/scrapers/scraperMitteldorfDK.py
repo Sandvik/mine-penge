@@ -11,6 +11,14 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+def normalize_url(url):
+    # Fjern trailing slash og www
+    url = url.strip()
+    if url.endswith('/'):
+        url = url[:-1]
+    url = url.replace('www.', '')
+    return url
+
 class MitteldorfBlogScraper:
     def __init__(self):
         self.base_url = "https://mitteldorf.dk"
@@ -115,7 +123,27 @@ class MitteldorfBlogScraper:
         
         return list(blog_urls)
 
-    def extract_blog_content(self, url):
+    def get_article_dates_from_listing(self):
+        """Scraper oversigtssiden og returnerer dict {url: date_published}"""
+        url = self.blog_base_url
+        response = self.get_page_content(url)
+        if not response:
+            return {}
+        soup = BeautifulSoup(response.content, 'html.parser')
+        article_dates = {}
+        for li in soup.find_all(['li']):
+            link = li.find('a', href=True)
+            if link:
+                article_url = urljoin(self.base_url, link['href'])
+                article_url = normalize_url(article_url)
+                text = li.get_text(separator=' ', strip=True)
+                m = re.match(r'(\d{1,2}\.\s*[a-zæøåA-ZÆØÅ]+\s*\d{4})', text)
+                if m:
+                    date_str = m.group(1)
+                    article_dates[article_url] = date_str
+        return article_dates
+
+    def extract_blog_content(self, url, date_published=None):
         """Ekstraherer indhold fra et enkelt blog indlæg"""
         logger.info(f"Scraper blog indlæg: {url}")
         
@@ -197,40 +225,6 @@ class MitteldorfBlogScraper:
         if meta_desc and meta_desc.get('content'):
             summary = meta_desc['content']
         
-        # Prøv at finde udgivelsesdato
-        date_published = ""
-        date_selectors = [
-            'meta[property="article:published_time"]',
-            'meta[name="date"]',
-            '.date',
-            '.published',
-            '.post-date',
-            '.entry-date',
-            'time[datetime]'
-        ]
-        
-        for selector in date_selectors:
-            date_element = soup.select_one(selector)
-            if date_element:
-                date_published = (date_element.get('content') or 
-                                date_element.get('datetime') or 
-                                date_element.get_text()).strip()
-                break
-        
-        # Prøv at parse dato fra URL eller indhold
-        if not date_published:
-            # Kig efter dato mønstre i URL eller indhold
-            date_patterns = [
-                r'(\d{1,2})\.\s*(januar|februar|marts|april|maj|juni|juli|august|september|oktober|november|december)\s*(\d{4})',
-                r'(\d{4})-(\d{2})-(\d{2})'
-            ]
-            
-            for pattern in date_patterns:
-                match = re.search(pattern, content, re.IGNORECASE)
-                if match:
-                    date_published = match.group(0)
-                    break
-        
         # Forfatter
         author = "Christian Mitteldorf"  # Blog ejer
         
@@ -251,6 +245,10 @@ class MitteldorfBlogScraper:
         if any(word in content.lower() for word in ['lysa', 'robot', 'platform', 'app']):
             categories.append('Fintech')
         
+        # Extract date if not provided
+        if not date_published:
+            date_published = self.extract_date_from_page(soup)
+        
         blog_post = {
             'url': url,
             'title': title,
@@ -261,7 +259,9 @@ class MitteldorfBlogScraper:
             'date_published': date_published,
             'scraped_at': datetime.now().isoformat(),
             'word_count': len(content.split()),
-            'source': 'Mitteldorf Blog'
+            'source': 'Mitteldorf Blog',
+            'scrape_date': datetime.now().isoformat(),
+            'last_updated': datetime.now().isoformat()
         }
         
         return blog_post
@@ -311,12 +311,17 @@ class MitteldorfBlogScraper:
         
         logger.info(f"Filtrerede URLs til {len(filtered_urls)} faktiske blog indlæg")
         
+        # Hent datoer fra oversigtssiden
+        article_dates = self.get_article_dates_from_listing()
+        
         # Scrape hvert blog indlæg
         successful_scrapes = 0
         for i, url in enumerate(filtered_urls, 1):
             logger.info(f"Scraper {i}/{len(filtered_urls)}: {url}")
             
-            blog_post = self.extract_blog_content(url)
+            norm_url = normalize_url(url)
+            date_published = article_dates.get(norm_url, "INGEN DATO FUNDET")
+            blog_post = self.extract_blog_content(url, date_published=date_published)
             if blog_post and blog_post['content'].strip():  # Kun gem hvis der er indhold
                 self.blog_posts.append(blog_post)
                 successful_scrapes += 1
@@ -375,6 +380,73 @@ class MitteldorfBlogScraper:
             'top_authors': sorted(author_counts.items(), key=lambda x: x[1], reverse=True)[:5]
         }
 
+    def print_article_dates_from_listing(self, article_dates):
+        print("\n=== URL: DATO fra oversigt ===")
+        for url, dato in article_dates.items():
+            print(f"{url}  -->  {dato}")
+        print(f"Antal fundet: {len(article_dates)}\n===========================\n")
+
+    def test_scrape_10_articles(self):
+        logger.info("=== TEST: Scraper 10 Mitteldorf artikler ===")
+        all_urls = set()
+        known_urls = self.find_known_blog_urls()
+        all_urls.update(known_urls)
+        try:
+            sitemap_urls = self.discover_blog_urls_from_sitemap()
+            all_urls.update(sitemap_urls)
+        except Exception as e:
+            logger.warning(f"Sitemap scraping fejlede: {e}")
+        try:
+            listing_urls = self.scrape_blog_listing_page()
+            all_urls.update(listing_urls)
+        except Exception as e:
+            logger.warning(f"Listing scraping fejlede: {e}")
+        filtered_urls = []
+        skip_words = ['#', '?', 'javascript:', '/bog/', '/nyhedsbrev/', '/kontakt/']
+        for url in all_urls:
+            if not any(word in url.lower() for word in skip_words):
+                if (url.startswith(self.base_url) and '/blog/' in url and url != self.blog_base_url and not url.endswith('/blog/')):
+                    filtered_urls.append(url)
+        test_urls = filtered_urls[:10]
+        logger.info(f"Tester med {len(test_urls)} artikler")
+        article_dates = self.get_article_dates_from_listing()
+        self.print_article_dates_from_listing(article_dates)
+        logger.info(f"Fandt datoer for {len(article_dates)} artikler fra oversigten")
+        successful_scrapes = 0
+        for i, url in enumerate(test_urls, 1):
+            logger.info(f"\n--- Artikel {i}/{len(test_urls)} ---")
+            logger.info(f"URL: {url}")
+            norm_url = normalize_url(url)
+            date_published = article_dates.get(norm_url, "INGEN DATO FUNDET")
+            logger.info(f"Dato fra oversigt: {date_published}")
+            blog_post = self.extract_blog_content(url, date_published=date_published)
+            if blog_post and blog_post['content'].strip():
+                self.blog_posts.append(blog_post)
+                successful_scrapes += 1
+                logger.info(f"✅ Artikel scraped:")
+                logger.info(f"   Titel: {blog_post['title'][:50]}...")
+                logger.info(f"   Dato: '{blog_post['date_published']}'")
+                logger.info(f"   Ord: {blog_post['word_count']}")
+            else:
+                logger.warning(f"❌ Kunne ikke scrape artikel")
+            time.sleep(1)
+        logger.info(f"\n=== TEST FÆRDIG ===")
+        logger.info(f"Succesfulde scrapes: {successful_scrapes}/{len(test_urls)}")
+        if self.blog_posts:
+            filename = "data/test_mitteldorf_10_articles.json"
+            output = {
+                'test_info': {
+                    'scraped_at': datetime.now().isoformat(),
+                    'articles_scraped': len(self.blog_posts),
+                    'test_type': '10_articles_with_dates'
+                },
+                'blog_posts': self.blog_posts
+            }
+            with open(filename, 'w', encoding='utf-8') as f:
+                json.dump(output, f, ensure_ascii=False, indent=2)
+            logger.info(f"Test-data gemt til: {filename}")
+        return self.blog_posts
+
 def main():
     """Hovedfunktion"""
     scraper = MitteldorfBlogScraper()
@@ -390,31 +462,30 @@ def main():
         stats = scraper.get_statistics()
         
         # Print resultater
-        print(f"\n{'='*50}")
-        print(f"MITTELDORF BLOG SCRAPING FÆRDIG!")
-        print(f"{'='*50}")
-        print(f"Antal indlæg scraped: {stats['total_posts']}")
+        print("\n" + "="*50)
+        print("MITTELDORF BLOG SCRAPING FÆRDIG!")
+        print("="*50)
+        print(f"Antal indlæg scraped: {stats.get('total_posts', 0)}")
         print(f"Data gemt til: {filename}")
-        print(f"Total antal ord: {stats['total_words']:,}")
-        print(f"Gennemsnitlig ordantal per indlæg: {stats['average_words_per_post']}")
+        print(f"Total antal ord: {stats.get('total_words', 0):,}")
+        print(f"Gennemsnitlig ordantal per indlæg: {stats.get('average_words_per_post', 0)}")
         
-        if stats['top_categories']:
-            print(f"\nTop kategorier:")
+        if stats.get('top_categories'):
+            print("\nTop kategorier:")
             for cat, count in stats['top_categories']:
-                print(f"  - {cat}: {count} indlæg")
+                print(f"- {cat}: {count} indlæg")
         
-        if stats['top_authors']:
-            print(f"\nTop forfattere:")
+        if stats.get('top_authors'):
+            print("\nTop forfattere:")
             for author, count in stats['top_authors']:
-                print(f"  - {author}: {count} indlæg")
+                print(f"- {author}: {count} indlæg")
         
-        # Vis de første 3 titler som eksempel
-        print(f"\nEksempler på titler:")
-        for i, post in enumerate(blog_posts[:3]):
-            print(f"{i+1}. {post['title']}")
-            
+        if blog_posts:
+            print("\nEksempler på titler:")
+            for i, post in enumerate(blog_posts[:5], 1):
+                print(f"{i}. {post['title']}")
     else:
-        print("Ingen blog indlæg kunne scrapes!")
+        print("Ingen blog indlæg blev scraped.")
 
 if __name__ == "__main__":
     main()

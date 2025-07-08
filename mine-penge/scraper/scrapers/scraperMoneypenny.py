@@ -8,8 +8,24 @@ from datetime import datetime
 import logging
 
 # Opsætning af logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
+
+# Console output funktioner
+def print_progress(message):
+    print(f"🔄 {message}")
+
+def print_success(message):
+    print(f"✅ {message}")
+
+def print_error(message):
+    print(f"❌ {message}")
+
+def print_info(message):
+    print(f"ℹ️  {message}")
+
+def print_warning(message):
+    print(f"⚠️  {message}")
 
 class MoneypennyBlogScraper:
     def __init__(self):
@@ -29,49 +45,18 @@ class MoneypennyBlogScraper:
                 response.raise_for_status()
                 return response
             except requests.RequestException as e:
-                logger.warning(f"Forsøg {attempt + 1} fejlede for {url}: {e}")
                 if attempt < retry_count - 1:
+                    print_warning(f"Forsøg {attempt + 1} fejlede for {url.split('/')[-1]}: {e}")
                     time.sleep(2 ** attempt)  # Exponential backoff
                 else:
-                    logger.error(f"Kunne ikke hente {url} efter {retry_count} forsøg")
+                    print_error(f"Kunne ikke hente {url.split('/')[-1]} efter {retry_count} forsøg")
                     return None
 
     def find_blog_urls_from_search(self):
         """Finder blog URLs ved at søge på Google med site: operator"""
-        blog_urls = set()
-        
-        # Definerede søgetermer for at finde forskellige typer indlæg
-        search_terms = [
-            "site:moneypennyandmore.dk/blog/ investering",
-            "site:moneypennyandmore.dk/blog/ aktier", 
-            "site:moneypennyandmore.dk/blog/ lysa",
-            "site:moneypennyandmore.dk/blog/ nordnet",
-            "site:moneypennyandmore.dk/blog/ 2024",
-            "site:moneypennyandmore.dk/blog/ 2025"
-        ]
-        
-        # Mock URLs baseret på de fundne eksempler (da vi ikke kan søge på Google direkte)
-        known_urls = [
-            "https://moneypennyandmore.dk/blog/status-marts-2025-min-lysa-tyv-ligger-pa-38.8-siden-start",
-            "https://moneypennyandmore.dk/blog/en-opdatering-pa-mine-fondsportefoljer-januar-2025",
-            "https://moneypennyandmore.dk/blog/status-2025-min-lysa-tyv-har-snuppet-11.849-kr.-og-givet-et-afkast-pa-47.03",
-            "https://moneypennyandmore.dk/blog/nyhed-fra-lysa-fra-2025-beskattes-din-lysa-gevinst-som-aktieindkomst",
-            "https://moneypennyandmore.dk/blog/giv-dit-barn-en-million-i-pensionsgave",
-            "https://moneypennyandmore.dk/blog/hvad-er-et-aktiedepot-en-simpel-guide-til-at-komme-i-gang-med-investeringer",
-            "https://moneypennyandmore.dk/blog/fire-bevaegelsen-bevaeger-sig",
-            "https://moneypennyandmore.dk/blog/hvad-er-en-aktiesparekonto",
-            "https://moneypennyandmore.dk/blog/klodshans-metoden",
-            "https://moneypennyandmore.dk/blog/manedsopsparing-sadan-startede-jeg-min",
-            "https://moneypennyandmore.dk/blog/hvad-er-skats-positivliste",
-            "https://moneypennyandmore.dk/blog/investering-sadan-kommer-du-igang",
-            "https://moneypennyandmore.dk/blog/robotradgiveren-lysa-er-kommet-til-danmark",
-            "https://moneypennyandmore.dk/blog/hvilken-investeringsplatform-skal-jeg-vaelge",
-            "https://moneypennyandmore.dk/blog/hvad-er-xdagen",
-            "https://moneypennyandmore.dk/blog/11-steder-med-gratis-fodselsdagsgaver-og-tilbud"
-        ]
-        
-        blog_urls.update(known_urls)
-        return list(blog_urls)
+        # Denne metode er ikke længere nødvendig da vi bruger dynamisk scraping
+        # af blog listing sider og sitemap i stedet
+        return []
 
     def discover_blog_urls_from_sitemap(self):
         """Prøver at finde blog URLs fra sitemap"""
@@ -110,7 +95,7 @@ class MoneypennyBlogScraper:
         ]
         
         for listing_url in listing_urls:
-            logger.info(f"Scraper listing side: {listing_url}")
+            # logger.info(f"Scraper listing side: {listing_url}")  # Reduced logging
             response = self.get_page_content(listing_url)
             
             if response:
@@ -134,7 +119,7 @@ class MoneypennyBlogScraper:
 
     def extract_blog_content(self, url):
         """Ekstraherer indhold fra et enkelt blog indlæg"""
-        logger.info(f"Scraper blog indlæg: {url}")
+        # logger.info(f"Scraper blog indlæg: {url}")  # Reduced logging
         
         response = self.get_page_content(url)
         if not response:
@@ -190,71 +175,322 @@ class MoneypennyBlogScraper:
         
         # Prøv at finde udgivelsesdato
         date_published = ""
-        date_selectors = [
-            'meta[property="article:published_time"]',
-            'meta[name="date"]',
-            '.date', '.published', '.post-date',
-            'time[datetime]'
-        ]
         
-        for selector in date_selectors:
-            date_element = soup.select_one(selector)
-            if date_element:
-                date_published = (date_element.get('content') or 
-                                date_element.get('datetime') or 
-                                date_element.get_text()).strip()
-                break
+        # Ekstraher udgivelsesdato fra <p itemprop="datePublished">
+        if not date_published:
+            p_date_tags = soup.find_all('p', attrs={'itemprop': 'datePublished'})
+            for p_tag in p_date_tags:
+                # Try datetime attribute first
+                datetime_attr = p_tag.get('datetime')
+                if datetime_attr:
+                    try:
+                        date_obj = datetime.fromisoformat(datetime_attr.replace('Z', '+00:00'))
+                        date_published = date_obj.isoformat()
+                        logger.info(f"Fandt dato i <p> datetime: {datetime_attr} -> {date_published}")
+                        break
+                    except ValueError as e:
+                        logger.warning(f"Kunne ikke parse <p> datetime: {datetime_attr}, fejl: {e}")
+                # Try text content
+                text_content = p_tag.get_text().strip()
+                if text_content:
+                    try:
+                        if ' ' in text_content:
+                            date_obj = datetime.strptime(text_content, '%d/%m/%Y %H:%M')
+                        else:
+                            date_obj = datetime.strptime(text_content, '%d/%m/%Y')
+                        date_published = date_obj.isoformat()
+                        logger.info(f"Fandt dato i <p> tekst: {text_content} -> {date_published}")
+                        break
+                    except ValueError as e:
+                        logger.warning(f"Kunne ikke parse <p> tekst: {text_content}, fejl: {e}")
+        
+        # Metode 1.1: Find itemprop="datePublished" elementer
+        if not date_published:
+            date_published_elements = soup.find_all(attrs={'itemprop': 'datePublished'})
+            for element in date_published_elements:
+                # Først prøv datetime attribut
+                datetime_attr = element.get('datetime')
+                if datetime_attr:
+                    try:
+                        # Parse ISO format datetime
+                        date_obj = datetime.fromisoformat(datetime_attr.replace('Z', '+00:00'))
+                        date_published = date_obj.isoformat()
+                        logger.info(f"Fandt dato i itemprop datetime: {datetime_attr} -> {date_published}")
+                        break
+                    except ValueError as e:
+                        logger.warning(f"Kunne ikke parse datetime attribut: {datetime_attr}, fejl: {e}")
+                
+                # Hvis ikke datetime, prøv tekst indhold
+                if not date_published:
+                    text_content = element.get_text().strip()
+                    if text_content:
+                        # Prøv at parse DD/MM/YYYY HH:MM format
+                        try:
+                            if ' ' in text_content:
+                                date_obj = datetime.strptime(text_content, '%d/%m/%Y %H:%M')
+                            else:
+                                date_obj = datetime.strptime(text_content, '%d/%m/%Y')
+                            date_published = date_obj.isoformat()
+                            logger.info(f"Fandt dato i itemprop tekst: {text_content} -> {date_published}")
+                            break
+                        except ValueError as e:
+                            logger.warning(f"Kunne ikke parse itemprop tekst: {text_content}, fejl: {e}")
+        
+        # Metode 1.5: Find elementer der indeholder "Slået op den"
+        if not date_published:
+            # Søg efter elementer der indeholder "Slået op den"
+            elements_with_date = soup.find_all(string=re.compile(r'Slået op den'))
+            for element in elements_with_date:
+                parent = element.parent
+                # Check for <p> tag with date as child
+                if parent:
+                    p_tag = parent.find('p')
+                    if p_tag:
+                        # Try datetime attribute first
+                        datetime_attr = p_tag.get('datetime')
+                        if datetime_attr:
+                            try:
+                                date_obj = datetime.fromisoformat(datetime_attr.replace('Z', '+00:00'))
+                                date_published = date_obj.isoformat()
+                                logger.info(f"Fandt dato i <p> datetime: {datetime_attr} -> {date_published}")
+                                break
+                            except ValueError as e:
+                                logger.warning(f"Kunne ikke parse <p> datetime: {datetime_attr}, fejl: {e}")
+                        # Try text content
+                        text_content = p_tag.get_text().strip()
+                        if text_content:
+                            try:
+                                if ' ' in text_content:
+                                    date_obj = datetime.strptime(text_content, '%d/%m/%Y %H:%M')
+                                else:
+                                    date_obj = datetime.strptime(text_content, '%d/%m/%Y')
+                                date_published = date_obj.isoformat()
+                                logger.info(f"Fandt dato i <p> tekst: {text_content} -> {date_published}")
+                                break
+                            except ValueError as e:
+                                logger.warning(f"Kunne ikke parse <p> tekst: {text_content}, fejl: {e}")
+                # Fallback: old logic
+                parent_text = parent.get_text() if parent else str(element)
+                date_match = re.search(r'Slået op den (\d{2}/\d{2}/\d{4}(?: \d{2}:\d{2})?)', parent_text)
+                if date_match:
+                    date_str = date_match.group(1)
+                    try:
+                        if ' ' in date_str:
+                            date_obj = datetime.strptime(date_str, '%d/%m/%Y %H:%M')
+                        else:
+                            date_obj = datetime.strptime(date_str, '%d/%m/%Y')
+                        date_published = date_obj.isoformat()
+                        logger.info(f"Fandt dato i HTML element: {date_str} -> {date_published}")
+                        break
+                    except ValueError as e:
+                        logger.warning(f"Kunne ikke parse dato fra HTML element: {date_str}, fejl: {e}")
+                        continue
+        
+        # Metode 2: Find dato i tekst format "Slået op den DD/MM/YYYY HH:MM"
+        if not date_published:
+            # Søg efter mønsteret "Slået op den" efterfulgt af dato (tillad HTML-tags/whitespace imellem)
+            date_patterns = [
+                r'Slået op den[\s\S]{0,50}?(\d{2}/\d{2}/\d{4} \d{2}:\d{2})',  # Med tid
+                r'Slået op den[\s\S]{0,50}?(\d{2}/\d{2}/\d{4})',  # Uden tid
+                r'(\d{2}/\d{2}/\d{4} \d{2}:\d{2})',  # Bare dato med tid
+                r'(\d{2}/\d{2}/\d{4})',  # Bare dato
+            ]
+            
+
+            
+            for pattern in date_patterns:
+                # Søg i hele indholdet
+                date_match = re.search(pattern, content)
+                if date_match:
+                    date_str = date_match.group(1)
+                    try:
+                        # Konverter fra DD/MM/YYYY til ISO format
+                        if ' ' in date_str:
+                            # Med tid: DD/MM/YYYY HH:MM
+                            date_obj = datetime.strptime(date_str, '%d/%m/%Y %H:%M')
+                        else:
+                            # Uden tid: DD/MM/YYYY
+                            date_obj = datetime.strptime(date_str, '%d/%m/%Y')
+                        
+                        date_published = date_obj.isoformat()
+                        logger.info(f"Fandt dato i tekst: {date_str} -> {date_published}")
+                        break
+                    except ValueError as e:
+                        logger.warning(f"Kunne ikke parse dato: {date_str}, fejl: {e}")
+                        continue
+                
+                # Søg også i hele HTML'en hvis ikke fundet i content
+                if not date_published:
+                    date_match = re.search(pattern, str(soup))
+                    if date_match:
+                        date_str = date_match.group(1)
+                        try:
+                            # Konverter fra DD/MM/YYYY til ISO format
+                            if ' ' in date_str:
+                                # Med tid: DD/MM/YYYY HH:MM
+                                date_obj = datetime.strptime(date_str, '%d/%m/%Y %H:%M')
+                            else:
+                                # Uden tid: DD/MM/YYYY
+                                date_obj = datetime.strptime(date_str, '%d/%m/%Y')
+                            
+                            date_published = date_obj.isoformat()
+                            # logger.info(f"Fandt dato i HTML: {date_str} -> {date_published}")  # Reduced logging
+                            break
+                        except ValueError as e:
+                            logger.warning(f"Kunne ikke parse dato fra HTML: {date_str}, fejl: {e}")
+                            continue
+                # Søg også i ren tekst fra hele HTML'en hvis ikke fundet endnu
+                if not date_published:
+                    text = soup.get_text(separator=" ")
+                    date_match = re.search(pattern, text)
+                    if date_match:
+                        date_str = date_match.group(1)
+                        try:
+                            if ' ' in date_str:
+                                date_obj = datetime.strptime(date_str, '%d/%m/%Y %H:%M')
+                            else:
+                                date_obj = datetime.strptime(date_str, '%d/%m/%Y')
+                            date_published = date_obj.isoformat()
+                            # logger.info(f"Fandt dato i ren tekst: {date_str} -> {date_published}")  # Reduced logging
+                            break
+                        except ValueError as e:
+                            logger.warning(f"Kunne ikke parse dato fra ren tekst: {date_str}, fejl: {e}")
+                            continue
+        
+        # Metode 3: Søg efter dato mønstre i hele HTML'en
+        if not date_published:
+            # Søg efter dato mønstre i hele siden
+            date_patterns = [
+                r'(\d{2}/\d{2}/\d{4} \d{2}:\d{2})',  # DD/MM/YYYY HH:MM
+                r'(\d{2}/\d{2}/\d{4})',  # DD/MM/YYYY
+                r'(\d{4}-\d{2}-\d{2})',  # YYYY-MM-DD
+            ]
+            
+            for pattern in date_patterns:
+                date_match = re.search(pattern, str(soup))
+                if date_match:
+                    date_str = date_match.group(1)
+                    try:
+                        if '/' in date_str and len(date_str.split('/')[0]) == 2:
+                            # DD/MM/YYYY format
+                            if ' ' in date_str:
+                                date_obj = datetime.strptime(date_str, '%d/%m/%Y %H:%M')
+                            else:
+                                date_obj = datetime.strptime(date_str, '%d/%m/%Y')
+                        else:
+                            # YYYY-MM-DD format
+                            date_obj = datetime.strptime(date_str, '%Y-%m-%d')
+                        
+                        date_published = date_obj.isoformat()
+                        # logger.info(f"Fandt dato med regex: {date_str} -> {date_published}")  # Reduced logging
+                        break
+                    except ValueError as e:
+                        logger.warning(f"Kunne ikke parse dato: {date_str}, fejl: {e}")
+                        continue
+        
+        # Fallback: Søg direkte i raw HTML efter <p itemprop="datePublished" ...>
+        if not date_published:
+            raw_html = response.text
+            # Find <p itemprop="datePublished" ... datetime="...">
+            p_tag_match = re.search(r'<p[^>]*itemprop=["\"]datePublished["\"][^>]*>', raw_html)
+            if p_tag_match:
+                p_tag = p_tag_match.group(0)
+                # Prøv at finde datetime attribut
+                datetime_match = re.search(r'datetime=["\"]([^"\"]+)["\"]', p_tag)
+                if datetime_match:
+                    datetime_attr = datetime_match.group(1)
+                    try:
+                        date_obj = datetime.fromisoformat(datetime_attr.replace('Z', '+00:00'))
+                        date_published = date_obj.isoformat()
+                        # logger.info(f"Fandt dato i raw <p> datetime: {datetime_attr} -> {date_published}")  # Reduced logging
+                    except ValueError as e:
+                        logger.warning(f"Kunne ikke parse raw <p> datetime: {datetime_attr}, fejl: {e}")
+                # Hvis ikke, prøv at finde tekst mellem taggene
+                if not date_published:
+                    text_match = re.search(r'<p[^>]*itemprop=["\"]datePublished["\"][^>]*>([^<]+)</p>', raw_html)
+                    if text_match:
+                        text_content = text_match.group(1).strip()
+                        try:
+                            if ' ' in text_content:
+                                date_obj = datetime.strptime(text_content, '%d/%m/%Y %H:%M')
+                            else:
+                                date_obj = datetime.strptime(text_content, '%d/%m/%Y')
+                            date_published = date_obj.isoformat()
+                            # logger.info(f"Fandt dato i raw <p> tekst: {text_content} -> {date_published}")  # Reduced logging
+                        except ValueError as e:
+                            logger.warning(f"Kunne ikke parse raw <p> tekst: {text_content}, fejl: {e}")
         
         blog_post = {
-            'url': url,
             'title': title,
-            'summary': summary,
             'content': content,
-            'date_published': date_published,
-            'scraped_at': datetime.now().isoformat(),
-            'word_count': len(content.split())
+            'url': url,
+            'source': 'Moneypenny',
+            'date_published': date_published or 'INGEN DATO FUNDET',
+            'scrape_date': datetime.now().isoformat(),
+            'last_updated': datetime.now().isoformat(),
+            'summary': summary
         }
         
         return blog_post
 
     def scrape_all_blogs(self):
         """Hovedfunktion der scraper alle blog indlæg"""
-        logger.info("Starter scraping af Moneypenny blog...")
+        print_info("Starter scraping af Moneypenny blog...")
         
         # Find alle blog URLs
         all_urls = set()
         
-        # Metode 1: Fra kendte URLs
-        known_urls = self.find_blog_urls_from_search()
-        all_urls.update(known_urls)
-        logger.info(f"Fandt {len(known_urls)} kendte URLs")
-        
-        # Metode 2: Fra sitemap
+        # Metode 1: Fra sitemap
+        print_progress("Søger efter URLs i sitemap...")
         sitemap_urls = self.discover_blog_urls_from_sitemap()
         all_urls.update(sitemap_urls)
-        logger.info(f"Fandt {len(sitemap_urls)} URLs fra sitemap")
+        if sitemap_urls:
+            print_success(f"Fandt {len(sitemap_urls)} URLs fra sitemap")
+        else:
+            print_warning("Ingen URLs fundet i sitemap")
         
-        # Metode 3: Fra blog listing sider
+        # Metode 2: Fra blog listing sider
+        print_progress("Scraper blog listing sider...")
         listing_urls = self.scrape_blog_listing_pages()
         all_urls.update(listing_urls)
-        logger.info(f"Fandt {len(listing_urls)} URLs fra listing sider")
+        if listing_urls:
+            print_success(f"Fandt {len(listing_urls)} URLs fra listing sider")
+        else:
+            print_warning("Ingen URLs fundet i listing sider")
         
-        logger.info(f"Total antal unikke blog URLs fundet: {len(all_urls)}")
+        print_info(f"Total antal unikke blog URLs fundet: {len(all_urls)}")
         
         # Scrape hvert blog indlæg
         successful_scrapes = 0
-        for i, url in enumerate(all_urls, 1):
-            logger.info(f"Scraper {i}/{len(all_urls)}: {url}")
+        failed_scrapes = 0
+        urls_to_scrape = list(all_urls)
+        
+        print_progress(f"Starter scraping af {len(urls_to_scrape)} artikler...")
+        
+        for i, url in enumerate(urls_to_scrape, 1):
+            # Vis progress hver 5. artikel eller hvis det er de første 3
+            if i <= 3 or i % 5 == 0 or i == len(urls_to_scrape):
+                print_progress(f"Scraper artikel {i}/{len(urls_to_scrape)}")
             
             blog_post = self.extract_blog_content(url)
             if blog_post:
                 self.blog_posts.append(blog_post)
                 successful_scrapes += 1
+                # Vis titel for de første 3 artikler
+                if i <= 3:
+                    title = blog_post.get('title', 'Ingen titel')[:50]
+                    date = blog_post.get('date_published', 'Ingen dato')
+                    print_success(f"Artikel {i}: '{title}...' (Dato: {date})")
+            else:
+                failed_scrapes += 1
+                print_error(f"Kunne ikke scrape artikel {i}")
             
             # Vær høflig og vent mellem requests
             time.sleep(1)
         
-        logger.info(f"Scraping færdig! {successful_scrapes}/{len(all_urls)} indlæg scraped succesfuldt")
+        print_success(f"Scraping færdig! {successful_scrapes} succesfulde, {failed_scrapes} fejlede")
+        if failed_scrapes > 0:
+            print_warning(f"{failed_scrapes} artikler kunne ikke scrapes - tjek ovenstående fejl")
         
         return self.blog_posts
 
@@ -269,7 +505,7 @@ class MoneypennyBlogScraper:
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(output, f, ensure_ascii=False, indent=2)
         
-        logger.info(f"Data gemt til {filename}")
+        print_success(f"Data gemt til {filename}")
         return filename
 
 def main():
@@ -284,20 +520,25 @@ def main():
         filename = scraper.save_to_json()
         
         # Print statistikker
-        print(f"\n{'='*50}")
-        print(f"SCRAPING FÆRDIG!")
-        print(f"{'='*50}")
-        print(f"Antal indlæg scraped: {len(blog_posts)}")
-        print(f"Data gemt til: {filename}")
-        print(f"Gennemsnitlig ordantal: {sum(post['word_count'] for post in blog_posts) // len(blog_posts)}")
+        print(f"\n{'='*60}")
+        print(f"🎉 SCRAPING FÆRDIG!")
+        print(f"{'='*60}")
+        print(f"📊 Antal indlæg scraped: {len(blog_posts)}")
+        print(f"💾 Data gemt til: {filename}")
+        
+        # Beregn gennemsnitlig ordantal
+        total_words = sum(len(post.get('content', '').split()) for post in blog_posts)
+        avg_words = total_words // len(blog_posts) if blog_posts else 0
+        print(f"📝 Gennemsnitlig ordantal: {avg_words}")
         
         # Vis de første 3 titler som eksempel
-        print(f"\nEksempler på titler:")
+        print(f"\n📋 Eksempler på titler:")
         for i, post in enumerate(blog_posts[:3]):
-            print(f"{i+1}. {post['title']}")
+            title = post.get('title', 'Ingen titel')[:60]
+            print(f"  {i+1}. {title}...")
             
     else:
-        print("Ingen blog indlæg kunne scrapes!")
+        print_error("Ingen blog indlæg kunne scrapes!")
 
 if __name__ == "__main__":
     main()

@@ -54,24 +54,13 @@ class DataUpdater:
             # Kør script med real-time output
             process = subprocess.Popen(
                 [sys.executable, script_path],
-                stdout=subprocess.PIPE,
-                stderr=subprocess.STDOUT,
-                text=True,
-                bufsize=1,
-                universal_newlines=True,
+                stdout=None,  # Brug terminal stdout direkte
+                stderr=None,  # Brug terminal stderr direkte
                 cwd=os.getcwd()
             )
             
-            # Print output i real-time
-            while True:
-                output = process.stdout.readline()
-                if output == '' and process.poll() is not None:
-                    break
-                if output:
-                    print(output.strip())
-            
             # Vent på at processen er færdig
-            return_code = process.poll()
+            return_code = process.wait()
             
             if return_code == 0:
                 print(f"✅ {script_name} kørt succesfuldt")
@@ -121,24 +110,13 @@ class DataUpdater:
             # Kør tagging script med real-time output
             process = subprocess.Popen(
                 [sys.executable, tagging_script],
-                stdout=subprocess.PIPE,
-                stderr=subprocess.STDOUT,
-                text=True,
-                bufsize=1,
-                universal_newlines=True,
+                stdout=None,  # Brug terminal stdout direkte
+                stderr=None,  # Brug terminal stderr direkte
                 cwd=os.getcwd()
             )
             
-            # Print output i real-time
-            while True:
-                output = process.stdout.readline()
-                if output == '' and process.poll() is not None:
-                    break
-                if output:
-                    print(output.strip())
-            
             # Vent på at processen er færdig
-            return_code = process.poll()
+            return_code = process.wait()
             
             if return_code == 0:
                 print("✅ Tagging kørt succesfuldt")

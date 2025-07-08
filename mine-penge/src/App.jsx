@@ -134,10 +134,77 @@ function App() {
     
     // Sort articles by date (newest first) and then by source for variety
     const sortedArticles = [...filteredByTopic].sort((a, b) => {
-      // First sort by date (newest first)
-      const dateA = new Date(a.published_date || a.scraped_date || 0);
-      const dateB = new Date(b.published_date || b.scraped_date || 0);
+      // Use the same smart date detection as articleService
+      const getArticleDate = (article) => {
+                 // 1. Prøv date_published (hvis det ikke er 'INGEN DATO FUNDET')
+         if (article.date_published && article.date_published !== 'INGEN DATO FUNDET') {
+           // Hvis det er en ISO dato (f.eks. "2020-08-05T10:36:00+00:00")
+           if (article.date_published.includes('T') || article.date_published.includes('-')) {
+             return new Date(article.date_published);
+           }
+          // Parse dansk dato format
+          const danishMonths = {
+            'januar': 0, 'jan': 0, 'februar': 1, 'feb': 1, 'marts': 2, 'mar': 2,
+            'april': 3, 'apr': 3, 'maj': 4, 'juni': 5, 'jun': 5, 'juli': 6, 'jul': 6,
+            'august': 7, 'aug': 7, 'september': 8, 'sep': 8, 'oktober': 9, 'okt': 9,
+            'november': 10, 'nov': 10, 'december': 11, 'dec': 11
+          };
+          
+          const patterns = [
+            /(\d{1,2})\.\s*(\w+)\s+(\d{4})/,  // "16. juli 2024"
+            /(\d{1,2})\.\s*(\w+)/,  // "5. maj" (antager nuværende år)
+          ];
+          
+                     for (const pattern of patterns) {
+             const match = article.date_published.toLowerCase().match(pattern);
+             if (match) {
+               const [_, day, monthName, year = new Date().getFullYear()] = match;
+               const month = danishMonths[monthName];
+               if (month !== undefined) {
+                 // Hvis datoen ikke har år, antag at den er fra 2023 eller tidligere
+                 // for at undgå at gamle artikler bliver behandlet som nye
+                 const assumedYear = year === new Date().getFullYear() ? 2023 : parseInt(year);
+                 return new Date(assumedYear, month, parseInt(day));
+               }
+             }
+           }
+        }
+        
+        // 2. Prøv URL-analyse
+        if (article.url) {
+          const patterns = [
+            /\/(\d{4})\/(\d{2})\//,  // /2024/12/
+            /\/(\d{4})-(\d{2})-(\d{2})\//,  // /2024-12-25/
+            /\/(\d{4})\/(\d{2})\/(\d{2})\//  // /2024/12/25/
+          ];
+          
+          for (const pattern of patterns) {
+            const match = article.url.match(pattern);
+            if (match) {
+              const [_, year, month, day = '01'] = match;
+              return new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+            }
+          }
+        }
+        
+        // 3. Brug scrape_date som fallback
+        if (article.scrape_date) {
+          return new Date(article.scrape_date);
+        }
+        
+        // 4. Brug last_updated som sidste udvej
+        if (article.last_updated) {
+          return new Date(article.last_updated);
+        }
+        
+        // 5. Fallback til meget gammel dato
+        return new Date('2020-01-01');
+      };
       
+      const dateA = getArticleDate(a);
+      const dateB = getArticleDate(b);
+      
+      // Sort by date (newest first)
       if (dateA > dateB) return -1;
       if (dateA < dateB) return 1;
       

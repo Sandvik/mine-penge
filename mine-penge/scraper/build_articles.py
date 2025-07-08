@@ -20,7 +20,12 @@ def load_articles_from_file(filepath):
         return data
     elif isinstance(data, dict):
         if 'articles' in data and isinstance(data['articles'], list):
-            return data['articles']
+            articles = data['articles']
+            # Kopier dato fra original_data hvis den findes
+            for article in articles:
+                if 'original_data' in article and 'date_published' in article['original_data']:
+                    article['date_published'] = article['original_data']['date_published']
+            return articles
         elif 'data' in data and isinstance(data['data'], list):
             return data['data']
     print(f"⚠️  Unexpected data structure in {os.path.basename(filepath)}")

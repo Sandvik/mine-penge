@@ -11,14 +11,106 @@ class ArticleService {
     this.cacheTimeout = 5 * 60 * 1000; // 5 minutter
   }
 
+  // Smart dato-udledning - kombineret tilgang
+  getArticleDate(article) {
+    // 1. Prøv date_published (hvis det ikke er 'INGEN DATO FUNDET')
+    if (article.date_published && article.date_published !== 'INGEN DATO FUNDET') {
+      return this.parseDanishDate(article.date_published);
+    }
+    
+    // 2. Prøv URL-analyse (hvis URL indeholder dato)
+    const urlDate = this.extractDateFromURL(article.url);
+    if (urlDate) return urlDate;
+    
+    // 3. Brug scrape_date som fallback
+    if (article.scrape_date) {
+      return new Date(article.scrape_date);
+    }
+    
+    // 4. Brug last_updated som sidste udvej
+    if (article.last_updated) {
+      return new Date(article.last_updated);
+    }
+    
+    // 5. Brug scraped_at (gammelt felt) hvis det findes
+    if (article.scraped_at) {
+      return new Date(article.scraped_at);
+    }
+    
+    // 6. Fallback til meget gammel dato
+    return new Date('2020-01-01');
+  }
+
+  // Udled dato fra URL-struktur
+  extractDateFromURL(url) {
+    if (!url) return null;
+    
+    // Mønstre: /blog/2024/12/artikel-titel eller /2024/12/artikel-titel
+    const patterns = [
+      /\/(\d{4})\/(\d{2})\//,  // /2024/12/
+      /\/(\d{4})-(\d{2})-(\d{2})\//,  // /2024-12-25/
+      /\/(\d{4})\/(\d{2})\/(\d{2})\//  // /2024/12/25/
+    ];
+    
+    for (const pattern of patterns) {
+      const match = url.match(pattern);
+      if (match) {
+        const [_, year, month, day = '01'] = match;
+        return new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+      }
+    }
+    
+    return null;
+  }
+
+  // Parse dansk dato format (f.eks. "16. juli 2024")
+  parseDanishDate(dateString) {
+    if (!dateString || typeof dateString !== 'string') return null;
+    
+    const danishMonths = {
+      'januar': 0, 'jan': 0,
+      'februar': 1, 'feb': 1,
+      'marts': 2, 'mar': 2,
+      'april': 3, 'apr': 3,
+      'maj': 4,
+      'juni': 5, 'jun': 5,
+      'juli': 6, 'jul': 6,
+      'august': 7, 'aug': 7,
+      'september': 8, 'sep': 8,
+      'oktober': 9, 'okt': 9,
+      'november': 10, 'nov': 10,
+      'december': 11, 'dec': 11
+    };
+    
+    // Mønstre: "16. juli 2024", "5. maj", "23. nov."
+    const patterns = [
+      /(\d{1,2})\.\s*(\w+)\s+(\d{4})/,  // "16. juli 2024"
+      /(\d{1,2})\.\s*(\w+)/,  // "5. maj" (antager nuværende år)
+    ];
+    
+    for (const pattern of patterns) {
+      const match = dateString.toLowerCase().match(pattern);
+      if (match) {
+        const [_, day, monthName, year = new Date().getFullYear()] = match;
+        const month = danishMonths[monthName];
+        
+        if (month !== undefined) {
+          return new Date(parseInt(year), month, parseInt(day));
+        }
+      }
+    }
+    
+    return null;
+  }
+
   // Get all articles with pagination
   getAllArticles(page = 1, pageSize = 20) {
-    // Sort articles by date (newest first) and then by source for variety
+    // Sort articles using smart date detection
     const sortedArticles = [...this.articles].sort((a, b) => {
-      // First sort by date (newest first)
-      const dateA = new Date(a.published_date || a.scraped_date || 0);
-      const dateB = new Date(b.published_date || b.scraped_date || 0);
+      const dateA = this.getArticleDate(a);
+      const dateB = this.getArticleDate(b);
       
+      // Sort by date (newest first)
       if (dateA > dateB) return -1;
       if (dateA < dateB) return 1;
       
@@ -91,10 +183,25 @@ class ArticleService {
       );
     }
 
+    // Sort filtered articles using smart date detection
+    const sortedFiltered = filtered.sort((a, b) => {
+      const dateA = this.getArticleDate(a);
+      const dateB = this.getArticleDate(b);
+      
+      // Sort by date (newest first)
+      if (dateA > dateB) return -1;
+      if (dateA < dateB) return 1;
+      
+      // If same date, sort by source for variety
+      const sourceA = a.source || '';
+      const sourceB = b.source || '';
+      return sourceA.localeCompare(sourceB);
+    });
+
     // Apply pagination
     const startIndex = (page - 1) * pageSize;
     const endIndex = startIndex + pageSize;
-    const paginatedArticles = filtered.slice(startIndex, endIndex);
+    const paginatedArticles = sortedFiltered.slice(startIndex, endIndex);
     
     return {
       articles: paginatedArticles,
@@ -275,9 +382,24 @@ class ArticleService {
 
     console.log('Found', filtered.length, 'articles for search:', searchLower);
 
+    // Sort filtered articles using smart date detection
+    const sortedFiltered = filtered.sort((a, b) => {
+      const dateA = this.getArticleDate(a);
+      const dateB = this.getArticleDate(b);
+      
+      // Sort by date (newest first)
+      if (dateA > dateB) return -1;
+      if (dateA < dateB) return 1;
+      
+      // If same date, sort by source for variety
+      const sourceA = a.source || '';
+      const sourceB = b.source || '';
+      return sourceA.localeCompare(sourceB);
+    });
+
     const startIndex = (page - 1) * pageSize;
     const endIndex = startIndex + pageSize;
-    const paginatedArticles = filtered.slice(startIndex, endIndex);
+    const paginatedArticles = sortedFiltered.slice(startIndex, endIndex);
     
     return {
       articles: paginatedArticles,
@@ -301,9 +423,24 @@ class ArticleService {
       )
     );
 
+    // Sort filtered articles using smart date detection
+    const sortedFiltered = filtered.sort((a, b) => {
+      const dateA = this.getArticleDate(a);
+      const dateB = this.getArticleDate(b);
+      
+      // Sort by date (newest first)
+      if (dateA > dateB) return -1;
+      if (dateA < dateB) return 1;
+      
+      // If same date, sort by source for variety
+      const sourceA = a.source || '';
+      const sourceB = b.source || '';
+      return sourceA.localeCompare(sourceB);
+    });
+
     const startIndex = (page - 1) * pageSize;
     const endIndex = startIndex + pageSize;
-    const paginatedArticles = filtered.slice(startIndex, endIndex);
+    const paginatedArticles = sortedFiltered.slice(startIndex, endIndex);
     
     return {
       articles: paginatedArticles,
@@ -325,9 +462,24 @@ class ArticleService {
       article.source && article.source.toLowerCase().includes(source.toLowerCase())
     );
 
+    // Sort filtered articles using smart date detection
+    const sortedFiltered = filtered.sort((a, b) => {
+      const dateA = this.getArticleDate(a);
+      const dateB = this.getArticleDate(b);
+      
+      // Sort by date (newest first)
+      if (dateA > dateB) return -1;
+      if (dateA < dateB) return 1;
+      
+      // If same date, sort by source for variety
+      const sourceA = a.source || '';
+      const sourceB = b.source || '';
+      return sourceA.localeCompare(sourceB);
+    });
+
     const startIndex = (page - 1) * pageSize;
     const endIndex = startIndex + pageSize;
-    const paginatedArticles = filtered.slice(startIndex, endIndex);
+    const paginatedArticles = sortedFiltered.slice(startIndex, endIndex);
     
     return {
       articles: paginatedArticles,

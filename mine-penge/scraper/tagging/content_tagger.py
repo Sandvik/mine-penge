@@ -13,7 +13,6 @@ from collections import Counter
 import hashlib
 from typing import Dict, List, Tuple, Any
 import logging
-import openai
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -26,7 +25,6 @@ class ContentTagger:
         """Initialiserer tagger med konfiguration fra fil"""
         self.config_file = config_file
         self.config = self.load_config()
-        self.client = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
         
     def load_config(self):
         """Indlæser konfiguration fra JSON fil"""

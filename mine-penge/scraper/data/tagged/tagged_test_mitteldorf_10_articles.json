@@ -1,0 +1,594 @@
+{
+  "metadata": {
+    "original_file": "test_mitteldorf_10_articles.json",
+    "total_articles": 10,
+    "tagged_at": "2025-07-08T05:55:06.190151",
+    "tag_categories_used": [
+      "Bolig & Ejendom",
+      "Investering & Aktier",
+      "Pension",
+      "SU & Studerende",
+      "Gæld & Lån",
+      "Opsparing",
+      "Bank & Betaling",
+      "Skat & Fradrag",
+      "Rente",
+      "Forbrug",
+      "Forsikring",
+      "Rådgivning",
+      "Familieøkonomi",
+      "Erhverv",
+      "Krypto",
+      "Pensionist",
+      "Problemer"
+    ],
+    "target_audiences_used": [
+      "studerende",
+      "børnefamilier",
+      "budgetbevidste",
+      "nybegynder_investering",
+      "økonomi_nybegynder",
+      "pensionister"
+    ]
+  },
+  "articles": [
+    {
+      "article_id": "2ac6502aa161",
+      "title": "Aktieklasser: Hvad er A og B aktier?",
+      "source": "Mitteldorf Blog",
+      "url": "https://mitteldorf.dk/blog/aktieklasser/",
+      "summary": "Mange selskaber opdeler deres aktier i flere såkaldte klasser. Disse giver for eksempel andre handels- eller stemmerettigheder, eller et andet udbytte.",
+      "target_audiences": [
+        "budgetbevidste",
+        "nybegynder_investering",
+        "studerende"
+      ],
+      "complexity_level": "mellem",
+      "minepenge_tags": [
+        "aktier",
+        "udbytte",
+        "investering",
+        "pris",
+        "su",
+        "bank",
+        "fonde",
+        "danske aktier",
+        "gæld",
+        "skat"
+      ],
+      "tag_categories": [
+        "SU & Studerende",
+        "Forbrug",
+        "Investering & Aktier",
+        "Skat & Fradrag",
+        "Gæld & Lån",
+        "Bank & Betaling"
+      ],
+      "confidence_scores": {
+        "studerende": 0.57,
+        "børnefamilier": 0.0,
+        "budgetbevidste": 0.67,
+        "nybegynder_investering": 0.67,
+        "økonomi_nybegynder": 0.33,
+        "pensionister": 0.0
+      },
+      "original_data": {
+        "summary": "Mange selskaber opdeler deres aktier i flere såkaldte klasser. Disse giver for eksempel andre handels- eller stemmerettigheder, eller et andet udbytte.",
+        "content": "Aktieklasser: Hvad er A og B aktier? Dette indlæg kan indeholde links til produkter, hvor jeg modtager en provision af salget. Jeg anbefaler kun produkter og services af højeste kvalitet, som jeg selv kan stå inde for. Læs mere her . Skal jeg købe A eller B aktien? Hvilken en er bedst? Hvad er egentlig forskellen? Hvis du har kigget ned af de danske aktie-lister , har du utvivlsomt stødt på at selskaber som Mærsk, Novo Nordisk, Lundbeck eller Rockwool både har en A og B-aktie, eller bare har et “B” efter navnet. Mange selskaber opdeler deres aktier i flere såkaldte klasser. Uanset om du køber A- eller B-aktien, er det det samme selskab du får, men der kan være forskel i den måde aktierne opfattes i selskabet. For eksempel kan nogle aktieklasser have andre handels- eller stemmerettigheder, eller et andet udbytte. Det er oftest at du kun ser to forskellige klasser: A og B, men et selskab kan i princippet have lige så mange de ønsker (og som aktionærerne godkender). De forskellige klasser vil oftest have en forskellig kurs, for eksempel er kursen på Rockwool A i skrivende stund 1.612 kr, og Rockwool B er 1.628 kr. Men fordi det er det samme selskab vil kursudviklingen (grafen) stort set være helt ens. Ligeledes er det som regel B-aktierne der handles mest (højest volumen). Sponsor På Saxobanks brugervenlige platform er det muligt at finde de investeringer, der passer til dig og dine behov du har. Saxobanks store udvalg af investeringsprodukter på tværs af de globale markeder, er med til at give dig et hav af muligheder. Kom let i gang nu Bliv sponsor i dag og nå ud til tusindvis af mennesker! Stemmerettigheder og særeje Typisk vil et selskab opdele deres aktiekapital i 2 klasser, A og B, og disse vil have forskellige stemmerettigheder. Som hovedregel opdeler virksomheden i flere klasser, for at en bestemt ejerkreds (for eksempel stifterne) kan beholde kontrollen over selskabet, ved at have flest stemmer. De andre aktieklasser er blot for at indhente mere kapital. Du vil kunne finde forskellene i selskabets vedtægter, eller ved at skrive til deres Investor Relations. Lad os tage Novo Nordisk som eksempel. Novo Nordisk er inddelt i A- og B-aktier. A aktierne handles ikke offentligt på børsen, men ejes direkte af Novo Fonden, som har langt størstedelen af stemmerne. Alle selskabets aktier giver stemmerettigheder ved generalforsamlingen, men i Novo’s tilfælde giver A-aktierne 10 gange flere stemmer pr. aktie end B-aktierne . Du har altså større indflydelse på selskabets beslutninger, hvis du har en A-aktie. I nogle tilfælde er det kun A-aktierne der har stemmeret, f.eks. ved Mærsk. Derudover kan A-aktier have førsteret til udbytte, eller få tildelt et større udbytte end B-aktierne. Det ses også somme tider, at kun A-aktier får tildelt et udbytte, mens B-aktierne ikke har ret til det. Du kan se forskellene for nogle af de danske aktier på Unge Investorers hjemmeside . Lær at investere fornuftigt som Warren Buffett og Charlie Munger Med min e-bog lærer du hvordan kan finde de gode selskaber og investere i dem. Jeg fortæller alt hvad jeg har lært på en let og overskuelig måde, så du nemt kan følge med og prøve det af selv. Denne korte e-bog kan du nyde i sofaen på en weekend, og lære nøjagtigt hvordan Warren Buffett er blevet så succesfuld en investor. Tryk på linket herunder og se hvordan du kan få min e-bog med det samme. Få 30% rabat på min e-bog her! Aktieklasser til en lavere kurs For andre selskaber gælder det, at opdelingen i aktieklasser sker, for at tilbyde aktier til en lavere pris. Dette er ikke det samme som ved et aktiesplit. Nogle selskaber ser alle ejere/aktionærer som lige, og giver ikke særlige stemmeretter, men vil gerne kunne invitere nye investorer ind. Mit bedste eksempel på dette er Berkshire Hathaway . Warren Buffett’s selskab har to aktieklasser , også kaldet A- og B. Han var i starten meget imod at opdele aktierne, fordi han mener alle aktionærer skal have helt ens forhold. Men efterhånden som aktieprisen på A-aktien steg (til nu over $470.000 pr. stk ), kunne han godt se det var meget svært for nye og små investorer at købe aktierne. Berkshire tog den beslutning at oprette en B-aktie, uden at udstede nye aktier. B-aktien skulle have nøjagtig 1/1500-del af rettighederne af en A-aktie, men 1/10.000-del af stemmerettighederne. Grundet denne opdeling koster Berkshire B-aktien (nærmest nøjagtig) kun en 1.500’ende del af A-aktien. I skrivende stund er det $312 , og det er langt mere tilgængeligt for mindre investorer. 1.500 B-aktier er altså lige så meget værd som 1 A-aktie. Spekulation og prisforskel Prisen på aktierne vil i de fleste tilfælde reflektere de rettigheder de har til selskabets indtjening, og vil vedligeholde det forhold mellem klasserne. I sjældne tilfælde kan der opstå en “arbitrage”-mulighed mellem de forskellige aktieklasser. De de reelt er to forskellige papirer på børsen, og har hver deres pris, kan der opstå tilfælde hvor markedet prissætter B-aktien meget anderledes end A-aktien. I disse tilfælde kan der opstå en mulighed for (som ved valuta-handel), at sælge sine B-aktier dyrt, og købe A-aktien billigt, eller omvendt. Dette sker meget sjældent - og vil lynhurtigt blive rettet af markedet, når det opdages. Samme tilfælde kan ses (og udnyttes) ved aktier som er børsnoteret på flere børser, eller i flere lande på samme tid, f.eks som Novo Nordisk. Nu bør du have en meget bedre forståelse af hvad aktieklasser er, og hvorfor nogle selskaber har valgt at opdele deres aktiekapital. Det er ikke noget jeg ser hverken som et godt eller skidt signal hvis de har, og de ejer stadig samme selskab. Vær dog sikker på, at du kender forskellen på aktieklasserne (i for eksempel Novo Nordisk), inden du køber dem. Så vidt jeg er bekendt, er der ingen særlige skattemæssige forskelle ved aktieklasser. Det afhænger stadig af afkast og udbytte, og indberettes som du normalt gør. Sponsor Lysa er den bedste og billigste investeringrobot jeg har set. Lysa lader dig investere dine penge bredt på en ultra-nem måde, og omkostningerne er holdt helt nede under 0,38% om året. De har en fornuftig tilgang til investering og investerer dine penge i indeksfonde af aktier og obligationer. Lysa tilpasser sig automatisk til din livssituation og hjælper dig til at træffe bedre økonomiske beslutninger. Åbn en konto nu Bliv sponsor i dag og nå ud til tusindvis af mennesker! Inden du går En af de største forskelle ved forskellige aktierklasser er aktionærernes stemmerettigheder, og det udbytte der udbetales. Vil du lære mere kan du læse min store guide til udbytte . Tak fordi du læste med! Kunne du lide artiklen? Har du en kommentar? 🤗 Det vil hjælpe mig meget, hvis du vil dele den på Facebook eller Twitter ⌨️ Skriv en kommentar i Facebook-gruppen Fornuftig Investering 📥 Tilmeld dig nyhedsbrevet så jeg kan sende dig andre lignende historier. 📚 Køb min e-bog Fornuftig Investering , eller book en gratis coaching-samtale 🤩 Få endnu mere indhold fra mig som Investor+ medlem Bliv Investor+ medlem via Lær mere om investering aktier begynder berkshire hathaway",
+        "author": "Christian Mitteldorf",
+        "date_published": "INGEN DATO FUNDET",
+        "word_count": 1180,
+        "categories": [
+          "Investering",
+          "Økonomi",
+          "Boganmeldelser",
+          "Fintech"
+        ]
+      },
+      "tagged_at": "2025-07-08T05:55:06.182810"
+    },
+    {
+      "article_id": "980be7c5b497",
+      "title": "Howards Marks advarer: Mr. Market er på spil igen",
+      "source": "Mitteldorf Blog",
+      "url": "https://mitteldorf.dk/blog/mr-market-er-paa-spil-igen",
+      "summary": "Howard Marks er en af mine investerings-idoler, og når han udsender nye memo's er de absolut værd at lytte til. Her er hans kommentarer om de seneste op- og nedture på markedet.",
+      "target_audiences": [
+        "budgetbevidste",
+        "nybegynder_investering",
+        "økonomi_nybegynder"
+      ],
+      "complexity_level": "begynder",
+      "minepenge_tags": [
+        "pris",
+        "investering",
+        "su",
+        "ældre",
+        "kort",
+        "renter",
+        "rente",
+        "job",
+        "fonde",
+        "råd"
+      ],
+      "tag_categories": [
+        "Erhverv",
+        "Rådgivning",
+        "SU & Studerende",
+        "Rente",
+        "Forbrug",
+        "Investering & Aktier",
+        "Pensionist",
+        "Gæld & Lån",
+        "Bank & Betaling"
+      ],
+      "confidence_scores": {
+        "studerende": 0.57,
+        "børnefamilier": 0.0,
+        "budgetbevidste": 0.67,
+        "nybegynder_investering": 0.67,
+        "økonomi_nybegynder": 0.67,
+        "pensionister": 0.0
+      },
+      "original_data": {
+        "summary": "Howard Marks er en af mine investerings-idoler, og når han udsender nye memo's er de absolut værd at lytte til. Her er hans kommentarer om de seneste op- og nedture på markedet.",
+        "content": "Howards Marks advarer: Mr. Market er på spil igen Dette indlæg kan indeholde links til produkter, hvor jeg modtager en provision af salget. Jeg anbefaler kun produkter og services af højeste kvalitet, som jeg selv kan stå inde for. Læs mere her . En af mine største investorer jeg følger, er Howard Marks. Howard, selvfølgelig sammen med Warren Buffett og Charlie Munger, har påvirket min strategi og måden jeg tænker om investering på, rigtig meget. Marks er milliardær og styrer til daglig fonden Oaktree Capital Management, også efter de samme grundlæggende principper som stor-investorer som Warren Buffett og Benjamin Graham introducerede for nærmest 100 år siden. Aktiemarkederne (hvis snart ikke alle markeder), svinger hele tiden mellem billigt og dyrt, efterhånden som investorernes humør svinger mellem eufori og håbløshed. Denne rutsjebane af et marked er meget aktivt og skam også interessant at følge, og føder medierne og tradere med konstante nyheder som de kan sende ud — oftest bare for at sige et eller andet. Men det viser også hvor ofte markedet mister forstanden. “De fleste mennesker vil gerne vide hvor markedet er lige nu. Er det billigt eller dyrt? Men det leder desværre til at for kort-sigtet tænkning”, mener Marks. Hvorfor skulle man bruge tid på at læse at markedet er steget 3%, fremfor at læse mere om nye selskabers produkter og resultater? Benjamin Graham introducerede konceptet om Mr. Market , i hans bog The Intelligent Investor , tilbage i 1949. Han er en manio-depressiv person der hele tiden skifter mening — og investorer har bedst af at ignorere ham. Graham skrev følgende: Imagine that in some private business you own a small share that cost you $1,000. One of your partners, named Mr. Market, is very obliging indeed. Every day he tells you what he thinks your interest is worth and furthermore offers either to buy you out or to sell you an additional interest on that basis. Sometimes his idea of value appears plausible and justified by business developments and prospects as you know them. Often, on the other hand, Mr. Market lets his enthusiasm or his fears run away with him, and the value he proposes seems to you a little short of silly. Graham’s intention er naturligvis at Mr. Market illustrerer markedet som helhed. Hans upålidelige opførsel gør at priserne på aktiemarkedet ofte svinger langt væk fra hvad selskaberne rimeligvis er værd. Når han er meget optimistisk, kan du sælge til ham til priser der er dyrere end hvad selskabet er værd. Omvendt, når han er helt nedtrykt sælger han alt til priser som fundamentalt er alt for lave. Mr. Market kan dog udnyttes af investorer som ved hvad ting er værd, og køber fra ham når han er nedtrykt. Lær at investere fornuftigt som Warren Buffett og Charlie Munger Med min e-bog lærer du hvordan kan finde de gode selskaber og investere i dem. Jeg fortæller alt hvad jeg har lært på en let og overskuelig måde, så du nemt kan følge med og prøve det af selv. Denne korte e-bog kan du nyde i sofaen på en weekend, og lære nøjagtigt hvordan Warren Buffett er blevet så succesfuld en investor. Tryk på linket herunder og se hvordan du kan få min e-bog med det samme. Få 30% rabat på min e-bog her! Howard Marks bruger den store nedgang i aktiemarkedederne i August 2024, som et godt eksempel på Mr. Market der slet ikke kan beslutte sig for hvad han vil i øjeblikket, og humøret svinger. Som Marks påpeger, har vi siden Covid-19 pandemien set kraftigt stigende inflation og rentestigninger, hvilket gjorde 2022 til et at historiens værste aktie-år. Aktiviteten i markederne faldt da investorer ikke så meget positivt håb forude på den korte bane, og frygtede en recession. Sent i 2022 skiftede markedet mening, og kunne nu se håb for, at den langsomme vækst ville få inflationen til at falde, renterne kunne falde, og at markederne ville få fornyet energi. Som så ofte sker, gik dette i opfyldelse netop fordi investorer tænkte det ville ske og købte ind i markedet, hvilket nu er skyld i at vi har set S&P 500 indekset stige 54% over de sidste 21 måneder. Omkring samme tid hævede Japan renterne, USA viste mindre gode økonomiske tal, jobløsheden steg, og ansættelser steg mindre end forventet. Pludselig mente markedet igen, at der var problemer forude, og S&P 500-indekset (og markedet) faldt i 3 dage i træk, samlet 6,1 %. Alt dette på trods af, at virksomhedernes indtjening og marginer så fine ud, og der var øget produktivitet. Mr. Market’s humør svinger igen væk fra fakta. Howard Marks påpeger til læserne, at det er ubetydeligt af forsøge at forudsige hvad USA gør med renten næste gang, eller om de nye jobtal er gode, og hvilken effekt det kan have på markedet. Det er den generelle retning over mange år der betyder noget — ikke detaljerne. Marks delte i et interview til Australia Financial Review: “Oaktree Capital har ingen økonomer ansat, og vi vil heller ikke tale med dem. Makrotal er ikke årsagen til vi klarer det så godt i vores investeringer. Verden er et upålideligt sted, og at tage beslutninger baseret på én nyhed eller en enkel ny rapport er helt enkelt en fejltagelse.” Og markedernes bevægelser driver ofte de samme bevægelser andre steder i en lykke af positiv eller negativ retning, baseret på vores opfattelse af hvad det burde. Alt hvad der var godt for markedet i går, er skidt for markedet i dag. Benjamin Graham fortsatte sin introduktion af Mr. Market med følgende: If you are a prudent investor or a sensible businessman will you let Mr. Market’s daily communication determine your view of the value of your $1,000 interest in the enterprise? Only in case you agree with him, or in case you want to trade with him. You may be happy to sell out to him when he quotes you a ridiculously high price, and equally happy to buy from him when his price is low. But the rest of the time you will be wiser to form your own ideas of the value of your holdings, based on full reports from the company about its operations and financial position. I den virkelige verden svinger tingene ofte mellem “ret godt” og “ikke så populært”, men for investeringer ser humøret oftere ud til at svinge imellem “fejlfrit” og “håbløst”. Vi ser hvad vi gerne vil se, og når vi er optimistiske, ignorerer vi dårlige nyheder hurtigere end en teenager ignorerer sine forældre. Når noget er nyt og har success i en tid, hopper alle om bord ukritisk, og de kan slet ikke se hvordan der overhovedet kunne være problemer på vej. Det får dem til at overvurdere sig selv og situationen, og det går sjældent særligt godt. Verden styres af fakta, men investering drives af følelser. Da markedet faldt i starten af August var det ikke fordi forholdene pludselig blev dårlige. De blev kun set som dårlige, og investorer satte sig ud på sidelinien. Dette skulle meget gerne illustrere, hvorfor “effektive markeder” teorien er absolut tåbelig. Det vigtigste for de fleste mennesker som har lidt penge at investere, er at være i markedet det meste af tiden, og undgå at lave alt for store fejl. Hvis man bliver ved med at købe ind, sælge ud; købe ind, sælge ud; købe ind, sælge ud — for du meget lidt afkast (og forholdsvis negativt) ud af alt den energi du bruger. Det har i hvert fald ikke fungeret for mig, og jeg har klaret det langt bedre ved at investere fornuftigt . Vi er nødt til at forholde os rationelt og ikke lytte til hvad markedet som helhed gør. Se efter fakta. Ignorerer folks mening, og undersøg tingene selv. Udnyt Mr. Market, og husk: gode råd fra en gennemsnitlig investor vil aldrig kunne gøre dig bedre end en gennemsnitlig investor. Du kan læse Howard Marks’ memo på oaktreecapital.com. Tak fordi du læste med! Kunne du lide artiklen? Har du en kommentar? 🤗 Det vil hjælpe mig meget, hvis du vil dele den på Facebook eller Twitter ⌨️ Skriv en kommentar i Facebook-gruppen Fornuftig Investering 📥 Tilmeld dig nyhedsbrevet så jeg kan sende dig andre lignende historier. 📚 Køb min e-bog Fornuftig Investering , eller book en gratis coaching-samtale 🤩 Få endnu mere indhold fra mig som Investor+ medlem Bliv Investor+ medlem via Lær mere om investering howard marks mr. market Warren Buffett Benjamin Graham",
+        "author": "Christian Mitteldorf",
+        "date_published": "7. oktober 2024",
+        "word_count": 1403,
+        "categories": [
+          "Investering",
+          "Økonomi",
+          "Minimalisme",
+          "Boganmeldelser",
+          "Fintech"
+        ]
+      },
+      "tagged_at": "2025-07-08T05:55:06.183797"
+    },
+    {
+      "article_id": "dbbef779dd4f",
+      "title": "Bliv hurtigere rig med Snebolds-effekten",
+      "source": "Mitteldorf Blog",
+      "url": "https://mitteldorf.dk/blog/bliv-hurtigere-rig-med-snebolds-effekten/",
+      "summary": "Snebolds-effekten dækker over princippet om renters rente. Hvis du kan få din snebold til at trille, bliver du snart meget rig.",
+      "target_audiences": [
+        "budgetbevidste",
+        "nybegynder_investering",
+        "studerende"
+      ],
+      "complexity_level": "begynder",
+      "minepenge_tags": [
+        "rente",
+        "investering",
+        "renter",
+        "opsparing",
+        "su",
+        "aktier",
+        "etf",
+        "skat",
+        "arbejde",
+        "fonde"
+      ],
+      "tag_categories": [
+        "Erhverv",
+        "SU & Studerende",
+        "Opsparing",
+        "Investering & Aktier",
+        "Skat & Fradrag",
+        "Rente",
+        "Gæld & Lån"
+      ],
+      "confidence_scores": {
+        "studerende": 0.57,
+        "børnefamilier": 0.0,
+        "budgetbevidste": 0.67,
+        "nybegynder_investering": 0.67,
+        "økonomi_nybegynder": 0.33,
+        "pensionister": 0.0
+      },
+      "original_data": {
+        "summary": "Snebolds-effekten dækker over princippet om renters rente. Hvis du kan få din snebold til at trille, bliver du snart meget rig.",
+        "content": "Bliv hurtigere rig med Snebolds-effekten Dette indlæg kan indeholde links til produkter, hvor jeg modtager en provision af salget. Jeg anbefaler kun produkter og services af højeste kvalitet, som jeg selv kan stå inde for. Læs mere her . Hvad sker der hvis du skubber en snebold ned ad en bakke? Og hvad har dette at gøre med at øge din formue? Når du skubber en lille snebold fremad og ned ad en bakke, så samler den hele tiden mere sne til sig. Når den endelig når bunden af Bakken, vil den have vokset sig mange gange større. Snebolden bliver større, så længe den triller. Jo større den bliver, desto mere sne samler den på sin vej. Snebolds-effekten er en metafor for princippet om renters rente, som du nok har hørt før. Det går ud på, at selv små handlinger der sker konsistent kan føre til meget store resultater. Sponsor Nordnet er min foretrukne børsmægler i Danmark. De har et meget bredt udvalg af aktier, ETF'er, fonde og andre instrumenter, og kan stort set tilbyde dig alt du har brug for, for at lave dine investeringer. Nordnet giver dig et godt overblik over dine investeringer og indrapporterer selv alle dine handler til Skat. Prøv Nordnets månedsopsparing og få gratis kurtage nu! Åbn en konto nu Bliv sponsor i dag og nå ud til tusindvis af mennesker! Lær at investere fornuftigt som Warren Buffett og Charlie Munger Med min e-bog lærer du hvordan kan finde de gode selskaber og investere i dem. Jeg fortæller alt hvad jeg har lært på en let og overskuelig måde, så du nemt kan følge med og prøve det af selv. Denne korte e-bog kan du nyde i sofaen på en weekend, og lære nøjagtigt hvordan Warren Buffett er blevet så succesfuld en investor. Tryk på linket herunder og se hvordan du kan få min e-bog med det samme. Få 30% rabat på min e-bog her! Styrken ved Snebolds-effekten Før vi kommer ind på hvordan du kan udnytte snebolds-effekten, må vi først forstå hvor stærk den kan være. Snebold-metaforen viser egentlig princippet om renters rente, og hvor stor en effekt dette kan have på din formue. Men lad mig forsøge at gøre det på en sjov og lærerig måde, uden for mange gøre regnskabsudtryk. Den største kraft vi har i verden, er renters rente Albert Einstein Nedenfor kan du se styrken ved renters-rente: Forstil dig, at du har investeret én krone, som forrenter sig med sølle 1% hver eneste dag, hvilken i dag er mere end hvad de fleste banker tilbyder på en opsparingskonto. Efter bare 5 år vil din én-krone være vokset til 77 millioner kroner. Efter 7 år vil du være den rigeste person i verden. Ikke dårligt vel? Men så let er det naturligvis heller ikke. Renters rente er ikke en måde at blive hurtig rig på, for det tager lang tid, før man virkelig kan se virkningen ved det. Og desværre er de færreste mennesker ikke så tålmodige. Udlover dette, så findes der ingen investeringer der kan give 1% i rente eller afkast om dagen. En almindelig opsparingskonto kan måske give 1% om året . Aktiemarkedet har generelt haft et afkast (korrigeret for inflation) på 7% om året, i det lange løb, ihvertfald set over de seneste 100 år. Med sådan et afkast vil en investering i aktiemarkedet i teorien fordoble hvert tiende år . Men det er her renters rente og snebolds-effekten får sin virkning, for et afkast på 7% hvert år kan blive til mange penge i sidste ende. Lad os sige du har 10.000 kr., du investerer i aktier. Året efter er disse blevet til 10.700 kr. Men allerede året efter vil du stå med 11.449 kr. Du har altså fået 749 kr. I afkast, mod 700 kr. året før. Og sådan vil dit afkast hver år vokse på grund af snebolds-effekten, da din formue hvert år bliver større, og derfor har et større afkast, selvom procentdelen er det samme. Derfor er det også utrolig vigtigt at man kan forrente sine penge ved at investere, så hurtigt som muligt i livet, så de har længere tid til at danne en kæmpe snebold. Snebolden har gjort Warren Buffett rig Den kendte investor og forretningsmand Warren Buffett , en af mine største helte, forstod dette princip allerede i en meget tidlig alder da han som barn stadig gik med aviser. Han indså at jo længere han holder på sine penge, jo mere tid har de til at vokse sig større. Min formue er kommet af en kombination af at leve i USA, heldige gener, og renters rente. Warren Buffett Warren Buffett har forøget sin formue stort set hvert eneste år ved at holde sig til en specifik type investeringer . Helt enkelt investerer Buffett i: Ejer- og aktionærvenlige selskaber Med stærke forretningsfordele Til en fair eller endda billig pris Det eneste investering går ud på er, at vælge fremragende selskaber på det rigtige tidspunkt, og forblive investeret så længe selskabet forbliver fremragende. Warren Buffett Og lige så længe han fortsætter med at gøre dette, lige så længe snebolden triller, vil den kun vokse sig større og større, helt af sig selv. Derfor er det bedste du kan gøre, at finde det rigtige selskab, og lade dine penge arbejde for dig. Sponsor Nordnet er min foretrukne børsmægler i Danmark. De har et meget bredt udvalg af aktier, ETF'er, fonde og andre instrumenter, og kan stort set tilbyde dig alt du har brug for, for at lave dine investeringer. Nordnet giver dig et godt overblik over dine investeringer og indrapporterer selv alle dine handler til Skat. Prøv Nordnets månedsopsparing og få gratis kurtage nu! Åbn en konto nu Bliv sponsor i dag og nå ud til tusindvis af mennesker! Inden du går Det er let hurtigt at udregne hvor hurtigt din formue kan formere sig med 72-reglen . Snebolden kan desværre både trille op og ned ad bakken, og hvis du har gæld arbejder den imod dig. En god måde at få snebolden til at trille opad er, at gøre brug af f.eks. Dollar cost averaging , gennem Nordnet's månedsosparing . Tak fordi du læste med! Kunne du lide artiklen? Har du en kommentar? 🤗 Det vil hjælpe mig meget, hvis du vil dele den på Facebook eller Twitter ⌨️ Skriv en kommentar i Facebook-gruppen Fornuftig Investering 📥 Tilmeld dig nyhedsbrevet så jeg kan sende dig andre lignende historier. 📚 Køb min e-bog Fornuftig Investering , eller book en gratis coaching-samtale 🤩 Få endnu mere indhold fra mig som Investor+ medlem Bliv Investor+ medlem via Lær mere om investering warren buffett",
+        "author": "Christian Mitteldorf",
+        "date_published": "INGEN DATO FUNDET",
+        "word_count": 1098,
+        "categories": [
+          "Investering",
+          "Økonomi",
+          "Boganmeldelser",
+          "Fintech"
+        ]
+      },
+      "tagged_at": "2025-07-08T05:55:06.184612"
+    },
+    {
+      "article_id": "799b472e8ae0",
+      "title": "Året der gik: 2021",
+      "source": "Mitteldorf Blog",
+      "url": "https://mitteldorf.dk/blog/aaret-der-gik-2021",
+      "summary": "Vi ser tilbage på året der er gået og hvad 2022 vil bringe her på bloggen.",
+      "target_audiences": [
+        "budgetbevidste",
+        "økonomi_nybegynder",
+        "studerende"
+      ],
+      "complexity_level": "begynder",
+      "minepenge_tags": [
+        "udbytte",
+        "investering",
+        "portefølje",
+        "bank",
+        "aktier",
+        "job",
+        "pension",
+        "skat",
+        "indkomst",
+        "pris"
+      ],
+      "tag_categories": [
+        "Erhverv",
+        "Pension",
+        "Forbrug",
+        "Investering & Aktier",
+        "Skat & Fradrag",
+        "Bank & Betaling"
+      ],
+      "confidence_scores": {
+        "studerende": 0.86,
+        "børnefamilier": 0.4,
+        "budgetbevidste": 1.0,
+        "nybegynder_investering": 0.67,
+        "økonomi_nybegynder": 1.0,
+        "pensionister": 0.4
+      },
+      "original_data": {
+        "summary": "Vi ser tilbage på året der er gået og hvad 2022 vil bringe her på bloggen.",
+        "content": "Året der gik: 2021 Dette indlæg kan indeholde links til produkter, hvor jeg modtager en provision af salget. Jeg anbefaler kun produkter og services af højeste kvalitet, som jeg selv kan stå inde for. Læs mere her . Sikke et år. Måske et af de mest begivenhedsrige i mit liv indtil videre. I marts flyttede jeg omsider til Sydney, Australien, for at bo sammen med min kæreste. Og det har indtil videre været rigtig godt! Vi er glade for mad og at rejse, men på grund af restriktionerne har der ikke været meget af den slags indtil nu. Det håber vi, vi kan gøre mere af i 2022. Det er trods alt det vi vil bruge vores tid på, når vi bliver uafhængige økonomisk. Min familie er langt væk nu, og det er svært at undvære dem så længe ad gangen. Vi kommer heldigvis på tur til Danmark i slutningen af januar for at se dem, samt holde vores begges 30-års fødselsdag! Det bliver godt. Det har været et år med masser af forandringer, både personligt og for formuen. Med nyt job har jeg kunne spare op, og investere en del, men flytningen til både Sydney og til anden lejlighed har kostet næsten lige så meget. På trods af det, og med hjælp fra aktiemarkedet er min samlede formue steget med mere end 30% i 2021. Jeg er ganske tilfreds! Sponsor Lysa er den bedste og billigste investeringrobot jeg har set. Lysa lader dig investere dine penge bredt på en ultra-nem måde, og omkostningerne er holdt helt nede under 0,38% om året. De har en fornuftig tilgang til investering og investerer dine penge i indeksfonde af aktier og obligationer. Lysa tilpasser sig automatisk til din livssituation og hjælper dig til at træffe bedre økonomiske beslutninger. Åbn en konto nu Bliv sponsor i dag og nå ud til tusindvis af mennesker! Lær at investere fornuftigt som Warren Buffett og Charlie Munger Med min e-bog lærer du hvordan kan finde de gode selskaber og investere i dem. Jeg fortæller alt hvad jeg har lært på en let og overskuelig måde, så du nemt kan følge med og prøve det af selv. Denne korte e-bog kan du nyde i sofaen på en weekend, og lære nøjagtigt hvordan Warren Buffett er blevet så succesfuld en investor. Tryk på linket herunder og se hvordan du kan få min e-bog med det samme. Få 30% rabat på min e-bog her! Bloggen i 2021 Det er gået rigtig fint frem for min blog i 2021, og jeg er begyndt at have nogle samarbejder, blandt andet med Lysa , som er begyndt at give nogle sponsorindtægter. Det betyder jeg kan blive ved med at skrive godt indhold til jer, og det er jeg så glad for. Mit mål er at undervise folk, til at tage hånd om deres egen økonomi og lære at investere deres penge selv, eller vide hvor de skal gå hen hvis de ikke selv ønsker at tage sig af det. Uanset din livssituation (ung eller ældre) så forsøger jeg at bidrage med råd og vejledning på en let forståelig måde. Jeg håber du vil læse med i 2022! Tusind tak til alle mine sponsorer og samarbejdspartnere for at støtte mig, så jeg kan skrive mere indhold til alle jer. Her er de 5 mest populære artikler i 2021 : Hvordan udregner jeg mit afkast rigtigt? Mød Lysa: Den bedste investeringsrobot jeg har set 5 ting vi kan lære fra FIRE-bevægelsen Skal jeg betale gæld eller spare op? Udbytte: Den ultimative guide Hvis der er noget du mener jeg bør skrive mere om, eller spørgsmål du ønsker svar på, så lad mig høre hvad du synes . I 2022 forventer jeg naturligvis at levere meget mere indhold til jer, både på bloggen, og også ved videre udvikling af mine to apps: FI Scouts og Stokki . 🌱 Økonomisk Uafhængighed Som det ser ud nu kan jeg være økonomisk uafhængig om 12 år - fra det tidspunkt skulle min portefølje og egen virksomhed selv kunne give en indkomst jeg kan leve (godt) af. Det er selvfølgelig mange år, men sammenlignet med den almindelige pensionsalder, så er det lige om lidt! Selvom der har været store udgifter i løbet af året, har jeg også sikret mig et job med en god indkomst, og det kommer til at give et rigtig godt boost til min FIRE-rejse de næste 2 år. Jeg har opdateret min fremgang, og fortæller mere om hvorfor jeg vil være uafhængig her . 💰 Formue Min samlede formue er nu på over 1.177.000 kr hvilket er 36% mere end sidste år. De fleste af mine penge står i aktier, som jeg køber lidt hen ad vejen. I min bog Fornuftig investering kan du læse nøjagtigt hvordan jeg udvælger mine aktier. Grundet min flytning til Australien og dernæst flytning til lejlighed har der været nogle store udgifter. Til gengæld fik jeg også nyt job som gav indkomsten et godt skud op. Samlet set har jeg haft en gennemsnitlig opsparingsrate på 48%, hvilket alt taget i betragting er meget fint! Opsparingsrate: ~48% Samlet formue inkl. pension: 1.177.840 kr. Heraf markedsværdi: 1.076.120 kr. Egenkapitalforøgelse for året: 315.332 kr. (+36 %) (fra 862.508 kr. pr. 31. dec 2020) 🛒 Handler og Udbytter Dette år har for en gangs skyld været godt fyldt med handler, både køb og salg. Hvis du har fulgt mig i noget tid, så ved du nok at jeg ikke er typen der køber og sælger hver eneste måned når lønnen kommer ind, som jeg tror de fleste andre gør. Der er intet galt med den tilgang, men det kan føre til man kommer til at købe nogle ting for dyrt. Det vil jeg gerne undgå. Det sidste års tid har jeg brugt mange penge på flytning til Australien, ny bolig og nyt udstyr. Men jeg har også fået mig et godt job, som giver en god indtægt. Det betyder der har været godt med penge at investere for, både personligt og fælles med min partner. Op til nytår lavede jeg lidt porteføljeoptimering og solgte nogle aktier hvor jeg havde et tab, eller små positioner som ikke gav meget. Dels for at realisere tab til at trække fra i skat, og dels for at have penge til at købe andre selskaber. I 2021 har jeg købt eller forøget min beholdning af Lollands Bank, Verizon, Intel, Fortescue Metals Group og Ocean Bio-Chem. Tabellen herunder viser mine transaktioner på tværs af alle depoter (inkl. pension), i det seneste kvartal. Negativt antal er salg. Netto har jeg købt aktier for 138.410 kr. Selskab Antal Gns. kurs Afreg. beløb (kr.) Cheesecake Factory -170 48,06 US$ 53,363 kr. Danske Bank -140 113,00 kr. 15.791 kr. Fortescue Metals Group 425 14,20 US$ -39.750 kr. Intel 329 48,00 US$ -103.465 kr. Lollands Bank 46 548,00 kr. -25.237 kr. Novo Nordisk -10 750,90 kr. 7.480 kr. Ocean Bio-Chem, Inc. 460 8,56 US$ -25.890 kr. Pandora -46 719,90 kr. 33.708 kr. TCM Group -8 158,00 kr. 1.235 kr. Verizon Communications 150 56,62 US$ -55.645 kr. I alt -138.410 kr. Oven i et i forvejen handelsfyldt år, så er der også nyheder på udbyttefronten, hvor mit samlede udbytte for året er næsten 4 gange så højt som sidste år, til 16.032 kr. Det er der naturligvis en god forklaring på, da mange selskaber ikke betalte udbytte sidste år, for i stedet at holde kontanter klar for at komme gennem Coronakrisen. Denne beslutning havde jeg det helt fint med. Så længe selskaberne stadig har en fin indtjening, og vokser stødt, så betyder det ikke noget for mig om der kommer udbytte eller ej. Faktisk ville jeg oftest foretrække de investerer pengene i virksomheden, eller laver aktietilbagekøb. Det er skattemæssigt meget bedre for aktionærerne. I 2021 har jeg samlet modtaget udbytter for 16.032 kr. Dette svarer til en udbytteprocent af min portefølje på 1,4 %. I 2020 modtog jeg samlet udbytter for 4.704 kr. Tabellen herunder viser alle udbytter modtaget i 2021. Selskab Udbytte (kr.) Apple Inc. 328,19 Bakkafrost 73,00 The Coca-Cola Company 194,01 Danske Bank 1.960,00 H. Lundbeck 200,00 Hennes & Mauritz 727,50 Intel Corporation 1.458,85 Matas 1.632,00 Novo Nordisk 981,75 Pandora 1.815,00 Scandinavian Tobacco Group 65,00 Starbucks 288,06 SP Group 370,00 TCM Group 3.429,12 Tryg 687.50 Verizon 1.821,53 I alt 16.032 kr. 📈 Portefølje Samlet afkast i 2021 inkl. udbytte: 39,14 % Gennemsnitligt afkast pr. år, siden 2019: ~30 % Aktierne er braget op i år (de fleste af mine ihverfald) og det har naturligvis givet mig nogle gode grønne tal på bundlinjen. Min portefølje er i løbet af 2021 steget med hele 39,14 %! Det er ganske overvældende. Jeg forsøger at købe selskaber af høj kvalitet til en billig pris, og har gjort det siden jeg begyndte at investere mine egne penge. Metoden er inspireret af Warren Buffett, Charlie Munger og Benjamin Graham, og du kan lære hvordan jeg gør i min bog . Et afkast i ét bestemt år har dog ikke den store betydning for mig, for alle kan have et heldigt år. For at være en god investor skal man dog kunne skabe et godt afkast i størstedelen af årene, og helst slå indekset før man kan sige at det har været tiden værd. Jeg har indtil videre klaret den fint, og siden 2015 har jeg haft et gennemsnitligt afkast på omkring 22 %. Siden 2019 har det været omkring 30%! Tabellen herunder viser min samlede personlige portefølje på tværs af alle depoter. Jeg har også en fælles portefølje med min kæreste som ikke er reflekteret her. Alle beløb er i DKK før SKAT. Afkast er urealiseret. Selskab Købspris Markedsværdi Urealiseret afkast Apple Inc. 15.756 69.601 341,7 % Bakkafrost 4.042 8.658 114,2 % Berkshire Hathaway Inc. B 28.846 39.213 35,9 % Carnival Corporation 37.764 34.567 -8,5 % Coca-Cola Company (The) 6.061 7.761 28,1 % Danske Bank A/S 123.331 94.878 -23,1 % Fortescue Metals Group 28.190 38.922 38,1 % H. Lundbeck 16.981 13.508 -20,5 % H+H International 6.025 13.110 117,6 % Hennes & Mauritz AB 22.081 19.406 -12,1 % Intel Corporation 129.042 137.602 6,6 % iShares MSCI China ETF 11.256 10.954 -2,7 % Kraft-Heinz Company 2.880 3.739 29,8 % Lollands Bank A/S 33.366 42.476 26,2 % Matas A/S 56.777 101.592 78,9 % Novo Nordisk A/S 24.288 69.825 187,5 % Ocean Bio-Chem 25.890 26.181 1,1 % Pandora A/S 58.323 89.694 53,8 % SAS AB 6.779 3.692 -45,4 % Scandinavian Tobacco Grp. 1.276 1.373 7,6% SP Group A/S 15.226 32.634 114,3 % Starbucks 13.354 21.476 60,8 % TCM Group A/S 26.142 37.842 51,9 % Tryg A/S 17.850 43.928 146,1 % Verizon Communications 55.785 50.916 -8,7 % I alt 775.228 1.022.549 31,9 % Godt nytår! 🥂🎉 Alle tal i denne opgørelse er pr. 31. december 2021. Tak fordi du læste med! Kunne du lide artiklen? Har du en kommentar? 🤗 Det vil hjælpe mig meget, hvis du vil dele den på Facebook eller Twitter ⌨️ Skriv en kommentar i Facebook-gruppen Fornuftig Investering 📥 Tilmeld dig nyhedsbrevet så jeg kan sende dig andre lignende historier. 📚 Køb min e-bog Fornuftig Investering , eller book en gratis coaching-samtale 🤩 Få endnu mere indhold fra mig som Investor+ medlem Bliv Investor+ medlem via Lær mere om økonomisk uafhængighed opgørelser investering",
+        "author": "Christian Mitteldorf",
+        "date_published": "INGEN DATO FUNDET",
+        "word_count": 1861,
+        "categories": [
+          "Investering",
+          "FIRE",
+          "Økonomi",
+          "Minimalisme",
+          "Boganmeldelser",
+          "Fintech"
+        ]
+      },
+      "tagged_at": "2025-07-08T05:55:06.185692"
+    },
+    {
+      "article_id": "170c9cbdffb6",
+      "title": "Hvad er unoterede aktier?",
+      "source": "Mitteldorf Blog",
+      "url": "https://mitteldorf.dk/blog/unoterede-aktier/",
+      "summary": "Unoterede aktier er aktier i selskaber der ikke handles på en offentlig børs.",
+      "target_audiences": [
+        "budgetbevidste",
+        "nybegynder_investering",
+        "økonomi_nybegynder"
+      ],
+      "complexity_level": "begynder",
+      "minepenge_tags": [
+        "pris",
+        "investering",
+        "su",
+        "gæld",
+        "bank",
+        "kort",
+        "aktier",
+        "udbytte",
+        "råd"
+      ],
+      "tag_categories": [
+        "Rådgivning",
+        "SU & Studerende",
+        "Forbrug",
+        "Investering & Aktier",
+        "Gæld & Lån",
+        "Bank & Betaling"
+      ],
+      "confidence_scores": {
+        "studerende": 0.29,
+        "børnefamilier": 0.0,
+        "budgetbevidste": 0.33,
+        "nybegynder_investering": 0.33,
+        "økonomi_nybegynder": 0.33,
+        "pensionister": 0.0
+      },
+      "original_data": {
+        "summary": "Unoterede aktier er aktier i selskaber der ikke handles på en offentlig børs.",
+        "content": "Hvad er unoterede aktier? Dette indlæg kan indeholde links til produkter, hvor jeg modtager en provision af salget. Jeg anbefaler kun produkter og services af højeste kvalitet, som jeg selv kan stå inde for. Læs mere her . Når du handler aktier sker det formentlig i din bank eller på en investeringsplatform. Alle aktier her vil være noterede aktier, fordi de handles på en børs hvor alle kan købe og sælge. Derfor kaldes de også børsnoterede aktier eller selskaber. Der findes dog mange andre aktieselskaber i verden end dem som kan handles på børsen. Bare i Danmark findes der omkring 200 børsnoterede selskaber, men du kan nok gætte der er langt flere aktieselskaber end det. Disse vil alle betegnes som unoterede selskaber. Unoterede aktier er aktier som ikke handles på en offentlig børs. Det er aktieselskaber som er under privat ejerskab. Aktier kan stadig købes og sælges privat, eller via. selskabets hjemmeside, men handles ikke på en reguleret børs. Der er mange anparts- og aktieselskaber i Danmark hvor alle aktierne ejes af én person, og denne har fuld råderet over selskabet. I de fleste tilfælde ejes aktierne dog af flere personer eller andre selskaber. Der er ingen forskel på aktieselskaber på børsen, og unoterede selskaber - kun hvordan aktierne kan handles. I ikke-noterede selskaber handles aktier privat, hvor en køber finder en sælger, eller omvendt. Dette er en meget sværere og mere manual process, fordi det ikke sker på en børs. En børs' formål er egentlig primært at formidle denne handel så det er langt nemmere, og reguleret. Man kan altid købe, sælge eller give aktier til andre, og dette registreres i selskabets ejerbog. Er du interesseret i dette skal du blot finde en sælger, som kan ske fra selskabets hjemmeside, ved at skrive til selskabet, eller endda ved at lave et opslag på Facebook Marketplace eller DBA. Hvis en sælger finder dig, så kan i handle aktierne nøjagtigt som hvis du købte et brugt TV eller noget andet. Sponsor Saxo er landets største boghandel med et rigt udvalg af bøger. De har flere millioner danske og engelske titler på hylderne i alle genrer, både på tryk, e-bog eller lydbog. Med Saxo Premium får du ekstra rabatter. Køb bøger hos Saxo nu Bliv sponsor i dag og nå ud til tusindvis af mennesker! Lær at investere fornuftigt som Warren Buffett og Charlie Munger Med min e-bog lærer du hvordan kan finde de gode selskaber og investere i dem. Jeg fortæller alt hvad jeg har lært på en let og overskuelig måde, så du nemt kan følge med og prøve det af selv. Denne korte e-bog kan du nyde i sofaen på en weekend, og lære nøjagtigt hvordan Warren Buffett er blevet så succesfuld en investor. Tryk på linket herunder og se hvordan du kan få min e-bog med det samme. Få 30% rabat på min e-bog her! Alle kan købe aktier Fordi jeg synes det var sjovt at lære, har jeg selv 3 aktier i Skagen Bryghus A/S . De er købt unoteret gennem deres hjemmeside, og kan købes af enhver person direkte. En sjov bonus ved mine aktier i bryghuset er, at de ikke opbevares digitalt i et depot, men jeg har derimod modtaget dem på papir med posten. De ser ud som på billedet i toppen. I en tid hvor alt er digitalt, og aktiehandel foregå på få sekunder, er det ret fedt at få tilsendt sine aktier på papir med posten. Man kunne endda ramme dem ind og hænge på væggen. Kald mig bare gammeldags! Som andre aktieselskaber, har du som aktionær ret til din del af indtjeningen eller et udbytte hvis det udbetales. Du har også ret til at deltage i generalforsamlingen. Dette er ingen anbefaling af, at du skal købe aktier i Skagen Bryghus hverken nu eller nogensinde. Jeg kan have taget fejl, eller have købt mine aktier på et tidspunkt hvor det gav mening. De kan sagtens være for dyre nu, eller ikke længere være en god forretning. Du må aldrig tage beslutninger kun baseret på hvad andre siger eller gør. Hvordan sættes aktiekursen? Hvad er selskabet værd? Metoderne for at værdiansætte et unoteret selskab er helt det samme som ved børsnoterede selskaber. Du skal finde selskabets regnskaber eller årsrapport, og regne på tallene. Det kan du lære meget mere om i min bog . Regnskaber finder du ofte på selskabets egen hjemmeside, eller ved danske selskaber, på for eksempel proff.dk . Den aktuelle aktiekurs er, som altid, den kurs den sidste handel er foregået ved. Men som du nok ved så er kursen ikke altid (langt fra) det som selskabet egentlig er værd. Da aktierne handles meget sjældent finder jeg at prisen og værdien faktisk er ret tæt på hinanden, men det afhænger af hvordan du prissætter selskabet. Du kan for eksempel starte med, at tage deres indre værdi og dividere med det samlede antal af aktier. Herfra kan du justere lidt afhængig af hvordan du mener væksten vil se ud, og hvor mange penge de vil tjene i fremtiden. Det er trods alt derfor vi investerer. For at få del i den fremtidige indtjening. Nu ved du lidt mere om unoterede aktier. Det kan være sjovt at lede efter selskaber der ikke er børsnoterede. Mange selskaber bliver aldrig børsnoteret, men de skal jo stadig ejes af nogen. Måske finder du et interessant selskab du kan se en fremtid i, og vil eje dem meget tidligt. Uanset hvad skal du vide, at køb/salg i af unoteret aktie foregår meget sjældent, og med besvær. Det er ikke ligesom på børsen hvor du oftest bliver matchet med en køber inden for få sekunder. Du skal tænke dig godt om, før du køber unoterede aktier, for det kan være du aldrig kan skille dig af med dem igen, og du kan gå hen at tabe pengene hvis selskaber går konkurs. Helt ligesom på børsen. Sponsor Reclaim er et vidunderligt værktøj der bruger AI til at organisere din dag. Jeg har prøvet utallige systemer til at holde styr på de ting jeg gerne vil, og det har aldrig rigtigt passet til min meget ad-hoc og frie måde at leve livet på. Reclaim.ai planlægger automatisk dine opgaver og møder, og flytter dem rundt så du har tid til det hele. Prøv Reclaim.ai gratis nu Bliv sponsor i dag og nå ud til tusindvis af mennesker! Inden du går Både ved noterede og unoterede aktier, gælder det om at købe til den rigtige pris. Og det skal være en pris der helst er lavere end aktien og selskabet egentlig er værd. Det kan princippet om Margin of Safety hjælpe med . Tak fordi du læste med! Kunne du lide artiklen? Har du en kommentar? 🤗 Det vil hjælpe mig meget, hvis du vil dele den på Facebook eller Twitter ⌨️ Skriv en kommentar i Facebook-gruppen Fornuftig Investering 📥 Tilmeld dig nyhedsbrevet så jeg kan sende dig andre lignende historier. 📚 Køb min e-bog Fornuftig Investering , eller book en gratis coaching-samtale 🤩 Få endnu mere indhold fra mig som Investor+ medlem Bliv Investor+ medlem via Lær mere om investering aktier",
+        "author": "Christian Mitteldorf",
+        "date_published": "INGEN DATO FUNDET",
+        "word_count": 1181,
+        "categories": [
+          "Investering",
+          "Minimalisme",
+          "Boganmeldelser",
+          "Fintech"
+        ]
+      },
+      "tagged_at": "2025-07-08T05:55:06.186552"
+    },
+    {
+      "article_id": "c412ac81cfb9",
+      "title": "[Anmeldelse] Investér i Livet",
+      "source": "Mitteldorf Blog",
+      "url": "https://mitteldorf.dk/blog/invester-i-livet/",
+      "summary": "Invester i livet er en ny bog om minimalisme og investering, og hvordan vi ved fysisk og mental oprydning kan få plads og råd til de drømme vi har.",
+      "target_audiences": [
+        "budgetbevidste",
+        "nybegynder_investering",
+        "økonomi_nybegynder"
+      ],
+      "complexity_level": "begynder",
+      "minepenge_tags": [
+        "pris",
+        "investering",
+        "su",
+        "gæld",
+        "arbejde",
+        "kort",
+        "aktier",
+        "forbrug",
+        "guide",
+        "råd"
+      ],
+      "tag_categories": [
+        "Erhverv",
+        "Rådgivning",
+        "SU & Studerende",
+        "Forbrug",
+        "Investering & Aktier",
+        "Gæld & Lån",
+        "Bank & Betaling"
+      ],
+      "confidence_scores": {
+        "studerende": 0.29,
+        "børnefamilier": 0.0,
+        "budgetbevidste": 0.33,
+        "nybegynder_investering": 0.33,
+        "økonomi_nybegynder": 0.67,
+        "pensionister": 0.0
+      },
+      "original_data": {
+        "summary": "Invester i livet er en ny bog om minimalisme og investering, og hvordan vi ved fysisk og mental oprydning kan få plads og råd til de drømme vi har.",
+        "content": "[Anmeldelse] Investér i Livet Dette indlæg kan indeholde links til produkter, hvor jeg modtager en provision af salget. Jeg anbefaler kun produkter og services af højeste kvalitet, som jeg selv kan stå inde for. Læs mere her . Investér i Livet - Køb aktier og bliv fri. Dette er titlen på en ny bog fra Pernille Wahlgren, og hendes mor Jane Bækgaard, som jeg har fået lov at læse op til udgivelsen, og fortælle jer om den. Pernille og Jane har skrevet en dybt personlig historie om deres egne oplevelser og erfaringer, og indblander en hel bunke erfaring om samfund og psykologi. Bogen handler om at investere - både i aktier men også i livet og dig selv. Det handler om at få ro i hjemmet og sindet ved at bruge dine penge og din tid på de ting som gør dig allermest lykkelig, og ikke på overfladiske materielle ting, som vi kun bliver glade for kortvarigt. Du kan købe den nu hos Saxo . Det var som at læse en bog om mig selv, og den rejse jeg selv har været igennem de seneste 3-4 år. En rejse mod en mere fri og minimalistisk livsstil som har skabt ro i sindet, ved at skille sig af med alt overflødigt. Det har ændret mit liv totalt. Faktisk rammer bogen helt plet med nedenstående citat: Det at skille mig af med ting er nu blevet mere lykkebetonet, end det er at anskaffe nyt. Pernille Wahlgren Hvis du føler du mangler retning i livet, eller ikke kan finde frem til hvordan du kan udleve dine drømme, så giver bogen dig en god forklaring om økonomisk frihed, og guider dig igennem mange øvelser, der giver overblik over dine ønsker og drømme. Den er en vejledning i, at finde motivationen frem så vi kan føle os successfulde, og ikke blive tilbageholdt af negative tanker. Sponsor Saxo er landets største boghandel med et rigt udvalg af bøger. De har flere millioner danske og engelske titler på hylderne i alle genrer, både på tryk, e-bog eller lydbog. Med Saxo Premium får du ekstra rabatter. Køb bøger hos Saxo nu Bliv sponsor i dag og nå ud til tusindvis af mennesker! En personlig historie i tre dele Bogen består af tre dele: Det enkle liv og økonomisk uafhængighed Hvordan du investerer Det gode og enkle liv Du kan sagtens få meget hjælp ved bare at læse én af delene for sig selv, og arbejde med det. Fælles for dem alle er handling. Vi går alle og tænker dagen lang. Tænker på hvad vi gerne vil, hvad vi burde gøre, hvad vi kunne have gjort. Men alt det betyder ikke noget hvis ikke der kommer handling bag ordene. Og uden handling opnår vi ikke de drømme vi har. Men vi skal også finde råd til dem, komme af med gælden, og de ting der står i vejen. Jane og Pernilles holdning (og den deler jeg fuldt ud) er, at færre ting giver flere penge som kan give mere frihed. Rod skaber mere rod, og det bliver hurtigt en negativ spiral af dårlig samvittighed, som det kan være svært at komme ud af. Vi skal leve enkelt uden at overforbruge, og komme væk fra idéen om, at flere ting betyder mere livskvalitet. Vi ved jo alle godt at det ikke passer. “Det handler i høj grad om at skelne mellem det, vi umiddelbart ønsker, og det, vi virkelig har brug for – det, der giver os ægte næring på alle planer” Pernille Wahlgren For at komme frem til det punkt skal vi aktivt ændre vores liv. Det handler om gode og dårlige vaner. Vi skal have selvindsigt, og opdage de dårlige vaner. Langsomt gøre dem til gode vaner. På det område kan jeg virkelig også anbefale de to bøger: The Power of Habit (dansk udgave) og Atomic Habits . Lær at investere fornuftigt som Warren Buffett og Charlie Munger Med min e-bog lærer du hvordan kan finde de gode selskaber og investere i dem. Jeg fortæller alt hvad jeg har lært på en let og overskuelig måde, så du nemt kan følge med og prøve det af selv. Denne korte e-bog kan du nyde i sofaen på en weekend, og lære nøjagtigt hvordan Warren Buffett er blevet så succesfuld en investor. Tryk på linket herunder og se hvordan du kan få min e-bog med det samme. Få 30% rabat på min e-bog her! En start til aktier Bogen giver det et kort indblik i, hvordan man kommer i gang med at investere og handle med aktier. Det er ikke en dybdegående investeringsbog, men mere en bog om, at få balance i livet, og se de muligheder som er i verden for at opnå de drømme man har. Pernille fortæller at hun altid investerer med en horisont på mindst 5 år. Alt andet er spekulationer, og hun har helt ret. Spekulationer og et roligt liv hører ikke sammen. Investering handler ikke kun om at få afkast, men først og fremmest om at beskytte dine penge mod inflation. Derfor rådes du til “Køb og behold”-metoden. Du tjener kun penge når du venter - ikke ved køb eller salg. Personligt bruger jeg princippet om, aldrig at købe noget før jeg ikke har lyst til at sælge det igen. Derved undgår man spekulationer, og man kommer virkelig til at tænke over og undersøge grundigt, hvad man sætter sine penge i. En varm anbefaling herfra Det skal siges, at jeg har fået bogen foræret til denne anmeldelse. Det ændrer dog ikke på min opfattelse, for det er virkelig en fremragende bog, som samler trådene mellem flere andre bøger om lignende emner, jeg har læst — nogle er nævnt sidst i Investér i livet . Det er en selvhjælpsbog om livsglæde, success og en enkel økonomi der skaber muligheder for dig. Derfor får den en varm anbefaling herfra — en lille og hyggelig bog som du let kan læse over en weekend, samtidig med du prøver nogle af øvelserne af. Køb Investér i livet nu hos Saxo . Du kan følge Pernille på Facebook . Sponsor Saxo er landets største boghandel med et rigt udvalg af bøger. De har flere millioner danske og engelske titler på hylderne i alle genrer, både på tryk, e-bog eller lydbog. Med Saxo Premium får du ekstra rabatter. Køb bøger hos Saxo nu Bliv sponsor i dag og nå ud til tusindvis af mennesker! Inden du går Vil du gå meget mere i dybden, og finde ud af nøjagtig hvad du kan investere i, og hvordan du finder den rette pris, kan du se nærmere på min e-bog Fornuftig investering . Tak fordi du læste med! Kunne du lide artiklen? Har du en kommentar? 🤗 Det vil hjælpe mig meget, hvis du vil dele den på Facebook eller Twitter ⌨️ Skriv en kommentar i Facebook-gruppen Fornuftig Investering 📥 Tilmeld dig nyhedsbrevet så jeg kan sende dig andre lignende historier. 📚 Køb min e-bog Fornuftig Investering , eller book en gratis coaching-samtale 🤩 Få endnu mere indhold fra mig som Investor+ medlem Bliv Investor+ medlem via Læs mine andre anmeldelser",
+        "author": "Christian Mitteldorf",
+        "date_published": "INGEN DATO FUNDET",
+        "word_count": 1179,
+        "categories": [
+          "Investering",
+          "FIRE",
+          "Økonomi",
+          "Minimalisme",
+          "Boganmeldelser"
+        ]
+      },
+      "tagged_at": "2025-07-08T05:55:06.187207"
+    },
+    {
+      "article_id": "03ec22198e5f",
+      "title": "Året der gik: 2020",
+      "source": "Mitteldorf Blog",
+      "url": "https://mitteldorf.dk/blog/aaret-der-gik-2020",
+      "summary": "Vi ser tilbage på året der er gået og hvad 2021 vil bringe her på bloggen.",
+      "target_audiences": [
+        "budgetbevidste",
+        "studerende",
+        "nybegynder_investering"
+      ],
+      "complexity_level": "begynder",
+      "minepenge_tags": [
+        "investering",
+        "aktier",
+        "udbytte",
+        "arbejde",
+        "opsparing",
+        "bank",
+        "portefølje",
+        "gæld",
+        "pris",
+        "pension"
+      ],
+      "tag_categories": [
+        "Erhverv",
+        "Pension",
+        "Forbrug",
+        "Opsparing",
+        "Investering & Aktier",
+        "Gæld & Lån",
+        "Bank & Betaling"
+      ],
+      "confidence_scores": {
+        "studerende": 0.86,
+        "børnefamilier": 0.0,
+        "budgetbevidste": 1.0,
+        "nybegynder_investering": 0.67,
+        "økonomi_nybegynder": 0.67,
+        "pensionister": 0.4
+      },
+      "original_data": {
+        "summary": "Vi ser tilbage på året der er gået og hvad 2021 vil bringe her på bloggen.",
+        "content": "Året der gik: 2020 Dette indlæg kan indeholde links til produkter, hvor jeg modtager en provision af salget. Jeg anbefaler kun produkter og services af højeste kvalitet, som jeg selv kan stå inde for. Læs mere her . Hvordan skal man sætte ord på 2020? Sikke et år. Hvordan er det gået for jer læsere? 2020 har på mange måder været et udueligt år for os alle sammen. Et år med nye prøvelser og udfordringer, et år med ofre og ensomhed. Det er så vigtigt at vi allesammen står sammen for at komme igennem denne krise. Da Corona-virussen dukkede op i Kina i januar fik den ikke meget opmærksomhed fra resten af verdenen. Det var først da det begyndte at sprede sig i februar, at vi fik 'jnene op for, hvor alvorligt det er. Nu er vi heldigvis begyndt at vaccinere folk, og selvom det ikke er en permanent løsning, så giver det håb og modet til at stå igennem resten af pandemien. Grundet Corona-krisen har jeg arbejdet hjemmefra stort set hele året, og det har været en sjov, ny oplevelse for mig. Jeg har længe ville arbejde hjemmefra halvdelen af ugen for at se om det fungerer for mig, og om det kan fungere når man skal arbejde i et team. Nu blev hele arbejdspladsen tvunget ud i det, og jeg må sige det er gået rigtig godt uden de store udfordringer. Men man kommer nu til at savne sine kollegaer. Som du nok ved så har jeg planer om at flytte sammen med min kæreste Brenda i Sydney, Australien, og jeg havde oprindeligt håbet at kunne arbejde \"remote\" og beholde mit job. Det blev vi dog enige om i fællesskab, ikke var det rigtige at gøre, og derfor sagde jeg selv mit job op med sidste arbejdsdag d. 31. december 2020. Det har dog vist sig at være godt, for det giver mig meget mere tid til at arbejde på personlige projekter, og jeg har besluttet at være selvstændig nu, ihverfald i en periode, og så længe der er opsparing til det. Det er mit mål primært at kunne leve af mine investeringer, samt denne blog, og mine andre projekter. Blandt andet har jeg fået frigivet tid til at skrive min Visa-ansøgning til at flytte til Australien, og den blev sendt afsted. Heldigvis er min ansøgning blevet godkendt og jeg har tilladelse til at rejse ind i landet, hvilket jeg gør d. 2. februar! Sponsor Freedom24 er en glimrende børsmægler med mere end 1 million aktier og instrumenter. Opret en gratis konto, og begynd at handle aktier fra deres app. Du finder helt sikker det du søger, og kan følge dine aktier tæt hos Freedom24. De udsender også gratis analyser hver uge for aktier i USA, Europa og Asien. Prøv Freedom24 nu Bliv sponsor i dag og nå ud til tusindvis af mennesker! Lær at investere fornuftigt som Warren Buffett og Charlie Munger Med min e-bog lærer du hvordan kan finde de gode selskaber og investere i dem. Jeg fortæller alt hvad jeg har lært på en let og overskuelig måde, så du nemt kan følge med og prøve det af selv. Denne korte e-bog kan du nyde i sofaen på en weekend, og lære nøjagtigt hvordan Warren Buffett er blevet så succesfuld en investor. Tryk på linket herunder og se hvordan du kan få min e-bog med det samme. Få 30% rabat på min e-bog her! 📖 Fornuftig investering: Min første e-bog I efteråret annoncerede jeg, at jeg ville skrive en bog der lærer dig at investere dine egne penge. I måneder har jeg arbejdet hårdt på at gøre den færdig, og den blev udgivet d. 28 december i år. Jeg er virkelig stolt af den, og kan se der har været god interesse for den. Du kan se mere om min nye bog Fornuftig investering, her . Bogen lærer dig at investere dine egne penge, baseret på den måde jeg selv gør det på. Jeg har lært at investere fra Warren Buffett, efter at have læst en masse bøger om hans metode, samt hans aktionærbreve, og en masse videoer med ham og Charlie Munger. Bogen er kun på 64 sider og jeg har forsøgt at skrive den på et sprog hvor alle kan være med, omend det forventes at man har styr på det mest basale og har købt nogle aktier allerede. Tilmeld dig mit nyhedsbrev for at få 30% rabat! Bloggen i 2020 På grund af personlige årsager, samt mange andre projekter, har jeg ikke været nær så god til at skrive til selve bloggen, men det skulle ændre sig i 2021. Jeg er dog glad for at se, at der kommer flere læsere til hver uge, og jeg hører fra nogle af jer, at i virkelig kan lide det. Tusind tak til hver eneste af jer! Her er de 5 mest populære artikler i 2020 : Skak og renters rente Anmeldelse af bogen Invester i livet Gældfri: Sådan kommer du effektivt af med din gæld Undgå købefristelser i hverdagen Udbytte: Den ultimative guide Hvis der er noget du mener jeg bør skrive mere om, eller spørgsmål du ønsker svar på, så lad mig høre hvad du synes . Sponsor Nordnet er min foretrukne børsmægler i Danmark. De har et meget bredt udvalg af aktier, ETF'er, fonde og andre instrumenter, og kan stort set tilbyde dig alt du har brug for, for at lave dine investeringer. Nordnet giver dig et godt overblik over dine investeringer og indrapporterer selv alle dine handler til Skat. Prøv Nordnets månedsopsparing og få gratis kurtage nu! Åbn en konto nu Bliv sponsor i dag og nå ud til tusindvis af mennesker! 🌱 Økonomisk Uafhængighed Vejen mod FIRE er lang, men det går rigtig fint fremad! Aktiemarkedet i år har været helt ekstremt og det hjælper naturligvis, men jeg ved også der pludselig kommer et større fald, så man kan aldrig regne med det. For mig har det været et fantastisk år, godt hjulpet på vej af, at jeg har boet hos mine forældre i 6 måneder nu, uden betydelige udgifter. Det har jeg været meget taknemmelig for, og den effekt det vil have på min fremtid er enorm! Jeg har optalt hele vores privatøkonomi inkl. fælles udgifter for at se hvordan pengene er brugt i løbet af året, og hvor meget vi har sparet op. Det er der kommet følgende Sankey-diagram ud af. 💰 Formue Min formue, samt portefølje, har sat ny rekord på trods af faldet i marts, og er nu på over 860.000 kr hvilket er 84% mere end sidste år. Faldet i foråret brugte jeg til at købe godt ind i nogle gode selskaber med en lovende fremtid. I min bog Fornuftig investering kan du læse nøjagtigt hvordan jeg udvælger mine aktier. Opsparingsrate: ~65% Samlet formue inkl. pension: 862.508 kr. Heraf markedsværdi: 685.448 kr. Egenkapitalforøgelse for året: 392.508 kr. (+84 %) (fra 555.104 kr. pr. 31. dec 2019) 🛒 Handler og Udbytter I løbet af året har jeg sat ekstra fokus på opsparing, for at have flere penge at investere for, og desuden skal jeg bruge en del kontanter til at flytte til Australien. Vi skal jo finde en lejlighed, betale for visa, købe møbler og den slags, så jeg har sat ca. 100.000 kr. til side indtil videre. Senere vil det der er til overs blive investeret i aktier når der er nogle gode køb derude. Jeg handler ikke ofte, og i 4. kvartal i år har jeg kun foretaget 3 handler. Tabellen herunder viser mine transaktioner på tværs af alle depoter (inkl. pension), i det seneste kvartal. Negativt antal er salg. Selskab Antal Gns. kurs Afreg. beløb (kr.) SAS (Tegningsretter) 3600 0,832 kr. -2.995,56 Carnival Corp. 120 21,68 US$ -15.962,55 H. Lundbeck 80 211,90 kr. -16.981,00 I alt 35.939,11 kr. Sammenlignet med sidste år har jeg stort set ikke modtaget nogle udbytter. Grundet Corona-pandemien har de fleste selskaber valgt ikke at udbetale udbytter i 2020, og denne beslutning har jeg det helt fint med. Så længe selskaberne stadig har en fin indtjening, så forventer jeg det kommer igen næste år, evt. med en større forøgelse. I 2020 til dato har jeg samlet modtaget udbytter for 4.704,41 kr. I 2019 modtog jeg samlet udbytter for 13.298 kr. Selskab Udbytte (kr.) Apple Inc. 313,53 Novo Nordisk 900,90 Pandora 1.404,00 Tryg 1.022,50 The Cheesecake Factory 64,86 Lollands bank 140,00 Scandinavian Tobacco Group 50,00 Intel Corporation 327,56 The Coca-Cola Company 257,63 I alt 4.704,41 kr. 📈 Portefølje Mit afkast, 2020: 28,93 % Gennemsnitligt afkast pr. år, siden 2015: ~22 % Jeg har i år præsteret et samlet afkast på knap 29%, hvilket jo er helt formidabelt. Jeg er klar over at indeksene alle har braget op, så det er ikke fordi jeg har gjort noget særligt i år. Jeg forsøger at købe selskaber af høj kvalitet til en billig pris, og har gjort det siden jeg begyndte at investere for alvor, for nu 5 år siden. Et afkast i et bestemt år har ikke den store betydning for mig, det er den lange bane der gælder. Mit mål er dog, over en længere årrække, konsekvent at slå markedet med 5%-point, og dette ser ud til at gå meget fint. Siden 2015 har jeg haft et gennemsnitligt afkast på omkring 22 %, hvilket er meget tilfredsstillende. Tabellen herunder viser min samlede portefølje på tværs af alle depoter. Alle beløb er i DKK før SKAT. Afkast er urealiseret. Selskab Købspris Markedsværdi Urealiseret afkast Apple Inc. 15.756 48.504 207,8 % Bakkafrost 5.404 8.684 60,7 % Berkshire Hathaway Inc. B 28.149 29.541 4,9 % Carnival Corporation 37.764 34.420 -8,9 % Cheesecake Factory (The) 26.945 38.383 42,4 % Coca-Cola Company (The) 6.061 6.657 9,8 % Danske Bank A/S 139.120 98.636 -29,1 % H+H International 6.025 7.524 24,9 % Hennes & Mauritz AB 22.081 19.097 -13,5 % H. Lundbeck 16.981 16.704 -1,6 % Intel Corporation 24.803 24.368 -1,8 % iShares MSCI China UCITS ETF 11.256 13.245 17,7 % Kraft-Heinz Company 2.880 3.362 16,7 % Lollands Bank A/S 8.429 10.864 28,9 % Matas A/S 56.777 70.501 24,2 % Novo Nordisk A/S 31.767 44.797 41,0 % Pandora A/S 64.075 106.236 65,8 % SAS AB 6.779 5.424 -20,0 % Scandinavian Tobacco Group A/S 1.276 1.041 -18,4 % SP Group A/S 15.226 20.054 31,7 % Starbucks 13.354 18.169 36,1 % TCM Group A/S 26.142 34.194 30,8 % Tryg A/S 17.847 24.204 35,6 % I alt 584.897 684.609 17,0 % Godt nytår! Pas på alle mennesker omkring dig. 🥂🎉 Alle tal i denne opgørelse er pr. 1. januar 2021. Tak fordi du læste med! Kunne du lide artiklen? Har du en kommentar? 🤗 Det vil hjælpe mig meget, hvis du vil dele den på Facebook eller Twitter ⌨️ Skriv en kommentar i Facebook-gruppen Fornuftig Investering 📥 Tilmeld dig nyhedsbrevet så jeg kan sende dig andre lignende historier. 📚 Køb min e-bog Fornuftig Investering , eller book en gratis coaching-samtale 🤩 Få endnu mere indhold fra mig som Investor+ medlem Bliv Investor+ medlem via Lær mere om økonomisk uafhængighed opgørelser investering",
+        "author": "Christian Mitteldorf",
+        "date_published": "INGEN DATO FUNDET",
+        "word_count": 1830,
+        "categories": [
+          "Investering",
+          "FIRE",
+          "Økonomi",
+          "Boganmeldelser",
+          "Fintech"
+        ]
+      },
+      "tagged_at": "2025-07-08T05:55:06.188276"
+    },
+    {
+      "article_id": "56d31a28dd7b",
+      "title": "Hvad betyder x-dag?",
+      "source": "Mitteldorf Blog",
+      "url": "https://mitteldorf.dk/blog/x-dag/",
+      "summary": "Når virksomheder betaler et udbytte sker det efter x-dagen. Men hvad er det overhovedet?",
+      "target_audiences": [
+        "studerende",
+        "budgetbevidste",
+        "nybegynder_investering"
+      ],
+      "complexity_level": "begynder",
+      "minepenge_tags": [
+        "pris",
+        "investering",
+        "su",
+        "kort",
+        "aktier",
+        "udbytte",
+        "guide",
+        "spare",
+        "råvarer"
+      ],
+      "tag_categories": [
+        "Rådgivning",
+        "SU & Studerende",
+        "Krypto",
+        "Forbrug",
+        "Opsparing",
+        "Investering & Aktier",
+        "Bank & Betaling"
+      ],
+      "confidence_scores": {
+        "studerende": 0.57,
+        "børnefamilier": 0.0,
+        "budgetbevidste": 0.33,
+        "nybegynder_investering": 0.33,
+        "økonomi_nybegynder": 0.33,
+        "pensionister": 0.0
+      },
+      "original_data": {
+        "summary": "Når virksomheder betaler et udbytte sker det efter x-dagen. Men hvad er det overhovedet?",
+        "content": "Hvad betyder x-dag? Dette indlæg kan indeholde links til produkter, hvor jeg modtager en provision af salget. Jeg anbefaler kun produkter og services af højeste kvalitet, som jeg selv kan stå inde for. Læs mere her . Hvis selskaber vælger at udbetale udbytte, udmelder de en såkaldt X-dag, som oftest er den første børsdag lige efter selskabets årlige generalforsamling. Det er den første dag, selskabet handler eksklusiv udbytte. Det vil sige, for at kunne modtage udbytte skal du eje aktier inden denne dato. Udbyttet bliver udbetalt nogle dage efter x-dag. Selskaber kan vælge at betale udbytte årligt, kvartalsvis eller endda månedligt. Faktisk kan de udbetale det lige så ofte som aktionærerne tillader det. Derfor kan du ofte se at selskabet udmelder flere end én x-dag - en for hver gang de vil udbetale. For kvartalsvise udbytter som er mest almindeligt i USA, vil de derfor udmelde 4 x-dage. Et selskab udbetaler udbytte den første børsdag efter X-dag, som er den første dag, selskabet handler eksklusiv udbytte. Man skal eje aktier i selskabet dagen før X-dag, for at være berettiget til udbytte. Udbyttet skal godkendes på selskabets generalforsamling, så det er vigtigt at tjekke om det er blevet foreslået og godkendt. Ellers kommer det ikke. Lær at investere fornuftigt som Warren Buffett og Charlie Munger Med min e-bog lærer du hvordan kan finde de gode selskaber og investere i dem. Jeg fortæller alt hvad jeg har lært på en let og overskuelig måde, så du nemt kan følge med og prøve det af selv. Denne korte e-bog kan du nyde i sofaen på en weekend, og lære nøjagtigt hvordan Warren Buffett er blevet så succesfuld en investor. Tryk på linket herunder og se hvordan du kan få min e-bog med det samme. Få 30% rabat på min e-bog her! Der er ofte forsinkelser afhængig af hvilken børsmægler du bruger, men frygt ej. Du vil helt sikkert se pengene på din konto inden for nogle dage. Ellers bør du ringe til din børsmægler og høre hvornår de kommer. Når udbyttet bliver udbetalt ses det oftets at kursværdien falder tilsvarende. Det sker fordi virksomheden udsender en del af deres kontantbeholdning, og derfor bliver mindre værd på den korte bane. Dette kursfald skal egentlig blot ignoreres, for det forventes at selskabet indtjener det udbetalte over det næste år. Samtidig er aktiemarkedet tosset og irrationelt. Derfor er det ikke en regel at prisen falder. Det sker oftets, men ikke altid. Af den årsag kan man regne med, at det ikke giver mening at investere i et selskab kort før udbytte, for at få det, og så sælge sine aktier igen, da prisen formentlig vil falde tilsvarende. Sponsor Vi har købt måltidskasser i flere måneder, gennem HelloFresh, og det er en super god måde at spare tid og penge på. Deres råvarer og opskrifter er rigtig lækre, og du modtager kun nøjagtig hvad du skal bruge. Et godt måltid uden spild. Få din kasse nu Bliv sponsor i dag og nå ud til tusindvis af mennesker! Inden du går Du kan læse meget mere om X-dag og udbytter i min Ultimative Guide til Udbytte . Lær hvordan du kan betale dine udgifter med udbytter . Tak fordi du læste med! Kunne du lide artiklen? Har du en kommentar? 🤗 Det vil hjælpe mig meget, hvis du vil dele den på Facebook eller Twitter ⌨️ Skriv en kommentar i Facebook-gruppen Fornuftig Investering 📥 Tilmeld dig nyhedsbrevet så jeg kan sende dig andre lignende historier. 📚 Køb min e-bog Fornuftig Investering , eller book en gratis coaching-samtale 🤩 Få endnu mere indhold fra mig som Investor+ medlem Bliv Investor+ medlem via Lær mere om investering udbytte",
+        "author": "Christian Mitteldorf",
+        "date_published": "INGEN DATO FUNDET",
+        "word_count": 608,
+        "categories": [
+          "Investering",
+          "Boganmeldelser"
+        ]
+      },
+      "tagged_at": "2025-07-08T05:55:06.188694"
+    },
+    {
+      "article_id": "3aff66366313",
+      "title": "FI Scouts: Følg din FIRE-rejse",
+      "source": "Mitteldorf Blog",
+      "url": "https://mitteldorf.dk/blog/fiscouts/",
+      "summary": "FI Scouts er en app jeg har udviklet med MindingMyThirties, en FIRE-blogger fra USA. FI Scouts lader dig holde styr på din rejse på FIRE på en meget let måde.",
+      "target_audiences": [
+        "studerende",
+        "budgetbevidste",
+        "nybegynder_investering"
+      ],
+      "complexity_level": "begynder",
+      "minepenge_tags": [
+        "investering",
+        "arbejde",
+        "opsparing",
+        "kort",
+        "etf",
+        "su",
+        "skat",
+        "aktier",
+        "fonde",
+        "spare"
+      ],
+      "tag_categories": [
+        "Erhverv",
+        "SU & Studerende",
+        "Opsparing",
+        "Investering & Aktier",
+        "Skat & Fradrag",
+        "Bank & Betaling"
+      ],
+      "confidence_scores": {
+        "studerende": 0.86,
+        "børnefamilier": 0.0,
+        "budgetbevidste": 0.67,
+        "nybegynder_investering": 0.67,
+        "økonomi_nybegynder": 0.67,
+        "pensionister": 0.0
+      },
+      "original_data": {
+        "summary": "FI Scouts er en app jeg har udviklet med MindingMyThirties, en FIRE-blogger fra USA. FI Scouts lader dig holde styr på din rejse på FIRE på en meget let måde.",
+        "content": "FI Scouts: Følg din FIRE-rejse Dette indlæg kan indeholde links til produkter, hvor jeg modtager en provision af salget. Jeg anbefaler kun produkter og services af højeste kvalitet, som jeg selv kan stå inde for. Læs mere her . Mandag d. 14. juni 2021. Det er datoen hvor FI Scouts omsider blev lanceret efter næsten et års arbejde, fordelt på de få timer om ugen vi havde tid. For omkring et år siden så jeg et tweet fra @MindingMyThirties . Liz Brenner, kendt i FIRE-communitiet som MindingMyThirties, er en blogger fra USA der nu bor i Norge. Til dagligt er hun UI/UX-designer og var ved at designe en app til hendes design portfolio. Som en del af det arbejde udsendte hun en lille spørgeundersøgelse omkring en FIRE-app hun var ved at designe. Jeg kunne godt lide hvad jeg så, og skrev en kommentar: “Hvis du gerne vil lave en rigtig app ud af dette, så lad os snakke sammen!”. Kort efter skrev hun til mig, og spurgte hvordan det kunne foregå, og derfra startede vores samarbejde, som vi nu kan høste frugterne af. FI Scouts har været gennem mange ændringer, og det har været svært at finde ud af nøjagtigt hvordan app’en skulle virke og se ud. Takket være feedback fra en masse mennesker har vi kunne tilpasse den til brugernes ønsker. Og det vil vi blive ved med, så lad os endelig høre hvad du synes. Sponsor Reclaim er et vidunderligt værktøj der bruger AI til at organisere din dag. Jeg har prøvet utallige systemer til at holde styr på de ting jeg gerne vil, og det har aldrig rigtigt passet til min meget ad-hoc og frie måde at leve livet på. Reclaim.ai planlægger automatisk dine opgaver og møder, og flytter dem rundt så du har tid til det hele. Prøv Reclaim.ai gratis nu Bliv sponsor i dag og nå ud til tusindvis af mennesker! Hvad er FI Scouts? Med FI Scouts får du en god vejledning til hvad du skal gøre, og hvor langt du er på vejen mod at blive økonomisk uafhængig. App’en lader dig følge udviklingen af din egenkapital (net worth), opsparingsrate og selvfølgelig dit FIRE-tal du vil opnå. Du vælger selv hvor ofte du vil opdatere dem, og vi holder dine tal sikre og private. App’en viser dig grafer over hvor godt du klarer dig, og gør det let for dig at se hvordan det skrider fremad. Vi håber FI Scouts kan hjælpe brugerne med, at finde deres FIRE-tal, og gøre det let at se hvad der skal til for at opnå det. Vi har endda tilføjet nogle milesten du kan opnå, og få en lille medalje for! Under hver kategori på hjemmeskærmen (Dashboard) kan du se mange flere informationer om dine tal og din rejse. Herunder ses en af skærmene bag ‘FI number’, hvor du kan se hvor langt du er nået, hvornår du vil være FIRE og hvad din næste milepæl er. Lær at investere fornuftigt som Warren Buffett og Charlie Munger Med min e-bog lærer du hvordan kan finde de gode selskaber og investere i dem. Jeg fortæller alt hvad jeg har lært på en let og overskuelig måde, så du nemt kan følge med og prøve det af selv. Denne korte e-bog kan du nyde i sofaen på en weekend, og lære nøjagtigt hvordan Warren Buffett er blevet så succesfuld en investor. Tryk på linket herunder og se hvordan du kan få min e-bog med det samme. Få 30% rabat på min e-bog her! Hvad kan jeg bruge den til? App’en kan lige nu bruges til at tracke dine FIRE-tal, og du kan sætte påmindelser så du husker at opdatere dine tal, for eksempel hver måned. Det vigtigste er, at du altid kan gå tilbage og se (og redigere) hele din historik, og se det flot præsenteret på en graf. Hvis du ikke er interesseret i FIRE, men bare ønsker at holde styr på din egenkapital eller opsparingsrate, så kan du bare gøre det. Du kan bruge app’en til nøjagtigt hvad du har brug for. Vi har tænkt os at tilføje mange flere funktioner som tiden går, så følg med! Du kan skrive dig på nyhedsbrevet for at få vores seneste nyheder. Hvad er planen for FI Scouts? FI Scouts er startet som et hobby-projekt, men efterhånden som vi har udviklet konceptet har vi samlet mange idéer til, hvordan vi kan udvide det. Som sagt vil vi hele tiden tilføje nye funktioner, der gør det lettere for dig at følge med, eller lege med dine tal. Vi vil gerne tilføje funktioner der gør det let at dele din rejse med andre, på for eksempel sociale medier, eller lade dig eksportere dine data så du kan lege videre i et regneark. FI Scouts er lanceret globalt, hvilket betyder den kan bruges i alle lande. Det betyder at der er mange sprog vi gerne vil tilføje (naturligvis også dansk), og det kommer hen ad vejen. Hvis du på nogen måde kan hjælpe med dette, så skriv til mig . FI Scouts forbliver et hobby-projekt for nu, men det er en app både Liz og jeg bruger, så du skal ikke være nervøs for, at vi pludselig dropper det. Vi har ikke nogen større planer som det er lige nu, men det betyder ikke der ikke kommer til at ske mere i fremtiden. Vi forventer ikke at kunne leve af at lave FI Scouts lige nu — selvom det er et mål og min drøm at kunne leve af mine apps, FI Scouts og Stokki , samt bloggen her. Android-app? Nej. Rigtig mange har efterspurgt en Android-udgave af app’en, og vi forstår det godt. Hvis man går efter at blive økonomisk uafhængig, så er det naturligt at man sparer hvor man kan, og Android-telefoner er generelt billigere end iPhone. Vi lytter til alt den feedback vi får, men vi er desværre også begrænset af at være blot 2 personer. Ingen af os har erfaring i Android-udvikling, eller midlerne til at ansætte nogen til det. Derfor ser vi ikke der kommer en Android-version i den nærmere fremtid. Hvis du har erfaring, og kunne tænke dig at hjælpe på det område, så kontakt mig endelig. Sponsor Nordnet er min foretrukne børsmægler i Danmark. De har et meget bredt udvalg af aktier, ETF'er, fonde og andre instrumenter, og kan stort set tilbyde dig alt du har brug for, for at lave dine investeringer. Nordnet giver dig et godt overblik over dine investeringer og indrapporterer selv alle dine handler til Skat. Prøv Nordnets månedsopsparing og få gratis kurtage nu! Åbn en konto nu Bliv sponsor i dag og nå ud til tusindvis af mennesker! Inden du går Sådan ser det altså ud — vi har brugt næsten et år på at udvikle FI Scouts, så vi håber virkelig i finder app’en brugbar, og vil fortælle os hvordan i bruger den. Hvis du ikke kan lide den, så lad os høre det også, så vi kan forbedre det! Vi håber virkelig det kan blive det bedste værktøj for alle der søger at blive økonomisk uafhængige. Hvis du kan du lide app’en, så overvej at sende os et bidrag og skulderklap i form af “drikkepenge”. Ved at trykke på profil-ikonet finder du “Tip jar”, hvor du kan sende os en donation. Det vil virkelig betyde uendeligt meget for os, og viser at der er potentiale her. Du kan læse mere om FI scouts på hjemmesiden fiscouts.com . Er du interesseret i noget af det research vi har lavet kan du se det på Liz’ portfolio website . Tak fordi du læste med! Kunne du lide artiklen? Har du en kommentar? 🤗 Det vil hjælpe mig meget, hvis du vil dele den på Facebook eller Twitter ⌨️ Skriv en kommentar i Facebook-gruppen Fornuftig Investering 📥 Tilmeld dig nyhedsbrevet så jeg kan sende dig andre lignende historier. 📚 Køb min e-bog Fornuftig Investering , eller book en gratis coaching-samtale 🤩 Få endnu mere indhold fra mig som Investor+ medlem Bliv Investor+ medlem via Lær mere om fire økonomisk uafhængighed",
+        "author": "Christian Mitteldorf",
+        "date_published": "INGEN DATO FUNDET",
+        "word_count": 1337,
+        "categories": [
+          "Investering",
+          "FIRE",
+          "Økonomi",
+          "Minimalisme",
+          "Boganmeldelser",
+          "Fintech"
+        ]
+      },
+      "tagged_at": "2025-07-08T05:55:06.189525"
+    },
+    {
+      "article_id": "bf5c21591ed0",
+      "title": "Warren Buffett bliver 93: Her er hans 5 bedste principper",
+      "source": "Mitteldorf Blog",
+      "url": "https://mitteldorf.dk/blog/buffett-5-principper/",
+      "summary": "Warren Buffett er fyldt 93 år. Her er et tilbageblik på hans bedste guldkorn.",
+      "target_audiences": [
+        "studerende",
+        "nybegynder_investering",
+        "økonomi_nybegynder"
+      ],
+      "complexity_level": "begynder",
+      "minepenge_tags": [
+        "pris",
+        "investering",
+        "su",
+        "universitet",
+        "løn",
+        "arbejde",
+        "kort",
+        "studerende",
+        "råd"
+      ],
+      "tag_categories": [
+        "Erhverv",
+        "Rådgivning",
+        "SU & Studerende",
+        "Forbrug",
+        "Investering & Aktier",
+        "Bank & Betaling"
+      ],
+      "confidence_scores": {
+        "studerende": 0.86,
+        "børnefamilier": 0.0,
+        "budgetbevidste": 0.0,
+        "nybegynder_investering": 0.33,
+        "økonomi_nybegynder": 0.33,
+        "pensionister": 0.0
+      },
+      "original_data": {
+        "summary": "Warren Buffett er fyldt 93 år. Her er et tilbageblik på hans bedste guldkorn.",
+        "content": "Warren Buffett bliver 93: Her er hans 5 bedste principper Dette indlæg kan indeholde links til produkter, hvor jeg modtager en provision af salget. Jeg anbefaler kun produkter og services af højeste kvalitet, som jeg selv kan stå inde for. Læs mere her . Warren Buffett, den store legende, blev 93 år, her 30. august 2023. Stort tillykke herfra, og tak for inspirationen og visdommen gennem alle de mange år! Som en af de mest (hvis ikke den mest) successfulde investorer og forretningsmænd i verden, har Buffett gennen tiden uddelt gavmildt af sin visdom. Han har før udtalt sig meget om investering, inflation, recession, livet og meget andet. Buffett siger selv hans største helt var hans far, Howard Buffett, og med hans gode råd endte Buffett med at stå i spidsen for Berkshire Hathaway - investeringsselskabet der ejer mere end 60 andre virksomheder. Buffett’s investeringsstrategi kan simplificeres til hans vigtigste regler: “Rule 1: Never Lose Money”, og “Rule 2: Never Forget Rule 1”. I anledning af mandens fødselsdag ser vi tilbage på nogle af hans vigtigste lektioner. Sponsor Saxo er landets største boghandel med et rigt udvalg af bøger. De har flere millioner danske og engelske titler på hylderne i alle genrer, både på tryk, e-bog eller lydbog. Med Saxo Premium får du ekstra rabatter. Køb bøger hos Saxo nu Bliv sponsor i dag og nå ud til tusindvis af mennesker! Start tidligt Under aktionærmødet for Berkshire Hathaway i 1999, blev Warren Buffett spurgt: Hvordan tjener man $30 millarder? Hans svar var: “Start tidligt”. “Jeg startede selv med en lille snebold [af penge] på toppen af en meget lang bakke. Tricket til at få den længste bakke er, enten at starte mens du er meget ung, eller at leve meget længe”, sagde Buffett. Hvis han selv startede med $10.000 at investere nu ville han: “… sandsynligvis fokusere på små selskaber fordi jeg ville have mindre summer at arbejde med. Der er en større chance for at noget godt er blevet overset der”. Uanset hvad er det aldrig for sent at begynde at investere. Kom i gang i dag. Find en god forretning Buffett mener, at investorer er bedst stillet med ikke at lytte til andre, og bør stole på deres egne instinkter når de vælger den rette virksomhed eller aktie. Når du finder en bod investeringsmulighed, og prisen er rigtig, skal du handle hurtigt og meget. Warren har mange gange sagt, at hans succes først og fremmest kommer fra at investere i gode forretninger med stærke brands og konkurrencefordele. “Den bedste investering, synes jeg, er en god forretning og virksomhed”. Lær at investere fornuftigt som Warren Buffett og Charlie Munger Med min e-bog lærer du hvordan kan finde de gode selskaber og investere i dem. Jeg fortæller alt hvad jeg har lært på en let og overskuelig måde, så du nemt kan følge med og prøve det af selv. Denne korte e-bog kan du nyde i sofaen på en weekend, og lære nøjagtigt hvordan Warren Buffett er blevet så succesfuld en investor. Tryk på linket herunder og se hvordan du kan få min e-bog med det samme. Få 30% rabat på min e-bog her! Vær ydmyg og lær fra andre Buffett, ofte hyldet som Oraklet fra Omaha , taler somme tider med universitetsstuderende og lærer fra sig. En af hans gentagne lektioner er, at de altid skal forblive åbne for at lære nye ting, og undgå én ting som langsomt kan ødelægge deres relationer til andre. “Der er én dårlig vane som i skal være meget opmærksomme på, som kan være ødelæggende i det lange løb: arrogance. At tro du er bedre eller ved mere end andre, og føle at du skal overbevise andre om det, er en god måde at ødelægge dine personlige forhold på,” sagde han. Vær klog, men vær ikke arrogant. Søg viden fra dem som muligvis ved mere end dig. Warren Buffett Investér i dig selv Buffett bliver, måske ikke overraskende, oftest spurgt om hvordan man bliver succesfuld i sit arbejdsliv. “Den bedste investering du kan gøre er at uddanne dig selv og lære mere”, siger han. Han fortsatte herefter med at forklare hvordan dine evner til at kommunikere er altafgørende, og hvad han normalt fortæller studerende der spørger ind til det: “Du kan gå på alle mulige skoler, og lære komplekse formler og alt muligt. Men hvis bare i lærer at kommunikere bedre og effektivt, både skriftligt og mundtligt, så hæver i jeres personlige værdi med mindst 50%. Det er simpelthen virkelig vigtigt. Og hvad du investerer i dig selv, er der ingen der kan tage fra dig.” Vær ligeglad hvis markedet lukker i 10 år Til sidst nævner jeg en af Buffett’s mest unikke talenter. Han har en utrolig evne til at tænke og agere langsigtet, og helt lukke ørene for kortsigtet snak og forventninger. Han køber helst virksomheder for at beholde dem resten af hans liv, og har aldrig en “exit-strategi”. Han har den generelle holdning at aktiemarkedet altid vil gå op over lang tid, og investorer der beholder deres investeringer i meget lang tid vil blive rigt belønnet. Han siger ofte: “du bør kun købe noget hvis du har absolut ingen bekymringer om at beholde det, selv hvis aktiemarkedet stoppede al handel i 10 år.” Sponsor Reclaim er et vidunderligt værktøj der bruger AI til at organisere din dag. Jeg har prøvet utallige systemer til at holde styr på de ting jeg gerne vil, og det har aldrig rigtigt passet til min meget ad-hoc og frie måde at leve livet på. Reclaim.ai planlægger automatisk dine opgaver og møder, og flytter dem rundt så du har tid til det hele. Prøv Reclaim.ai gratis nu Bliv sponsor i dag og nå ud til tusindvis af mennesker! Inden du går Berkshire Hathaway er det selskab der har bragt Warren Buffett sin kæmpe succes (eller måske er det den omvendt?). Læs hvorfor Berkshire Hathaway måske er den bedst investering du kan gøre . Tak fordi du læste med! Kunne du lide artiklen? Har du en kommentar? 🤗 Det vil hjælpe mig meget, hvis du vil dele den på Facebook eller Twitter ⌨️ Skriv en kommentar i Facebook-gruppen Fornuftig Investering 📥 Tilmeld dig nyhedsbrevet så jeg kan sende dig andre lignende historier. 📚 Køb min e-bog Fornuftig Investering , eller book en gratis coaching-samtale 🤩 Få endnu mere indhold fra mig som Investor+ medlem Bliv Investor+ medlem via Lær mere om warren buffett investering livsstil",
+        "author": "Christian Mitteldorf",
+        "date_published": "INGEN DATO FUNDET",
+        "word_count": 1068,
+        "categories": [
+          "Investering",
+          "Minimalisme",
+          "Boganmeldelser"
+        ]
+      },
+      "tagged_at": "2025-07-08T05:55:06.190149"
+    }
+  ]
+}

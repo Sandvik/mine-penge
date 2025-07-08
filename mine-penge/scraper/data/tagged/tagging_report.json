@@ -1,42 +1,42 @@
 {
   "summary": {
-    "total_files_processed": 5,
-    "total_articles_tagged": 706,
-    "processing_date": "2025-07-05T16:10:36.289187"
+    "total_files_processed": 6,
+    "total_articles_tagged": 717,
+    "processing_date": "2025-07-08T05:55:06.216809"
   },
   "tag_statistics": {
-    "investering": 603,
+    "investering": 614,
+    "su": 483,
     "aktier": 476,
-    "su": 456,
-    "bank": 313,
-    "spare": 267,
-    "skat": 245,
-    "råd": 239,
-    "udbytte": 230,
-    "pris": 223,
-    "portefølje": 221,
-    "arbejde": 212,
-    "kort": 210,
-    "opsparing": 204,
-    "fonde": 180,
-    "forbrug": 155,
-    "gæld": 132,
-    "betaling": 128,
-    "rente": 122,
-    "budget": 111,
-    "guide": 108
+    "bank": 337,
+    "skat": 259,
+    "spare": 258,
+    "pris": 256,
+    "portefølje": 249,
+    "kort": 230,
+    "udbytte": 218,
+    "arbejde": 216,
+    "opsparing": 200,
+    "råd": 190,
+    "gæld": 174,
+    "fonde": 154,
+    "etf": 152,
+    "forbrug": 144,
+    "rente": 126,
+    "budget": 112,
+    "betaling": 108
   },
   "audience_statistics": {
-    "budgetbevidste": 515,
-    "studerende": 401,
-    "nybegynder_investering": 521,
-    "økonomi_nybegynder": 342,
-    "pensionister": 60,
-    "børnefamilier": 68
+    "studerende": 408,
+    "nybegynder_investering": 531,
+    "økonomi_nybegynder": 348,
+    "børnefamilier": 68,
+    "budgetbevidste": 525,
+    "pensionister": 60
   },
   "complexity_statistics": {
-    "begynder": 634,
-    "mellem": 69,
+    "begynder": 644,
+    "mellem": 70,
     "avanceret": 3
   },
   "tagged_files": [
@@ -44,6 +44,7 @@
     "data/tagged/tagged_moneypenny_blog_posts.json",
     "data/tagged/tagged_ungmedpenge_blog_posts.json",
     "data/tagged/tagged_nordnet_blog_posts.json",
-    "data/tagged/tagged_budgetnoerden_blog_posts.json"
+    "data/tagged/tagged_budgetnoerden_blog_posts.json",
+    "data/tagged/tagged_test_mitteldorf_10_articles.json"
   ]
 }

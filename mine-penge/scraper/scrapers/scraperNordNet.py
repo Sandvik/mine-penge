@@ -258,16 +258,17 @@ class NordnetBlogScraper:
                 categories.append(cat_element.get_text().strip())
         
         blog_post = {
-            'url': url,
             'title': title,
-            'summary': summary,
             'content': content,
+            'url': url,
+            'source': 'Nordnet',
+            'date_published': date_published or 'INGEN DATO FUNDET',
+            'scrape_date': datetime.now().isoformat(),
+            'last_updated': datetime.now().isoformat(),
+            'summary': summary,
             'author': author,
             'categories': categories,
-            'date_published': date_published,
-            'scraped_at': datetime.now().isoformat(),
             'word_count': len(content.split()),
-            'source': 'Nordnet Blog'
         }
         
         return blog_post

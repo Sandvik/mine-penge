@@ -67,6 +67,47 @@ Systemet scraper automatisk artikler fra 5 danske økonomiblogger:
 - **Ungmedpenge** - Investering for unge
 - **Mitteldorf** - FIRE, value investing og minimalisme
 
+## 📊 Artikel Sortering
+
+Artiklerne sorteres intelligent efter **publiceringsdato** med de nyeste først, og bruger en avanceret dato-udledning:
+
+### 🎯 **Sorteringslogik**
+
+1. **ISO Datoer** (f.eks. Moneypenny)
+   ```
+   "2020-08-05T10:36:00+00:00" → 5. august 2020
+   "2022-07-25T14:04:16+00:00" → 25. juli 2022
+   ```
+
+2. **Danske datoer med år** (f.eks. Mitteldorf)
+   ```
+   "5. juni 2024" → 5. juni 2024
+   "16. juli 2023" → 16. juli 2023
+   ```
+
+3. **Danske datoer uden år** (f.eks. Budget Nørden)
+   ```
+   "16. jun." → 16. juni 2023 (antages som gammel artikel)
+   "5. maj" → 5. maj 2023 (antages som gammel artikel)
+   ```
+
+4. **Fallback datoer**
+   ```
+   "INGEN DATO FUNDET" → scrape_date eller last_updated
+   Ingen dato → 1. januar 2020 (meget gammel)
+   ```
+
+### 🔄 **Sekundær sortering**
+Hvis to artikler har samme dato, sorteres de alfabetisk efter **kilde** for at give variation.
+
+### 📋 **Praktisk eksempel**
+1. **Nyeste artikel** fra Mitteldorf (5. juni 2024) → Først
+2. **Nyeste artikel** fra Moneypenny (25. juli 2022) → Andet  
+3. **Gammel artikel** fra Budget Nørden (16. juni 2023) → Tredje
+4. **Endnu ældre** fra Ung Med Penge (2021) → Fjerde
+
+Dette sikrer at brugerne altid ser de **nyeste og mest relevante artikler** først, uanset kilde.
+
 ### 🤖 Automatisk Klassificering
 
 Artikler klassificeres automatisk på:
