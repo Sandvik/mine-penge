@@ -5,6 +5,7 @@ En moderne React app der samler og kuraterer danske økonomi-artikler med Python
 ## 📚 Dokumentation
 
 Se [docs/](docs/) mappen for detaljeret dokumentation:
+- [Vision](docs/Vision.md) - Komplet vision for MinePenge.dk som Danmarks #1 finansielle rådgivningsplatform
 - [AI Chat System](docs/AI-CHAT-SYSTEM.md) - Komplet AI chat strategi og implementering
 - [SEO Checklist](docs/SEO_CHECKLIST.md)
 - [Scraper Guide](docs/scraper-guide.md)
