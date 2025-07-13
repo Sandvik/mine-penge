@@ -12,6 +12,7 @@ const ChatWidget = () => {
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
+  const [showInfoModal, setShowInfoModal] = useState(false);
   const messagesEndRef = useRef(null);
 
   // FAQ data fra alle kategorier
@@ -346,6 +347,94 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
+  // Info Modal Component
+  const InfoModal = () => {
+    if (!showInfoModal) return null;
+
+    return (
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div className="bg-white rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+          <div className="p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-bold text-gray-900">💡 Sådan bruger du MinePenge Assistenten</h2>
+              <button
+                onClick={() => setShowInfoModal(false)}
+                className="text-gray-400 hover:text-gray-600"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            
+            <div className="space-y-4">
+              <p className="text-gray-600">
+                Jeg kan hjælpe dig med spørgsmål om alle aspekter af din økonomi. Her er nogle eksempler på spørgsmål du kan stille:
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h3 className="font-semibold text-blue-900 mb-2">💰 Investering:</h3>
+                  <ul className="text-blue-800 space-y-1 text-sm">
+                    <li>• "Hvordan starter jeg med at investere?"</li>
+                    <li>• "Hvad er ASK?"</li>
+                    <li>• "Hvilke fonde skal jeg vælge?"</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-green-50 p-4 rounded-lg">
+                  <h3 className="font-semibold text-green-900 mb-2">🏠 Bolig & Hus:</h3>
+                  <ul className="text-green-800 space-y-1 text-sm">
+                    <li>• "Hvordan får jeg boliglån?"</li>
+                    <li>• "Hvor meget skal jeg spare op til bolig?"</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-purple-50 p-4 rounded-lg">
+                  <h3 className="font-semibold text-purple-900 mb-2">📊 Budget & Økonomi:</h3>
+                  <ul className="text-purple-800 space-y-1 text-sm">
+                    <li>• "Hvordan laver jeg et budget?"</li>
+                    <li>• "Hvor meget skal jeg spare op?"</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-yellow-50 p-4 rounded-lg">
+                  <h3 className="font-semibold text-yellow-900 mb-2">🎓 Studerende:</h3>
+                  <ul className="text-yellow-800 space-y-1 text-sm">
+                    <li>• "Hvordan får jeg styr på min økonomi som studerende?"</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-orange-50 p-4 rounded-lg">
+                  <h3 className="font-semibold text-orange-900 mb-2">👴 Pension:</h3>
+                  <ul className="text-orange-800 space-y-1 text-sm">
+                    <li>• "Hvor meget skal jeg spare op til pension?"</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-red-50 p-4 rounded-lg">
+                  <h3 className="font-semibold text-red-900 mb-2">💳 Gæld & Lån:</h3>
+                  <ul className="text-red-800 space-y-1 text-sm">
+                    <li>• "Hvordan kommer jeg ud af gæld?"</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <h3 className="font-semibold text-gray-900 mb-2">💡 Tips:</h3>
+                <ul className="text-gray-700 space-y-1 text-sm">
+                  <li>• Du kan spørge på mange måder - jeg forstår forskellige formuleringer</li>
+                  <li>• Hvis jeg ikke forstår dit spørgsmål, vil jeg foreslå relevante emner</li>
+                  <li>• Besøg vores FAQ side for endnu flere spørgsmål og svar</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   // If minimized, show only header
   if (isMinimized) {
     return (
@@ -376,98 +465,114 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
   }
 
   return (
-    <div className="fixed bottom-4 right-20 w-96 h-96 bg-white rounded-lg shadow-xl border border-gray-200 flex flex-col">
-      {/* Header */}
-      <div className="bg-blue-600 text-white p-4 rounded-t-lg">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-              <span className="text-blue-600 font-bold text-sm">💰</span>
+    <>
+      <div className="fixed bottom-4 right-20 w-96 h-96 bg-white rounded-lg shadow-xl border border-gray-200 flex flex-col">
+        {/* Header */}
+        <div className="bg-blue-600 text-white p-4 rounded-t-lg">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                <span className="text-blue-600 font-bold text-sm">💰</span>
+              </div>
+              <div>
+                <h3 className="font-semibold">MinePenge Assistent</h3>
+                <p className="text-xs opacity-90">Spørg om økonomi</p>
+              </div>
             </div>
-            <div>
-              <h3 className="font-semibold">MinePenge Assistent</h3>
-              <p className="text-xs opacity-90">Spørg om økonomi</p>
+            <div className="flex items-center space-x-2">
+              <button 
+                onClick={() => setShowInfoModal(true)}
+                className="text-white hover:text-gray-200 transition-colors p-1"
+                title="Hvordan bruger jeg assistenten?"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </button>
+              <button 
+                onClick={() => setIsMinimized(true)}
+                className="text-white hover:text-gray-200 transition-colors"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
             </div>
           </div>
-          <button 
-            onClick={() => setIsMinimized(true)}
-            className="text-white hover:text-gray-200 transition-colors"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
         </div>
-      </div>
 
-      {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
-        {messages.map((message) => (
-          <div
-            key={message.id}
-            className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-          >
+        {/* Messages */}
+        <div className="flex-1 overflow-y-auto p-4 space-y-4">
+          {messages.map((message) => (
             <div
-              className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
-                message.type === 'user'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 text-gray-800'
-              }`}
+              key={message.id}
+              className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
             >
-              <div className="whitespace-pre-wrap text-sm">{message.text}</div>
-              {message.relatedQuestion && (
-                <div className="mt-2 text-xs opacity-75">
-                  Relateret: {message.relatedQuestion}
+              <div
+                className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
+                  message.type === 'user'
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-100 text-gray-800'
+                }`}
+              >
+                <div className="whitespace-pre-wrap text-sm">{message.text}</div>
+                {message.relatedQuestion && (
+                  <div className="mt-2 text-xs opacity-75">
+                    Relateret: {message.relatedQuestion}
+                  </div>
+                )}
+                <div className="text-xs opacity-50 mt-1">
+                  {message.timestamp.toLocaleTimeString('da-DK', { 
+                    hour: '2-digit', 
+                    minute: '2-digit' 
+                  })}
                 </div>
-              )}
-              <div className="text-xs opacity-50 mt-1">
-                {message.timestamp.toLocaleTimeString('da-DK', { 
-                  hour: '2-digit', 
-                  minute: '2-digit' 
-                })}
               </div>
             </div>
-          </div>
-        ))}
-        
-        {isTyping && (
-          <div className="flex justify-start">
-            <div className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg">
-              <div className="flex space-x-1">
-                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
-                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+          ))}
+          
+          {isTyping && (
+            <div className="flex justify-start">
+              <div className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg">
+                <div className="flex space-x-1">
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+                </div>
               </div>
             </div>
-          </div>
-        )}
-        
-        <div ref={messagesEndRef} />
-      </div>
-
-      {/* Input */}
-      <form onSubmit={handleSubmit} className="p-4 border-t border-gray-200">
-        <div className="flex space-x-2">
-          <input
-            type="text"
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            placeholder="Skriv dit spørgsmål..."
-            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            disabled={isTyping}
-          />
-          <button
-            type="submit"
-            disabled={!inputValue.trim() || isTyping}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-            </svg>
-          </button>
+          )}
+          
+          <div ref={messagesEndRef} />
         </div>
-      </form>
-    </div>
+
+        {/* Input */}
+        <form onSubmit={handleSubmit} className="p-4 border-t border-gray-200">
+          <div className="flex space-x-2">
+            <input
+              type="text"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              placeholder="Skriv dit spørgsmål..."
+              className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              disabled={isTyping}
+            />
+            <button
+              type="submit"
+              disabled={!inputValue.trim() || isTyping}
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+      
+      {/* Info Modal */}
+      <InfoModal />
+    </>
   );
 };
 
