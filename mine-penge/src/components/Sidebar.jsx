@@ -113,13 +113,13 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles =
           </div>
           
           <div className="grid grid-cols-3 gap-2">
-            <button 
-              onClick={() => onTopicChange('Alle tags')}
+            <a 
+              href="/"
               className="bg-white rounded-md p-2 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
             >
               <BookOpen className="h-4 w-4 text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
               <span className="text-xs text-nordic-700 group-hover:text-orange-600 transition-colors">Alle artikler</span>
-            </button>
+            </a>
             
             <a 
               href="/student-investment-guide"

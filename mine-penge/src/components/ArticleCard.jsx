@@ -280,14 +280,7 @@ function ArticleCard({ article, selectedTag = null }) {
         </div>
       )}
 
-      {/* Article ID - Top right corner */}
-      {article_id && (
-        <div className="absolute top-2 right-2">
-          <span className="bg-nordic-100 text-nordic-600 text-xs font-mono px-2 py-1 rounded border border-nordic-200">
-            ID: {article_id}
-          </span>
-        </div>
-      )}
+
 
       {/* Header */}
               <div className="mb-5">

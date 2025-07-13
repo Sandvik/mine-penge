@@ -1,5 +1,5 @@
 {
-  "update_timestamp": "2025-07-08T05:55:06.223104",
+  "update_timestamp": "2025-07-13T17:45:43.493122",
   "scrapers_run": [
     "scraperMoneypenny.py",
     "scraperNordNet.py",
@@ -18,11 +18,11 @@
     },
     {
       "filename": "ungmedpenge_blog_posts.json",
-      "articles": 241
+      "articles": 242
     },
     {
       "filename": "nordnet_blog_posts.json",
-      "articles": 53
+      "articles": 52
     },
     {
       "filename": "budgetnoerden_blog_posts.json",

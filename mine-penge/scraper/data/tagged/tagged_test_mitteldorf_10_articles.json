@@ -2,7 +2,7 @@
   "metadata": {
     "original_file": "test_mitteldorf_10_articles.json",
     "total_articles": 10,
-    "tagged_at": "2025-07-08T05:55:06.190151",
+    "tagged_at": "2025-07-13T17:45:43.470978",
     "tag_categories_used": [
       "Bolig & Ejendom",
       "Investering & Aktier",
@@ -49,20 +49,19 @@
         "udbytte",
         "investering",
         "pris",
+        "fonde",
         "su",
         "bank",
-        "fonde",
         "danske aktier",
-        "gæld",
-        "skat"
+        "skat",
+        "kort"
       ],
       "tag_categories": [
-        "SU & Studerende",
-        "Forbrug",
-        "Investering & Aktier",
         "Skat & Fradrag",
-        "Gæld & Lån",
-        "Bank & Betaling"
+        "SU & Studerende",
+        "Bank & Betaling",
+        "Forbrug",
+        "Investering & Aktier"
       ],
       "confidence_scores": {
         "studerende": 0.57,
@@ -85,7 +84,7 @@
           "Fintech"
         ]
       },
-      "tagged_at": "2025-07-08T05:55:06.182810"
+      "tagged_at": "2025-07-13T17:45:43.464965"
     },
     {
       "article_id": "980be7c5b497",
@@ -100,27 +99,27 @@
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
-        "pris",
-        "investering",
-        "su",
-        "ældre",
-        "kort",
-        "renter",
-        "rente",
-        "job",
         "fonde",
-        "råd"
+        "renter",
+        "job",
+        "råd",
+        "investering",
+        "rente",
+        "su",
+        "pris",
+        "ældre",
+        "kort"
       ],
       "tag_categories": [
-        "Erhverv",
-        "Rådgivning",
-        "SU & Studerende",
-        "Rente",
-        "Forbrug",
         "Investering & Aktier",
         "Pensionist",
+        "Rådgivning",
+        "SU & Studerende",
+        "Erhverv",
         "Gæld & Lån",
-        "Bank & Betaling"
+        "Bank & Betaling",
+        "Forbrug",
+        "Rente"
       ],
       "confidence_scores": {
         "studerende": 0.57,
@@ -144,7 +143,7 @@
           "Fintech"
         ]
       },
-      "tagged_at": "2025-07-08T05:55:06.183797"
+      "tagged_at": "2025-07-13T17:45:43.465730"
     },
     {
       "article_id": "dbbef779dd4f",
@@ -165,19 +164,18 @@
         "opsparing",
         "su",
         "aktier",
-        "etf",
+        "fonde",
         "skat",
-        "arbejde",
-        "fonde"
+        "etf",
+        "opsparingskonto"
       ],
       "tag_categories": [
-        "Erhverv",
-        "SU & Studerende",
-        "Opsparing",
         "Investering & Aktier",
         "Skat & Fradrag",
-        "Rente",
-        "Gæld & Lån"
+        "Opsparing",
+        "SU & Studerende",
+        "Gæld & Lån",
+        "Rente"
       ],
       "confidence_scores": {
         "studerende": 0.57,
@@ -200,7 +198,7 @@
           "Fintech"
         ]
       },
-      "tagged_at": "2025-07-08T05:55:06.184612"
+      "tagged_at": "2025-07-13T17:45:43.466384"
     },
     {
       "article_id": "799b472e8ae0",
@@ -218,21 +216,21 @@
         "udbytte",
         "investering",
         "portefølje",
-        "bank",
         "aktier",
+        "bank",
         "job",
-        "pension",
-        "skat",
         "indkomst",
+        "skat",
+        "pension",
         "pris"
       ],
       "tag_categories": [
+        "Skat & Fradrag",
         "Erhverv",
+        "Bank & Betaling",
         "Pension",
         "Forbrug",
-        "Investering & Aktier",
-        "Skat & Fradrag",
-        "Bank & Betaling"
+        "Investering & Aktier"
       ],
       "confidence_scores": {
         "studerende": 0.86,
@@ -257,7 +255,7 @@
           "Fintech"
         ]
       },
-      "tagged_at": "2025-07-08T05:55:06.185692"
+      "tagged_at": "2025-07-13T17:45:43.467323"
     },
     {
       "article_id": "170c9cbdffb6",
@@ -272,23 +270,23 @@
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
-        "pris",
+        "råd",
         "investering",
         "su",
-        "gæld",
-        "bank",
-        "kort",
         "aktier",
         "udbytte",
-        "råd"
+        "pris",
+        "kort",
+        "bank",
+        "gæld"
       ],
       "tag_categories": [
         "Rådgivning",
         "SU & Studerende",
-        "Forbrug",
-        "Investering & Aktier",
         "Gæld & Lån",
-        "Bank & Betaling"
+        "Bank & Betaling",
+        "Forbrug",
+        "Investering & Aktier"
       ],
       "confidence_scores": {
         "studerende": 0.29,
@@ -311,7 +309,7 @@
           "Fintech"
         ]
       },
-      "tagged_at": "2025-07-08T05:55:06.186552"
+      "tagged_at": "2025-07-13T17:45:43.467919"
     },
     {
       "article_id": "c412ac81cfb9",
@@ -326,25 +324,25 @@
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
-        "pris",
+        "råd",
         "investering",
         "su",
-        "gæld",
-        "arbejde",
-        "kort",
         "aktier",
+        "arbejde",
         "forbrug",
+        "pris",
+        "kort",
         "guide",
-        "råd"
+        "gæld"
       ],
       "tag_categories": [
-        "Erhverv",
         "Rådgivning",
         "SU & Studerende",
-        "Forbrug",
-        "Investering & Aktier",
+        "Erhverv",
         "Gæld & Lån",
-        "Bank & Betaling"
+        "Bank & Betaling",
+        "Forbrug",
+        "Investering & Aktier"
       ],
       "confidence_scores": {
         "studerende": 0.29,
@@ -368,7 +366,7 @@
           "Boganmeldelser"
         ]
       },
-      "tagged_at": "2025-07-08T05:55:06.187207"
+      "tagged_at": "2025-07-13T17:45:43.468473"
     },
     {
       "article_id": "03ec22198e5f",
@@ -389,19 +387,18 @@
         "arbejde",
         "opsparing",
         "bank",
-        "portefølje",
         "gæld",
-        "pris",
-        "pension"
+        "portefølje",
+        "job",
+        "su"
       ],
       "tag_categories": [
-        "Erhverv",
-        "Pension",
-        "Forbrug",
         "Opsparing",
-        "Investering & Aktier",
+        "SU & Studerende",
+        "Erhverv",
         "Gæld & Lån",
-        "Bank & Betaling"
+        "Bank & Betaling",
+        "Investering & Aktier"
       ],
       "confidence_scores": {
         "studerende": 0.86,
@@ -425,7 +422,7 @@
           "Fintech"
         ]
       },
-      "tagged_at": "2025-07-08T05:55:06.188276"
+      "tagged_at": "2025-07-13T17:45:43.469405"
     },
     {
       "article_id": "56d31a28dd7b",
@@ -440,24 +437,24 @@
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
-        "pris",
         "investering",
         "su",
-        "kort",
         "aktier",
         "udbytte",
+        "pris",
+        "kort",
+        "råvarer",
         "guide",
-        "spare",
-        "råvarer"
+        "spare"
       ],
       "tag_categories": [
         "Rådgivning",
-        "SU & Studerende",
-        "Krypto",
-        "Forbrug",
         "Opsparing",
+        "SU & Studerende",
+        "Bank & Betaling",
+        "Forbrug",
         "Investering & Aktier",
-        "Bank & Betaling"
+        "Krypto"
       ],
       "confidence_scores": {
         "studerende": 0.57,
@@ -478,7 +475,7 @@
           "Boganmeldelser"
         ]
       },
-      "tagged_at": "2025-07-08T05:55:06.188694"
+      "tagged_at": "2025-07-13T17:45:43.469742"
     },
     {
       "article_id": "3aff66366313",
@@ -494,23 +491,24 @@
       "complexity_level": "begynder",
       "minepenge_tags": [
         "investering",
-        "arbejde",
         "opsparing",
+        "arbejde",
         "kort",
-        "etf",
-        "su",
-        "skat",
-        "aktier",
         "fonde",
-        "spare"
+        "skat",
+        "råd",
+        "su",
+        "aktier",
+        "etf"
       ],
       "tag_categories": [
-        "Erhverv",
-        "SU & Studerende",
-        "Opsparing",
-        "Investering & Aktier",
         "Skat & Fradrag",
-        "Bank & Betaling"
+        "Rådgivning",
+        "Opsparing",
+        "SU & Studerende",
+        "Erhverv",
+        "Bank & Betaling",
+        "Investering & Aktier"
       ],
       "confidence_scores": {
         "studerende": 0.86,
@@ -535,7 +533,7 @@
           "Fintech"
         ]
       },
-      "tagged_at": "2025-07-08T05:55:06.189525"
+      "tagged_at": "2025-07-13T17:45:43.470433"
     },
     {
       "article_id": "bf5c21591ed0",
@@ -550,23 +548,23 @@
       ],
       "complexity_level": "begynder",
       "minepenge_tags": [
-        "pris",
+        "studerende",
+        "løn",
+        "råd",
         "investering",
         "su",
-        "universitet",
-        "løn",
         "arbejde",
+        "pris",
         "kort",
-        "studerende",
-        "råd"
+        "universitet"
       ],
       "tag_categories": [
-        "Erhverv",
         "Rådgivning",
         "SU & Studerende",
+        "Erhverv",
+        "Bank & Betaling",
         "Forbrug",
-        "Investering & Aktier",
-        "Bank & Betaling"
+        "Investering & Aktier"
       ],
       "confidence_scores": {
         "studerende": 0.86,
@@ -588,7 +586,7 @@
           "Boganmeldelser"
         ]
       },
-      "tagged_at": "2025-07-08T05:55:06.190149"
+      "tagged_at": "2025-07-13T17:45:43.470976"
     }
   ]
 }
