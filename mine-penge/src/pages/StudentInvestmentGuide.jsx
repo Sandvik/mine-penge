@@ -18,6 +18,52 @@ const StudentInvestmentGuide = () => {
     { id: 'quiz', label: 'Quiz', icon: Brain }
   ];
 
+  // SEO data
+  const seoData = {
+    title: 'Studerende og Investering - Kom Godt i Gang | MinePenge.nu',
+    description: 'Lær at investere som studerende i Danmark. Gratis beregner, budget template og guide til at starte din investeringsrejse med små beløb.',
+    keywords: 'studerende investering, investering for unge, nordnet studerende, saxo bank studerende, etf studerende, månedsopsparing',
+    url: '/student-investment-guide',
+    type: 'article',
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Hvordan investerer jeg som studerende?",
+      "description": "Komplet guide til investering for studerende i Danmark med praktiske værktøjer og tips",
+      "image": "https://minepenge.nu/student-investment-guide.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "MinePenge.nu"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "MinePenge.nu"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Forstå hvorfor du skal investere",
+          "text": "Som studerende har du tid på din side. Selv små beløb kan vokse betydeligt over tid."
+        },
+        {
+          "@type": "HowToStep", 
+          "name": "Beregn hvor meget du kan investere",
+          "text": "Brug 50/30/20 reglen: 50% nødvendige udgifter, 30% ønsker, 20% opsparing/investering"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Vælg en platform",
+          "text": "Nordnet, Saxo Bank, Lunar eller Danske Bank - afhængigt af dine behov"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Start med ETF'er",
+          "text": "Begynd med brede ETF'er som Sparindex INDEX Globale Aktier KL"
+        }
+      ]
+    }
+  };
+
   const renderContent = () => {
     switch (activeTab) {
       case 'calculator':
@@ -356,11 +402,7 @@ const StudentInvestmentGuide = () => {
 
   return (
     <>
-      <SEOHead 
-        title="Studerende og Investering - Kom Godt i Gang | MinePenge.nu"
-        description="En komplet guide til at starte din investeringsrejse som studerende i Danmark. Lær om platforms, strategier og få praktiske værktøjer."
-        keywords="studerende investering, investering for begyndere, danske aktier, ETF, Nordnet, Saxo Bank, ASK"
-      />
+      <SEOHead {...seoData} />
       
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-8">

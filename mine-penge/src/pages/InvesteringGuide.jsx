@@ -1,12 +1,59 @@
 import React, { useState } from 'react';
-import { ArrowLeft, TrendingUp, Calculator, PieChart, Brain, Download, BookOpen, Target, DollarSign, BarChart3 } from 'lucide-react';
+import { ArrowLeft, TrendingUp, Calculator, PieChart, Brain, Download, BookOpen, Target, DollarSign, BarChart3, Home, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import InvestmentCalculator from '../components/InvestmentCalculator';
 import PortfolioBalance from '../components/PortfolioBalance';
 import InvestmentQuiz from '../components/InvestmentQuiz';
-import Breadcrumbs from '../components/Breadcrumbs';
+import SEOHead from '../components/SEOHead';
 
 const InvesteringGuide = () => {
   const [activeTab, setActiveTab] = useState('artikler');
+
+  // SEO data
+  const seoData = {
+    title: 'Investering Guide - Komplet Guide til Investering | MinePenge.nu',
+    description: 'Lær alt om investering i Danmark. Gratis guides, beregnere og værktøjer til at starte din investeringsrejse. ASK, ETF, aktier og mere.',
+    keywords: 'investering danmark, aktiesparekonto, etf investering, nordnet, saxo bank, aktier danmark, investering for begyndere',
+    url: '/investering-guide',
+    type: 'article',
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Hvordan investerer jeg i Danmark?",
+      "description": "Komplet guide til investering i Danmark med praktiske værktøjer og tips",
+      "image": "https://minepenge.nu/investering-guide.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "MinePenge.nu"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "MinePenge.nu"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Forstå grundlæggende principper",
+          "text": "Lær om risiko, afkast og tidshorisont før du starter"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Opret aktiesparekonto",
+          "text": "Udnyt 17% skat på ASK i stedet for 27-42%"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Vælg platform",
+          "text": "Nordnet, Saxo Bank eller din egen bank"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Start med ETF'er",
+          "text": "Begynd med brede indeksfonde for diversificering"
+        }
+      ]
+    }
+  };
 
   const originalArticles = [
     {
@@ -307,14 +354,42 @@ const InvesteringGuide = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        {/* Breadcrumbs */}
-        <Breadcrumbs currentPage="Investering Guide" />
+    <>
+      <SEOHead {...seoData} />
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-8">
+          {/* Navigation Header */}
+          <div className="mb-6">
+            {/* Breadcrumb */}
+            <div className="flex items-center gap-2 text-sm text-gray-600 mb-4">
+              <Link to="/" className="hover:text-blue-600 transition-colors">
+                Forside
+              </Link>
+              <span>/</span>
+              <span className="text-gray-800 font-medium">Investering Guide</span>
+            </div>
+            
+            <div className="flex items-center justify-end">
+              <Link 
+                to="/" 
+                className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
+              >
+                <Home className="w-4 h-4" />
+                Forside
+              </Link>
+            </div>
+          </div>
 
-        {/* Header */}
-        <div className="mb-8">
-        </div>
+          {/* Page Header */}
+          <div className="text-center mb-8">
+            <h1 className="text-3xl font-bold text-gray-800 mb-4">
+              Investering Guide
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Alt du skal vide om investering - fra grundlæggende principper til avancerede strategier
+            </p>
+          </div>
 
         {/* Tab Navigation */}
         <div className="bg-white rounded-lg shadow-lg p-2 mb-8">
@@ -354,25 +429,26 @@ const InvesteringGuide = () => {
               Vores guides og værktøjer hjælper dig med at tage informerede beslutninger om din økonomiske fremtid.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
               >
                 <BookOpen className="w-5 h-5" />
                 Se alle artikler
-              </a>
-              <a
-                href="/kontakt"
+              </Link>
+              <Link
+                to="/kontakt"
                 className="flex items-center gap-2 bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
               >
                 <Target className="w-5 h-5" />
                 Kontakt os
-              </a>
+              </Link>
             </div>
           </div>
         )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

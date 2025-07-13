@@ -119,18 +119,7 @@ function SEODashboard() {
               </button>
             </form>
 
-            {/* Demo credentials */}
-            <div className="mt-6 p-4 bg-nordic-50 rounded-lg">
-              <p className="text-xs text-nordic-600 mb-2">
-                <strong>Demo credentials:</strong>
-              </p>
-              <p className="text-xs text-nordic-500">
-                Brugernavn: <code className="bg-white px-1 rounded">admin</code>
-              </p>
-              <p className="text-xs text-nordic-500">
-                Adgangskode: <code className="bg-white px-1 rounded">password</code>
-              </p>
-            </div>
+
 
             {/* Back to home */}
             <div className="mt-6 text-center">

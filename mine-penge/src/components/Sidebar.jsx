@@ -1,5 +1,5 @@
-import React, { useState, useMemo, useEffect } from 'react';
-import { Tag, Search, ChevronDown, ChevronUp, Clock, TrendingUp, Star, Zap, Eye, BookOpen, Filter } from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import { Tag, Search, ChevronDown, ChevronUp, TrendingUp, Star, Zap, BookOpen, Filter } from 'lucide-react';
 
 function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles = [] }) {
   const [searchTerm, setSearchTerm] = useState('');
@@ -10,8 +10,7 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles =
     'Niveau': false,
     'Andre': false
   });
-  const [recentActivity, setRecentActivity] = useState([]);
-  const [viewedArticles, setViewedArticles] = useState([]);
+
 
   // Kategoriser tags automatisk baseret på tag-navne
   const categorizedTags = useMemo(() => {
@@ -159,97 +158,7 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles =
           </div>
         </div>
 
-        {/* Seneste artikler */}
-        <div className="bg-gradient-to-br from-blue-50 to-nordic-50 rounded-lg p-4 mb-4 shadow-sm border border-blue-100">
-          <div className="flex items-center mb-3">
-            <Clock className="h-4 w-4 text-blue-600 mr-2" />
-            <h3 className="text-base lg:text-lg font-semibold text-nordic-900">Seneste artikler</h3>
-          </div>
-          
-          <div className="space-y-2">
-            {articles.slice(0, 3).map((article, index) => (
-              <div key={article.article_id || index} className="bg-white rounded-md p-2 border border-blue-100 hover:border-blue-200 transition-colors">
-                <a 
-                  href={article.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="block group"
-                >
-                  <h4 className="text-xs font-medium text-nordic-900 group-hover:text-blue-600 transition-colors line-clamp-2">
-                    {article.title}
-                  </h4>
-                  <div className="flex items-center justify-between mt-1">
-                    <span className="text-xs text-nordic-600">{article.source}</span>
-                    <span className="text-xs text-nordic-500">
-                      {(() => {
-                        const date = new Date(article.published_date || article.scraped_date);
-                        return isNaN(date.getTime()) ? new Date().toLocaleDateString('da-DK') : date.toLocaleDateString('da-DK');
-                      })()}
-                    </span>
-                  </div>
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
 
-        {/* Personalized Recommendations */}
-        <div className="bg-gradient-to-br from-green-50 to-nordic-50 rounded-lg p-4 mb-4 shadow-sm border border-green-100">
-          <div className="flex items-center mb-3">
-            <Star className="h-4 w-4 text-green-600 mr-2" />
-            <h3 className="text-base lg:text-lg font-semibold text-nordic-900">Anbefalinger</h3>
-          </div>
-          
-          <div className="space-y-2">
-            {articles
-              .filter(article => article.relevance_score && article.relevance_score > 3.5)
-              .slice(0, 2)
-              .map((article, index) => (
-                <div key={article.article_id || index} className="bg-white rounded-md p-2 border border-green-100 hover:border-green-200 transition-colors">
-                  <a 
-                    href={article.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="block group"
-                  >
-                    <div className="flex items-center justify-between mb-1">
-                      <h4 className="text-xs font-medium text-nordic-900 group-hover:text-green-600 transition-colors line-clamp-1">
-                        {article.title}
-                      </h4>
-                      <span className="text-xs bg-green-100 text-green-700 px-1.5 py-0.5 rounded">
-                        {article.relevance_score?.toFixed(1)}
-                      </span>
-                    </div>
-                    <span className="text-xs text-nordic-600">{article.source}</span>
-                  </a>
-                </div>
-              ))}
-          </div>
-        </div>
-
-        {/* Recent Activity */}
-        <div className="bg-gradient-to-br from-purple-50 to-nordic-50 rounded-lg p-4 mb-4 shadow-sm border border-purple-100">
-          <div className="flex items-center mb-3">
-            <Eye className="h-4 w-4 text-purple-600 mr-2" />
-            <h3 className="text-base lg:text-lg font-semibold text-nordic-900">Seneste aktivitet</h3>
-          </div>
-          
-          <div className="space-y-2">
-            {articles.slice(0, 2).map((article, index) => (
-              <div key={article.article_id || index} className="bg-white rounded-md p-2 border border-purple-100 hover:border-purple-200 transition-colors">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-nordic-700">Søgte efter</span>
-                  <span className="text-xs text-purple-600 font-medium">
-                    {article.minepenge_tags?.[0] || 'Økonomi'}
-                  </span>
-                </div>
-                <div className="text-xs text-nordic-500 mt-1">
-                  {new Date().toLocaleDateString('da-DK')}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
 
         <h2 className="text-base lg:text-lg font-semibold text-nordic-900 mb-3 lg:mb-4 flex items-center">
           <Tag className="h-4 w-4 lg:h-5 lg:w-5 mr-2 text-primary-600" />

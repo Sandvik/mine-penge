@@ -1,12 +1,59 @@
 import React, { useState } from 'react';
-import { ArrowLeft, Home, Calculator, BarChart3, Brain, Download, BookOpen, Target, DollarSign, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Home, Calculator, BarChart3, Brain, Download, BookOpen, Target, DollarSign, TrendingUp, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import MortgageCalculator from '../components/MortgageCalculator';
 import PropertyComparison from '../components/PropertyComparison';
 import HousingQuiz from '../components/HousingQuiz';
-import Breadcrumbs from '../components/Breadcrumbs';
+import SEOHead from '../components/SEOHead';
 
 const BoligHusGuide = () => {
   const [activeTab, setActiveTab] = useState('artikler');
+
+  // SEO data
+  const seoData = {
+    title: 'Bolig & Hus Guide - Komplet Guide til Boligkøb | MinePenge.nu',
+    description: 'Lær alt om boligkøb i Danmark. Gratis guides, beregnere og værktøjer til boliglån, udbetaling, skatter og købsprocessen.',
+    keywords: 'boligkøb danmark, boliglån, udbetaling bolig, ejendomsskat, boligkøbsprocessen, fastforrentet lån, variabel rente',
+    url: '/bolig-hus-guide',
+    type: 'article',
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Hvordan køber jeg bolig i Danmark?",
+      "description": "Komplet guide til boligkøb i Danmark med praktiske værktøjer og tips",
+      "image": "https://minepenge.nu/bolig-hus-guide.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "MinePenge.nu"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "MinePenge.nu"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Spare op til udbetaling",
+          "text": "Du skal have mindst 20% af boligprisen sparet op"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Få lånebevis",
+          "text": "Få bekræftet fra banken hvor meget du kan låne"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Find bolig",
+          "text": "Søg efter boliger der passer til dit budget og ønsker"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Køb bolig",
+          "text": "Gennemfør købsprocessen med advokat og bank"
+        }
+      ]
+    }
+  };
 
   const originalArticles = [
     {
@@ -379,14 +426,42 @@ const BoligHusGuide = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        {/* Breadcrumbs */}
-        <Breadcrumbs currentPage="Bolig Guide" />
+    <>
+      <SEOHead {...seoData} />
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-8">
+          {/* Navigation Header */}
+          <div className="mb-6">
+            {/* Breadcrumb */}
+            <div className="flex items-center gap-2 text-sm text-gray-600 mb-4">
+              <Link to="/" className="hover:text-green-600 transition-colors">
+                Forside
+              </Link>
+              <span>/</span>
+              <span className="text-gray-800 font-medium">Bolig & Hus Guide</span>
+            </div>
+            
+            <div className="flex items-center justify-end">
+              <Link 
+                to="/" 
+                className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors"
+              >
+                <Home className="w-4 h-4" />
+                Forside
+              </Link>
+            </div>
+          </div>
 
-        {/* Header */}
-        <div className="mb-8">
-        </div>
+          {/* Page Header */}
+          <div className="text-center mb-8">
+            <h1 className="text-3xl font-bold text-gray-800 mb-4">
+              Bolig & Hus Guide
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Alt du skal vide om boligkøb i Danmark - fra første opsparing til nøgle i hånden
+            </p>
+          </div>
 
         {/* Tab Navigation */}
         <div className="bg-white rounded-lg shadow-lg p-2 mb-8">
@@ -426,25 +501,26 @@ const BoligHusGuide = () => {
               Vores guides og værktøjer hjælper dig med at tage informerede beslutninger om dit boligkøb.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
               >
                 <BookOpen className="w-5 h-5" />
                 Se alle artikler
-              </a>
-              <a
-                href="/kontakt"
+              </Link>
+              <Link
+                to="/kontakt"
                 className="flex items-center gap-2 bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
               >
                 <Target className="w-5 h-5" />
                 Kontakt os
-              </a>
+              </Link>
             </div>
           </div>
         )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

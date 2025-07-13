@@ -19,6 +19,52 @@ const FamilyFinanceGuide = () => {
     { id: 'quiz', label: 'Quiz', icon: Brain }
   ];
 
+  // SEO data
+  const seoData = {
+    title: 'Børne familie og Økonomi - Komplet Guide | MinePenge.nu',
+    description: 'Lær om familieøkonomi, børneopsparing, forsikringer og budgetplanlægning for familier med børn i Danmark. Gratis værktøjer og beregnere.',
+    keywords: 'familieøkonomi, børneopsparing, familie budget, forsikringer familier, børnepasning udgifter, skattefordele børn',
+    url: '/family-finance-guide',
+    type: 'article',
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Hvordan planlægger jeg familieøkonomi?",
+      "description": "Komplet guide til økonomisk planlægning for familier med børn i Danmark",
+      "image": "https://minepenge.nu/family-finance-guide.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "MinePenge.nu"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "MinePenge.nu"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Forstå familieøkonomi",
+          "text": "Som familie har du ansvar for både nuværende og fremtidige behov"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Opret børneopsparing",
+          "text": "Udnyt Danmarks bedste skattefordel med børneopsparing"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Planlæg familiebudget",
+          "text": "Brug 50/30/20 reglen tilpasset familiens behov"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Sikre forsikringer",
+          "text": "Sørg for at hele familien er dækket med de rigtige forsikringer"
+        }
+      ]
+    }
+  };
+
   const renderContent = () => {
     switch (activeTab) {
       case 'calculator':
@@ -418,11 +464,7 @@ const FamilyFinanceGuide = () => {
 
   return (
     <>
-      <SEOHead 
-        title="Børne familie og Økonomi - Komplet Guide | MinePenge.nu"
-        description="En komplet guide til økonomisk planlægning for familier med børn i Danmark. Lær om børneopsparing, budget og forsikringer."
-        keywords="børne familie økonomi, børneopsparing, familie budget, forsikringer, børnepasning, skattefordel"
-      />
+      <SEOHead {...seoData} />
       
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-8">
