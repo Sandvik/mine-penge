@@ -13,8 +13,9 @@ const ChatWidget = () => {
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef(null);
 
-  // FAQ data - vi importerer senere fra FAQ komponenten
+  // FAQ data fra alle kategorier
   const faqData = [
+    // 💰 Investering
     {
       id: 'investering-1',
       question: 'Hvordan starter jeg med at investere som begynder?',
@@ -26,7 +27,8 @@ const ChatWidget = () => {
 4️⃣ Tålmodighed - Investering er langsigtet
 
 💡 Tip: Du behøver ikke være ekspert for at starte. Månedsopsparing er perfekt til begyndere!`,
-      tags: ['starte', 'begynde', 'komme i gang', 'første gang', 'nybegynder', 'investering']
+      tags: ['starte', 'begynde', 'komme i gang', 'første gang', 'nybegynder', 'investering'],
+      category: 'investering'
     },
     {
       id: 'investering-4',
@@ -45,7 +47,8 @@ const ChatWidget = () => {
 4. Betal kun 17% skat
 
 🎯 Velegnet til langsigtet investering i f.eks. Sparindex Globale Aktier.`,
-      tags: ['ASK', 'aktiesparekonto', 'skat', 'skattefordel', '17%']
+      tags: ['ASK', 'aktiesparekonto', 'skat', 'skattefordel', '17%'],
+      category: 'investering'
     },
     {
       id: 'investering-5',
@@ -68,7 +71,188 @@ const ChatWidget = () => {
    - 10-20% af din portefølje
 
 💡 Start med: 100% Sparindex INDEX Globale Aktier, og tilføj andre senere.`,
-      tags: ['fonde', 'sparindex', 'begynder', 'vælg', 'hvilke']
+      tags: ['fonde', 'sparindex', 'begynder', 'vælg', 'hvilke'],
+      category: 'investering'
+    },
+    // 🏠 Bolig & Hus
+    {
+      id: 'bolig-1',
+      question: 'Hvordan får jeg boliglån?',
+      answer: `Sådan får du boliglån:
+
+1️⃣ Spar op til udbetaling
+   - Minimum 20% af boligprisen
+   - Jo mere, jo bedre lånevilkår
+
+2️⃣ Få styr på din økonomi
+   - Ingen højforrentet gæld
+   - Stabil indkomst
+   - God kreditvurdering
+
+3️⃣ Få lånebevis
+   - 6 måneder før køb
+   - Sammenlign banker
+   - Forhandl om renter
+
+4️⃣ Find bolig og køb
+   - Maksimum 4x din årsindkomst
+   - Husk ejerudgifter
+
+💡 Tip: Start med at spare op og få lånebevis, før du begynder at kigge på boliger.`,
+      tags: ['boliglån', 'udbetaling', 'lånebevis', 'bolig', 'hus', 'køb'],
+      category: 'bolig'
+    },
+    {
+      id: 'bolig-2',
+      question: 'Hvor meget skal jeg spare op til bolig?',
+      answer: `Minimum 20% af boligprisen:
+
+🏠 Eksempler:
+- Bolig til 2 mio = 400.000 kr
+- Bolig til 3 mio = 600.000 kr
+- Bolig til 4 mio = 800.000 kr
+
+💰 Hvor meget skal du spare op:
+- 2 mio bolig: 16.700 kr/måned i 2 år
+- 3 mio bolig: 25.000 kr/måned i 2 år
+- 4 mio bolig: 33.300 kr/måned i 2 år
+
+💡 Jo mere du sparer op, jo:
+- Lavere månedlig ydelse
+- Bedre lånevilkår
+- Mindre risiko
+
+🎯 Start tidligt - Jo før du begynder at spare, jo lettere bliver det!`,
+      tags: ['spareop', 'udbetaling', 'bolig', 'hus', 'beløb'],
+      category: 'bolig'
+    },
+    // 📊 Budget & Økonomi
+    {
+      id: 'budget-1',
+      question: 'Hvordan laver jeg et budget?',
+      answer: `Sådan laver du et budget:
+
+1️⃣ Få overblik over indkomst
+   - Løn, SU, andre indtægter
+   - Skriv alt ned
+
+2️⃣ Kategoriser udgifter
+   - Faste udgifter (husleje, el, internet)
+   - Variable udgifter (mad, transport, underholdning)
+   - Uventede udgifter (forsikring, vedligeholdelse)
+
+3️⃣ 50/30/20 reglen:
+   - 50% til nødvendigheder
+   - 30% til ønsker
+   - 20% til opsparing
+
+4️⃣ Brug en app eller Excel
+   - Track dine udgifter
+   - Juster løbende
+
+💡 Start simpelt og bliv bedre over tid!`,
+      tags: ['budget', 'økonomi', 'udgifter', 'indkomst', 'planlægning'],
+      category: 'budget'
+    },
+    {
+      id: 'budget-2',
+      question: 'Hvor meget skal jeg spare op?',
+      answer: `Generelle retningslinjer for opsparing:
+
+💰 Nødopsparing: 3-6 måneders udgifter
+- Hvis du bruger 10.000 kr/måned = 30.000-60.000 kr
+
+🎯 Målbaseret opsparing:
+- Bolig: 20% af boligprisen
+- Pension: 10-15% af indkomst
+- Ferie: 5-10% af indkomst
+- Børn: 5-10% af indkomst
+
+📊 50/30/20 reglen:
+- 50% til nødvendigheder
+- 30% til ønsker
+- 20% til opsparing
+
+💡 Start med nødopsparing, derefter målbaseret opsparing.`,
+      tags: ['spareop', 'nødopsparing', 'mål', 'beløb', 'regler'],
+      category: 'budget'
+    },
+    // 🎓 Studerende
+    {
+      id: 'studerende-1',
+      question: 'Hvordan får jeg styr på min økonomi som studerende?',
+      answer: `Økonomi for studerende:
+
+💰 Indtægter:
+- SU: 6.397 kr/måned (2024)
+- Studiejob: 1.000-3.000 kr/måned
+- Forældrebidrag: Varierer
+
+📊 Typiske udgifter:
+- Husleje: 3.000-6.000 kr/måned
+- Mad: 1.500-2.500 kr/måned
+- Transport: 300-800 kr/måned
+- Underholdning: 500-1.000 kr/måned
+
+💡 Tips:
+- Lav et budget
+- Brug SU-lån kun til nødvendigheder
+- Find billige alternativer
+- Del udgifter med roommates
+
+🎯 Mål: Spar 500-1.000 kr/måned til nødopsparing.`,
+      tags: ['studerende', 'SU', 'budget', 'økonomi', 'husleje'],
+      category: 'studerende'
+    },
+    // 👴 Pension
+    {
+      id: 'pension-1',
+      question: 'Hvor meget skal jeg spare op til pension?',
+      answer: `Pensionsopsparing:
+
+💰 Generel regel: 10-15% af din indkomst
+- Hvis du tjener 30.000 kr/måned = 3.000-4.500 kr/måned
+
+📊 Sådan fordeler du det:
+- Arbejdsgiverpension: 8-12% (automatisk)
+- Privat pension: 2-3% (frivilligt)
+- Frie midler: 0-5% (fleksibelt)
+
+🎯 Mål: 70% af din nuværende indkomst som pensionist
+- Hvis du tjener 30.000 kr nu = 21.000 kr som pensionist
+
+💡 Start tidligt - renters rente gør en kæmpe forskel!`,
+      tags: ['pension', 'opsparing', 'arbejdsgiverpension', 'privat pension', 'beløb'],
+      category: 'pension'
+    },
+    // 💳 Gæld & Lån
+    {
+      id: 'gæld-1',
+      question: 'Hvordan kommer jeg ud af gæld?',
+      answer: `Sådan kommer du ud af gæld:
+
+1️⃣ Få overblik
+   - Skriv alle gæld op
+   - Noter renter og gebyrer
+   - Prioriter efter rente (højest først)
+
+2️⃣ Lav en plan
+   - Sælg unødvendige ting
+   - Find ekstra indtægter
+   - Skær ned på udgifter
+
+3️⃣ Vælg strategi
+   - Snowball: Mindste gæld først (motivation)
+   - Avalanche: Højeste rente først (sparer penge)
+
+4️⃣ Hold fast
+   - Betal altid minimum
+   - Brug ekstra penge til gæld
+   - Undgå ny gæld
+
+💡 Fokuser på én gæld ad gangen - det giver resultater!`,
+      tags: ['gæld', 'lån', 'afbetaling', 'strategi', 'plan'],
+      category: 'gæld'
     }
   ];
 
@@ -124,9 +308,27 @@ const ChatWidget = () => {
           type: 'bot',
           text: `Jeg forstår ikke helt dit spørgsmål. Kan du prøve at spørge om:
 
+💰 Investering:
 • Hvordan starter jeg med at investere?
 • Hvad er ASK?
 • Hvilke fonde skal jeg vælge?
+
+🏠 Bolig & Hus:
+• Hvordan får jeg boliglån?
+• Hvor meget skal jeg spare op til bolig?
+
+📊 Budget & Økonomi:
+• Hvordan laver jeg et budget?
+• Hvor meget skal jeg spare op?
+
+🎓 Studerende:
+• Hvordan får jeg styr på min økonomi som studerende?
+
+👴 Pension:
+• Hvor meget skal jeg spare op til pension?
+
+💳 Gæld & Lån:
+• Hvordan kommer jeg ud af gæld?
 
 Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
           timestamp: new Date()

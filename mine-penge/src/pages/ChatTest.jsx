@@ -32,13 +32,48 @@ const ChatTest = () => {
               
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
                 <h3 className="font-semibold text-blue-900 mb-2">💡 Test disse spørgsmål:</h3>
-                <ul className="text-blue-800 space-y-1">
-                  <li>• "Hvordan starter jeg med at investere?"</li>
-                  <li>• "Hvad er ASK?"</li>
-                  <li>• "Hvilke fonde skal jeg vælge?"</li>
-                  <li>• "Jeg vil gerne begynde at investere"</li>
-                  <li>• "Kan du hjælpe mig med at starte?"</li>
-                </ul>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <h4 className="font-medium text-blue-900 mb-2">💰 Investering:</h4>
+                    <ul className="text-blue-800 space-y-1 text-sm">
+                      <li>• "Hvordan starter jeg med at investere?"</li>
+                      <li>• "Hvad er ASK?"</li>
+                      <li>• "Hvilke fonde skal jeg vælge?"</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-blue-900 mb-2">🏠 Bolig & Hus:</h4>
+                    <ul className="text-blue-800 space-y-1 text-sm">
+                      <li>• "Hvordan får jeg boliglån?"</li>
+                      <li>• "Hvor meget skal jeg spare op til bolig?"</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-blue-900 mb-2">📊 Budget & Økonomi:</h4>
+                    <ul className="text-blue-800 space-y-1 text-sm">
+                      <li>• "Hvordan laver jeg et budget?"</li>
+                      <li>• "Hvor meget skal jeg spare op?"</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-blue-900 mb-2">🎓 Studerende:</h4>
+                    <ul className="text-blue-800 space-y-1 text-sm">
+                      <li>• "Hvordan får jeg styr på min økonomi som studerende?"</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-blue-900 mb-2">👴 Pension:</h4>
+                    <ul className="text-blue-800 space-y-1 text-sm">
+                      <li>• "Hvor meget skal jeg spare op til pension?"</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-blue-900 mb-2">💳 Gæld & Lån:</h4>
+                    <ul className="text-blue-800 space-y-1 text-sm">
+                      <li>• "Hvordan kommer jeg ud af gæld?"</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
