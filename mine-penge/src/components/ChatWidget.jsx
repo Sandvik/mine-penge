@@ -98,10 +98,10 @@ Som begynder er det vigtigt at starte simpelt:
 
 Du er på rette spor ved at spørge - det er første skridt til økonomisk frihed! 🚀
 
-🏠 **Vil du se vores investeringsberegner?**
+🏠 Vil du se vores investeringsberegner?
 [📊 Åbn investeringsberegner](/investering-guide#beregner)
 
-📚 **Læs mere i vores investering guide:**
+📚 Læs mere i vores investering guide:
 [📖 Investering guide](/investering-guide)`,
       tags: ['starte', 'begynde', 'komme i gang', 'første gang', 'nybegynder', 'investering'],
       category: 'investering'
@@ -156,7 +156,7 @@ Top 3 fonde til begyndere:
 
 Det kan være svært at komme i gang, men du har taget det vigtigste skridt - at spørge! Du klarer det! 🚀
 
-💰 **Vil du se vores investeringsberegner?**
+💰 Vil du se vores investeringsberegner?
 [📊 Åbn investeringsberegner](/investering-guide#beregner)`,
       tags: ['fonde', 'sparindex', 'begynder', 'vælg', 'hvilke'],
       category: 'investering'
@@ -191,10 +191,10 @@ Sådan får du boliglån:
 
 Du er på rette spor ved at spørge! Boligkøb er en stor beslutning, og det er smart at forberede sig. 🎯
 
-🏠 **Vil du se vores boligberegner?**
+🏠 Vil du se vores boligberegner?
 [📊 Åbn boligberegner](/bolig-hus-guide#beregner)
 
-📚 **Læs mere i vores bolig guide:**
+📚 Læs mere i vores bolig guide:
 [📖 Bolig & Hus guide](/bolig-hus-guide)`,
       tags: ['boliglån', 'udbetaling', 'lånebevis', 'bolig', 'hus', 'køb'],
       category: 'bolig'
@@ -223,7 +223,7 @@ Du er på rette spor ved at spørge! Boligkøb er en stor beslutning, og det er 
 
 Ja, det kan virke som et stort beløb, men husk - mange har gjort det før dig! Du klarer det! 💪
 
-🏠 **Vil du se vores boligberegner?**
+🏠 Vil du se vores boligberegner?
 [📊 Åbn boligberegner](/bolig-hus-guide#beregner)`,
       tags: ['spareop', 'udbetaling', 'bolig', 'hus', 'beløb'],
       category: 'bolig'
@@ -258,10 +258,10 @@ Sådan laver du et budget:
 
 Du klarer det! Start småt og bliv bedre over tid. 🚀
 
-📊 **Vil du se vores budgetberegner?**
+📊 Vil du se vores budgetberegner?
 [📊 Åbn budgetberegner](/family-finance-guide#beregner)
 
-📚 **Læs mere i vores familieøkonomi guide:**
+📚 Læs mere i vores familieøkonomi guide:
 [📖 Familieøkonomi guide](/family-finance-guide)`,
       tags: ['budget', 'økonomi', 'udgifter', 'indkomst', 'planlægning'],
       category: 'budget'
@@ -289,7 +289,7 @@ Du klarer det! Start småt og bliv bedre over tid. 🚀
 
 Det kan virke som meget, men husk - alle starter et sted! Du er på rette spor ved at spørge. 🌟
 
-📊 **Vil du se vores budgetberegner?**
+📊 Vil du se vores budgetberegner?
 [📊 Åbn budgetberegner](/family-finance-guide#beregner)`,
       tags: ['spareop', 'nødopsparing', 'mål', 'beløb', 'regler'],
       category: 'budget'
@@ -321,7 +321,7 @@ Det kan virke som meget, men husk - alle starter et sted! Du er på rette spor v
 
 Det kan være svært at komme i gang, men du har taget det vigtigste skridt - at spørge! Du klarer det! 💪
 
-📚 **Læs mere i vores studerende guide:**
+📚 Læs mere i vores studerende guide:
 [📖 Studerende investering guide](/student-investment-guide)`,
       tags: ['studerende', 'SU', 'budget', 'økonomi', 'husleje'],
       category: 'studerende'
