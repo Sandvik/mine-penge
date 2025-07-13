@@ -5,8 +5,7 @@ En moderne React app der samler og kuraterer danske økonomi-artikler med Python
 ## 📚 Dokumentation
 
 Se [docs/](docs/) mappen for detaljeret dokumentation:
-- [AI Chat Integration](docs/AI-CHAT.md)
-- [Chat Strategy](docs/CHAT-STRATEGY.md) 
+- [AI Chat System](docs/AI-CHAT-SYSTEM.md) - Komplet AI chat strategi og implementering
 - [SEO Checklist](docs/SEO_CHECKLIST.md)
 - [Scraper Guide](docs/scraper-guide.md)
 - [Integration Guide](docs/integration-guide.md)
