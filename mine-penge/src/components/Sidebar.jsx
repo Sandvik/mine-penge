@@ -105,8 +105,62 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles =
           </div>
         </div>
 
+        {/* Quick Actions */}
+        <div className="bg-gradient-to-br from-orange-50 to-nordic-50 rounded-lg p-4 mb-4 shadow-sm border border-orange-100 mt-[50px]">
+          <div className="flex items-center mb-3">
+            <Zap className="h-4 w-4 text-orange-600 mr-2" />
+            <h3 className="text-base lg:text-lg font-semibold text-nordic-900">Quick Actions</h3>
+          </div>
+          
+          <div className="grid grid-cols-3 gap-2">
+            <button 
+              onClick={() => onTopicChange('Alle tags')}
+              className="bg-white rounded-md p-2 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+            >
+              <BookOpen className="h-4 w-4 text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
+              <span className="text-xs text-nordic-700 group-hover:text-orange-600 transition-colors">Alle artikler</span>
+            </button>
+            
+            <a 
+              href="/student-investment-guide"
+              className="bg-white rounded-md p-2 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+            >
+              <TrendingUp className="h-4 w-4 text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
+              <span className="text-xs text-nordic-700 group-hover:text-orange-600 transition-colors">Student Guide</span>
+            </a>
+            
+            <a 
+              href="/family-finance-guide"
+              className="bg-white rounded-md p-2 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+            >
+              <Star className="h-4 w-4 text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
+              <span className="text-xs text-nordic-700 group-hover:text-orange-600 transition-colors">
+                Børne familie Guide
+              </span>
+            </a>
+            
+            <a 
+              href="/investering-guide"
+              className="bg-white rounded-md p-2 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+            >
+              <Filter className="h-4 w-4 text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
+              <span className="text-xs text-nordic-700 group-hover:text-orange-600 transition-colors">Inves–tering Guide</span>
+            </a>
+            
+            <a 
+              href="/bolig-hus-guide"
+              className="bg-white rounded-md p-2 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+            >
+              <Star className="h-4 w-4 text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
+              <span className="text-xs text-nordic-700 group-hover:text-orange-600 transition-colors">
+                Bolig Guide
+              </span>
+            </a>
+          </div>
+        </div>
+
         {/* Seneste artikler */}
-        <div className="bg-gradient-to-br from-blue-50 to-nordic-50 rounded-lg p-4 mb-4 shadow-sm border border-blue-100 mt-[50px]">
+        <div className="bg-gradient-to-br from-blue-50 to-nordic-50 rounded-lg p-4 mb-4 shadow-sm border border-blue-100">
           <div className="flex items-center mb-3">
             <Clock className="h-4 w-4 text-blue-600 mr-2" />
             <h3 className="text-base lg:text-lg font-semibold text-nordic-900">Seneste artikler</h3>
@@ -194,48 +248,6 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles =
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Quick Actions */}
-        <div className="bg-gradient-to-br from-orange-50 to-nordic-50 rounded-lg p-4 mb-4 shadow-sm border border-orange-100">
-          <div className="flex items-center mb-3">
-            <Zap className="h-4 w-4 text-orange-600 mr-2" />
-            <h3 className="text-base lg:text-lg font-semibold text-nordic-900">Quick Actions</h3>
-          </div>
-          
-          <div className="grid grid-cols-2 gap-2">
-            <button 
-              onClick={() => onTopicChange('Alle tags')}
-              className="bg-white rounded-md p-2 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
-            >
-              <BookOpen className="h-4 w-4 text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
-              <span className="text-xs text-nordic-700 group-hover:text-orange-600 transition-colors">Alle artikler</span>
-            </button>
-            
-            <a 
-              href="/student-investment-guide"
-              className="bg-white rounded-md p-2 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
-            >
-              <TrendingUp className="h-4 w-4 text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
-              <span className="text-xs text-nordic-700 group-hover:text-orange-600 transition-colors">Student Guide</span>
-            </a>
-            
-            <button 
-              onClick={() => onTopicChange('Investering')}
-              className="bg-white rounded-md p-2 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
-            >
-              <Filter className="h-4 w-4 text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
-              <span className="text-xs text-nordic-700 group-hover:text-orange-600 transition-colors">Investering</span>
-            </button>
-            
-            <button 
-              onClick={() => onTopicChange('Bolig')}
-              className="bg-white rounded-md p-2 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
-            >
-              <Star className="h-4 w-4 text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
-              <span className="text-xs text-nordic-700 group-hover:text-orange-600 transition-colors">Bolig & Hus</span>
-            </button>
           </div>
         </div>
 

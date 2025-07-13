@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Brain, CheckCircle, XCircle, ArrowRight, RefreshCw, Trophy, TrendingUp, Target, PieChart, DollarSign } from 'lucide-react';
+import { Brain, CheckCircle, XCircle, ArrowRight, RefreshCw, Trophy, Home, DollarSign, Target, BarChart3 } from 'lucide-react';
 
-const InvestmentQuiz = () => {
+const HousingQuiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showResults, setShowResults] = useState(false);
@@ -10,123 +10,123 @@ const InvestmentQuiz = () => {
   const questions = [
     {
       id: 1,
-      question: "Hvad er compound interest (sammensatte renter)?",
+      question: "Hvad er en fastforrentet boliglån?",
       options: [
-        "Renter på renter over tid",
-        "Kun renter på det oprindelige beløb",
-        "En type skat på investeringer",
-        "Gebyrer til banken"
+        "Et lån med rente der ændrer sig hver måned",
+        "Et lån med fast rente i hele lånets løbetid",
+        "Et lån uden renter",
+        "Et lån kun for rige mennesker"
       ],
-      correct: 0,
-      explanation: "Compound interest betyder at du tjener renter ikke kun på dit oprindelige beløb, men også på de renter du allerede har tjent. Dette skaber eksponentiel vækst over tid."
+      correct: 1,
+      explanation: "Et fastforrentet boliglån har en fast rente i hele lånets løbetid. Det giver sikkerhed og forudsigelighed, men typisk til en højere rente end variabel rente."
     },
     {
       id: 2,
-      question: "Hvad er en ETF?",
+      question: "Hvor meget skal du typisk spare op til udbetaling på en bolig i Danmark?",
       options: [
-        "En type bankkonto",
-        "Exchange Traded Fund - en fond der handles som en aktie",
-        "En type obligation",
-        "En forsikring"
+        "5% af boligprisen",
+        "10% af boligprisen",
+        "20% af boligprisen",
+        "50% af boligprisen"
       ],
-      correct: 1,
-      explanation: "ETF (Exchange Traded Fund) er en fond der indeholder en samling af aktier eller andre aktiver og handles på børsen som en enkelt aktie. Det giver nem adgang til diversificering."
+      correct: 2,
+      explanation: "De fleste banker kræver 20% udbetaling for at give dig et boliglån. Dette sikrer at du har en solid økonomisk base."
     },
     {
       id: 3,
-      question: "Hvad betyder diversificering i investering?",
+      question: "Hvad er ejendomsskat?",
       options: [
-        "At sætte alle penge i én aktie",
-        "At sprede investeringer på tværs af forskellige aktiver",
-        "At kun investere i danske aktier",
-        "At købe og sælge hurtigt"
+        "En skat du betaler når du sælger din bolig",
+        "En årlig skat baseret på din boligs værdi",
+        "En skat kun for lejeboliger",
+        "En engangsbetaling ved køb"
       ],
       correct: 1,
-      explanation: "Diversificering betyder at sprede dine investeringer på tværs af forskellige aktiver, sektorer og geografiske områder for at reducere risiko."
+      explanation: "Ejendomsskat er en årlig skat baseret på din boligs værdi. Den betales til kommunen og bruges til at finansiere lokale tjenester."
     },
     {
       id: 4,
-      question: "Hvad er en aktiesparekonto (ASK)?",
+      question: "Hvad betyder 'annuitetslån'?",
       options: [
-        "En almindelig bankkonto",
-        "En konto med 17% skat på afkast i stedet for 27-42%",
-        "En pensionsopsparing",
-        "En konto kun for aktier"
+        "Et lån med variabel rente",
+        "Et lån hvor ydelsen er konstant gennem hele løbetiden",
+        "Et lån kun for pensionister",
+        "Et lån uden afdrag"
       ],
       correct: 1,
-      explanation: "Aktiesparekontoen giver dig 17% skat på afkast i stedet for de normale 27-42%. Du kan indbetale op til 106.600 kr (2024)."
+      explanation: "Et annuitetslån har konstant ydelse gennem hele løbetiden. I starten betaler du mest i renter, senere mest i afdrag."
     },
     {
       id: 5,
-      question: "Hvad er den bedste strategi for langtidssucces med investering?",
+      question: "Hvad er en boligkøberrådgiver?",
       options: [
-        "Køb og sælg hurtigt baseret på markedets bevægelser",
-        "Køb og hold i lang tid (buy and hold)",
-        "Kun investere når markedet stiger",
-        "Sælg alt når markedet falder"
+        "En advokat der hjælper med købet",
+        "En rådgiver der hjælper dig gennem hele købsprocessen",
+        "En ejendomsmægler",
+        "En bankrådgiver"
       ],
       correct: 1,
-      explanation: "Buy and hold strategien har historisk givet de bedste resultater. Tid i markedet er vigtigere end timing af markedet."
+      explanation: "En boligkøberrådgiver hjælper dig gennem hele købsprocessen - fra at finde boligen til at underskrive købskontrakten."
     },
     {
       id: 6,
-      question: "Hvad er en bear market?",
+      question: "Hvad er 'tinglysning'?",
       options: [
-        "Et marked der stiger kraftigt",
-        "Et marked der falder 20% eller mere",
-        "Et marked for bjørneaktier",
-        "Et marked kun for store virksomheder"
+        "At registrere dit boliglån i det offentlige system",
+        "At sælge din bolig",
+        "At renovere din bolig",
+        "At få en boligvurdering"
       ],
-      correct: 1,
-      explanation: "En bear market er defineret som et fald på 20% eller mere fra et højdepunkt. Det er normalt og en del af investeringscyklussen."
+      correct: 0,
+      explanation: "Tinglysning er registrering af dit boliglån i det offentlige system. Det sikrer at banken har ret til at sælge boligen hvis du ikke kan betale."
     },
     {
       id: 7,
-      question: "Hvad er den gyldne regel for investering?",
+      question: "Hvad er en 'flexlån'?",
       options: [
-        "Invester kun penge du kan tåle at miste",
-        "Invester alt hvad du har",
-        "Kun invester hvis du er sikker på gevinst",
-        "Invester kun i guld"
+        "Et lån med meget høj rente",
+        "Et lån der kombinerer fast og variabel rente",
+        "Et lån kun for unge",
+        "Et lån uden sikkerhed"
       ],
-      correct: 0,
-      explanation: "Den gyldne regel er at investere kun penge du kan tåle at miste. Investering indebærer altid risiko for tab."
+      correct: 1,
+      explanation: "Et flexlån kombinerer fast og variabel rente. Du kan typisk vælge mellem forskellige rentetyper og justere løbetiden."
     },
     {
       id: 8,
-      question: "Hvad er en dividend?",
+      question: "Hvad er 'ejendomsværdiskat'?",
       options: [
-        "En type skat",
-        "En del af virksomhedens overskud udbetalt til aktionærer",
-        "En gebyr til banken",
-        "En type obligation"
+        "En skat på din boligs værdi over 3,04 mio. kr",
+        "En skat på alle boliger",
+        "En skat kun for sommerhuse",
+        "En skat på lejeboliger"
       ],
-      correct: 1,
-      explanation: "Dividend er en del af virksomhedens overskud der udbetales til aktionærer. Det kan være en god kilde til passiv indkomst."
+      correct: 0,
+      explanation: "Ejendomsværdiskat er en skat på din boligs værdi over 3,04 mio. kr. Den betales årligt til staten."
     },
     {
       id: 9,
-      question: "Hvad betyder 'time in the market beats timing the market'?",
+      question: "Hvad er 'omkostninger ved boligkøb'?",
       options: [
-        "At det er bedre at være i markedet længe end at prøve at time det",
-        "At du skal sælge alt på det rigtige tidspunkt",
-        "At markedet altid stiger",
-        "At timing er alt"
+        "Kun boligprisen",
+        "Boligpris plus advokatomkostninger og tinglysning",
+        "Kun advokatomkostninger",
+        "Kun tinglysning"
       ],
-      correct: 0,
-      explanation: "Dette betyder at det er bedre at investere regelmæssigt og holde i lang tid, end at prøve at købe og sælge på det perfekte tidspunkt."
+      correct: 1,
+      explanation: "Omkostninger ved boligkøb inkluderer boligpris plus advokatomkostninger, tinglysning og andre gebyrer. Typisk 1-2% af boligprisen."
     },
     {
       id: 10,
-      question: "Hvad er en index fond?",
+      question: "Hvad er 'energimærke'?",
       options: [
-        "En fond der følger et bestemt indeks som OMX C25",
-        "En fond der kun indeholder danske aktier",
-        "En fond med høje gebyrer",
-        "En fond der altid slår markedet"
+        "Et mærke der viser boligens energiforbrug",
+        "Et mærke for nye boliger",
+        "Et mærke for billige boliger",
+        "Et mærke for store boliger"
       ],
       correct: 0,
-      explanation: "En index fond følger et bestemt indeks som OMX C25 eller MSCI World. Den giver automatisk diversificering og lave omkostninger."
+      explanation: "Energimærket viser boligens energiforbrug fra A (meget lavt) til G (meget højt). Det påvirker både boligpris og løbende omkostninger."
     }
   ];
 
@@ -158,10 +158,10 @@ const InvestmentQuiz = () => {
 
   const getScoreMessage = () => {
     const percentage = (score / questions.length) * 100;
-    if (percentage >= 90) return { message: "Fantastisk! Du er en investeringsekspert!", color: "text-green-600", icon: Trophy };
-    if (percentage >= 70) return { message: "Godt gået! Du har solid investeringsviden.", color: "text-blue-600", icon: TrendingUp };
+    if (percentage >= 90) return { message: "Fantastisk! Du er en boligkøbsekspert!", color: "text-green-600", icon: Trophy };
+    if (percentage >= 70) return { message: "Godt gået! Du har solid viden om boligkøb.", color: "text-blue-600", icon: Home };
     if (percentage >= 50) return { message: "Ikke dårligt! Du har grundlæggende viden, men kan forbedres.", color: "text-yellow-600", icon: Target };
-    return { message: "Du har brug for at lære mere om investering.", color: "text-red-600", icon: XCircle };
+    return { message: "Du har brug for at lære mere om boligkøb.", color: "text-red-600", icon: XCircle };
   };
 
   const currentQ = questions[currentQuestion];
@@ -184,7 +184,7 @@ const InvestmentQuiz = () => {
               Quiz Resultat
             </h2>
             <p className="text-gray-600">
-              Din viden om investering
+              Din viden om boligkøb
             </p>
           </div>
 
@@ -222,10 +222,10 @@ const InvestmentQuiz = () => {
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-green-800 mb-3">Næste skridt</h3>
               <ul className="text-sm text-green-700 space-y-1">
-                <li>• Læs vores investeringsguide</li>
-                <li>• Prøv vores investeringsberegner</li>
-                <li>• Analyser din portefølje</li>
-                <li>• Start med små beløb</li>
+                <li>• Læs vores boligkøbsguide</li>
+                <li>• Prøv vores boliglånsberegner</li>
+                <li>• Sammenlign forskellige ejendomme</li>
+                <li>• Kontakt en boligkøberrådgiver</li>
               </ul>
             </div>
           </div>
@@ -249,15 +249,15 @@ const InvestmentQuiz = () => {
       <div className="bg-white rounded-lg shadow-lg p-8">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
-            <div className="bg-purple-100 p-3 rounded-full">
-              <Brain className="w-8 h-8 text-purple-600" />
+            <div className="bg-blue-100 p-3 rounded-full">
+              <Brain className="w-8 h-8 text-blue-600" />
             </div>
           </div>
           <h2 className="text-3xl font-bold text-gray-800 mb-2">
-            Investerings Quiz
+            Boligkøbs Quiz
           </h2>
           <p className="text-gray-600">
-            Test din viden om investering og få tips til at forbedre din strategi
+            Test din viden om boligkøb og få tips til at forberede dig på din boligjagt
           </p>
         </div>
 
@@ -335,12 +335,12 @@ const InvestmentQuiz = () => {
 
         {/* Tips */}
         <div className="mt-8 bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-          <h4 className="font-semibold text-yellow-800 mb-2">💡 Tips til quiz'en</h4>
+          <h4 className="font-semibold text-yellow-800 mb-2">💡 Boligkøbsråd</h4>
           <ul className="text-sm text-yellow-700 space-y-1">
-            <li>• Tag dig tid til at læse spørgsmålene grundigt</li>
-            <li>• Tænk over din egen investeringsstrategi</li>
-            <li>• Husk at der ikke altid er ét rigtigt svar</li>
-            <li>• Brug quiz'en som læringsmulighed</li>
+            <li>• Spar op til mindst 20% udbetaling</li>
+            <li>• Få din økonomi i orden før du køber</li>
+            <li>• Undersøg både boligpris og løbende omkostninger</li>
+            <li>• Brug professionel hjælp til købsprocessen</li>
           </ul>
         </div>
       </div>
@@ -348,4 +348,4 @@ const InvestmentQuiz = () => {
   );
 };
 
-export default InvestmentQuiz; 
+export default HousingQuiz; 

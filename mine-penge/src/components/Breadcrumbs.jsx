@@ -7,7 +7,7 @@ const Breadcrumbs = ({ currentPage, currentTag }) => {
   
   const breadcrumbs = [
     {
-      name: 'Hjem',
+      name: 'Forside',
       href: '/',
       icon: <Home className="h-4 w-4" />
     }
@@ -30,7 +30,7 @@ const Breadcrumbs = ({ currentPage, currentTag }) => {
 
   return (
     <nav className="flex mb-6" aria-label="Breadcrumb">
-      <ol className="flex items-center space-x-2">
+      <ol className="flex items-center space-x-2 text-sm">
         {breadcrumbs.map((breadcrumb, index) => (
           <li key={breadcrumb.name} className="flex items-center">
             {index > 0 && (

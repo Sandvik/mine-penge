@@ -14,6 +14,9 @@ import OmOs from './pages/OmOs';
 import Kontakt from './pages/Kontakt';
 import HeroDemo from './pages/HeroDemo';
 import StudentInvestmentGuide from './pages/StudentInvestmentGuide';
+import FamilyFinanceGuide from './pages/FamilyFinanceGuide';
+import InvesteringGuide from './pages/InvesteringGuide';
+import BoligHusGuide from './pages/BoligHusGuide';
 import TestPage from './pages/TestPage';
 import HeroSectionAdvanced from './components/HeroSectionAdvanced';
 import CurationPanel from './components/CurationPanel';
@@ -475,6 +478,9 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/test" element={<TestPage />} />
               <Route path="/student-investment-guide" element={<StudentInvestmentGuide />} />
+              <Route path="/family-finance-guide" element={<FamilyFinanceGuide />} />
+              <Route path="/investering-guide" element={<InvesteringGuide />} />
+              <Route path="/bolig-hus-guide" element={<BoligHusGuide />} />
               <Route path="/seo-dashboard" element={<SEODashboard />} />
               <Route path="/landing-page-generator" element={<LandingPageGenerator />} />
               <Route path="/qa-feed-generator" element={<QAFeedGenerator />} />

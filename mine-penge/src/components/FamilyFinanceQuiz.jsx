@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Brain, CheckCircle, XCircle, ArrowRight, RefreshCw, Trophy, TrendingUp, Target, PieChart, DollarSign } from 'lucide-react';
+import { Brain, CheckCircle, XCircle, ArrowRight, RefreshCw, Trophy, Users, Baby, Home, Car } from 'lucide-react';
 
-const InvestmentQuiz = () => {
+const FamilyFinanceQuiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showResults, setShowResults] = useState(false);
@@ -10,123 +10,123 @@ const InvestmentQuiz = () => {
   const questions = [
     {
       id: 1,
-      question: "Hvad er compound interest (sammensatte renter)?",
+      question: "Hvor meget af din månedlige indkomst bør du som familie spare op til børneopsparing?",
       options: [
-        "Renter på renter over tid",
-        "Kun renter på det oprindelige beløb",
-        "En type skat på investeringer",
-        "Gebyrer til banken"
+        "5-10%",
+        "10-15%", 
+        "15-20%",
+        "20-25%"
       ],
-      correct: 0,
-      explanation: "Compound interest betyder at du tjener renter ikke kun på dit oprindelige beløb, men også på de renter du allerede har tjent. Dette skaber eksponentiel vækst over tid."
+      correct: 1,
+      explanation: "10-15% er en god regel for børneopsparing. Dette sikrer at børnene har penge til uddannelse eller andre vigtige formål, uden at det går ud over familiens øvrige økonomi."
     },
     {
       id: 2,
-      question: "Hvad er en ETF?",
+      question: "Hvilken forsikring er MEST vigtig for en familie med børn?",
       options: [
-        "En type bankkonto",
-        "Exchange Traded Fund - en fond der handles som en aktie",
-        "En type obligation",
-        "En forsikring"
+        "Bilforsikring",
+        "Sundhedsforsikring",
+        "Rejseforsikring", 
+        "Ulykkesforsikring"
       ],
       correct: 1,
-      explanation: "ETF (Exchange Traded Fund) er en fond der indeholder en samling af aktier eller andre aktiver og handles på børsen som en enkelt aktie. Det giver nem adgang til diversificering."
+      explanation: "Sundhedsforsikring er mest vigtig for familier med børn, da den sikrer hurtig behandling og dækker tandlæge, fysioterapi og andre sundhedsudgifter."
     },
     {
       id: 3,
-      question: "Hvad betyder diversificering i investering?",
+      question: "Hvornår bør du starte med børneopsparing?",
       options: [
-        "At sætte alle penge i én aktie",
-        "At sprede investeringer på tværs af forskellige aktiver",
-        "At kun investere i danske aktier",
-        "At købe og sælge hurtigt"
+        "Når barnet starter i skole",
+        "Så snart barnet er født",
+        "Når barnet er 10 år",
+        "Når barnet er teenager"
       ],
       correct: 1,
-      explanation: "Diversificering betyder at sprede dine investeringer på tværs af forskellige aktiver, sektorer og geografiske områder for at reducere risiko."
+      explanation: "Jo tidligere du starter, jo bedre. Tid er din største fordel ved investering. Selv små beløb kan vokse til betydelige summer over tid."
     },
     {
       id: 4,
-      question: "Hvad er en aktiesparekonto (ASK)?",
+      question: "Hvor meget koster børnepasning typisk per måned for et barn i Danmark?",
       options: [
-        "En almindelig bankkonto",
-        "En konto med 17% skat på afkast i stedet for 27-42%",
-        "En pensionsopsparing",
-        "En konto kun for aktier"
+        "1.000-2.000 kr",
+        "2.000-3.000 kr",
+        "3.000-4.000 kr",
+        "4.000-5.000 kr"
       ],
-      correct: 1,
-      explanation: "Aktiesparekontoen giver dig 17% skat på afkast i stedet for de normale 27-42%. Du kan indbetale op til 106.600 kr (2024)."
+      correct: 2,
+      explanation: "Børnepasning koster typisk 3.000-4.000 kr per måned per barn. Dette er ofte familiens største udgift efter bolig."
     },
     {
       id: 5,
-      question: "Hvad er den bedste strategi for langtidssucces med investering?",
+      question: "Hvilken type konto er bedst til børneopsparing i Danmark?",
       options: [
-        "Køb og sælg hurtigt baseret på markedets bevægelser",
-        "Køb og hold i lang tid (buy and hold)",
-        "Kun investere når markedet stiger",
-        "Sælg alt når markedet falder"
+        "Almindelig opsparingskonto",
+        "Børneopsparing med skattefordel",
+        "Aktiesparekonto (ASK)",
+        "Pensionsopsparing"
       ],
       correct: 1,
-      explanation: "Buy and hold strategien har historisk givet de bedste resultater. Tid i markedet er vigtigere end timing af markedet."
+      explanation: "Børneopsparing med skattefordel er bedst, da den giver skattefordel på indbetalinger og afkast. Barnet betaler kun 15% skat af afkastet."
     },
     {
       id: 6,
-      question: "Hvad er en bear market?",
+      question: "Hvor mange måneders udgifter bør en familie have i emergency fund?",
       options: [
-        "Et marked der stiger kraftigt",
-        "Et marked der falder 20% eller mere",
-        "Et marked for bjørneaktier",
-        "Et marked kun for store virksomheder"
+        "1-2 måneder",
+        "3-6 måneder",
+        "6-12 måneder",
+        "12+ måneder"
       ],
       correct: 1,
-      explanation: "En bear market er defineret som et fald på 20% eller mere fra et højdepunkt. Det er normalt og en del af investeringscyklussen."
+      explanation: "3-6 måneders udgifter er passende for familier. Dette giver sikkerhed ved uventede udgifter som sygdom eller arbejdsløshed."
     },
     {
       id: 7,
-      question: "Hvad er den gyldne regel for investering?",
+      question: "Hvad er den bedste måde at spare penge på mad til en familie?",
       options: [
-        "Invester kun penge du kan tåle at miste",
-        "Invester alt hvad du har",
-        "Kun invester hvis du er sikker på gevinst",
-        "Invester kun i guld"
+        "Købe alt på tilbud",
+        "Lave madplan og handle stort",
+        "Købe takeaway hver dag",
+        "Købe dyre økologiske varer"
       ],
-      correct: 0,
-      explanation: "Den gyldne regel er at investere kun penge du kan tåle at miste. Investering indebærer altid risiko for tab."
+      correct: 1,
+      explanation: "Madplan og stort indkøb er mest effektivt. Det reducerer madspild og giver mulighed for at købe varer på tilbud."
     },
     {
       id: 8,
-      question: "Hvad er en dividend?",
+      question: "Hvornår bør du overveje livsforsikring?",
       options: [
-        "En type skat",
-        "En del af virksomhedens overskud udbetalt til aktionærer",
-        "En gebyr til banken",
-        "En type obligation"
+        "Kun hvis du er syg",
+        "Når du får børn",
+        "Når du er pensionist",
+        "Aldrig"
       ],
       correct: 1,
-      explanation: "Dividend er en del af virksomhedens overskud der udbetales til aktionærer. Det kan være en god kilde til passiv indkomst."
+      explanation: "Livsforsikring bør overvejes når du får børn. Den sikrer familiens økonomi hvis den primære forsørger dør."
     },
     {
       id: 9,
-      question: "Hvad betyder 'time in the market beats timing the market'?",
+      question: "Hvor meget bør du budgettere til fritidsaktiviteter per barn per måned?",
       options: [
-        "At det er bedre at være i markedet længe end at prøve at time det",
-        "At du skal sælge alt på det rigtige tidspunkt",
-        "At markedet altid stiger",
-        "At timing er alt"
+        "100-300 kr",
+        "300-500 kr",
+        "500-800 kr",
+        "800+ kr"
       ],
-      correct: 0,
-      explanation: "Dette betyder at det er bedre at investere regelmæssigt og holde i lang tid, end at prøve at købe og sælge på det perfekte tidspunkt."
+      correct: 2,
+      explanation: "500-800 kr per barn per måned er realistisk for fritidsaktiviteter som sport, musik, eller andre hobbyer."
     },
     {
       id: 10,
-      question: "Hvad er en index fond?",
+      question: "Hvad er den bedste strategi for familiens økonomi?",
       options: [
-        "En fond der følger et bestemt indeks som OMX C25",
-        "En fond der kun indeholder danske aktier",
-        "En fond med høje gebyrer",
-        "En fond der altid slår markedet"
+        "Spendere alt hvad du tjener",
+        "Sætte penge til side først",
+        "Vente til sidst på måneden",
+        "Kun spare når der er overskud"
       ],
-      correct: 0,
-      explanation: "En index fond følger et bestemt indeks som OMX C25 eller MSCI World. Den giver automatisk diversificering og lave omkostninger."
+      correct: 1,
+      explanation: "Sæt penge til side først (pay yourself first). Dette sikrer at opsparing og investering sker automatisk."
     }
   ];
 
@@ -158,10 +158,10 @@ const InvestmentQuiz = () => {
 
   const getScoreMessage = () => {
     const percentage = (score / questions.length) * 100;
-    if (percentage >= 90) return { message: "Fantastisk! Du er en investeringsekspert!", color: "text-green-600", icon: Trophy };
-    if (percentage >= 70) return { message: "Godt gået! Du har solid investeringsviden.", color: "text-blue-600", icon: TrendingUp };
-    if (percentage >= 50) return { message: "Ikke dårligt! Du har grundlæggende viden, men kan forbedres.", color: "text-yellow-600", icon: Target };
-    return { message: "Du har brug for at lære mere om investering.", color: "text-red-600", icon: XCircle };
+    if (percentage >= 90) return { message: "Fantastisk! Du er en familie finans ekspert!", color: "text-green-600", icon: Trophy };
+    if (percentage >= 70) return { message: "Godt gået! Du har solid viden om familie økonomi.", color: "text-blue-600", icon: CheckCircle };
+    if (percentage >= 50) return { message: "Ikke dårligt! Du har grundlæggende viden, men kan forbedres.", color: "text-yellow-600", icon: Users };
+    return { message: "Du har brug for at lære mere om familie økonomi.", color: "text-red-600", icon: XCircle };
   };
 
   const currentQ = questions[currentQuestion];
@@ -184,7 +184,7 @@ const InvestmentQuiz = () => {
               Quiz Resultat
             </h2>
             <p className="text-gray-600">
-              Din viden om investering
+              Din viden om familie økonomi
             </p>
           </div>
 
@@ -222,10 +222,10 @@ const InvestmentQuiz = () => {
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-green-800 mb-3">Næste skridt</h3>
               <ul className="text-sm text-green-700 space-y-1">
-                <li>• Læs vores investeringsguide</li>
-                <li>• Prøv vores investeringsberegner</li>
-                <li>• Analyser din portefølje</li>
-                <li>• Start med små beløb</li>
+                <li>• Læs vores familie økonomi guide</li>
+                <li>• Prøv vores budget template</li>
+                <li>• Brug børneopsparing beregneren</li>
+                <li>• Sammenlign forsikringer</li>
               </ul>
             </div>
           </div>
@@ -254,10 +254,10 @@ const InvestmentQuiz = () => {
             </div>
           </div>
           <h2 className="text-3xl font-bold text-gray-800 mb-2">
-            Investerings Quiz
+            Familie Økonomi Quiz
           </h2>
           <p className="text-gray-600">
-            Test din viden om investering og få tips til at forbedre din strategi
+            Test din viden om familie økonomi og få tips til at forbedre din økonomiske situation
           </p>
         </div>
 
@@ -338,7 +338,7 @@ const InvestmentQuiz = () => {
           <h4 className="font-semibold text-yellow-800 mb-2">💡 Tips til quiz'en</h4>
           <ul className="text-sm text-yellow-700 space-y-1">
             <li>• Tag dig tid til at læse spørgsmålene grundigt</li>
-            <li>• Tænk over din egen investeringsstrategi</li>
+            <li>• Tænk over din egen familiesituation</li>
             <li>• Husk at der ikke altid er ét rigtigt svar</li>
             <li>• Brug quiz'en som læringsmulighed</li>
           </ul>
@@ -348,4 +348,4 @@ const InvestmentQuiz = () => {
   );
 };
 
-export default InvestmentQuiz; 
+export default FamilyFinanceQuiz; 
