@@ -2,14 +2,31 @@ import React, { useState, useRef, useEffect } from 'react';
 import articlesData from '../data/articles.json';
 
 const ChatWidget = () => {
-  const [messages, setMessages] = useState([
-    {
-      id: 1,
-      type: 'bot',
-      text: 'Hej! Jeg er MinePenge assistenten. Hvordan kan jeg hjælpe dig med din økonomi i dag? 💰',
-      timestamp: new Date()
+  const [messages, setMessages] = useState(() => {
+    // Load messages from localStorage on component mount
+    const savedMessages = localStorage.getItem('chatWidgetMessages');
+    if (savedMessages) {
+      try {
+        const parsed = JSON.parse(savedMessages);
+        // Convert timestamp strings back to Date objects
+        return parsed.map(msg => ({
+          ...msg,
+          timestamp: new Date(msg.timestamp)
+        }));
+      } catch (e) {
+        console.error('Error parsing saved messages:', e);
+      }
     }
-  ]);
+    // Default initial message
+    return [
+      {
+        id: 1,
+        type: 'bot',
+        text: 'Hej! Jeg er MinePenge assistenten. Hvordan kan jeg hjælpe dig med din økonomi i dag? 💰',
+        timestamp: new Date()
+      }
+    ];
+  });
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isMinimized, setIsMinimized] = useState(() => {
@@ -509,9 +526,28 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
     }, 1000);
   };
 
+  // Clear chat history
+  const clearChatHistory = () => {
+    const initialMessage = {
+      id: Date.now(),
+      type: 'bot',
+      text: 'Hej! Jeg er MinePenge assistenten. Hvordan kan jeg hjælpe dig med din økonomi i dag? 💰',
+      timestamp: new Date()
+    };
+    setMessages([initialMessage]);
+    localStorage.setItem('chatWidgetMessages', JSON.stringify([initialMessage]));
+  };
+
   // Auto-scroll to bottom
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
+
+  // Save messages to localStorage whenever they change
+  useEffect(() => {
+    // Limit to last 50 messages to prevent localStorage from getting too large
+    const messagesToSave = messages.slice(-50);
+    localStorage.setItem('chatWidgetMessages', JSON.stringify(messagesToSave));
   }, [messages]);
 
   // Info Modal Component
@@ -595,6 +631,21 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
                   <li>• Besøg vores FAQ side for endnu flere spørgsmål og svar</li>
                 </ul>
               </div>
+              
+              <div className="flex justify-between items-center pt-4 border-t border-gray-200">
+                <button
+                  onClick={clearChatHistory}
+                  className="px-4 py-2 bg-red-100 text-red-700 rounded-lg hover:bg-red-200 transition-colors text-sm"
+                >
+                  🗑️ Ryd chat historik
+                </button>
+                <button
+                  onClick={() => setShowInfoModal(false)}
+                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm"
+                >
+                  Luk
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -646,7 +697,9 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
               </div>
               <div>
                 <h3 className="font-semibold">MinePenge Assistent</h3>
-                <p className="text-xs opacity-90">Spørg om økonomi</p>
+                <p className="text-xs opacity-90">
+                  {messages.length > 1 ? `${messages.length - 1} beskeder` : 'Spørg om økonomi'}
+                </p>
               </div>
             </div>
             <div className="flex items-center space-x-2">
