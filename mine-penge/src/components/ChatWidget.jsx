@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import articlesData from '../data/articles.json';
 
 const ChatWidget = () => {
   const [messages, setMessages] = useState([
@@ -11,9 +12,72 @@ const ChatWidget = () => {
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(() => {
+    // Check localStorage for saved state, default to true (minimized)
+    const saved = localStorage.getItem('chatWidgetMinimized');
+    return saved !== null ? JSON.parse(saved) : true;
+  });
   const [showInfoModal, setShowInfoModal] = useState(false);
   const messagesEndRef = useRef(null);
+
+  // Get articles from imported data
+  const articles = articlesData.articles || [];
+
+  // Find related articles based on user question
+  const findRelatedArticles = (userQuestion, limit = 2) => {
+    const normalizedQuestion = userQuestion.toLowerCase();
+    
+    // Score articles based on multiple factors
+    const scoredArticles = articles.map(article => {
+      let score = 0;
+      
+      // Check minepenge_tags (highest weight)
+      if (article.minepenge_tags && Array.isArray(article.minepenge_tags)) {
+        const tagMatches = article.minepenge_tags.filter(tag => 
+          normalizedQuestion.includes(tag.toLowerCase())
+        );
+        score += tagMatches.length * 10;
+      }
+      
+      // Check title (medium weight)
+      if (article.title) {
+        const titleWords = article.title.toLowerCase().split(' ');
+        const questionWords = normalizedQuestion.split(' ');
+        const titleMatches = titleWords.filter(word => 
+          questionWords.some(qWord => qWord.length > 2 && word.includes(qWord))
+        );
+        score += titleMatches.length * 5;
+      }
+      
+      // Check summary (lower weight)
+      if (article.summary) {
+        const summaryWords = article.summary.toLowerCase().split(' ');
+        const questionWords = normalizedQuestion.split(' ');
+        const summaryMatches = summaryWords.filter(word => 
+          questionWords.some(qWord => qWord.length > 3 && word.includes(qWord))
+        );
+        score += summaryMatches.length * 2;
+      }
+      
+      // Bonus for recent articles
+      if (article.date_published) {
+        const articleDate = new Date(article.date_published);
+        const now = new Date();
+        const daysDiff = (now - articleDate) / (1000 * 60 * 60 * 24);
+        if (daysDiff < 365) score += 1; // Bonus for articles less than 1 year old
+      }
+      
+      return { ...article, score };
+    });
+    
+    // Filter articles with score > 0 and sort by score
+    const relevantArticles = scoredArticles
+      .filter(article => article.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, limit);
+    
+    return relevantArticles;
+  };
 
   // FAQ data fra alle kategorier
   const faqData = [
@@ -294,6 +358,7 @@ const ChatWidget = () => {
     // Simulate typing delay
     setTimeout(() => {
       const match = findBestMatch(inputValue);
+      const relatedArticles = findRelatedArticles(inputValue, 2);
       
       let botResponse;
       if (match) {
@@ -302,7 +367,8 @@ const ChatWidget = () => {
           type: 'bot',
           text: match.answer,
           timestamp: new Date(),
-          relatedQuestion: match.question
+          relatedQuestion: match.question,
+          relatedArticles: relatedArticles
         };
       } else {
         botResponse = {
@@ -333,7 +399,8 @@ const ChatWidget = () => {
 • Hvordan kommer jeg ud af gæld?
 
 Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
-          timestamp: new Date()
+          timestamp: new Date(),
+          relatedArticles: relatedArticles
         };
       }
 
@@ -451,7 +518,10 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
               </div>
             </div>
             <button 
-              onClick={() => setIsMinimized(false)}
+              onClick={() => {
+                setIsMinimized(false);
+                localStorage.setItem('chatWidgetMinimized', 'false');
+              }}
               className="text-white hover:text-gray-200 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -490,7 +560,10 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
                 </svg>
               </button>
               <button 
-                onClick={() => setIsMinimized(true)}
+                onClick={() => {
+                  setIsMinimized(true);
+                  localStorage.setItem('chatWidgetMinimized', 'true');
+                }}
                 className="text-white hover:text-gray-200 transition-colors"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -521,6 +594,26 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
                     Relateret: {message.relatedQuestion}
                   </div>
                 )}
+                
+                {/* Related Articles */}
+                {message.relatedArticles && message.relatedArticles.length > 0 && (
+                  <div className="mt-3 p-3 bg-blue-50 rounded-lg">
+                    <h4 className="font-semibold text-blue-900 mb-2 text-xs">📖 Relaterede artikler:</h4>
+                    {message.relatedArticles.map(article => (
+                      <a 
+                        key={article.article_id}
+                        href={article.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block text-blue-700 hover:text-blue-900 text-xs mb-1 truncate"
+                        title={article.title}
+                      >
+                        • {article.title}
+                      </a>
+                    ))}
+                  </div>
+                )}
+                
                 <div className="text-xs opacity-50 mt-1">
                   {message.timestamp.toLocaleTimeString('da-DK', { 
                     hour: '2-digit', 

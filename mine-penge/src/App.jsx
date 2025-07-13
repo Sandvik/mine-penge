@@ -22,6 +22,7 @@ import BoligHusGuide from './pages/BoligHusGuide';
 import TestPage from './pages/TestPage';
 import HeroSectionAdvanced from './components/HeroSectionAdvanced';
 import CurationPanel from './components/CurationPanel';
+import ChatWidget from './components/ChatWidget';
 import { fetchArticles, searchArticles, getArticlesByFilter, getStatistics, getAvailableFilters } from './services/articleService';
 import curationService from './services/curationService';
 import ScrollToTopButton from './components/ScrollToTopButton';
@@ -508,6 +509,7 @@ function App() {
         )}
         
         <ScrollToTopButton />
+        <ChatWidget />
         <Footer />
       </div>
     </Router>
