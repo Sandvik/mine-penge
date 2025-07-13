@@ -2,6 +2,17 @@
 
 En moderne React app der samler og kuraterer danske økonomi-artikler med Python scraper backend og interaktive guides.
 
+## 📚 Dokumentation
+
+Se [docs/](docs/) mappen for detaljeret dokumentation:
+- [AI Chat Integration](docs/AI-CHAT.md)
+- [Chat Strategy](docs/CHAT-STRATEGY.md) 
+- [SEO Checklist](docs/SEO_CHECKLIST.md)
+- [Database Setup](docs/database-setup.md)
+- [One.com Setup](docs/onecom-setup.md)
+- [Scraper Guide](docs/scraper-guide.md)
+- [Integration Guide](docs/integration-guide.md)
+
 ## 🎯 Formål
 AI-drevet aggregator der samler, klassificerer og præsenterer danske artikler om privatøkonomi - som en "Google News for dine penge" med fokus på unge og børnefamilier. Inkluderer interaktive guides med værktøjer og beregnere.
 
