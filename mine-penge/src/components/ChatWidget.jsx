@@ -11,6 +11,7 @@ const ChatWidget = () => {
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(false);
   const messagesEndRef = useRef(null);
 
   // FAQ data fra alle kategorier
@@ -345,6 +346,35 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
+  // If minimized, show only header
+  if (isMinimized) {
+    return (
+      <div className="fixed bottom-4 right-4 w-80 bg-white rounded-lg shadow-xl border border-gray-200">
+        <div className="bg-blue-600 text-white p-4 rounded-lg">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                <span className="text-blue-600 font-bold text-sm">💰</span>
+              </div>
+              <div>
+                <h3 className="font-semibold">MinePenge Assistent</h3>
+                <p className="text-xs opacity-90">Klik for at åbne chat</p>
+              </div>
+            </div>
+            <button 
+              onClick={() => setIsMinimized(false)}
+              className="text-white hover:text-gray-200 transition-colors"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="fixed bottom-4 right-4 w-96 h-96 bg-white rounded-lg shadow-xl border border-gray-200 flex flex-col">
       {/* Header */}
@@ -359,9 +389,12 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
               <p className="text-xs opacity-90">Spørg om økonomi</p>
             </div>
           </div>
-          <button className="text-white hover:text-gray-200">
+          <button 
+            onClick={() => setIsMinimized(true)}
+            className="text-white hover:text-gray-200 transition-colors"
+          >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </button>
         </div>
