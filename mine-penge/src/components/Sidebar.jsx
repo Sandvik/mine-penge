@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Tag, Search, ChevronDown, ChevronUp, TrendingUp, Star, Zap, BookOpen, Filter } from 'lucide-react';
+import { Tag, Search, ChevronDown, ChevronUp, TrendingUp, Star, Zap, BookOpen, Filter, HelpCircle } from 'lucide-react';
 
 function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles = [] }) {
   const [searchTerm, setSearchTerm] = useState('');
@@ -118,6 +118,14 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles =
             >
               <BookOpen className="h-4 w-4 text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
               <span className="text-xs text-nordic-700 group-hover:text-orange-600 transition-colors">Alle artikler</span>
+            </a>
+            
+            <a 
+              href="/faq"
+              className="bg-white rounded-md p-2 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+            >
+              <HelpCircle className="h-4 w-4 text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
+              <span className="text-xs text-nordic-700 group-hover:text-orange-600 transition-colors">FAQ</span>
             </a>
             
             <a 

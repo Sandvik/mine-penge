@@ -13,6 +13,8 @@ import EmbedWidget from './pages/EmbedWidget';
 import OmOs from './pages/OmOs';
 import Kontakt from './pages/Kontakt';
 import HeroDemo from './pages/HeroDemo';
+import FAQ from './pages/FAQ';
+import ChatTest from './pages/ChatTest';
 import StudentInvestmentGuide from './pages/StudentInvestmentGuide';
 import FamilyFinanceGuide from './pages/FamilyFinanceGuide';
 import InvesteringGuide from './pages/InvesteringGuide';
@@ -477,6 +479,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/test" element={<TestPage />} />
+              <Route path="/chat-test" element={<ChatTest />} />
               <Route path="/student-investment-guide" element={<StudentInvestmentGuide />} />
               <Route path="/family-finance-guide" element={<FamilyFinanceGuide />} />
               <Route path="/investering-guide" element={<InvesteringGuide />} />
@@ -488,6 +491,7 @@ function App() {
               <Route path="/embed-widget" element={<EmbedWidget />} />
               <Route path="/om-os" element={<OmOs />} />
               <Route path="/kontakt" element={<Kontakt />} />
+              <Route path="/faq" element={<FAQ />} />
               <Route path="/hero-demo" element={<HeroDemo />} />
               <Route path="/sitemap.xml" element={<Sitemap />} />
             </Routes>

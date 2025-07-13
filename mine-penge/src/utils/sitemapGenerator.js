@@ -8,6 +8,7 @@ export const generateSitemap = () => {
   // Static pages
   const staticPages = [
     { url: '/', priority: '1.0', changefreq: 'daily' },
+    { url: '/faq', priority: '0.8', changefreq: 'weekly' },
     { url: '/student-investment-guide', priority: '0.9', changefreq: 'weekly' },
     { url: '/family-finance-guide', priority: '0.9', changefreq: 'weekly' },
     { url: '/investering-guide', priority: '0.9', changefreq: 'weekly' },
