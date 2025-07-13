@@ -85,14 +85,24 @@ const ChatWidget = () => {
     {
       id: 'investering-1',
       question: 'Hvordan starter jeg med at investere som begynder?',
-      answer: `Som begynder er det vigtigt at starte simpelt:
+      answer: `Hej! Det er super at du vil komme i gang med at investere! 🎉
+
+Som begynder er det vigtigt at starte simpelt:
 
 1️⃣ Start med månedsopsparing - 100-500 kr/måned
 2️⃣ Vælg brede fonde - Sparindex INDEX Globale Aktier
 3️⃣ Brug Nordnet eller Saxo - Gratis månedsopsparing
 4️⃣ Tålmodighed - Investering er langsigtet
 
-💡 Tip: Du behøver ikke være ekspert for at starte. Månedsopsparing er perfekt til begyndere!`,
+💡 Tip: Du behøver ikke være ekspert for at starte. Månedsopsparing er perfekt til begyndere!
+
+Du er på rette spor ved at spørge - det er første skridt til økonomisk frihed! 🚀
+
+🏠 **Vil du se vores investeringsberegner?**
+[📊 Åbn investeringsberegner](/investering-guide#beregner)
+
+📚 **Læs mere i vores investering guide:**
+[📖 Investering guide](/investering-guide)`,
       tags: ['starte', 'begynde', 'komme i gang', 'første gang', 'nybegynder', 'investering'],
       category: 'investering'
     },
@@ -112,14 +122,20 @@ const ChatWidget = () => {
 3. Køb fonde/aktier
 4. Betal kun 17% skat
 
-🎯 Velegnet til langsigtet investering i f.eks. Sparindex Globale Aktier.`,
+🎯 Velegnet til langsigtet investering i f.eks. Sparindex Globale Aktier.
+
+Ah, skat - det kedelige emne vi alle skal forholde os til! 😅 Men hey, 17% er meget bedre end normale 27-42% skat.
+
+Du gør det rigtigt ved at spørge! 👍`,
       tags: ['ASK', 'aktiesparekonto', 'skat', 'skattefordel', '17%'],
       category: 'investering'
     },
     {
       id: 'investering-5',
       question: 'Hvilke fonde skal jeg vælge som begynder?',
-      answer: `Top 3 fonde til begyndere:
+      answer: `Fantastisk spørgsmål! Som begynder er det vigtigt at starte simpelt. Du er på rette spor! 🎯
+
+Top 3 fonde til begyndere:
 
 1️⃣ Sparindex INDEX Globale Aktier
    - Verdens største virksomheder
@@ -136,7 +152,12 @@ const ChatWidget = () => {
    - Skattefordel (realisationsbeskatning)
    - 10-20% af din portefølje
 
-💡 Start med: 100% Sparindex INDEX Globale Aktier, og tilføj andre senere.`,
+💡 Start med: 100% Sparindex INDEX Globale Aktier, og tilføj andre senere.
+
+Det kan være svært at komme i gang, men du har taget det vigtigste skridt - at spørge! Du klarer det! 🚀
+
+💰 **Vil du se vores investeringsberegner?**
+[📊 Åbn investeringsberegner](/investering-guide#beregner)`,
       tags: ['fonde', 'sparindex', 'begynder', 'vælg', 'hvilke'],
       category: 'investering'
     },
@@ -144,7 +165,9 @@ const ChatWidget = () => {
     {
       id: 'bolig-1',
       question: 'Hvordan får jeg boliglån?',
-      answer: `Sådan får du boliglån:
+      answer: `God planlægning! 🏠 Her er din vej til boliglån:
+
+Sådan får du boliglån:
 
 1️⃣ Spar op til udbetaling
    - Minimum 20% af boligprisen
@@ -164,7 +187,15 @@ const ChatWidget = () => {
    - Maksimum 4x din årsindkomst
    - Husk ejerudgifter
 
-💡 Tip: Start med at spare op og få lånebevis, før du begynder at kigge på boliger.`,
+💡 Tip: Start med at spare op og få lånebevis, før du begynder at kigge på boliger.
+
+Du er på rette spor ved at spørge! Boligkøb er en stor beslutning, og det er smart at forberede sig. 🎯
+
+🏠 **Vil du se vores boligberegner?**
+[📊 Åbn boligberegner](/bolig-hus-guide#beregner)
+
+📚 **Læs mere i vores bolig guide:**
+[📖 Bolig & Hus guide](/bolig-hus-guide)`,
       tags: ['boliglån', 'udbetaling', 'lånebevis', 'bolig', 'hus', 'køb'],
       category: 'bolig'
     },
@@ -188,7 +219,12 @@ const ChatWidget = () => {
 - Bedre lånevilkår
 - Mindre risiko
 
-🎯 Start tidligt - Jo før du begynder at spare, jo lettere bliver det!`,
+🎯 Start tidligt - Jo før du begynder at spare, jo lettere bliver det!
+
+Ja, det kan virke som et stort beløb, men husk - mange har gjort det før dig! Du klarer det! 💪
+
+🏠 **Vil du se vores boligberegner?**
+[📊 Åbn boligberegner](/bolig-hus-guide#beregner)`,
       tags: ['spareop', 'udbetaling', 'bolig', 'hus', 'beløb'],
       category: 'bolig'
     },
@@ -196,7 +232,9 @@ const ChatWidget = () => {
     {
       id: 'budget-1',
       question: 'Hvordan laver jeg et budget?',
-      answer: `Sådan laver du et budget:
+      answer: `Fantastisk spørgsmål! At lave et budget er første skridt til økonomisk kontrol. Du er på rette spor! 🎯
+
+Sådan laver du et budget:
 
 1️⃣ Få overblik over indkomst
    - Løn, SU, andre indtægter
@@ -216,7 +254,15 @@ const ChatWidget = () => {
    - Track dine udgifter
    - Juster løbende
 
-💡 Start simpelt og bliv bedre over tid!`,
+💡 Det kan være svært at komme i gang, men du har taget det vigtigste skridt - at spørge!
+
+Du klarer det! Start småt og bliv bedre over tid. 🚀
+
+📊 **Vil du se vores budgetberegner?**
+[📊 Åbn budgetberegner](/family-finance-guide#beregner)
+
+📚 **Læs mere i vores familieøkonomi guide:**
+[📖 Familieøkonomi guide](/family-finance-guide)`,
       tags: ['budget', 'økonomi', 'udgifter', 'indkomst', 'planlægning'],
       category: 'budget'
     },
@@ -239,7 +285,12 @@ const ChatWidget = () => {
 - 30% til ønsker
 - 20% til opsparing
 
-💡 Start med nødopsparing, derefter målbaseret opsparing.`,
+💡 Start med nødopsparing, derefter målbaseret opsparing.
+
+Det kan virke som meget, men husk - alle starter et sted! Du er på rette spor ved at spørge. 🌟
+
+📊 **Vil du se vores budgetberegner?**
+[📊 Åbn budgetberegner](/family-finance-guide#beregner)`,
       tags: ['spareop', 'nødopsparing', 'mål', 'beløb', 'regler'],
       category: 'budget'
     },
@@ -247,7 +298,7 @@ const ChatWidget = () => {
     {
       id: 'studerende-1',
       question: 'Hvordan får jeg styr på min økonomi som studerende?',
-      answer: `Økonomi for studerende:
+      answer: `Økonomi for studerende - det kan være en udfordring, men du er ikke alene! 🎓
 
 💰 Indtægter:
 - SU: 6.397 kr/måned (2024)
@@ -266,7 +317,12 @@ const ChatWidget = () => {
 - Find billige alternativer
 - Del udgifter med roommates
 
-🎯 Mål: Spar 500-1.000 kr/måned til nødopsparing.`,
+🎯 Mål: Spar 500-1.000 kr/måned til nødopsparing.
+
+Det kan være svært at komme i gang, men du har taget det vigtigste skridt - at spørge! Du klarer det! 💪
+
+📚 **Læs mere i vores studerende guide:**
+[📖 Studerende investering guide](/student-investment-guide)`,
       tags: ['studerende', 'SU', 'budget', 'økonomi', 'husleje'],
       category: 'studerende'
     },
@@ -274,7 +330,7 @@ const ChatWidget = () => {
     {
       id: 'pension-1',
       question: 'Hvor meget skal jeg spare op til pension?',
-      answer: `Pensionsopsparing:
+      answer: `Pensionsopsparing - det emne vi alle tænker på, men ikke altid gør noget ved! 😅
 
 💰 Generel regel: 10-15% af din indkomst
 - Hvis du tjener 30.000 kr/måned = 3.000-4.500 kr/måned
@@ -287,7 +343,9 @@ const ChatWidget = () => {
 🎯 Mål: 70% af din nuværende indkomst som pensionist
 - Hvis du tjener 30.000 kr nu = 21.000 kr som pensionist
 
-💡 Start tidligt - renters rente gør en kæmpe forskel!`,
+💡 Start tidligt - renters rente gør en kæmpe forskel!
+
+Ja, pension kan virke langt væk, men jo tidligere du starter, jo lettere bliver det! Du er på rette spor! 🚀`,
       tags: ['pension', 'opsparing', 'arbejdsgiverpension', 'privat pension', 'beløb'],
       category: 'pension'
     },
@@ -295,7 +353,9 @@ const ChatWidget = () => {
     {
       id: 'gæld-1',
       question: 'Hvordan kommer jeg ud af gæld?',
-      answer: `Sådan kommer du ud af gæld:
+      answer: `Det kan være svært at komme ud af gæld, men du er ikke alene! Du har taget det vigtigste skridt - at spørge. 💪
+
+Sådan kommer du ud af gæld:
 
 1️⃣ Få overblik
    - Skriv alle gæld op
@@ -316,7 +376,9 @@ const ChatWidget = () => {
    - Brug ekstra penge til gæld
    - Undgå ny gæld
 
-💡 Fokuser på én gæld ad gangen - det giver resultater!`,
+💡 Fokuser på én gæld ad gangen - det giver resultater!
+
+Det kan være en hård vej, men du klarer det! Fokuser på én dag ad gangen. 🌟`,
       tags: ['gæld', 'lån', 'afbetaling', 'strategi', 'plan'],
       category: 'gæld'
     }
@@ -337,6 +399,44 @@ const ChatWidget = () => {
     }
     
     return null;
+  };
+
+  // Parse links in text and convert to clickable elements
+  const parseLinks = (text) => {
+    // Match markdown-style links: [text](url)
+    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    const parts = [];
+    let lastIndex = 0;
+    let match;
+
+    while ((match = linkRegex.exec(text)) !== null) {
+      // Add text before the link
+      if (match.index > lastIndex) {
+        parts.push({
+          type: 'text',
+          content: text.slice(lastIndex, match.index)
+        });
+      }
+
+      // Add the link
+      parts.push({
+        type: 'link',
+        text: match[1],
+        url: match[2]
+      });
+
+      lastIndex = match.index + match[0].length;
+    }
+
+    // Add remaining text
+    if (lastIndex < text.length) {
+      parts.push({
+        type: 'text',
+        content: text.slice(lastIndex)
+      });
+    }
+
+    return parts.length > 0 ? parts : [{ type: 'text', content: text }];
   };
 
   // Handle user input
@@ -588,7 +688,29 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
                     : 'bg-gray-100 text-gray-800'
                 }`}
               >
-                <div className="whitespace-pre-wrap text-sm">{message.text}</div>
+                {message.text.split('\n').map((line, index) => (
+                  <React.Fragment key={index}>
+                    {parseLinks(line).map((part, partIndex) => (
+                      <React.Fragment key={partIndex}>
+                        {part.type === 'text' ? (
+                          <span>{part.content}</span>
+                        ) : (
+                          <a
+                            href={part.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-700 hover:text-blue-900 underline"
+                            onClick={(e) => e.stopPropagation()} // Prevent parent click
+                          >
+                            {part.text}
+                          </a>
+                        )}
+                      </React.Fragment>
+                    ))}
+                    <br />
+                  </React.Fragment>
+                ))}
+                
                 {message.relatedQuestion && (
                   <div className="mt-2 text-xs opacity-75">
                     Relateret: {message.relatedQuestion}
