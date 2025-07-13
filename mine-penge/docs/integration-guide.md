@@ -1,6 +1,6 @@
 # Mine Penge Scraper Integration Guide
 
-Denne guide forklarer hvordan Scraper projektet kan integreres i minepenge.dk projektet.
+Denne guide forklarer hvordan Scraper projektet integreres i minepenge.dk projektet.
 
 ## 📁 Anbefalede Placeringer
 
@@ -15,30 +15,18 @@ minepenge/
 │   ├── data/
 │   ├── requirements.txt
 │   └── README.md
-├── frontend/
-├── backend/
+├── src/                        # Frontend React app
+├── public/                     # Statiske filer
 └── ...
 ```
 
-### Mulighed 2: Som backend komponent
-```
-minepenge/
-├── backend/
-│   ├── scraper/               # Scraper som backend komponent
-│   ├── api/
-│   ├── database/
-│   └── ...
-├── frontend/
-└── ...
-```
-
-### Mulighed 3: Som tools mappe
+### Mulighed 2: Som tools mappe
 ```
 minepenge/
 ├── tools/
 │   └── scraper/               # Scraper som værktøj
-├── frontend/
-├── backend/
+├── src/
+├── public/
 └── ...
 ```
 
@@ -65,99 +53,76 @@ python scrapers/scraperMoneypenny.py
 python update_all_data_realtime.py
 ```
 
-## 🔗 Integration muligheder
+## 🔗 Integration med Frontend
 
-### 1. Database Integration
-```python
-# Eksempel: Import tagged data til minepenge database
-import json
-from minepenge.database import Article, Tag
-
-def import_tagged_articles():
-    with open('data/tagged/tagged_mitteldorf_blog_posts.json', 'r') as f:
-        data = json.load(f)
-    
-    for article_data in data['articles']:
-        article = Article(
-            title=article_data['title'],
-            content=article_data['original_data']['content'],
-            summary=article_data['summary'],
-            source=article_data['source'],
-            url=article_data['url'],
-            complexity_level=article_data['complexity_level']
-        )
-        # Gem artikel og tags...
+### 1. Data Flow
+```
+Blogs → Scrapers → Raw JSON → Tagging → Tagged JSON → articles.json → Frontend
 ```
 
-### 2. API Endpoints
-```python
-# Eksempel: API endpoint til at køre scrapers
-@app.route('/api/scraper/run', methods=['POST'])
-def run_scraper():
-    import subprocess
-    result = subprocess.run(['python', 'scraper/update_all_data_realtime.py'])
-    return {'status': 'success' if result.returncode == 0 else 'error'}
+### 2. Frontend Integration
+```javascript
+// src/services/articleService.js
+import articlesData from '../data/articles.json';
 
-@app.route('/api/scraper/status', methods=['GET'])
-def scraper_status():
-    # Returner status af seneste kørsel
-    pass
+export const getArticles = () => {
+  return articlesData.articles;
+};
+
+export const getArticlesByTag = (tag) => {
+  return articlesData.articles.filter(article => 
+    article.minepenge_tags.includes(tag)
+  );
+};
 ```
 
-### 3. Scheduled Jobs
-```python
-# Eksempel: Automatisk opdatering hver dag
-from apscheduler.schedulers.background import BackgroundScheduler
+### 3. Automatisk Data Opdatering
+```bash
+# Workflow til at opdatere frontend data
+cd scraper
+python update_all_data_realtime.py
+python tagging/content_tagger.py
+python build_articles.py
 
-scheduler = BackgroundScheduler()
-scheduler.add_job(
-    func=run_daily_scrape,
-    trigger="cron",
-    hour=2,  # Kør kl 2 om natten
-    id="daily_scraper"
-)
-scheduler.start()
-```
-
-## 📊 Data Flow
-
-### Nuværende flow:
-```
-Blogs → Scrapers → Raw JSON → Tagging → Tagged JSON
-```
-
-### Integreret flow:
-```
-Blogs → Scrapers → Raw JSON → Tagging → Tagged JSON → Database → Frontend
+# Kopier til frontend
+cp articles.json ../src/data/
 ```
 
 ## 🔧 Konfiguration
 
 ### Environment Variables
 ```bash
-# Tilføj til minepenge .env fil
+# Tilføj til minepenge .env fil (valgfrit)
 SCRAPER_DATA_PATH=./scraper/data
 SCRAPER_TAGGED_PATH=./scraper/data/tagged
 SCRAPER_LOG_LEVEL=INFO
 ```
 
-### Database Schema
-```sql
--- Eksempel på database tabel for artikler
-CREATE TABLE articles (
-    id SERIAL PRIMARY KEY,
-    article_id VARCHAR(50) UNIQUE,
-    title TEXT NOT NULL,
-    content TEXT,
-    summary TEXT,
-    source VARCHAR(100),
-    url TEXT UNIQUE,
-    complexity_level VARCHAR(20),
-    target_audiences JSONB,
-    minepenge_tags JSONB,
-    confidence_scores JSONB,
-    created_at TIMESTAMP DEFAULT NOW()
-);
+### Frontend Data Struktur
+```json
+{
+  "metadata": {
+    "total_articles": 847,
+    "sources": ["Moneypenny", "Nordnet", "Budgetnoerden", "Ungmedpenge", "Mitteldorf"],
+    "date_range": "2020-01-01 to 2025-01-15",
+    "built_at": "2025-01-15T10:30:00"
+  },
+  "articles": [
+    {
+      "article_id": "unique_id",
+      "title": "Artikel titel",
+      "source": "Blog navn",
+      "url": "artikel URL",
+      "summary": "Kort resume...",
+      "target_audiences": ["målgruppe1", "målgruppe2"],
+      "complexity_level": "begynder",
+      "minepenge_tags": ["tag1", "tag2"],
+      "tag_categories": ["Kategori1", "Kategori2"],
+      "date_published": "2025-01-15",
+      "word_count": 1234
+    }
+  ]
+}
 ```
 
 ## 🧪 Testing
@@ -175,13 +140,11 @@ cd scraper
 python update_all_data_realtime.py
 ```
 
-### Test database import
-```python
-# Test script til at importere data
-python -c "
-from integration import import_tagged_articles
-import_tagged_articles()
-"
+### Test frontend integration
+```bash
+# Start frontend efter data opdatering
+npm run dev
+# Tjek at artikler vises korrekt
 ```
 
 ## 📈 Monitoring
@@ -202,7 +165,7 @@ logging.basicConfig(
 ### Metrics
 - Antal artikler scraped per dag
 - Tagging accuracy
-- Database import success rate
+- Frontend data opdatering success rate
 - Scraper performance
 
 ## 🔒 Sikkerhed
@@ -222,23 +185,112 @@ logging.basicConfig(
 
 ## 🚀 Deployment
 
-### Docker (Valgfrit)
-```dockerfile
-FROM python:3.9-slim
-
-WORKDIR /app
-COPY scraper/ ./scraper/
-RUN pip install -r scraper/requirements.txt
-
-CMD ["python", "scraper/update_all_data_realtime.py"]
+### Automatiseret Workflow
+```bash
+# Script til at køre hele workflow
+#!/bin/bash
+cd scraper
+python update_all_data_realtime.py
+python tagging/content_tagger.py
+python build_articles.py
+cp articles.json ../src/data/
+echo "Data opdateret: $(date)"
 ```
 
 ### Cron Jobs
 ```bash
 # Kør dagligt kl 2:00
-0 2 * * * cd /path/to/minepenge/scraper && python update_all_data_realtime.py
+0 2 * * * cd /path/to/minepenge/scraper && python update_all_data_realtime.py && python tagging/content_tagger.py && python build_articles.py && cp articles.json ../src/data/
+```
+
+### GitHub Actions (Valgfrit)
+```yaml
+# .github/workflows/update-data.yml
+name: Update Article Data
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Dagligt kl 2:00
+  workflow_dispatch:     # Manuelt trigger
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: |
+          cd scraper
+          pip install -r requirements.txt
+      - name: Update data
+        run: |
+          cd scraper
+          python update_all_data_realtime.py
+          python tagging/content_tagger.py
+          python build_articles.py
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add src/data/articles.json
+          git commit -m "Update article data" || exit 0
+          git push
+```
+
+## 📊 Frontend Integration Eksempler
+
+### Søgning og Filtrering
+```javascript
+// src/components/FilterBar.jsx
+export const FilterBar = ({ onFilterChange }) => {
+  const [selectedTags, setSelectedTags] = useState([]);
+  const [selectedAudience, setSelectedAudience] = useState('');
+  
+  const handleFilter = () => {
+    onFilterChange({
+      tags: selectedTags,
+      audience: selectedAudience
+    });
+  };
+  
+  return (
+    <div className="filter-bar">
+      {/* Filter UI */}
+    </div>
+  );
+};
+```
+
+### Artikel Visning
+```javascript
+// src/components/ArticleCard.jsx
+export const ArticleCard = ({ article }) => {
+  return (
+    <div className="article-card">
+      <h3>{article.title}</h3>
+      <p>{article.summary}</p>
+      <div className="tags">
+        {article.minepenge_tags.map(tag => (
+          <span key={tag} className="tag">{tag}</span>
+        ))}
+      </div>
+      <div className="audience">
+        {article.target_audiences.map(audience => (
+          <span key={audience} className="audience-tag">{audience}</span>
+        ))}
+      </div>
+    </div>
+  );
+};
 ```
 
 ## 📞 Support
 
-For spørgsmål om integration, kontakt udviklingsteamet på minepenge.dk 
+For spørgsmål om scraper integration, kontakt udviklingsteamet på minepenge.dk
+
+---
+
+*Opdateret: Januar 2025 - Fjernet database referencer, fokuseret på JSON-baseret integration* 

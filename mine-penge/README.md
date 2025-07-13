@@ -8,10 +8,9 @@ Se [docs/](docs/) mappen for detaljeret dokumentation:
 - [AI Chat Integration](docs/AI-CHAT.md)
 - [Chat Strategy](docs/CHAT-STRATEGY.md) 
 - [SEO Checklist](docs/SEO_CHECKLIST.md)
-- [Database Setup](docs/database-setup.md)
-- [One.com Setup](docs/onecom-setup.md)
 - [Scraper Guide](docs/scraper-guide.md)
 - [Integration Guide](docs/integration-guide.md)
+- [Deployment Guide](docs/deployment-guide.md)
 
 ## 🎯 Formål
 AI-drevet aggregator der samler, klassificerer og præsenterer danske artikler om privatøkonomi - som en "Google News for dine penge" med fokus på unge og børnefamilier. Inkluderer interaktive guides med værktøjer og beregnere.
