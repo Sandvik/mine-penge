@@ -349,7 +349,7 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
   // If minimized, show only header
   if (isMinimized) {
     return (
-      <div className="fixed bottom-4 right-4 w-80 bg-white rounded-lg shadow-xl border border-gray-200">
+      <div className="fixed bottom-4 right-20 w-80 bg-white rounded-lg shadow-xl border border-gray-200">
         <div className="bg-blue-600 text-white p-4 rounded-lg">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
@@ -376,7 +376,7 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
   }
 
   return (
-    <div className="fixed bottom-4 right-4 w-96 h-96 bg-white rounded-lg shadow-xl border border-gray-200 flex flex-col">
+    <div className="fixed bottom-4 right-20 w-96 h-96 bg-white rounded-lg shadow-xl border border-gray-200 flex flex-col">
       {/* Header */}
       <div className="bg-blue-600 text-white p-4 rounded-t-lg">
         <div className="flex items-center justify-between">
