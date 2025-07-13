@@ -1,0 +1,44 @@
+[
+  {
+    "article_id": "original_001",
+    "title": "Studerende og Investering - Kom Godt i Gang",
+    "summary": "En komplet guide til at starte din investeringsrejse som studerende i Danmark. Lær om platforms, strategier og få praktiske værktøjer.",
+    "source": "MinePenge Original",
+    "url": "/student-investment-guide",
+    "published_date": "2024-12-19T10:00:00+00:00",
+    "minepenge_tags": ["studerende", "investering", "begynder", "SU", "budget"],
+    "complexity_level": "begynder",
+    "target_audiences": ["studerende", "nybegynder_investering"],
+    "content_type": "original",
+    "reading_time": 15,
+    "author": "MinePenge Teamet"
+  },
+  {
+    "article_id": "original_002", 
+    "title": "Spare Skilling Investering - Automatiser Din Opsparing",
+    "summary": "Lær hvordan du kan spare små beløb op automatisk og få dem til at vokse over tid. Perfekt for studerende med begrænset budget.",
+    "source": "MinePenge Original",
+    "url": "/student-investment-guide?tab=calculator",
+    "published_date": "2024-12-18T14:30:00+00:00",
+    "minepenge_tags": ["spare", "investering", "automatisering", "studerende", "budget"],
+    "complexity_level": "begynder",
+    "target_audiences": ["studerende", "budgetbevidste"],
+    "content_type": "original",
+    "reading_time": 8,
+    "author": "MinePenge Teamet"
+  },
+  {
+    "article_id": "original_003",
+    "title": "Student Budget + Investment Plan Template",
+    "summary": "Download vores gratis budget template specifikt designet til studerende. Inkluderer SU, deltidsjob og investeringsplanlægning.",
+    "source": "MinePenge Original", 
+    "url": "/student-investment-guide?tab=template",
+    "published_date": "2024-12-17T09:15:00+00:00",
+    "minepenge_tags": ["budget", "template", "studerende", "SU", "planlægning"],
+    "complexity_level": "begynder",
+    "target_audiences": ["studerende"],
+    "content_type": "original",
+    "reading_time": 5,
+    "author": "MinePenge Teamet"
+  }
+] 

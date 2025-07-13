@@ -264,8 +264,22 @@ function ArticleCard({ article, selectedTag = null }) {
     return finalPrefix + title;
   };
 
+  // Check if this is original content
+  const isOriginalContent = source === 'MinePenge Original' || source === 'MinePenge.nu';
+
   return (
-    <article className="bg-white rounded-2xl p-6 shadow-soft border border-nordic-200 hover:shadow-lg transition-shadow duration-200 relative">
+    <article className={`bg-white rounded-2xl p-6 shadow-soft border hover:shadow-lg transition-shadow duration-200 relative ${
+      isOriginalContent ? 'border-blue-300 border-l-4 border-l-blue-500' : 'border-nordic-200'
+    }`}>
+      {/* Original Content Badge */}
+      {isOriginalContent && (
+        <div className="absolute top-2 left-2">
+          <span className="bg-blue-600 text-white text-xs font-medium px-3 py-1 rounded-full shadow-sm">
+            ✨ Original Content
+          </span>
+        </div>
+      )}
+
       {/* Article ID - Top right corner */}
       {article_id && (
         <div className="absolute top-2 right-2">

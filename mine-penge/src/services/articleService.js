@@ -1,9 +1,11 @@
 // Article service for handling data from Python scraper scripts and APIs
 import articlesData from '../data/articles.json';
+import originalArticlesData from '../data/original_articles.json';
 
 class ArticleService {
   constructor() {
-    this.articles = articlesData.articles || [];
+    // Combine regular articles with original content
+    this.articles = [...(articlesData.articles || []), ...originalArticlesData];
     this.metadata = articlesData.metadata || {};
     this.apiBaseUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
     this.cache = new Map();

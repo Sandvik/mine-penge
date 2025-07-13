@@ -13,6 +13,8 @@ import EmbedWidget from './pages/EmbedWidget';
 import OmOs from './pages/OmOs';
 import Kontakt from './pages/Kontakt';
 import HeroDemo from './pages/HeroDemo';
+import StudentInvestmentGuide from './pages/StudentInvestmentGuide';
+import TestPage from './pages/TestPage';
 import HeroSectionAdvanced from './components/HeroSectionAdvanced';
 import CurationPanel from './components/CurationPanel';
 import { fetchArticles, searchArticles, getArticlesByFilter, getStatistics, getAvailableFilters } from './services/articleService';
@@ -471,6 +473,8 @@ function App() {
           <main className="flex-1 min-w-0">
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/test" element={<TestPage />} />
+              <Route path="/student-investment-guide" element={<StudentInvestmentGuide />} />
               <Route path="/seo-dashboard" element={<SEODashboard />} />
               <Route path="/landing-page-generator" element={<LandingPageGenerator />} />
               <Route path="/qa-feed-generator" element={<QAFeedGenerator />} />
