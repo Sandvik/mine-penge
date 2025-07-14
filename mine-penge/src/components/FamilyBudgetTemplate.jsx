@@ -240,7 +240,7 @@ const FamilyBudgetTemplate = () => {
 
           {/* Expenses */}
           <div className="lg:col-span-2">
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
+            <div className="bg-nordic-50 border border-nordic-200 rounded-lg p-6">
               <div className="flex justify-between items-center mb-6">
                 <h3 className="text-lg font-semibold text-gray-800">Månedlige Udgifter</h3>
                 <button

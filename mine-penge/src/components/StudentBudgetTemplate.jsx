@@ -150,7 +150,7 @@ BUDGET TIPS:
       {showPreview && (
         <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
           <h5 className="font-medium text-gray-800 mb-3">Template Preview:</h5>
-          <div className="text-xs font-mono text-gray-600 bg-white p-3 rounded border overflow-x-auto">
+          <div className="text-xs font-mono text-gray-600 bg-nordic-50 p-3 rounded border overflow-x-auto">
             <div>Kategori,Månedlig indkomst,Månedlig udgift,Noter</div>
             <div>SU (efter skat),,</div>
             <div>Deltidsjob,,</div>

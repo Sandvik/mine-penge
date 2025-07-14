@@ -15,7 +15,7 @@ function FilterBar({ filters, onFilterChange, onClearFilters }) {
             <select
               value={filters.topic}
               onChange={(e) => onFilterChange('topic', e.target.value)}
-              className="px-3 py-2 border border-nordic-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white whitespace-nowrap"
+              className="px-3 py-2 border border-nordic-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-nordic-50 whitespace-nowrap"
             >
               <option value="">Alle emner</option>
               <option value="Osparing">Osparing</option>
@@ -29,7 +29,7 @@ function FilterBar({ filters, onFilterChange, onClearFilters }) {
             <select
               value={filters.audience || ''}
               onChange={(e) => onFilterChange('audience', e.target.value)}
-              className="px-3 py-2 border border-nordic-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white whitespace-nowrap"
+              className="px-3 py-2 border border-nordic-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-nordic-50 whitespace-nowrap"
             >
               <option value="">Alle målgrupper</option>
               <option value="studerende">Studerende</option>

@@ -145,14 +145,14 @@ function MobileSidebar({
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-nordic-200 bg-gradient-to-r from-primary-600 to-blue-600 text-white">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-nordic-50 bg-opacity-20 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">M</span>
             </div>
             <span className="text-xl font-bold">MinePenge</span>
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-lg hover:bg-white hover:bg-opacity-20 transition-colors"
+            className="p-2 rounded-lg hover:bg-nordic-50 hover:bg-opacity-20 transition-colors"
           >
             <X className="h-6 w-6" />
           </button>
@@ -172,7 +172,7 @@ function MobileSidebar({
                 <a 
                   href="/"
                   onClick={onClose}
-                  className="bg-white rounded-lg p-3 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+                  className="bg-nordic-50 rounded-lg p-3 border border-orange-200 hover:border-orange-300 transition-colors text-center group"
                 >
                   <BookOpen className="h-5 w-5 text-orange-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
                   <span className="text-sm text-nordic-700 group-hover:text-orange-600 transition-colors">Alle artikler</span>
@@ -181,7 +181,7 @@ function MobileSidebar({
                 <a 
                   href="/faq"
                   onClick={onClose}
-                  className="bg-white rounded-lg p-3 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+                  className="bg-nordic-50 rounded-lg p-3 border border-orange-200 hover:border-orange-300 transition-colors text-center group"
                 >
                   <HelpCircle className="h-5 w-5 text-orange-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
                   <span className="text-sm text-nordic-700 group-hover:text-orange-600 transition-colors">FAQ</span>
@@ -190,7 +190,7 @@ function MobileSidebar({
                 <a 
                   href="/student-investment-guide"
                   onClick={onClose}
-                  className="bg-white rounded-lg p-3 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+                  className="bg-nordic-50 rounded-lg p-3 border border-orange-200 hover:border-orange-300 transition-colors text-center group"
                 >
                   <TrendingUp className="h-5 w-5 text-orange-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
                   <span className="text-sm text-nordic-700 group-hover:text-orange-600 transition-colors">Student Guide</span>
@@ -199,7 +199,7 @@ function MobileSidebar({
                 <a 
                   href="/family-finance-guide"
                   onClick={onClose}
-                  className="bg-white rounded-lg p-3 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+                  className="bg-nordic-50 rounded-lg p-3 border border-orange-200 hover:border-orange-300 transition-colors text-center group"
                 >
                   <Star className="h-5 w-5 text-orange-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
                   <span className="text-sm text-nordic-700 group-hover:text-orange-600 transition-colors">Familie Guide</span>
@@ -208,7 +208,7 @@ function MobileSidebar({
                 <a 
                   href="/investering-guide"
                   onClick={onClose}
-                  className="bg-white rounded-lg p-3 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+                  className="bg-nordic-50 rounded-lg p-3 border border-orange-200 hover:border-orange-300 transition-colors text-center group"
                 >
                   <Filter className="h-5 w-5 text-orange-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
                   <span className="text-sm text-nordic-700 group-hover:text-orange-600 transition-colors">Investering</span>
@@ -217,7 +217,7 @@ function MobileSidebar({
                 <a 
                   href="/bolig-hus-guide"
                   onClick={onClose}
-                  className="bg-white rounded-lg p-3 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+                  className="bg-nordic-50 rounded-lg p-3 border border-orange-200 hover:border-orange-300 transition-colors text-center group"
                 >
                   <Star className="h-5 w-5 text-orange-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
                   <span className="text-sm text-nordic-700 group-hover:text-orange-600 transition-colors">Bolig Guide</span>
@@ -226,7 +226,7 @@ function MobileSidebar({
                 <a 
                   href="/pensionist-guide"
                   onClick={onClose}
-                  className="bg-white rounded-lg p-3 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+                  className="bg-nordic-50 rounded-lg p-3 border border-orange-200 hover:border-orange-300 transition-colors text-center group"
                 >
                   <Star className="h-5 w-5 text-orange-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
                   <span className="text-sm text-nordic-700 group-hover:text-orange-600 transition-colors">Pensions Guide</span>
@@ -256,7 +256,7 @@ function MobileSidebar({
               {/* Kategorier */}
               <div className="space-y-3">
                 {Object.entries(filteredCategories).map(([category, tags]) => (
-                  <div key={category} className="border border-gray-200 rounded-lg bg-white">
+                  <div key={category} className="border border-nordic-200 rounded-lg bg-nordic-50">
                     <button
                       onClick={() => toggleCategory(category)}
                       className="w-full px-4 py-3 text-left text-sm font-medium text-gray-700 hover:bg-gray-50 flex items-center justify-between"

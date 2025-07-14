@@ -102,7 +102,7 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles =
       <div className="lg:hidden fixed top-4 left-4 z-50">
         <button
           onClick={onOpenMobileSidebar}
-          className="p-3 bg-white rounded-lg shadow-lg border border-nordic-200 hover:bg-nordic-50 transition-colors"
+          className="p-3 bg-nordic-50 rounded-lg shadow-lg border border-nordic-300 hover:bg-nordic-100 transition-colors"
         >
           <Menu className="h-6 w-6 text-nordic-700" />
         </button>
@@ -129,7 +129,7 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles =
           <div className="grid grid-cols-3 gap-2">
             <a 
               href="/"
-              className="bg-white rounded-md p-2 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+              className="bg-nordic-50 rounded-md p-2 border border-orange-200 hover:border-orange-300 transition-colors text-center group"
             >
               <BookOpen className="h-4 w-4 text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
               <span className="text-xs text-nordic-700 group-hover:text-orange-600 transition-colors">Alle artikler</span>
@@ -137,7 +137,7 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles =
             
             <a 
               href="/faq"
-              className="bg-white rounded-md p-2 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+              className="bg-nordic-50 rounded-md p-2 border border-orange-200 hover:border-orange-300 transition-colors text-center group"
             >
               <HelpCircle className="h-4 w-4 text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
               <span className="text-xs text-nordic-700 group-hover:text-orange-600 transition-colors">FAQ</span>
@@ -145,7 +145,7 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles =
             
             <a 
               href="/student-investment-guide"
-              className="bg-white rounded-md p-2 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+              className="bg-nordic-50 rounded-md p-2 border border-orange-200 hover:border-orange-300 transition-colors text-center group"
             >
               <TrendingUp className="h-4 w-4 text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
               <span className="text-xs text-nordic-700 group-hover:text-orange-600 transition-colors">Student Guide</span>
@@ -153,7 +153,7 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles =
             
             <a 
               href="/family-finance-guide"
-              className="bg-white rounded-md p-2 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+              className="bg-nordic-50 rounded-md p-2 border border-orange-200 hover:border-orange-300 transition-colors text-center group"
             >
               <Star className="h-4 w-4 text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
               <span className="text-xs text-nordic-700 group-hover:text-orange-600 transition-colors">
@@ -163,7 +163,7 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles =
             
             <a 
               href="/investering-guide"
-              className="bg-white rounded-md p-2 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+              className="bg-nordic-50 rounded-md p-2 border border-orange-200 hover:border-orange-300 transition-colors text-center group"
             >
               <Filter className="h-4 w-4 text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
               <span className="text-xs text-nordic-700 group-hover:text-orange-600 transition-colors">Inves–tering Guide</span>
@@ -171,7 +171,7 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles =
             
             <a 
               href="/bolig-hus-guide"
-              className="bg-white rounded-md p-2 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+              className="bg-nordic-50 rounded-md p-2 border border-orange-200 hover:border-orange-300 transition-colors text-center group"
             >
               <Star className="h-4 w-4 text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
               <span className="text-xs text-nordic-700 group-hover:text-orange-600 transition-colors">
@@ -181,7 +181,7 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles =
             
             <a 
               href="/pensionist-guide"
-              className="bg-white rounded-md p-2 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+              className="bg-nordic-50 rounded-md p-2 border border-orange-200 hover:border-orange-300 transition-colors text-center group"
             >
               <Star className="h-4 w-4 text-orange-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
               <span className="text-xs text-nordic-700 group-hover:text-orange-600 transition-colors">
@@ -213,7 +213,7 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles =
         {/* Kategorier */}
         <div className="space-y-3">
           {Object.entries(filteredCategories).map(([category, tags]) => (
-            <div key={category} className="border border-gray-200 rounded-lg bg-white">
+            <div key={category} className="border border-nordic-200 rounded-lg bg-nordic-50">
               <button
                 onClick={() => toggleCategory(category)}
                 className="w-full px-3 py-2 text-left text-sm font-medium text-gray-700 hover:bg-gray-50 flex items-center justify-between"
