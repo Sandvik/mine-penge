@@ -173,7 +173,7 @@ const FamilyFinanceQuiz = () => {
     
     return (
       <div className="max-w-4xl mx-auto">
-        <div className="bg-nordic-50 rounded-lg shadow-lg p-8">
+        <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
             <div className="flex justify-center mb-4">
               <div className="bg-green-100 p-3 rounded-full">
@@ -246,7 +246,7 @@ const FamilyFinanceQuiz = () => {
 
   return (
     <div className="max-w-4xl mx-auto">
-      <div className="bg-nordic-50 rounded-lg shadow-lg p-8">
+      <div className="bg-white rounded-lg shadow-lg p-8">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
             <div className="bg-purple-100 p-3 rounded-full">

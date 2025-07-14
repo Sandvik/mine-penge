@@ -74,7 +74,7 @@ function OmOs() {
           </div>
 
           {/* Mission */}
-          <div className="bg-nordic-50 rounded-2xl p-8 mb-12 shadow-soft">
+          <div className="bg-white rounded-2xl p-8 mb-12 shadow-soft">
             <div className="flex items-center mb-6">
               <Target className="h-8 w-8 text-primary-600 mr-3" />
               <h2 className="text-2xl font-bold text-nordic-900">Vores Mission</h2>
@@ -88,7 +88,7 @@ function OmOs() {
 
           {/* Values */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-nordic-50 rounded-2xl p-8 shadow-soft">
+            <div className="bg-white rounded-2xl p-8 shadow-soft">
               <div className="flex items-center mb-4">
                 <Shield className="h-6 w-6 text-primary-600 mr-3" />
                 <h3 className="text-xl font-semibold text-nordic-900">Pålidelighed</h3>
@@ -99,7 +99,7 @@ function OmOs() {
               </p>
             </div>
 
-            <div className="bg-nordic-50 rounded-2xl p-8 shadow-soft">
+            <div className="bg-white rounded-2xl p-8 shadow-soft">
               <div className="flex items-center mb-4">
                 <Heart className="h-6 w-6 text-primary-600 mr-3" />
                 <h3 className="text-xl font-semibold text-nordic-900">Empati</h3>
@@ -110,7 +110,7 @@ function OmOs() {
               </p>
             </div>
 
-            <div className="bg-nordic-50 rounded-2xl p-8 shadow-soft">
+            <div className="bg-white rounded-2xl p-8 shadow-soft">
               <div className="flex items-center mb-4">
                 <BookOpen className="h-6 w-6 text-primary-600 mr-3" />
                 <h3 className="text-xl font-semibold text-nordic-900">Læring</h3>
@@ -121,7 +121,7 @@ function OmOs() {
               </p>
             </div>
 
-            <div className="bg-nordic-50 rounded-2xl p-8 shadow-soft">
+            <div className="bg-white rounded-2xl p-8 shadow-soft">
               <div className="flex items-center mb-4">
                 <TrendingUp className="h-6 w-6 text-primary-600 mr-3" />
                 <h3 className="text-xl font-semibold text-nordic-900">Vækst</h3>
@@ -134,7 +134,7 @@ function OmOs() {
           </div>
 
           {/* Creator */}
-          <div className="bg-nordic-50 rounded-2xl p-8 mb-12 shadow-soft">
+          <div className="bg-white rounded-2xl p-8 mb-12 shadow-soft">
             <div className="flex items-center mb-6">
               <Users className="h-8 w-8 text-primary-600 mr-3" />
                               <h2 className="text-2xl font-bold text-nordic-900">Skaberen bag MinePenge.nu</h2>
@@ -224,26 +224,26 @@ function OmOs() {
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-nordic-50 rounded-xl p-6 text-center shadow-soft">
+            <div className="bg-white rounded-xl p-6 text-center shadow-soft">
               <div className="text-3xl font-bold text-primary-600 mb-2">{statistics.totalArticles.toLocaleString()}</div>
               <div className="text-sm text-nordic-600">Artikler</div>
             </div>
-            <div className="bg-nordic-50 rounded-xl p-6 text-center shadow-soft">
+            <div className="bg-white rounded-xl p-6 text-center shadow-soft">
               <div className="text-3xl font-bold text-primary-600 mb-2">{statistics.sources.length}</div>
               <div className="text-sm text-nordic-600">Kilder</div>
             </div>
-            <div className="bg-nordic-50 rounded-xl p-6 text-center shadow-soft">
+            <div className="bg-white rounded-xl p-6 text-center shadow-soft">
               <div className="text-3xl font-bold text-primary-600 mb-2">{statistics.availableTags}</div>
               <div className="text-sm text-nordic-600">Tags</div>
             </div>
-            <div className="bg-nordic-50 rounded-xl p-6 text-center shadow-soft">
+            <div className="bg-white rounded-xl p-6 text-center shadow-soft">
               <div className="text-3xl font-bold text-primary-600 mb-2">24/7</div>
               <div className="text-sm text-nordic-600">Tilgængelig</div>
             </div>
           </div>
 
           {/* Sources */}
-          <div className="bg-nordic-50 rounded-2xl p-8 mb-12 shadow-soft">
+          <div className="bg-white rounded-2xl p-8 mb-12 shadow-soft">
             <h2 className="text-2xl font-bold text-nordic-900 mb-6">Vores Kilder</h2>
             <p className="text-lg text-nordic-700 leading-relaxed mb-6">
               Vi samler indhold fra Danmarks førende økonomieksperter og finansmedier 

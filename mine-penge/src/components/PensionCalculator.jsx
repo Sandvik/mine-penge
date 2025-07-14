@@ -92,7 +92,7 @@ function PensionCalculator() {
   };
 
   return (
-            <div className="bg-nordic-50 rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
+    <div className="bg-white rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
       <div className="flex items-center gap-3 mb-6">
         <Calculator className="h-8 w-8 text-primary-600" />
         <h2 className="text-2xl font-bold text-nordic-800">Pensionberegner for Pensionister</h2>

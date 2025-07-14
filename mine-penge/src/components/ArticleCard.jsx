@@ -268,7 +268,7 @@ function ArticleCard({ article, selectedTag = null }) {
   const isOriginalContent = source === 'MinePenge Original' || source === 'MinePenge.nu';
 
   return (
-            <article className={`bg-nordic-50 rounded-2xl p-6 shadow-soft border hover:shadow-lg transition-shadow duration-200 relative ${
+    <article className={`bg-white rounded-2xl p-6 shadow-soft border hover:shadow-lg transition-shadow duration-200 relative ${
       isOriginalContent ? 'border-blue-300 border-l-4 border-l-blue-500' : 'border-nordic-200'
     }`}>
       {/* Original Content Badge */}
@@ -352,7 +352,7 @@ function ArticleCard({ article, selectedTag = null }) {
           >
             +{minepenge_tags.length - 3} mere
             {showAllTags && (
-              <div className="absolute left-0 top-full mt-2 z-20 bg-nordic-50 border border-nordic-300 rounded-lg shadow-lg p-3 min-w-[180px] max-w-xs text-xs flex flex-wrap gap-2">
+              <div className="absolute left-0 top-full mt-2 z-20 bg-white border border-nordic-200 rounded-lg shadow-lg p-3 min-w-[180px] max-w-xs text-xs flex flex-wrap gap-2">
                 {minepenge_tags.slice(3).map((tag, idx) => (
                   <span
                     key={idx + 3}

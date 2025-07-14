@@ -131,7 +131,7 @@ const PortfolioBalance = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
-              <div className="bg-nordic-50 rounded-lg shadow-lg p-8">
+      <div className="bg-white rounded-lg shadow-lg p-8">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
             <div className="bg-purple-100 p-3 rounded-full">
@@ -289,7 +289,7 @@ const PortfolioBalance = () => {
                   <span className="font-semibold text-gray-800">{riskScore.score}/100</span>
                 </div>
                 
-                <div className="bg-nordic-50 rounded-lg p-3">
+                <div className="bg-white rounded-lg p-3">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-sm font-medium text-gray-700">Risikoprofil:</span>
                     <span className={`text-sm font-semibold text-${riskScore.color}-600`}>
@@ -323,7 +323,7 @@ const PortfolioBalance = () => {
                 
                 <div className="space-y-3">
                   {rebalancingNeeds.map((need, index) => (
-                    <div key={index} className="bg-nordic-50 rounded-lg p-3">
+                    <div key={index} className="bg-white rounded-lg p-3">
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
                           <need.asset.icon className={`w-4 h-4 text-${need.asset.color}-600`} />
@@ -352,7 +352,7 @@ const PortfolioBalance = () => {
               
               <div className="space-y-3">
                 {assetClasses.map((assetClass) => (
-                  <div key={assetClass.id} className="flex items-center justify-between p-3 bg-nordic-50 rounded-lg">
+                  <div key={assetClass.id} className="flex items-center justify-between p-3 bg-white rounded-lg">
                     <div className="flex items-center gap-3">
                       <assetClass.icon className={`w-4 h-4 text-${assetClass.color}-600`} />
                       <div>

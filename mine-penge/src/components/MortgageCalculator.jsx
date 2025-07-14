@@ -163,7 +163,7 @@ const MortgageCalculator = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
-              <div className="bg-nordic-50 rounded-lg shadow-lg p-8">
+      <div className="bg-white rounded-lg shadow-lg p-8">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
             <div className="bg-green-100 p-3 rounded-full">
@@ -350,7 +350,7 @@ const MortgageCalculator = () => {
                     </div>
                   </div>
 
-                  <div className="bg-nordic-50 rounded-lg p-4">
+                  <div className="bg-white rounded-lg p-4">
                     <div className="text-center">
                       <div className="text-lg font-bold text-gray-800">
                         {formatCurrency(results.totalPayment)}
@@ -387,7 +387,7 @@ const MortgageCalculator = () => {
                 <div className="space-y-3">
                   <h4 className="font-semibold text-gray-800">Forskellige rentescenarier</h4>
                   {results.interestScenarios.map((scenario, index) => (
-                    <div key={index} className="bg-nordic-50 border border-nordic-200 rounded-lg p-4">
+                    <div key={index} className="bg-white border border-gray-200 rounded-lg p-4">
                       <div className="flex justify-between items-center">
                         <div>
                           <div className="font-medium text-gray-800">{scenario.label}</div>

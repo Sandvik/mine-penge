@@ -46,7 +46,7 @@ function EmbedScriptGenerator() {
   };
 
   return (
-            <div className="bg-nordic-50 rounded-2xl p-6 shadow-soft border border-nordic-300">
+    <div className="bg-white rounded-2xl p-6 shadow-soft border border-nordic-200">
       <h2 className="text-xl font-semibold text-nordic-900 mb-4">
         Embed Widget Generator
       </h2>
