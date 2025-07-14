@@ -1,0 +1,110 @@
+{
+  "articles": [
+    {
+      "title": "Sådan får du bugt med skægkræ i boligen",
+      "url": "https://www.bolius.dk/saadan-faar-du-bugt-med-skaegkrae-i-boligen-91693"
+    },
+    {
+      "title": "Sådan holder du boligen kølig om sommeren",
+      "url": "https://www.bolius.dk/saadan-holder-du-boligen-koelig-om-sommeren-18240"
+    },
+    {
+      "title": "10 gode råd om beskæring af træer og buske",
+      "url": "https://www.bolius.dk/10-gode-raad-om-beskaering-af-traeer-og-buske-17032"
+    },
+    {
+      "title": "Grønne tage, der holder på regnvandet",
+      "url": "https://www.bolius.dk/groenne-tage-der-holder-paa-regnvandet-19265"
+    },
+    {
+      "title": "Mange nybyggede huse får problemer i varmen",
+      "url": "https://www.bolius.dk/mange-nybyggede-huse-faar-problemer-i-varmen-28159",
+      "category": "Nyhed",
+      "image_alt": "Mange nybyggede huse får problemer i varmen"
+    },
+    {
+      "title": "Din endelige 2022-vurdering er på vej: Det skal du være opmærksom på",
+      "url": "https://www.bolius.dk/din-endelige-2022-vurdering-er-paa-vej-det-skal-du-vaere-opmaerksom-paa-100058",
+      "category": "Nyhed",
+      "image_alt": "Ejendomsvurderinger"
+    },
+    {
+      "title": "Sådan er det gået med fjernvarmepriserne for dit fjernvarmeværk",
+      "url": "https://www.bolius.dk/saadan-er-det-gaaet-med-fjernvarmepriserne-for-dit-fjernvarmevaerk-77546",
+      "category": "Indsigt",
+      "image_alt": "Sådan er det gået med fjernvarmepriserne for dit fjernvarmeværk"
+    },
+    {
+      "title": "Mange danskere bor sammen med skægkræ",
+      "url": "https://www.bolius.dk/mange-danskere-bor-sammen-med-skaegkrae-100062",
+      "category": "Nyhed",
+      "image_alt": "Mange danskere bor sammen med skægkræ"
+    },
+    {
+      "title": "Uskyldig larve kan ligne “larven fra helvede”",
+      "url": "https://www.bolius.dk/uskyldig-larve-kan-ligne-larven-fra-helvede-99963",
+      "category": "Tips & Råd",
+      "image_alt": "Uskyldig larve kan ligne “larven fra helvede”"
+    },
+    {
+      "title": "Orangeri bygget med genbrug: Se, hvordan der er plads til både hygge og drivhuse",
+      "url": "https://www.bolius.dk/orangeri-bygget-med-genbrug-se-hvordan-der-er-plads-til-baade-hygge-og-drivhuse-100069",
+      "category": "Havereportage",
+      "image_alt": "Orangeri bygget med genbrug: Se, hvordan der er plads til både hygge og drivhuse"
+    },
+    {
+      "title": "Hvordan undgår du flyvemyrer?",
+      "url": "https://www.bolius.dk/hvordan-undgaar-du-flyvemyrer-i-huset-28876",
+      "category": "Tips & Råd",
+      "image_alt": "Flyvemyre"
+    },
+    {
+      "title": "10 små haveprojekter du kan lave i sommerferien",
+      "url": "https://www.bolius.dk/10-smaa-haveprojekter-du-kan-lave-i-sommerferien-100078",
+      "category": "Tips & Råd",
+      "image_alt": "10 små haveprojekter du kan lave i sommerferien"
+    },
+    {
+      "title": "7 gode råd til at undgå indbrud i sommerferien",
+      "url": "https://www.bolius.dk/7-gode-raad-til-at-undgaa-indbrud-i-sommerferien-29911",
+      "category": "Guide",
+      "image_alt": "Indbrudstyv ved vindue"
+    },
+    {
+      "title": "Sådan overlever dit drivhus din ferie",
+      "url": "https://www.bolius.dk/saadan-overlever-dit-drivhus-din-ferie-8351",
+      "category": "Tips & Råd",
+      "image_alt": "Sådan overlever dit drivhus din ferie"
+    },
+    {
+      "title": "Luk huset ned for sommerferien",
+      "url": "https://www.bolius.dk/luk-huset-ned-for-sommerferien-2027",
+      "category": "Fakta",
+      "image_alt": "Luk ned for huset"
+    },
+    {
+      "title": "Sådan gør du haven sommerferieklar",
+      "url": "https://www.bolius.dk/saadan-goer-du-haven-sommerferieklar-16873",
+      "category": "Fakta",
+      "image_alt": "Sådan gør du haven sommerferieklar"
+    },
+    {
+      "title": "Forsikring under flytning",
+      "url": "https://www.bolius.dk/forsikring-under-flytning-19362",
+      "category": "Fakta",
+      "image_alt": "Forsikring under flytning"
+    },
+    {
+      "title": "Carporte og garager",
+      "url": "https://www.bolius.dk/carporte-og-garager-17565",
+      "category": "Fakta",
+      "image_alt": "Carporte og garager"
+    },
+    {
+      "title": "Regler for tildeling af boligstøtte til lejere",
+      "url": "https://www.bolius.dk/regler-for-tildeling-af-boligstoette-til-lejere-92868",
+      "category": "Fakta",
+      "image_alt": "Facade på lejlighedskompleks"
+    }
+  ]
+}
