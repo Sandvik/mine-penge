@@ -358,10 +358,10 @@ const InvesteringGuide = () => {
     <>
       <SEOHead {...seoData} />
       
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-8">
-          {/* Navigation Header */}
-          <div className="mb-6">
+      <div className="min-h-screen bg-nordic-50">
+        {/* Header */}
+        <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <Breadcrumbs 
               items={[
                 { label: 'Hjem', href: '/' },
@@ -369,83 +369,76 @@ const InvesteringGuide = () => {
               ]} 
             />
             
-            <div className="flex items-center justify-end">
-              <Link 
-                to="/" 
-                className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
-              >
-                <Home className="w-4 h-4" />
-                Forside
-              </Link>
+            <div className="mt-8 text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                Investering Guide
+              </h1>
+              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                Alt du skal vide om investering - fra grundlæggende principper til avancerede strategier
+              </p>
             </div>
           </div>
-
-          {/* Page Header */}
-          <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-800 mb-4">
-              Investering Guide
-            </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Alt du skal vide om investering - fra grundlæggende principper til avancerede strategier
-            </p>
-          </div>
+        </div>
 
         {/* Tab Navigation */}
-        <div className="bg-white rounded-lg shadow-lg p-2 mb-8">
-          <div className="flex flex-wrap gap-2">
-            {tabs.map((tab) => {
-              const Icon = tab.icon;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
-                    activeTab === tab.id
-                      ? 'bg-blue-600 text-white'
-                      : 'text-gray-600 hover:text-gray-800 hover:bg-gray-100'
-                  }`}
-                >
-                  <Icon className="w-4 h-4" />
-                  {tab.label}
-                </button>
-              );
-            })}
+        <div className="bg-white border-b border-nordic-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex space-x-8">
+              {tabs.map((tab) => {
+                const Icon = tab.icon;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`flex items-center gap-2 py-4 px-2 border-b-2 font-medium text-sm transition-colors ${
+                      activeTab === tab.id
+                        ? 'border-blue-500 text-blue-600'
+                        : 'border-transparent text-nordic-500 hover:text-nordic-700 hover:border-nordic-300'
+                    }`}
+                  >
+                    <Icon className="h-5 w-5" />
+                    {tab.label}
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
 
         {/* Content */}
-        <div className="mb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {renderContent()}
         </div>
 
         {/* Footer CTA */}
         {activeTab === 'artikler' && (
-          <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              Har du spørgsmål om investering?
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Vores guides og værktøjer hjælper dig med at tage informerede beslutninger om din økonomiske fremtid.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/"
-                className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
-              >
-                <BookOpen className="w-5 h-5" />
-                Se alle artikler
-              </Link>
-              <Link
-                to="/kontakt"
-                className="flex items-center gap-2 bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
-              >
-                <Target className="w-5 h-5" />
-                Kontakt os
-              </Link>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div className="bg-white rounded-lg shadow-lg p-8 text-center">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                Har du spørgsmål om investering?
+              </h3>
+              <p className="text-gray-600 mb-6">
+                Vores guides og værktøjer hjælper dig med at tage informerede beslutninger om din økonomiske fremtid.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  to="/"
+                  className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                >
+                  <BookOpen className="w-5 h-5" />
+                  Se alle artikler
+                </Link>
+                <Link
+                  to="/kontakt"
+                  className="flex items-center gap-2 bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                >
+                  <Target className="w-5 h-5" />
+                  Kontakt os
+                </Link>
+              </div>
             </div>
           </div>
         )}
-        </div>
       </div>
     </>
   );

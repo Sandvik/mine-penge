@@ -405,10 +405,10 @@ const StudentInvestmentGuide = () => {
     <>
       <SEOHead {...seoData} />
       
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-8">
-          {/* Navigation Header */}
-          <div className="mb-6">
+      <div className="min-h-screen bg-nordic-50">
+        {/* Header */}
+        <div className="bg-gradient-to-r from-purple-600 to-purple-700 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <Breadcrumbs 
               items={[
                 { label: 'Hjem', href: '/' },
@@ -416,55 +416,50 @@ const StudentInvestmentGuide = () => {
               ]} 
             />
             
-            <div className="flex items-center justify-end">
-              <Link 
-                to="/" 
-                className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
-              >
-                <Home className="w-4 h-4" />
-                Forside
-              </Link>
+            <div className="mt-8 text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                Investering for studerende
+              </h1>
+              <p className="text-xl text-purple-100 max-w-3xl mx-auto">
+                Alt du skal vide om investering som studerende - fra teori til praksis
+              </p>
             </div>
           </div>
+        </div>
 
-          {/* Page Header */}
-          <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-800 mb-4">
-              Investering for studerende
-            </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Alt du skal vide om investering som studerende - fra teori til praksis
-            </p>
+        {/* Tab Navigation */}
+        <div className="bg-white border-b border-nordic-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex space-x-8">
+              {tabs.map((tab) => {
+                const Icon = tab.icon;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`flex items-center gap-2 py-4 px-2 border-b-2 font-medium text-sm transition-colors ${
+                      activeTab === tab.id
+                        ? 'border-purple-500 text-purple-600'
+                        : 'border-transparent text-nordic-500 hover:text-nordic-700 hover:border-nordic-300'
+                    }`}
+                  >
+                    <Icon className="h-5 w-5" />
+                    {tab.label}
+                  </button>
+                );
+              })}
+            </div>
           </div>
+        </div>
 
-          {/* Tab Navigation */}
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {tabs.map((tab) => {
-              const Icon = tab.icon;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
-                    activeTab === tab.id
-                      ? 'bg-blue-600 text-white shadow-md'
-                      : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
-                  }`}
-                >
-                  <Icon className="w-4 h-4" />
-                  {tab.label}
-                </button>
-              );
-            })}
-          </div>
+        {/* Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          {renderContent()}
+        </div>
 
-          {/* Content */}
-          <div className="max-w-6xl mx-auto">
-            {renderContent()}
-          </div>
-
-                    {/* Call to Action */}
-          <div className="text-center mt-12">
+        {/* Call to Action */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="text-center">
             <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">
                 Klar til at starte din investeringsrejse?

@@ -1178,16 +1178,21 @@ Dårlig gæld:
         <link rel="canonical" href="https://minepenge.nu/faq" />
       </Helmet>
 
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-nordic-50">
         {/* Header */}
-        <div className="bg-white shadow-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <Breadcrumbs currentPage="FAQ" />
-            <div className="mt-6">
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <Breadcrumbs 
+              items={[
+                { label: 'Hjem', href: '/' },
+                { label: 'FAQ', href: '/faq' }
+              ]} 
+            />
+            <div className="mt-8 text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">
                 ❓ Ofte Stillede Spørgsmål
               </h1>
-              <p className="text-xl text-gray-600 max-w-3xl">
+              <p className="text-xl text-primary-100 max-w-3xl mx-auto">
                 Find svar på de mest almindelige spørgsmål om investering, bolig, budget og økonomi. Klik på en kategori for at folde spørgsmålene ud.
               </p>
             </div>
