@@ -229,7 +229,7 @@ function MobileSidebar({
                   className="bg-white rounded-lg p-3 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
                 >
                   <Star className="h-5 w-5 text-orange-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
-                  <span className="text-sm text-nordic-700 group-hover:text-orange-600 transition-colors">Pensionist Guide</span>
+                  <span className="text-sm text-nordic-700 group-hover:text-orange-600 transition-colors">Pensions Guide</span>
                 </a>
               </div>
             </div>
