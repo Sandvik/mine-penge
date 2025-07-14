@@ -6,6 +6,7 @@ import StudentBudgetTemplate from '../components/StudentBudgetTemplate';
 import InvestmentQuiz from '../components/InvestmentQuiz';
 import PlatformComparison from '../components/PlatformComparison';
 import SEOHead from '../components/SEOHead';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const StudentInvestmentGuide = () => {
   const [activeTab, setActiveTab] = useState('article');
@@ -408,14 +409,12 @@ const StudentInvestmentGuide = () => {
         <div className="container mx-auto px-4 py-8">
           {/* Navigation Header */}
           <div className="mb-6">
-            {/* Breadcrumb */}
-            <div className="flex items-center gap-2 text-sm text-gray-600 mb-4">
-              <Link to="/" className="hover:text-blue-600 transition-colors">
-                Forside
-              </Link>
-              <span>/</span>
-              <span className="text-gray-800 font-medium">Investering for studerende</span>
-            </div>
+            <Breadcrumbs 
+              items={[
+                { label: 'Hjem', href: '/' },
+                { label: 'Investering for studerende', href: '/student-investment-guide' }
+              ]} 
+            />
             
             <div className="flex items-center justify-end">
               <Link 

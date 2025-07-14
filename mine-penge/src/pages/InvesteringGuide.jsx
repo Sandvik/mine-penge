@@ -5,6 +5,7 @@ import InvestmentCalculator from '../components/InvestmentCalculator';
 import PortfolioBalance from '../components/PortfolioBalance';
 import InvestmentQuiz from '../components/InvestmentQuiz';
 import SEOHead from '../components/SEOHead';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const InvesteringGuide = () => {
   const [activeTab, setActiveTab] = useState('artikler');
@@ -361,14 +362,12 @@ const InvesteringGuide = () => {
         <div className="container mx-auto px-4 py-8">
           {/* Navigation Header */}
           <div className="mb-6">
-            {/* Breadcrumb */}
-            <div className="flex items-center gap-2 text-sm text-gray-600 mb-4">
-              <Link to="/" className="hover:text-blue-600 transition-colors">
-                Forside
-              </Link>
-              <span>/</span>
-              <span className="text-gray-800 font-medium">Investering Guide</span>
-            </div>
+            <Breadcrumbs 
+              items={[
+                { label: 'Hjem', href: '/' },
+                { label: 'Investering Guide', href: '/investering-guide' }
+              ]} 
+            />
             
             <div className="flex items-center justify-end">
               <Link 

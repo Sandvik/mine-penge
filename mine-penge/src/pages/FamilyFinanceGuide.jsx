@@ -470,14 +470,12 @@ const FamilyFinanceGuide = () => {
         <div className="container mx-auto px-4 py-8">
           {/* Navigation Header */}
           <div className="mb-6">
-            {/* Breadcrumb */}
-            <div className="flex items-center gap-2 text-sm text-gray-600 mb-4">
-              <Link to="/" className="hover:text-green-600 transition-colors">
-                Forside
-              </Link>
-              <span>/</span>
-              <span className="text-gray-800 font-medium">Børne familie Guide</span>
-            </div>
+            <Breadcrumbs 
+              items={[
+                { label: 'Hjem', href: '/' },
+                { label: 'Børne familie Guide', href: '/family-finance-guide' }
+              ]} 
+            />
             
             <div className="flex items-center justify-end">
               <Link 
