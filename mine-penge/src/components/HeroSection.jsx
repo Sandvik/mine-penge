@@ -1,7 +1,10 @@
 import React from 'react';
 import { TrendingUp, Users, Shield, Zap } from 'lucide-react';
+import { calculateStatistics } from '../utils/statistics';
 
 const HeroSection = () => {
+  const statistics = calculateStatistics();
+  
   return (
     <section className="relative bg-gradient-to-br from-nordic-50 via-white to-primary-50 overflow-hidden">
       {/* Background decorative elements */}
@@ -153,11 +156,11 @@ const HeroSection = () => {
               {/* Stats at bottom */}
               <div className="mt-8 grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-primary-600">500+</div>
+                  <div className="text-2xl font-bold text-primary-600">{statistics.totalArticles}</div>
                   <div className="text-sm text-nordic-600">Artikler</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-green-600">15+</div>
+                  <div className="text-2xl font-bold text-green-600">{statistics.totalSources}</div>
                   <div className="text-sm text-nordic-600">Kilder</div>
                 </div>
                 <div>

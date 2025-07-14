@@ -1,8 +1,16 @@
 import React from 'react';
 import { TrendingUp, Users, Shield, Zap, Home, GraduationCap, PiggyBank, BarChart3 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { calculateStatistics } from '../utils/statistics';
 
 const HeroSectionAdvanced = ({ statistics = {} }) => {
+  const defaultStatistics = calculateStatistics();
+  const finalStatistics = {
+    totalArticles: statistics.totalArticles || defaultStatistics.totalArticles,
+    totalSources: statistics.totalSources || defaultStatistics.totalSources,
+    sources: statistics.sources || defaultStatistics.sources
+  };
+  
   const scrollToSearch = () => {
     const searchBar = document.querySelector('.search-container') || document.querySelector('input[type="text"]');
     if (searchBar) {
@@ -236,13 +244,13 @@ const HeroSectionAdvanced = ({ statistics = {} }) => {
               <div className="mt-12 grid grid-cols-3 gap-6 text-center">
                 <div className="group">
                   <div className="text-3xl font-bold text-primary-600 group-hover:scale-110 transition-transform">
-                    {statistics.totalArticles || '500+'}
+                    {finalStatistics.totalArticles}
                   </div>
                   <div className="text-sm text-nordic-600 font-medium">Artikler</div>
                 </div>
                 <div className="group">
                   <div className="text-3xl font-bold text-green-600 group-hover:scale-110 transition-transform">
-                    {statistics.sources?.length || '15+'}
+                    {finalStatistics.totalSources}
                   </div>
                   <div className="text-sm text-nordic-600 font-medium">Kilder</div>
                 </div>
