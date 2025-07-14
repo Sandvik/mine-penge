@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
+import MobileSidebar from './components/MobileSidebar';
 import ArticleCard from './components/ArticleCard';
 import SearchBar from './components/SearchBar';
 import Footer from './components/Footer';
@@ -50,6 +51,7 @@ function App() {
   const [selectedTopics, setSelectedTopics] = useState(['Alle tags']);
   const [loading, setLoading] = useState(true);
   const [curationPanelOpen, setCurationPanelOpen] = useState(false);
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const [pagination, setPagination] = useState({
     currentPage: 1,
     pageSize: 20,
@@ -312,6 +314,14 @@ function App() {
     showCurrentPageArticles();
   };
 
+  const handleOpenMobileSidebar = () => {
+    setMobileSidebarOpen(true);
+  };
+
+  const handleCloseMobileSidebar = () => {
+    setMobileSidebarOpen(false);
+  };
+
   const PaginationControls = () => {
     if (pagination.totalPages <= 1) return null;
 
@@ -474,6 +484,7 @@ function App() {
             onTopicChange={handleTopicChange}
             availableTags={availableTags}
             articles={articles}
+            onOpenMobileSidebar={handleOpenMobileSidebar}
           />
           
           <main className="flex-1 min-w-0">
@@ -498,6 +509,16 @@ function App() {
             </Routes>
           </main>
         </div>
+        
+        {/* Mobile Sidebar */}
+        <MobileSidebar
+          selectedTopics={selectedTopics}
+          onTopicChange={handleTopicChange}
+          availableTags={availableTags}
+          articles={articles}
+          isOpen={mobileSidebarOpen}
+          onClose={handleCloseMobileSidebar}
+        />
         
         {/* Curation Panel - Only visible in debug mode */}
         {isDebugMode && (

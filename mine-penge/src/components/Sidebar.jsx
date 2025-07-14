@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
-import { Tag, Search, ChevronDown, ChevronUp, TrendingUp, Star, Zap, BookOpen, Filter, HelpCircle } from 'lucide-react';
+import { Tag, Search, ChevronDown, ChevronUp, TrendingUp, Star, Zap, BookOpen, Filter, HelpCircle, Menu } from 'lucide-react';
 
-function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles = [] }) {
+function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles = [], onOpenMobileSidebar }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedCategories, setExpandedCategories] = useState({
     'Alle tags': true,
@@ -94,10 +94,22 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles =
   };
 
   return (
-    <aside className="w-full lg:w-64 bg-nordic-100 shadow-soft lg:border-r border-nordic-200 p-4 lg:p-6">
-      <div className="mb-4 lg:mb-6">
-        {/* MinePenge Logo */}
-        <div className="text-center mb-6">
+    <>
+      {/* Mobile Menu Button - Only visible on mobile */}
+      <div className="lg:hidden fixed top-4 left-4 z-50">
+        <button
+          onClick={onOpenMobileSidebar}
+          className="p-3 bg-white rounded-lg shadow-lg border border-nordic-200 hover:bg-nordic-50 transition-colors"
+        >
+          <Menu className="h-6 w-6 text-nordic-700" />
+        </button>
+      </div>
+      
+      {/* Desktop Sidebar */}
+      <aside className="hidden lg:block w-64 bg-nordic-100 shadow-soft border-r border-nordic-200 p-6">
+        <div className="mb-4 lg:mb-6">
+          {/* MinePenge Logo */}
+          <div className="text-center mb-6">
           <div className="inline-flex items-center justify-center bg-gradient-to-r from-primary-600 to-blue-600 text-white px-4 py-3 rounded-lg shadow-md hover:shadow-lg transition-shadow">
             <span className="text-xl font-bold">MinePenge</span>
             <span className="ml-1 text-sm opacity-90">.nu</span>
@@ -236,6 +248,7 @@ function Sidebar({ selectedTopics, onTopicChange, availableTags = [], articles =
         </div>
       </div>
     </aside>
+    </>
   );
 }
 

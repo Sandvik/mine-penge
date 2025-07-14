@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, X, RefreshCw, Eye } from 'lucide-react';
 import { fetchArticles } from '../services/articleService';
 
-function Navigation({ onOpenCuration }) {
+function Navigation({ onOpenCuration, onOpenMobileSidebar }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   
@@ -62,12 +62,20 @@ function Navigation({ onOpenCuration }) {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            <button
+              onClick={onOpenMobileSidebar}
+              className="p-2 rounded-md text-nordic-600 hover:text-nordic-900 hover:bg-nordic-50"
+              title="Åbn menu"
+            >
+              <Menu className="h-6 w-6" />
+            </button>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 rounded-md text-nordic-600 hover:text-nordic-900 hover:bg-nordic-50"
+              title="Opdater artikler"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              <RefreshCw className={`h-6 w-6 ${isLoading ? 'animate-spin' : ''}`} />
             </button>
           </div>
         </div>

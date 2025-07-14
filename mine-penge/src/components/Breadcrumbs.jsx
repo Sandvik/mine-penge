@@ -29,7 +29,7 @@ const Breadcrumbs = ({ currentPage, currentTag }) => {
   }
 
   return (
-    <nav className="flex mb-6" aria-label="Breadcrumb">
+    <nav className="hidden lg:flex mb-6" aria-label="Breadcrumb">
       <ol className="flex items-center space-x-2 text-sm">
         {breadcrumbs.map((breadcrumb, index) => (
           <li key={breadcrumb.name} className="flex items-center">

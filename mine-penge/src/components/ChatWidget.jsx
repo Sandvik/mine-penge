@@ -656,7 +656,7 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
   // If minimized, show only header
   if (isMinimized) {
     return (
-      <div className="fixed bottom-4 right-20 w-80 bg-white rounded-lg shadow-xl border border-gray-200">
+      <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 lg:left-auto lg:right-20 lg:transform-none w-72 lg:w-80 bg-white rounded-lg shadow-xl border border-gray-200">
         <div className="bg-blue-600 text-white p-4 rounded-lg">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
@@ -664,7 +664,7 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
                 <span className="text-blue-600 font-bold text-sm">💰</span>
               </div>
               <div>
-                <h3 className="font-semibold">MinePenge Assistent</h3>
+                <h3 className="font-semibold text-sm lg:text-base">MinePenge Assistent</h3>
                 <p className="text-xs opacity-90">Klik for at åbne chat</p>
               </div>
             </div>
@@ -687,7 +687,7 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
 
   return (
     <>
-      <div className="fixed bottom-4 right-20 w-96 h-96 bg-white rounded-lg shadow-xl border border-gray-200 flex flex-col">
+      <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 lg:left-auto lg:right-20 lg:transform-none w-80 lg:w-96 h-80 lg:h-96 bg-white rounded-lg shadow-xl border border-gray-200 flex flex-col">
         {/* Header */}
         <div className="bg-blue-600 text-white p-4 rounded-t-lg">
           <div className="flex items-center justify-between">
@@ -696,7 +696,7 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
                 <span className="text-blue-600 font-bold text-sm">💰</span>
               </div>
               <div>
-                <h3 className="font-semibold">MinePenge Assistent</h3>
+                <h3 className="font-semibold text-sm lg:text-base">MinePenge Assistent</h3>
                 <p className="text-xs opacity-90">
                   {messages.length > 1 ? `${messages.length - 1} beskeder` : 'Spørg om økonomi'}
                 </p>
@@ -735,7 +735,7 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
               className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div
-                className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
+                className={`max-w-[200px] lg:max-w-md px-3 lg:px-4 py-2 rounded-lg ${
                   message.type === 'user'
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-100 text-gray-800'
@@ -815,20 +815,20 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
         </div>
 
         {/* Input */}
-        <form onSubmit={handleSubmit} className="p-4 border-t border-gray-200">
+        <form onSubmit={handleSubmit} className="p-3 lg:p-4 border-t border-gray-200">
           <div className="flex space-x-2">
             <input
               type="text"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               placeholder="Skriv dit spørgsmål..."
-              className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="flex-1 px-2 lg:px-3 py-2 text-sm lg:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               disabled={isTyping}
             />
             <button
               type="submit"
               disabled={!inputValue.trim() || isTyping}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-3 lg:px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
