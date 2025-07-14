@@ -83,7 +83,7 @@ function Navigation({ onOpenCuration, onOpenMobileSidebar }) {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-nordic-50 border-t border-nordic-300">
+        <div className="md:hidden bg-white border-t border-nordic-200">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {/* Mobile Action Buttons */}
             <div className="flex flex-col space-y-2">

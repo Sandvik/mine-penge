@@ -70,7 +70,7 @@ function UserFeedback({ articleId, onFeedback }) {
           className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
             rating === 'positive'
               ? 'bg-success-100 text-success-800 border border-success-300'
-              : 'bg-nordic-50 text-nordic-600 border border-nordic-300 hover:bg-success-50'
+              : 'bg-white text-nordic-600 border border-nordic-300 hover:bg-success-50'
           }`}
         >
           <ThumbsUp className="h-4 w-4" />
@@ -82,7 +82,7 @@ function UserFeedback({ articleId, onFeedback }) {
           className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
             rating === 'negative'
               ? 'bg-error-100 text-error-800 border border-error-300'
-              : 'bg-nordic-50 text-nordic-600 border border-nordic-300 hover:bg-error-50'
+              : 'bg-white text-nordic-600 border border-nordic-300 hover:bg-error-50'
           }`}
         >
           <ThumbsDown className="h-4 w-4" />

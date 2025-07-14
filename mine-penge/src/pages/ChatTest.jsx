@@ -21,7 +21,7 @@ const ChatTest = () => {
           />
           
           <div className="max-w-4xl mx-auto">
-            <div className="bg-nordic-50 rounded-lg shadow-md p-8 mb-8">
+            <div className="bg-white rounded-lg shadow-md p-8 mb-8">
               <h1 className="text-3xl font-bold text-gray-900 mb-4">
                 🤖 Chat Widget Test
               </h1>
@@ -85,7 +85,7 @@ const ChatTest = () => {
             </div>
             
             {/* Dummy content to make page scrollable */}
-            <div className="bg-nordic-50 rounded-lg shadow-md p-8 mb-8">
+            <div className="bg-white rounded-lg shadow-md p-8 mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 Om Chat Widget'en
               </h2>
@@ -105,7 +105,7 @@ const ChatTest = () => {
               </ul>
             </div>
             
-            <div className="bg-nordic-50 rounded-lg shadow-md p-8 mb-8">
+            <div className="bg-white rounded-lg shadow-md p-8 mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 Teknisk Implementation
               </h2>
