@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar';
 import MobileSidebar from './components/MobileSidebar';
 import ArticleCard from './components/ArticleCard';
 import SearchBar from './components/SearchBar';
+import FilterBar from './components/FilterBar';
 import Footer from './components/Footer';
 import SEOHead from './components/SEOHead';
 import SEODashboard from './pages/SEODashboard';
@@ -20,6 +21,7 @@ import StudentInvestmentGuide from './pages/StudentInvestmentGuide';
 import FamilyFinanceGuide from './pages/FamilyFinanceGuide';
 import InvesteringGuide from './pages/InvesteringGuide';
 import BoligHusGuide from './pages/BoligHusGuide';
+import PensionistGuide from './pages/PensionistGuide';
 import TestPage from './pages/TestPage';
 import HeroSectionAdvanced from './components/HeroSectionAdvanced';
 import CurationPanel from './components/CurationPanel';
@@ -49,6 +51,10 @@ function App() {
   const [filteredArticles, setFilteredArticles] = useState([]);
 
   const [selectedTopics, setSelectedTopics] = useState(['Alle tags']);
+  const [filters, setFilters] = useState({
+    topic: '',
+    audience: ''
+  });
   const [loading, setLoading] = useState(true);
   const [curationPanelOpen, setCurationPanelOpen] = useState(false);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
@@ -74,8 +80,9 @@ function App() {
     console.log('=== useEffect triggered ===');
     console.log('Articles length:', articles.length);
     console.log('Selected topics:', selectedTopics);
+    console.log('Filters:', filters);
     console.log('Current page:', pagination.currentPage);
-    console.log('useEffect dependencies changed - articles, selectedTopics, or pagination.currentPage');
+    console.log('useEffect dependencies changed - articles, selectedTopics, filters, or pagination.currentPage');
     
     if (articles.length > 0) {
       console.log('Calling showCurrentPageArticles from useEffect');
@@ -83,7 +90,7 @@ function App() {
     } else {
       console.log('No articles available, skipping showCurrentPageArticles');
     }
-  }, [articles, selectedTopics, pagination.currentPage]);
+  }, [articles, selectedTopics, filters, pagination.currentPage]);
 
   // Separate useEffect to debug selectedTopics changes
   useEffect(() => {
@@ -111,8 +118,10 @@ function App() {
     const nonBlacklistedArticles = curationService.filterArticles(allArticles);
     console.log('After blacklist filtering:', nonBlacklistedArticles.length);
     
-    // Apply topic filtering if a specific topic is selected
+    // Apply topic and audience filtering
     let filteredByTopic = nonBlacklistedArticles;
+    
+    // Topic filtering
     if (selectedTopics.length > 0 && !selectedTopics.includes('Alle tags')) {
       const selectedTopic = selectedTopics[0];
       console.log('Filtering by selected topic:', selectedTopic);
@@ -137,9 +146,22 @@ function App() {
         return false;
       });
       console.log('After topic filtering:', filteredByTopic.length);
-      console.log('Sample filtered articles:', filteredByTopic.slice(0, 3).map(a => ({ title: a.title, tags: a.minepenge_tags })));
-    } else {
-      console.log('No specific topic selected, showing all articles');
+    }
+    
+    // Audience filtering
+    if (filters.audience) {
+      console.log('Filtering by audience:', filters.audience);
+      filteredByTopic = filteredByTopic.filter(article => {
+        if (article.target_audiences && Array.isArray(article.target_audiences)) {
+          const hasAudience = article.target_audiences.includes(filters.audience);
+          if (hasAudience) {
+            console.log('Article matches audience:', article.title, 'Audience:', filters.audience);
+          }
+          return hasAudience;
+        }
+        return false;
+      });
+      console.log('After audience filtering:', filteredByTopic.length);
     }
     
     // Sort articles by date (newest first) and then by source for variety
@@ -284,6 +306,36 @@ function App() {
     
     // Let useEffect handle the filtering by calling showCurrentPageArticles
     console.log('=== handleTopicChange END ===');
+  };
+
+  // Handle filter change
+  const handleFilterChange = (filterType, value) => {
+    console.log('=== handleFilterChange called ===');
+    console.log('Filter type:', filterType, 'Value:', value);
+    
+    setFilters(prev => ({
+      ...prev,
+      [filterType]: value
+    }));
+    
+    // Reset to first page when changing filters
+    setPagination(prev => ({
+      ...prev,
+      currentPage: 1
+    }));
+  };
+
+  // Handle clear filters
+  const handleClearFilters = () => {
+    setFilters({
+      topic: '',
+      audience: ''
+    });
+    setSelectedTopics(['Alle tags']);
+    setPagination(prev => ({
+      ...prev,
+      currentPage: 1
+    }));
   };
 
   const loadArticles = async (page = 1) => {
@@ -505,10 +557,11 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/test" element={<TestPage />} />
               <Route path="/chat-test" element={<ChatTest />} />
-              <Route path="/student-investment-guide" element={<StudentInvestmentGuide />} />
-              <Route path="/family-finance-guide" element={<FamilyFinanceGuide />} />
-              <Route path="/investering-guide" element={<InvesteringGuide />} />
-              <Route path="/bolig-hus-guide" element={<BoligHusGuide />} />
+                      <Route path="/student-investment-guide" element={<StudentInvestmentGuide />} />
+        <Route path="/family-finance-guide" element={<FamilyFinanceGuide />} />
+        <Route path="/investering-guide" element={<InvesteringGuide />} />
+        <Route path="/bolig-hus-guide" element={<BoligHusGuide />} />
+        <Route path="/pensionist-guide" element={<PensionistGuide />} />
               <Route path="/seo-dashboard" element={<SEODashboard />} />
               <Route path="/landing-page-generator" element={<LandingPageGenerator />} />
               <Route path="/qa-feed-generator" element={<QAFeedGenerator />} />

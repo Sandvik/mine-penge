@@ -51,19 +51,22 @@ function MobileSidebar({
     availableTags.forEach(tag => {
       const tagLower = tag.toLowerCase();
       
+      // Livsstil-relaterede tags (tjek først for at undgå konflikter)
+      if ((tagLower.includes('børn') && !tagLower.includes('opspar')) || 
+          tagLower.includes('familie') || 
+          tagLower.includes('studerende') || 
+          tagLower.includes('livsstil') ||
+          tagLower.includes('pensionist')) {
+        categories['Livsstil'].push(tag);
+      }
       // Økonomi-relaterede tags
-      if (tagLower.includes('opspar') || tagLower.includes('invester') || 
+      else if (tagLower.includes('opspar') || tagLower.includes('invester') || 
           tagLower.includes('gæld') || tagLower.includes('budget') || 
           tagLower.includes('pension') || tagLower.includes('forsikr') ||
           tagLower.includes('bolig') || tagLower.includes('skat') ||
           tagLower.includes('lån') || tagLower.includes('rente') ||
           tagLower.includes('økonomi') || tagLower.includes('penge')) {
         categories['Økonomi'].push(tag);
-      }
-      // Livsstil-relaterede tags
-      else if (tagLower.includes('børn') || tagLower.includes('familie') || 
-               tagLower.includes('studerende') || tagLower.includes('livsstil')) {
-        categories['Livsstil'].push(tag);
       }
       // Niveau-relaterede tags
       else if (tagLower.includes('begynder') || tagLower.includes('øvet') || 
@@ -218,6 +221,15 @@ function MobileSidebar({
                 >
                   <Star className="h-5 w-5 text-orange-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
                   <span className="text-sm text-nordic-700 group-hover:text-orange-600 transition-colors">Bolig Guide</span>
+                </a>
+                
+                <a 
+                  href="/pensionist-guide"
+                  onClick={onClose}
+                  className="bg-white rounded-lg p-3 border border-orange-100 hover:border-orange-200 transition-colors text-center group"
+                >
+                  <Star className="h-5 w-5 text-orange-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                  <span className="text-sm text-nordic-700 group-hover:text-orange-600 transition-colors">Pensionist Guide</span>
                 </a>
               </div>
             </div>

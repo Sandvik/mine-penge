@@ -26,7 +26,20 @@ function FilterBar({ filters, onFilterChange, onClearFilters }) {
               <option value="Pension">Pension</option>
             </select>
             
-            {filters.topic && (
+            <select
+              value={filters.audience || ''}
+              onChange={(e) => onFilterChange('audience', e.target.value)}
+              className="px-3 py-2 border border-nordic-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white whitespace-nowrap"
+            >
+              <option value="">Alle målgrupper</option>
+              <option value="studerende">Studerende</option>
+              <option value="børnefamilie">Børnefamilie</option>
+              <option value="pensionister">Pensionister</option>
+              <option value="nybegynder_investering">Investeringsnybegynder</option>
+              <option value="økonomi_nybegynder">Økonominybegynder</option>
+            </select>
+            
+            {(filters.topic || filters.audience) && (
               <button
                 onClick={onClearFilters}
                 className="p-2 text-nordic-400 hover:text-nordic-600 hover:bg-nordic-100 rounded-lg transition-colors flex-shrink-0"
