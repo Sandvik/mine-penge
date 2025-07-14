@@ -23,7 +23,7 @@ function Navigation({ onOpenCuration, onOpenMobileSidebar }) {
   };
 
   return (
-    <nav className="bg-white shadow-sm border-b border-nordic-200">
+    <nav className="bg-nordic-50 shadow-sm border-b border-nordic-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}

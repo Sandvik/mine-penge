@@ -80,7 +80,7 @@ const HeroSectionAdvanced = ({ statistics = {} }) => {
 
             {/* Feature grid */}
             <div className="grid sm:grid-cols-2 gap-4">
-              <div className="group p-3 bg-white rounded-xl shadow-sm border border-nordic-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="group p-3 bg-nordic-50 rounded-xl shadow-sm border border-nordic-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <div className="flex items-start space-x-3">
                   <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                     <TrendingUp className="w-5 h-5 text-primary-600" />
@@ -92,7 +92,7 @@ const HeroSectionAdvanced = ({ statistics = {} }) => {
                 </div>
               </div>
               
-              <div className="group p-3 bg-white rounded-xl shadow-sm border border-nordic-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="group p-3 bg-nordic-50 rounded-xl shadow-sm border border-nordic-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <div className="flex items-start space-x-3">
                   <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-green-100 to-green-200 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Shield className="w-5 h-5 text-green-600" />
@@ -104,10 +104,10 @@ const HeroSectionAdvanced = ({ statistics = {} }) => {
                 </div>
               </div>
               
-              <div className="group p-3 bg-white rounded-xl shadow-sm border border-nordic-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="group p-3 bg-nordic-50 rounded-xl shadow-sm border border-nordic-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <div className="flex items-start space-x-3">
                   <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Users className="w-5 h-5 text-blue-600" />
+                  <Users className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-nordic-900 text-base">For alle danskere</h3>
@@ -116,7 +116,7 @@ const HeroSectionAdvanced = ({ statistics = {} }) => {
                 </div>
               </div>
               
-              <div className="group p-3 bg-white rounded-xl shadow-sm border border-nordic-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="group p-3 bg-nordic-50 rounded-xl shadow-sm border border-nordic-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <div className="flex items-start space-x-3">
                   <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Zap className="w-5 h-5 text-purple-600" />
@@ -151,7 +151,7 @@ const HeroSectionAdvanced = ({ statistics = {} }) => {
           {/* Right side - Advanced Illustration */}
           <div className="relative">
             {/* Main illustration container */}
-            <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-nordic-100 overflow-hidden">
+            <div className="relative bg-nordic-50 rounded-3xl shadow-2xl p-8 border border-nordic-200 overflow-hidden">
               
               {/* Background pattern */}
               <div className="absolute inset-0 opacity-5">
@@ -199,7 +199,7 @@ const HeroSectionAdvanced = ({ statistics = {} }) => {
                 </div>
 
                 {/* Article cards floating around */}
-                <div className="absolute top-8 left-16 w-36 h-20 bg-white rounded-xl shadow-lg border border-nordic-200 transform rotate-6 hover:rotate-0 transition-transform duration-300">
+                <div className="absolute top-8 left-16 w-36 h-20 bg-nordic-50 rounded-xl shadow-lg border border-nordic-300 transform rotate-6 hover:rotate-0 transition-transform duration-300">
                   <div className="p-4">
                     <div className="w-full h-2 bg-nordic-200 rounded mb-2"></div>
                     <div className="w-3/4 h-2 bg-nordic-200 rounded mb-2"></div>
@@ -207,14 +207,14 @@ const HeroSectionAdvanced = ({ statistics = {} }) => {
                   </div>
                 </div>
 
-                <div className="absolute top-16 right-16 w-32 h-16 bg-white rounded-xl shadow-lg border border-nordic-200 transform -rotate-3 hover:rotate-0 transition-transform duration-300">
+                <div className="absolute top-16 right-16 w-32 h-16 bg-nordic-50 rounded-xl shadow-lg border border-nordic-300 transform -rotate-3 hover:rotate-0 transition-transform duration-300">
                   <div className="p-3">
                     <div className="w-full h-2 bg-nordic-200 rounded mb-1"></div>
                     <div className="w-2/3 h-2 bg-green-200 rounded"></div>
                   </div>
                 </div>
 
-                <div className="absolute bottom-8 right-8 w-40 h-20 bg-white rounded-xl shadow-lg border border-nordic-200 transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                <div className="absolute bottom-8 right-8 w-40 h-20 bg-nordic-50 rounded-xl shadow-lg border border-nordic-300 transform rotate-2 hover:rotate-0 transition-transform duration-300">
                   <div className="p-4">
                     <div className="w-full h-2 bg-nordic-200 rounded mb-2"></div>
                     <div className="w-4/5 h-2 bg-nordic-200 rounded mb-2"></div>
@@ -262,15 +262,15 @@ const HeroSectionAdvanced = ({ statistics = {} }) => {
             </div>
 
             {/* Floating category badges */}
-            <div className="absolute -top-4 left-1/4 bg-white rounded-full px-6 py-3 shadow-xl border border-nordic-200 hover:shadow-2xl transition-shadow">
+            <div className="absolute -top-4 left-1/4 bg-nordic-50 rounded-full px-6 py-3 shadow-xl border border-nordic-300 hover:shadow-2xl transition-shadow">
               <span className="text-sm font-semibold text-nordic-700">SU & Studerende</span>
             </div>
             
-            <div className="absolute top-1/2 -right-4 bg-white rounded-full px-6 py-3 shadow-xl border border-nordic-200 hover:shadow-2xl transition-shadow">
+            <div className="absolute top-1/2 -right-4 bg-nordic-50 rounded-full px-6 py-3 shadow-xl border border-nordic-300 hover:shadow-2xl transition-shadow">
               <span className="text-sm font-semibold text-nordic-700">Bolig & Hus</span>
             </div>
             
-            <div className="absolute -bottom-4 left-1/3 bg-white rounded-full px-6 py-3 shadow-xl border border-nordic-200 hover:shadow-2xl transition-shadow">
+            <div className="absolute -bottom-4 left-1/3 bg-nordic-50 rounded-full px-6 py-3 shadow-xl border border-nordic-300 hover:shadow-2xl transition-shadow">
               <span className="text-sm font-semibold text-nordic-700">Investering</span>
             </div>
           </div>

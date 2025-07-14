@@ -31,7 +31,7 @@ function RelatedArticles({ currentArticleId, limit = 3 }) {
         </h3>
         <div className="animate-pulse space-y-3">
           {[...Array(limit)].map((_, i) => (
-            <div key={i} className="bg-white rounded-lg p-4 border border-nordic-200">
+            <div key={i} className="bg-nordic-50 rounded-lg p-4 border border-nordic-300">
               <div className="h-4 bg-nordic-200 rounded mb-2"></div>
               <div className="h-3 bg-nordic-200 rounded w-3/4"></div>
             </div>
@@ -52,7 +52,7 @@ function RelatedArticles({ currentArticleId, limit = 3 }) {
       </h3>
       <div className="space-y-3">
         {relatedArticles.map((article) => (
-          <div key={article.article_id} className="bg-white rounded-lg p-4 border border-nordic-200 hover:shadow-md transition-shadow">
+          <div key={article.article_id} className="bg-nordic-50 rounded-lg p-4 border border-nordic-300 hover:shadow-md transition-shadow">
             <h4 className="font-medium text-nordic-900 mb-2 line-clamp-2">
               {article.title}
             </h4>

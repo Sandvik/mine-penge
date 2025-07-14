@@ -129,7 +129,7 @@ const PropertyComparison = () => {
 
   return (
     <div className="max-w-7xl mx-auto">
-      <div className="bg-white rounded-lg shadow-lg p-8">
+      <div className="bg-nordic-50 rounded-lg shadow-lg p-8">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
             <div className="bg-blue-100 p-3 rounded-full">

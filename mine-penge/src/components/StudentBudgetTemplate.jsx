@@ -47,7 +47,7 @@ BUDGET TIPS:
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200">
+    <div className="bg-nordic-50 rounded-lg shadow-lg p-6 border border-nordic-200">
       <div className="flex items-center gap-2 mb-6">
         <FileSpreadsheet className="w-6 h-6 text-green-600" />
         <h3 className="text-xl font-semibold text-gray-800">Student Budget Template</h3>

@@ -470,7 +470,7 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
 
   return (
     <>
-      <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 lg:left-auto lg:right-20 lg:transform-none w-80 lg:w-96 h-80 lg:h-96 bg-white rounded-lg shadow-xl border border-gray-200 flex flex-col">
+      <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 lg:left-auto lg:right-20 lg:transform-none w-80 lg:w-96 h-80 lg:h-96 bg-nordic-50 rounded-lg shadow-xl border border-nordic-200 flex flex-col">
         {/* Header */}
         <div className="bg-blue-600 text-white p-4 rounded-t-lg">
           <div className="flex items-center justify-between">
@@ -585,7 +585,7 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
           
           {isTyping && (
             <div className="flex justify-start">
-              <div className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg">
+              <div className="bg-nordic-100 text-nordic-800 px-4 py-2 rounded-lg">
                 <div className="flex space-x-1">
                   <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
                   <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
