@@ -1,5 +1,98 @@
 import React, { useState, useRef, useEffect } from 'react';
 import articlesData from '../data/articles.json';
+import faqData from '../data/faqData';
+import Fuse from 'fuse.js';
+
+// Synonym-ordbog
+const synonymMap = {
+  'andelslån': ['boliglån til andelsbolig', 'lån til andelsbolig', 'andelsboliglån'],
+  'boliglån': ['lån til bolig', 'ejerboliglån'],
+  'lån': ['kredit', 'finansiering'],
+  'opsparing': ['spare op', 'sparekonto'],
+  'pension': ['folkepension', 'ratepension', 'livrente'],
+  'andel': ['andelsbolig', 'andelshaver', 'andel'],
+  'ejer': ['ejerbolig', 'ejerlejlighed', 'ejer'],
+  'forskel': ['hvad er forskellen', 'sammenligning', 'vs', 'kontra', 'eller', 'forskellen på'],
+  'bolig': ['hus', 'lejlighed', 'bopæl', 'boligtype'],
+  'andelsbolig': ['andelsbolig', 'andelslejlighed', 'andelsbolig'],
+  'ejerbolig': ['ejerbolig', 'ejerlejlighed', 'ejerbolig'],
+  // Tilføj flere synonymer efter behov
+};
+
+// Simpel dansk stemming (fjerner almindelige endelser)
+const stemText = (text) => {
+  return text
+    .split(/\s+/)
+    .map(word => {
+      // Fjern almindelige danske endelser
+      if (word.endsWith('et') && word.length > 4) return word.slice(0, -2);
+      if (word.endsWith('en') && word.length > 4) return word.slice(0, -2);
+      if (word.endsWith('er') && word.length > 4) return word.slice(0, -2);
+      if (word.endsWith('e') && word.length > 3) return word.slice(0, -1);
+      return word;
+    })
+    .join(' ');
+};
+
+// Udvid brugerens spørgsmål med synonymer og stemming
+const expandQuestion = (question) => {
+  let expanded = question.toLowerCase();
+  Object.entries(synonymMap).forEach(([key, syns]) => {
+    syns.forEach(syn => {
+      if (expanded.includes(syn)) expanded += ' ' + key;
+      if (expanded.includes(key)) expanded += ' ' + syn;
+    });
+  });
+  expanded = stemText(expanded);
+  return expanded;
+};
+
+// Opsæt Fuse.js
+const fuseOptions = {
+  includeScore: true,
+  threshold: 0.6, // Øget fra 0.5 til 0.6 for mere fleksibel matching
+  keys: [
+    { name: 'question', weight: 0.6 },
+    { name: 'answer', weight: 0.2 },
+    { name: 'tags', weight: 0.2 }
+  ]
+};
+const fuse = new Fuse(faqData, fuseOptions);
+
+// Forbedret matching med Fuse, stemming, synonymer og fallback substring-søgning
+const findBestMatch = (userQuestion) => {
+  const expanded = expandQuestion(userQuestion);
+  const results = fuse.search(expanded);
+  if (results.length > 0) {
+    return results[0].item;
+  }
+  
+  // Forbedret fallback: søg efter nøgleord i spørgsmål og tags
+  const q = userQuestion.toLowerCase();
+  
+  // Søg efter specifikke nøgleord kombinationer
+  const hasEjer = q.includes('ejer');
+  const hasAndel = q.includes('andel');
+  const hasForskel = q.includes('forskel') || q.includes('eller') || q.includes('vs');
+  
+  // Hvis brugeren spørger om ejer vs andel
+  if ((hasEjer && hasAndel) || (hasEjer && hasForskel) || (hasAndel && hasForskel)) {
+    const ejerAndelMatch = faqData.find(faq => 
+      faq.question.toLowerCase().includes('andelsbolig') && 
+      faq.question.toLowerCase().includes('ejerbolig')
+    );
+    if (ejerAndelMatch) return ejerAndelMatch;
+  }
+  
+  // Generel fallback: simpel substring-søgning i spørgsmål og tags
+  const fallback = faqData.find(faq =>
+    (faq.question && faq.question.toLowerCase().includes(q)) ||
+    (faq.tags && faq.tags.some(tag => q.includes(tag)))
+  );
+  if (fallback) return fallback;
+  
+  return null;
+};
 
 const ChatWidget = () => {
   const [messages, setMessages] = useState(() => {
@@ -35,7 +128,9 @@ const ChatWidget = () => {
     return saved !== null ? JSON.parse(saved) : true;
   });
   const [showInfoModal, setShowInfoModal] = useState(false);
-  const messagesEndRef = useRef(null);
+
+  // Ref til alle bot-svar
+  const botMessageRefs = useRef({});
 
   // Get articles from imported data
   const articles = articlesData.articles || [];
@@ -94,328 +189,6 @@ const ChatWidget = () => {
       .slice(0, limit);
     
     return relevantArticles;
-  };
-
-  // FAQ data fra alle kategorier
-  const faqData = [
-    // 💰 Investering
-    {
-      id: 'investering-1',
-      question: 'Hvordan starter jeg med at investere som begynder?',
-      answer: `Hej! Det er super at du vil komme i gang med at investere! 🎉
-
-Som begynder er det vigtigt at starte simpelt:
-
-1️⃣ Start med månedsopsparing - 100-500 kr/måned
-2️⃣ Vælg brede fonde - Sparindex INDEX Globale Aktier
-3️⃣ Brug Nordnet eller Saxo - Gratis månedsopsparing
-4️⃣ Tålmodighed - Investering er langsigtet
-
-💡 Tip: Du behøver ikke være ekspert for at starte. Månedsopsparing er perfekt til begyndere!
-
-Du er på rette spor ved at spørge - det er første skridt til økonomisk frihed! 🚀
-
-🏠 Vil du se vores investeringsberegner?
-[📊 Åbn investeringsberegner](/investering-guide#beregner)
-
-📚 Læs mere i vores investering guide:
-[📖 Investering guide](/investering-guide)`,
-      tags: ['starte', 'begynde', 'komme i gang', 'første gang', 'nybegynder', 'investering'],
-      category: 'investering'
-    },
-    {
-      id: 'investering-4',
-      question: 'Hvad er ASK (Aktiesparekonto)?',
-      answer: `ASK (Aktiesparekonto) er en skattebegunstiget konto til investering i aktiebaserede værdipapirer.
-
-✅ Fordele:
-- Maksimalt indskud i 2024: 106.600 kr
-- Beskattes med 17% i lagerbeskatning (årlig værdistigning)
-- Gælder kun for aktier og aktiebaserede fonde
-
-📋 Sådan gør du:
-1. Opret konto hos Nordnet/Saxo
-2. Indsæt penge
-3. Køb fonde/aktier
-4. Betal kun 17% skat
-
-🎯 Velegnet til langsigtet investering i f.eks. Sparindex Globale Aktier.
-
-Ah, skat - det kedelige emne vi alle skal forholde os til! 😅 Men hey, 17% er meget bedre end normale 27-42% skat.
-
-Du gør det rigtigt ved at spørge! 👍`,
-      tags: ['ASK', 'aktiesparekonto', 'skat', 'skattefordel', '17%'],
-      category: 'investering'
-    },
-    {
-      id: 'investering-5',
-      question: 'Hvilke fonde skal jeg vælge som begynder?',
-      answer: `Fantastisk spørgsmål! Som begynder er det vigtigt at starte simpelt. Du er på rette spor! 🎯
-
-Top 3 fonde til begyndere:
-
-1️⃣ Sparindex INDEX Globale Aktier
-   - Verdens største virksomheder
-   - Billig (0,5% omkostninger)
-   - Automatisk diversificering
-
-2️⃣ Sparindex INDEX Emerging Markets
-   - Vækstmarkeder (Kina, Indien, etc.)
-   - Højere risiko, højere potentielt afkast
-   - 10-20% af din portefølje
-
-3️⃣ Sparindex INDEX Danmark
-   - Danske virksomheder
-   - Skattefordel (realisationsbeskatning)
-   - 10-20% af din portefølje
-
-💡 Start med: 100% Sparindex INDEX Globale Aktier, og tilføj andre senere.
-
-Det kan være svært at komme i gang, men du har taget det vigtigste skridt - at spørge! Du klarer det! 🚀
-
-💰 Vil du se vores investeringsberegner?
-[📊 Åbn investeringsberegner](/investering-guide#beregner)`,
-      tags: ['fonde', 'sparindex', 'begynder', 'vælg', 'hvilke'],
-      category: 'investering'
-    },
-    // 🏠 Bolig & Hus
-    {
-      id: 'bolig-1',
-      question: 'Hvordan får jeg boliglån?',
-      answer: `God planlægning! 🏠 Her er din vej til boliglån:
-
-Sådan får du boliglån:
-
-1️⃣ Spar op til udbetaling
-   - Minimum 20% af boligprisen
-   - Jo mere, jo bedre lånevilkår
-
-2️⃣ Få styr på din økonomi
-   - Ingen højforrentet gæld
-   - Stabil indkomst
-   - God kreditvurdering
-
-3️⃣ Få lånebevis
-   - 6 måneder før køb
-   - Sammenlign banker
-   - Forhandl om renter
-
-4️⃣ Find bolig og køb
-   - Maksimum 4x din årsindkomst
-   - Husk ejerudgifter
-
-💡 Tip: Start med at spare op og få lånebevis, før du begynder at kigge på boliger.
-
-Du er på rette spor ved at spørge! Boligkøb er en stor beslutning, og det er smart at forberede sig. 🎯
-
-🏠 Vil du se vores boligberegner?
-[📊 Åbn boligberegner](/bolig-hus-guide#beregner)
-
-📚 Læs mere i vores bolig guide:
-[📖 Bolig & Hus guide](/bolig-hus-guide)`,
-      tags: ['boliglån', 'udbetaling', 'lånebevis', 'bolig', 'hus', 'køb'],
-      category: 'bolig'
-    },
-    {
-      id: 'bolig-2',
-      question: 'Hvor meget skal jeg spare op til bolig?',
-      answer: `Minimum 20% af boligprisen:
-
-🏠 Eksempler:
-- Bolig til 2 mio = 400.000 kr
-- Bolig til 3 mio = 600.000 kr
-- Bolig til 4 mio = 800.000 kr
-
-💰 Hvor meget skal du spare op:
-- 2 mio bolig: 16.700 kr/måned i 2 år
-- 3 mio bolig: 25.000 kr/måned i 2 år
-- 4 mio bolig: 33.300 kr/måned i 2 år
-
-💡 Jo mere du sparer op, jo:
-- Lavere månedlig ydelse
-- Bedre lånevilkår
-- Mindre risiko
-
-🎯 Start tidligt - Jo før du begynder at spare, jo lettere bliver det!
-
-Ja, det kan virke som et stort beløb, men husk - mange har gjort det før dig! Du klarer det! 💪
-
-🏠 Vil du se vores boligberegner?
-[📊 Åbn boligberegner](/bolig-hus-guide#beregner)`,
-      tags: ['spareop', 'udbetaling', 'bolig', 'hus', 'beløb'],
-      category: 'bolig'
-    },
-    // 📊 Budget & Økonomi
-    {
-      id: 'budget-1',
-      question: 'Hvordan laver jeg et budget?',
-      answer: `Fantastisk spørgsmål! At lave et budget er første skridt til økonomisk kontrol. Du er på rette spor! 🎯
-
-Sådan laver du et budget:
-
-1️⃣ Få overblik over indkomst
-   - Løn, SU, andre indtægter
-   - Skriv alt ned
-
-2️⃣ Kategoriser udgifter
-   - Faste udgifter (husleje, el, internet)
-   - Variable udgifter (mad, transport, underholdning)
-   - Uventede udgifter (forsikring, vedligeholdelse)
-
-3️⃣ 50/30/20 reglen:
-   - 50% til nødvendigheder
-   - 30% til ønsker
-   - 20% til opsparing
-
-4️⃣ Brug en app eller Excel
-   - Track dine udgifter
-   - Juster løbende
-
-💡 Det kan være svært at komme i gang, men du har taget det vigtigste skridt - at spørge!
-
-Du klarer det! Start småt og bliv bedre over tid. 🚀
-
-📊 Vil du se vores budgetberegner?
-[📊 Åbn budgetberegner](/family-finance-guide#beregner)
-
-📚 Læs mere i vores familieøkonomi guide:
-[📖 Familieøkonomi guide](/family-finance-guide)`,
-      tags: ['budget', 'økonomi', 'udgifter', 'indkomst', 'planlægning'],
-      category: 'budget'
-    },
-    {
-      id: 'budget-2',
-      question: 'Hvor meget skal jeg spare op?',
-      answer: `Generelle retningslinjer for opsparing:
-
-💰 Nødopsparing: 3-6 måneders udgifter
-- Hvis du bruger 10.000 kr/måned = 30.000-60.000 kr
-
-🎯 Målbaseret opsparing:
-- Bolig: 20% af boligprisen
-- Pension: 10-15% af indkomst
-- Ferie: 5-10% af indkomst
-- Børn: 5-10% af indkomst
-
-📊 50/30/20 reglen:
-- 50% til nødvendigheder
-- 30% til ønsker
-- 20% til opsparing
-
-💡 Start med nødopsparing, derefter målbaseret opsparing.
-
-Det kan virke som meget, men husk - alle starter et sted! Du er på rette spor ved at spørge. 🌟
-
-📊 Vil du se vores budgetberegner?
-[📊 Åbn budgetberegner](/family-finance-guide#beregner)`,
-      tags: ['spareop', 'nødopsparing', 'mål', 'beløb', 'regler'],
-      category: 'budget'
-    },
-    // 🎓 Studerende
-    {
-      id: 'studerende-1',
-      question: 'Hvordan får jeg styr på min økonomi som studerende?',
-      answer: `Økonomi for studerende - det kan være en udfordring, men du er ikke alene! 🎓
-
-💰 Indtægter:
-- SU: 6.397 kr/måned (2024)
-- Studiejob: 1.000-3.000 kr/måned
-- Forældrebidrag: Varierer
-
-📊 Typiske udgifter:
-- Husleje: 3.000-6.000 kr/måned
-- Mad: 1.500-2.500 kr/måned
-- Transport: 300-800 kr/måned
-- Underholdning: 500-1.000 kr/måned
-
-💡 Tips:
-- Lav et budget
-- Brug SU-lån kun til nødvendigheder
-- Find billige alternativer
-- Del udgifter med roommates
-
-🎯 Mål: Spar 500-1.000 kr/måned til nødopsparing.
-
-Det kan være svært at komme i gang, men du har taget det vigtigste skridt - at spørge! Du klarer det! 💪
-
-📚 Læs mere i vores studerende guide:
-[📖 Studerende investering guide](/student-investment-guide)`,
-      tags: ['studerende', 'SU', 'budget', 'økonomi', 'husleje'],
-      category: 'studerende'
-    },
-    // 👴 Pension
-    {
-      id: 'pension-1',
-      question: 'Hvor meget skal jeg spare op til pension?',
-      answer: `Pensionsopsparing - det emne vi alle tænker på, men ikke altid gør noget ved! 😅
-
-💰 Generel regel: 10-15% af din indkomst
-- Hvis du tjener 30.000 kr/måned = 3.000-4.500 kr/måned
-
-📊 Sådan fordeler du det:
-- Arbejdsgiverpension: 8-12% (automatisk)
-- Privat pension: 2-3% (frivilligt)
-- Frie midler: 0-5% (fleksibelt)
-
-🎯 Mål: 70% af din nuværende indkomst som pensionist
-- Hvis du tjener 30.000 kr nu = 21.000 kr som pensionist
-
-💡 Start tidligt - renters rente gør en kæmpe forskel!
-
-Ja, pension kan virke langt væk, men jo tidligere du starter, jo lettere bliver det! Du er på rette spor! 🚀`,
-      tags: ['pension', 'opsparing', 'arbejdsgiverpension', 'privat pension', 'beløb'],
-      category: 'pension'
-    },
-    // 💳 Gæld & Lån
-    {
-      id: 'gæld-1',
-      question: 'Hvordan kommer jeg ud af gæld?',
-      answer: `Det kan være svært at komme ud af gæld, men du er ikke alene! Du har taget det vigtigste skridt - at spørge. 💪
-
-Sådan kommer du ud af gæld:
-
-1️⃣ Få overblik
-   - Skriv alle gæld op
-   - Noter renter og gebyrer
-   - Prioriter efter rente (højest først)
-
-2️⃣ Lav en plan
-   - Sælg unødvendige ting
-   - Find ekstra indtægter
-   - Skær ned på udgifter
-
-3️⃣ Vælg strategi
-   - Snowball: Mindste gæld først (motivation)
-   - Avalanche: Højeste rente først (sparer penge)
-
-4️⃣ Hold fast
-   - Betal altid minimum
-   - Brug ekstra penge til gæld
-   - Undgå ny gæld
-
-💡 Fokuser på én gæld ad gangen - det giver resultater!
-
-Det kan være en hård vej, men du klarer det! Fokuser på én dag ad gangen. 🌟`,
-      tags: ['gæld', 'lån', 'afbetaling', 'strategi', 'plan'],
-      category: 'gæld'
-    }
-  ];
-
-  // Simple keyword matching function
-  const findBestMatch = (userQuestion) => {
-    const normalizedQuestion = userQuestion.toLowerCase();
-    
-    // Find matches based on tags
-    const matches = faqData.filter(faq => 
-      faq.tags.some(tag => normalizedQuestion.includes(tag))
-    );
-    
-    if (matches.length > 0) {
-      // Return the first match (we can improve this later)
-      return matches[0];
-    }
-    
-    return null;
   };
 
   // Parse links in text and convert to clickable elements
@@ -538,9 +311,19 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
     localStorage.setItem('chatWidgetMessages', JSON.stringify([initialMessage]));
   };
 
-  // Auto-scroll to bottom
+  // Scroll til starten af det nyeste bot-svar
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (messages.length === 0) return;
+    // Find sidste bot-svar
+    for (let i = messages.length - 1; i >= 0; i--) {
+      if (messages[i].type === 'bot') {
+        const ref = botMessageRefs.current[messages[i].id];
+        if (ref && ref.scrollIntoView) {
+          ref.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        break;
+      }
+    }
   }, [messages]);
 
   // Save messages to localStorage whenever they change
@@ -732,6 +515,7 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
           {messages.map((message) => (
             <div
               key={message.id}
+              ref={message.type === 'bot' ? (el) => botMessageRefs.current[message.id] = el : null}
               className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div
@@ -810,8 +594,6 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
               </div>
             </div>
           )}
-          
-          <div ref={messagesEndRef} />
         </div>
 
         {/* Input */}
