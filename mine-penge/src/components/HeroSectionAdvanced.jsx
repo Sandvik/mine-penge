@@ -26,7 +26,7 @@ const HeroSectionAdvanced = ({ statistics = {} }) => {
     }
   };
   return (
-    <section className="relative bg-gradient-to-br from-nordic-50 via-white to-primary-50 overflow-hidden pb-4 lg:pb-6 mt-[50px]">
+    <section className="relative bg-gradient-to-br from-nordic-50 via-white to-primary-50 overflow-hidden pb-4 lg:pb-6 mt-[20px]">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         {/* Floating geometric shapes */}
@@ -52,7 +52,7 @@ const HeroSectionAdvanced = ({ statistics = {} }) => {
           
           {/* Left side - Content */}
           <div className="space-y-4">
-            <div className="space-y-6">
+            <div className="space-y-2">
 
               
               {/* Main headline */}
@@ -72,7 +72,7 @@ const HeroSectionAdvanced = ({ statistics = {} }) => {
 
             {/* Feature grid */}
             <div className="grid sm:grid-cols-2 gap-4">
-              <div className="group p-4 bg-white rounded-xl shadow-sm border border-nordic-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="group p-3 bg-white rounded-xl shadow-sm border border-nordic-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <div className="flex items-start space-x-3">
                   <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                     <TrendingUp className="w-5 h-5 text-primary-600" />
@@ -84,7 +84,7 @@ const HeroSectionAdvanced = ({ statistics = {} }) => {
                 </div>
               </div>
               
-              <div className="group p-4 bg-white rounded-xl shadow-sm border border-nordic-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="group p-3 bg-white rounded-xl shadow-sm border border-nordic-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <div className="flex items-start space-x-3">
                   <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-green-100 to-green-200 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Shield className="w-5 h-5 text-green-600" />
@@ -96,7 +96,7 @@ const HeroSectionAdvanced = ({ statistics = {} }) => {
                 </div>
               </div>
               
-              <div className="group p-4 bg-white rounded-xl shadow-sm border border-nordic-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="group p-3 bg-white rounded-xl shadow-sm border border-nordic-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <div className="flex items-start space-x-3">
                   <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Users className="w-5 h-5 text-blue-600" />
@@ -108,7 +108,7 @@ const HeroSectionAdvanced = ({ statistics = {} }) => {
                 </div>
               </div>
               
-              <div className="group p-4 bg-white rounded-xl shadow-sm border border-nordic-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="group p-3 bg-white rounded-xl shadow-sm border border-nordic-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <div className="flex items-start space-x-3">
                   <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Zap className="w-5 h-5 text-purple-600" />
@@ -125,7 +125,7 @@ const HeroSectionAdvanced = ({ statistics = {} }) => {
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
                 onClick={scrollToSearch}
-                className="group px-8 py-4 bg-gradient-to-r from-primary-600 to-blue-600 text-white rounded-xl font-semibold hover:from-primary-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="group px-8 py-3 bg-gradient-to-r from-primary-600 to-blue-600 text-white rounded-xl font-semibold hover:from-primary-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 <span className="flex items-center justify-center">
                   Udforsk artikler
@@ -133,7 +133,7 @@ const HeroSectionAdvanced = ({ statistics = {} }) => {
                 </span>
               </button>
               <Link to="/om-os">
-                <button className="px-8 py-4 border-2 border-nordic-300 text-nordic-700 rounded-xl font-semibold hover:border-primary-300 hover:text-primary-700 transition-all duration-300 hover:bg-primary-50">
+                <button className="px-8 py-3 border-2 border-nordic-300 text-nordic-700 rounded-xl font-semibold hover:border-primary-300 hover:text-primary-700 transition-all duration-300 hover:bg-primary-50">
                   Se hvordan det virker
                 </button>
               </Link>
