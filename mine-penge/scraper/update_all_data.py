@@ -157,6 +157,39 @@ class DataUpdater:
         
         return not duplicate_found
     
+    def run_article_cleaning(self):
+        """Kører artikel rydning efter opdatering"""
+        logger.info("🧹 Starter artikel rydning...")
+        
+        cleaning_script = os.path.join(os.path.dirname(__file__), "..", "scripts", "clean_articles.py")
+        
+        if not os.path.exists(cleaning_script):
+            logger.error(f"Cleaning script ikke fundet: {cleaning_script}")
+            return False
+        
+        try:
+            logger.info("🧹 Kører artikel rydning...")
+            result = subprocess.run(
+                [sys.executable, cleaning_script],
+                cwd=os.path.dirname(cleaning_script),
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+                text=True,
+                bufsize=1,
+                universal_newlines=True
+            )
+            
+            if result.returncode == 0:
+                logger.info("✅ Artikel rydning kørt succesfuldt")
+                return True
+            else:
+                logger.error(f"❌ Artikel rydning fejlede med exit code {result.returncode}")
+                return False
+                
+        except Exception as e:
+            logger.error(f"❌ Fejl ved kørsel af artikel rydning: {e}")
+            return False
+
     def generate_summary_report(self):
         """Genererer en samlet rapport over opdateringen"""
         logger.info("📊 Genererer samlet rapport...")
@@ -210,7 +243,9 @@ class DataUpdater:
         print("1. Køre alle scraper scripts i korrekt rækkefølge")
         print("2. Tjekke for dubletter i data")
         print("3. Køre automatisk tagging på alle JSON filer")
-        print("4. Generere en samlet rapport")
+        print("4. Samle alle artikler i articles.json")
+        print("5. Rydde op i artikler (fjern portfolio opdateringer, duplikater)")
+        print("6. Generere en samlet rapport")
         print("=" * 60)
         
         # Trin 1: Kør alle scrapers
@@ -262,6 +297,13 @@ def main():
             print(f"❌ Fejl ved kørsel af build_articles.py: {e}")
         except Exception as e:
             print(f"❌ Uventet fejl ved build: {e}")
+        
+        # Kør artikel rydning
+        print("\n🧹 Kører artikel rydning...")
+        if not updater.run_article_cleaning():
+            print("⚠️ Artikel rydning fejlede - fortsætter alligevel")
+        else:
+            print("✅ Artikel rydning gennemført!")
     else:
         print("\n❌ Opdatering fejlede - tjek loggene ovenfor")
         sys.exit(1)

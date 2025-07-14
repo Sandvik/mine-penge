@@ -1,0 +1,885 @@
+{
+  "timestamp": "2025-07-14T08:02:40.533489",
+  "stats": {
+    "total_before": 707,
+    "total_after": 562,
+    "removed": 145,
+    "rules_applied": {
+      "portfolio_updates": 63,
+      "duplicate_titles": 82,
+      "missing_data": 0
+    }
+  },
+  "removed_articles": [
+    {
+      "title": "Opdatering af porteføljen – Januar 2024",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-januar-2024/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – August 2022",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-august-2022/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Februar 2021",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-februar-2021/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Maj 2021",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-maj-2021/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – September 2020",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-september-2020/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – November 2023",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-november-2023/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Oktober 2022",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-oktober-2022/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Januar 2025",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-januar-2025/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – December 2022",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-december-2022/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – December 2020",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-december-2020/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – September 2024",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-september-2024/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – September 2021",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-september-2021/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Juni 2023",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-juni-2023/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – April 2025",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-april-2025/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Juni 2022",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-juni-2022/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Marts 2024",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-marts-2024/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – April 2023",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-april-2023/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – September 2023",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-september-2023/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Januar 2022",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-januar-2022/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Maj 2023",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-maj-2023/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Maj 2020",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-maj-2020/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Juni 2020",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-juni-2020/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Juni 2021",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-juni-2021/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Februar 2025",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-februar-2025/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – April 2020",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-april-2020/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – August 2024",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-august-2024/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Januar 2021",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-januar-2021/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Marts 2022",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-marts-2022/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – December 2021",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-december-2021/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Oktober 2021",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-oktober-2021/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – December 2023",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-december-2023/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Februar 2024",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-februar-2024/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Maj 2025",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-maj-2025/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Juli 2022",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-juli-2022/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Februar 2020",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-februar-2020/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Juni 2024",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-juni-2024/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – August 2020",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-august-2020/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – November 2020",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-november-2020/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Marts 2021",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-marts-2021/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Oktober 2020",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-oktober-2020/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Maj 2024",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-maj-2024/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Marts 2025",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-marts-2025/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Februar 2023",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-februar-2023/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Juni 2025",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-juni-2025/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – November 2021",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-november-2021/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – April 2022",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-april-2022/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – November 2024",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-november-2024/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – April 2021",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-april-2021/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Maj 2022",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-maj-2022/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Marts 2023",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-marts-2023/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Februar 2022",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-februar-2022/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Oktober 2024",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-oktober-2024/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – August 2021",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-august-2021/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – November 2022",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-november-2022/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Juli 2021",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-juli-2021/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Januar 2023",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-januar-2023/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Juli 2023",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-juli-2023/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – August 2023",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-august-2023/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – September 2022",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-september-2022/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – April 2024",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-april-2024/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – December 2024",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-december-2024/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Juli 2020",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoljen-juli-2020/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Opdatering af porteføljen – Oktober 2023",
+      "url": "https://ungmedpenge.dk/opdatering-af-portefoeljen-oktober-2023/",
+      "source": "Ung Med Penge",
+      "reason": "portfolio_update"
+    },
+    {
+      "title": "Mine 7 råd til investorer [2023]",
+      "url": "https://mitteldorf.dk/blog/7-raad-til-investorer-i-2023",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Freedom24 giver gratis aktier indtil 31 august",
+      "url": "https://mitteldorf.dk/blog/freedom24-gratis-aktier-august-2024/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Hvad er Price/Earnings ratio og hvordan bruger jeg det (PE, P/E)",
+      "url": "https://mitteldorf.dk/blog/pe/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Prøv Freedom24: en investeringsplatform med masser af aktier og høj indskudsrente",
+      "url": "https://mitteldorf.dk/blog/freedom24/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Er Berkshire Hathaway det perfekte selskab?",
+      "url": "https://mitteldorf.dk/blog/berkshire-hathaway-perfekte-investering/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Året der gik: 2022",
+      "url": "https://mitteldorf.dk/blog/aaret-der-gik-2022/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Jeg flyttede til Sydney med færre end 100 ting",
+      "url": "https://mitteldorf.dk/blog/100-ting-til-sydney",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Hvad er fornuftig investering?",
+      "url": "https://mitteldorf.dk/blog/hvad-er-fornuftig-investering",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Hvorfor føles investering som gambling?",
+      "url": "https://mitteldorf.dk/blog/aktiegambling/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Moats: Økosystemer som konkurrencefordel",
+      "url": "https://mitteldorf.dk/blog/moats-oekosystem",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "En samling af artikler fra Peter Lynch",
+      "url": "https://mitteldorf.dk/blog/peter-lynch-artikler",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Berkshire Hathaways generalforsamling 2021",
+      "url": "https://mitteldorf.dk/blog/berkshire-hathaway-annual-meeting-2021/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Kvartalsopgørelse, 3. kvartal 2021",
+      "url": "https://mitteldorf.dk/blog/kvartalsopgoerelse-3-kvartal-2021/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Nordnet integrerer Shareville",
+      "url": "https://mitteldorf.dk/blog/nordnet-integrerer-shareville/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Warren Buffetts brev til aktionærer 2020",
+      "url": "https://mitteldorf.dk/blog/warren-buffett-letter-2020/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Mød Lysa: Den bedste investeringsrobot jeg har set",
+      "url": "https://mitteldorf.dk/blog/lysa",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "15 bøger Warren Buffett anbefaler dig at læse",
+      "url": "https://mitteldorf.dk/blog/15-boeger-warren-buffett-anbefaler-dig-at-laese",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Verdens rigeste mennesker i 2024",
+      "url": "https://mitteldorf.dk/blog/forbes-rigeste-2024",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "[Anmeldelse] Trump: Think Like a Billionaire",
+      "url": "https://mitteldorf.dk/blog/think-like-a-billionaire",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "3 principper fra Warren Buffett der gør dig successfuld",
+      "url": "https://mitteldorf.dk/blog/warren-buffetts-3-ting-for-success",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Julegaveidéer til den håbefulde investor",
+      "url": "https://mitteldorf.dk/blog/julegaveideer-til-den-aspirerende-investor/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Berkshire Hathaway er nu 1 billion dollar værd: En milepæl i investeringshistorien",
+      "url": "https://mitteldorf.dk/blog/berkshire-1-billon-dollar/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Du bliver ikke rig af at spare op",
+      "url": "https://mitteldorf.dk/blog/du-bliver-ikke-rig-af-opsparing/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "3 løgne om investering",
+      "url": "https://mitteldorf.dk/blog/3-investerings-myter/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "De 10 mest ventede børsnoteringer i 2025",
+      "url": "https://mitteldorf.dk/blog/10-ventede-borsnoteringer-2025",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Bør det indiske vækstlokomotiv fylde mere i din portefølje?",
+      "url": "https://mitteldorf.dk/blog/skal-jeg-investere-i-indien/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Året der gik: 2021",
+      "url": "https://mitteldorf.dk/blog/aaret-der-gik-2021",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Kvartalsopgørelse, 1. kvartal 2022",
+      "url": "https://mitteldorf.dk/blog/kvartalsopgoerelse-1-kvartal-2022/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Hvad betyder x-dag?",
+      "url": "https://mitteldorf.dk/blog/x-dag",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Tænk som en ejer når du investerer",
+      "url": "https://mitteldorf.dk/blog/invester-som-en-ejer/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Kvartalsopgørelse, 3. kvartal 2023",
+      "url": "https://mitteldorf.dk/blog/kvartalsopgoerelse-2023-3-kvartal",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Warren Buffett Speaks: Lær fra mesteren",
+      "url": "https://mitteldorf.dk/blog/warren-buffett-speaks",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Året der gik: 2023",
+      "url": "https://mitteldorf.dk/blog/aaret-der-gik-2023/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Warren Buffett bliver 93: Her er hans 5 bedste principper",
+      "url": "https://mitteldorf.dk/blog/buffett-5-principper/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Investering kræver tålmodighed og et særligt temperament",
+      "url": "https://mitteldorf.dk/blog/investering-kraever-et-saerligt-temperament/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Hvad er Dollar cost averaging?",
+      "url": "https://mitteldorf.dk/blog/dollar-cost-averaging",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Kvartalsopgørelse, 1. kvartal 2023",
+      "url": "https://mitteldorf.dk/blog/kvartalsopgoerelse-1-kvartal-2023",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Kvartalsopgørelse, 1. kvartal 2021",
+      "url": "https://mitteldorf.dk/blog/kvartalsopgoerelse-1-kvartal-2021",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Spred din risiko i aktieporteføljen",
+      "url": "https://mitteldorf.dk/blog/spred-din-risiko-finanshuset",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Kvartalsopgørelse, 3. kvartal 2022",
+      "url": "https://mitteldorf.dk/blog/kvartalsopgoerelse-3-kvartal-2022",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "6 måder vi bliver fanget af vores investeringer",
+      "url": "https://mitteldorf.dk/blog/6-maader-vi-bliver-fanget-af-vores-investeringer/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Skal jeg sælge mine tab til nytår?",
+      "url": "https://mitteldorf.dk/blog/skal-jeg-saelge-mine-tab-til-nytaar/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Hvor mange aktier bør jeg have?",
+      "url": "https://mitteldorf.dk/blog/hvor-mange-aktier-boer-jeg-have",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Kvartalsopgørelse, 3. kvartal 2024",
+      "url": "https://mitteldorf.dk/blog/kvartalsopgoerelse-2024-3-kvartal/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "12 pengefejl du bør undgå når du er ung",
+      "url": "https://mitteldorf.dk/blog/pengefejl-du-boer-undgaa-naar-du-er-ung/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Er Berkshire Hathaway blevet et kedeligt konglomerat?",
+      "url": "https://mitteldorf.dk/blog/berkshire-hathaway-kedeligt-konglomerat/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Kvartalsopgørelse, 2. kvartal 2023",
+      "url": "https://mitteldorf.dk/blog/2023-2-kvartal-kvartalsopgoerelse/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Kan man få Amazon Kindle Unlimited i Danmark?",
+      "url": "https://mitteldorf.dk/blog/amazon-kindle-unlimited-danmark",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "[Anmeldelse] The Antisocial Network",
+      "url": "https://mitteldorf.dk/blog/antisocial-network",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "De 6 budget-typer: Hvordan du finder den rette for dig",
+      "url": "https://mitteldorf.dk/blog/6-budgettyper",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Sådan blev jeg investor (2. del)",
+      "url": "https://mitteldorf.dk/blog/saadan-blev-jeg-investor-del-2/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Flyselskaber er en dårlig investering",
+      "url": "https://mitteldorf.dk/blog/flyselskaber-er-ikke-en-god-investering/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Sådan kan du spare mere op i år",
+      "url": "https://mitteldorf.dk/blog/saadan-kan-du-spare-mere-op-i-aar",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Kvartalsopgørelse, 2. kvartal 2024",
+      "url": "https://mitteldorf.dk/blog/kvartalsopgoerelse-2024-2-kvartal",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Nye priser hos Saxo i 2024",
+      "url": "https://mitteldorf.dk/blog/nye-priser-hos-saxo-2024",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Hvordan får jeg den bedste søvn?",
+      "url": "https://mitteldorf.dk/blog/sov-godt",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Se hvad de bedste investorer køber og sælger",
+      "url": "https://mitteldorf.dk/blog/se-hvad-de-bedste-investorer-koeber",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Sådan tjente Warren Buffett sin første halve million",
+      "url": "https://mitteldorf.dk/blog/warren-buffetts-foerste-halve-million",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "9 gode tips til at spare lidt mere",
+      "url": "https://mitteldorf.dk/blog/9-gode-tips-til-mere-opsparing/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Howards Marks advarer: Mr. Market er på spil igen",
+      "url": "https://mitteldorf.dk/blog/mr-market-er-paa-spil-igen/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Hvordan udregner jeg mit afkast rigtigt?",
+      "url": "https://mitteldorf.dk/blog/hvordan-udregner-jeg-mit-afkast-rigtigt",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Investering eller spekulation: Hvad er forskellen?",
+      "url": "https://mitteldorf.dk/blog/investering-eller-spekulation/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Warren Buffett: Bitcoin er ikke noget jeg vil have",
+      "url": "https://mitteldorf.dk/blog/buffett-om-bitcoin/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Warren Buffetts portefølje i 2021",
+      "url": "https://mitteldorf.dk/blog/warren-buffetts-portefoelje",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Aktieklasser: Hvad er A og B aktier?",
+      "url": "https://mitteldorf.dk/blog/aktieklasser/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "[Anmeldelse] Bobler, Bullshit og Børsfest",
+      "url": "https://mitteldorf.dk/blog/anmeldelse-bobler-bullshit-boersfest/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Året der gik: 2020",
+      "url": "https://mitteldorf.dk/blog/aaret-der-gik-2020",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Pas på høje omkostninger når du investerer",
+      "url": "https://mitteldorf.dk/blog/pas-paa-omkostningerne",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Jeg læser alle mine bøger på en Kindle",
+      "url": "https://mitteldorf.dk/blog/kindle",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Kvartalsopgørelse, 2. kvartal 2021",
+      "url": "https://mitteldorf.dk/blog/kvartalsopgoerelse-2-kvartal-2021/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Hvad betyder market cap / markedskapital",
+      "url": "https://mitteldorf.dk/blog/markedskapital/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Hvad er indtjening pr. aktie (EPS, Earnings per share)",
+      "url": "https://mitteldorf.dk/blog/eps/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Hvad er unoterede aktier?",
+      "url": "https://mitteldorf.dk/blog/unoterede-aktier/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Lev et liv uden overforbrug",
+      "url": "https://mitteldorf.dk/blog/lev-et-liv-uden-overforbrug/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Lav et nemt budget med 50-30-20 reglen",
+      "url": "https://mitteldorf.dk/blog/budgetter-er-nemme-med-50-30-20-reglen",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Hvad er 72-reglen?",
+      "url": "https://mitteldorf.dk/blog/72-reglen/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Smarte mennesker tager også dårlige beslutninger",
+      "url": "https://mitteldorf.dk/blog/smarte-mennesker-tager-forkerte-beslutninger",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "FI Scouts: Følg din FIRE-rejse",
+      "url": "https://mitteldorf.dk/blog/fiscouts/",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Få overblik over hvor dine penge forsvinder hen",
+      "url": "https://mitteldorf.dk/blog/faa-overblik-over-hvor-pengene-forsvinder-hen",
+      "source": "Mitteldorf Blog",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Novo Nordisk: Fra darling til skepsis på blot et år",
+      "url": "https://www.nordnet.dk/blog/novo-nordisk-fra-darling-til-skepsis/",
+      "source": "Nordnet",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "7 nye features hos Nordnet: Sådan bruger du dem",
+      "url": "https://www.nordnet.dk/blog/7-nye-features-hos-nordnet-saadan-bruger-du-dem/",
+      "source": "Nordnet",
+      "reason": "duplicate_title"
+    },
+    {
+      "title": "Investeringspodcasten med Hansen & Larsen",
+      "url": "https://www.nordnet.dk/blog/penge-med-per",
+      "source": "Nordnet",
+      "reason": "duplicate_title"
+    }
+  ]
+}
