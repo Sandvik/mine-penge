@@ -36,7 +36,7 @@ export default {
         // Neutral grays - mørkere versioner
         nordic: {
           50: '#9ab7b7',   // Din ønskede farve: rgba(154, 183, 183, 1)
-          100: '#9ab7b7',  // Din ønskede farve: rgba(154, 183, 183, 1)
+          100: '#e2e8f0',  // Mørkere end før
           200: '#cbd5e1',  // Mørkere end før
           300: '#94a3b8',  // Mørkere end før
           400: '#64748b',  // Mørkere end før
