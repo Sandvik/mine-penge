@@ -58,9 +58,9 @@ def sort_articles(articles):
 
 
 def main():
-    print('🚀 Starting Python article data build...')
+    print('Starting Python article data build...')
     files = find_tagged_files()
-    print(f'📂 Found {len(files)} tagged data files:')
+    print(f'Found {len(files)} tagged data files:')
     for f in files:
         print(f'   - {os.path.basename(f)}')
 
@@ -75,10 +75,10 @@ def main():
                 article['source'] = source_name
         all_articles.extend(articles)
         source_stats[source_name] = len(articles)
-        print(f'✅ Loaded {len(articles)} articles from {source_name}')
+        print(f'Loaded {len(articles)} articles from {source_name}')
 
     unique_articles = remove_duplicates(all_articles)
-    print(f'🔄 Removed {len(all_articles) - len(unique_articles)} duplicate articles')
+    print(f'Removed {len(all_articles) - len(unique_articles)} duplicate articles')
 
     sorted_articles = sort_articles(unique_articles)
 
@@ -109,10 +109,10 @@ def main():
     size_mb = os.path.getsize(OUTPUT_PATH) / 1024 / 1024
     metadata['buildInfo']['totalSize'] = f"{size_mb:.2f} MB"
 
-    print(f'✅ Successfully created: {OUTPUT_PATH}')
-    print(f'📊 Total articles: {len(sorted_articles)}')
-    print(f'📁 File size: {size_mb:.2f} MB')
-    print('\n📈 Articles per source:')
+    print(f'Successfully created: {OUTPUT_PATH}')
+    print(f'Total articles: {len(sorted_articles)}')
+    print(f'File size: {size_mb:.2f} MB')
+    print('\nArticles per source:')
     for source, count in source_stats.items():
         print(f'   {source}: {count} articles')
 

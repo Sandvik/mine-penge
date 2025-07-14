@@ -98,6 +98,7 @@ def identify_low_value_articles(articles: List[Dict[str, Any]]) -> Dict[str, Lis
         'product_comparisons': [],
         'year_specific_old': [],
         'quarterly_reports': [],
+        'portfolio_updates': [],
         'very_short_summaries': [],
         'repetitive_patterns': []
     }
@@ -120,6 +121,9 @@ def identify_low_value_articles(articles: List[Dict[str, Any]]) -> Dict[str, Lis
             continue
         if re.search(r'kvartalsopgørelse.*\d+\.\s*kvartal', title):
             categories['quarterly_reports'].append(article)
+            continue
+        if re.search(r'opdatering.*portefølje', title, re.IGNORECASE) or re.search(r'portefølje.*opdatering', title, re.IGNORECASE):
+            categories['portfolio_updates'].append(article)
             continue
         if len(summary) < 50:
             categories['very_short_summaries'].append(article)
@@ -187,6 +191,15 @@ def clean_articles(articles: List[Dict[str, Any]]) -> Dict[str, Any]:
     return {'cleaned_articles': cleaned_articles, 'report': report}
 
 # --------- CLI ---------
+def clean_text_for_console(text):
+    """Clean text to avoid encoding issues on Windows console"""
+    try:
+        # Try to encode as ASCII, replacing problematic characters
+        return text.encode('ascii', 'replace').decode('ascii')
+    except:
+        # Fallback: remove all non-ASCII characters
+        return ''.join(char for char in text if ord(char) < 128)
+
 def print_report(report):
     print(f"\nRAPPORT fra rensning/analyse:")
     print(f"Originalt antal artikler: {report['original_count']}")
@@ -195,11 +208,12 @@ def print_report(report):
     print(f"\nFjernede kategorier:")
     for cat, count in report['categories_removed'].items():
         print(f"  {cat}: {count}")
-    print(f"\nEksempler på fjernede artikler:")
+    print(f"\nEksempler pa fjernede artikler:")
     for cat, examples in report['examples_removed'].items():
         print(f"  {cat}:")
         for ex in examples:
-            print(f"    - {ex}")
+            clean_ex = clean_text_for_console(ex)
+            print(f"    - {clean_ex}")
 
 def main():
     parser = argparse.ArgumentParser(description="Analyse og rensning af artikeldatasæt")
@@ -216,9 +230,11 @@ def main():
         print(json.dumps(analyze_content_quality(articles), indent=2, ensure_ascii=False))
         print("\n--- Repetitive mønstre ---")
         for pattern in find_repetitive_content(articles)[:10]:
-            print(f"{pattern['pattern']} ({pattern['count']} artikler)")
+            clean_pattern = clean_text_for_console(pattern['pattern'])
+            print(f"{clean_pattern} ({pattern['count']} artikler)")
             for ex in pattern['examples']:
-                print(f"  - {ex}")
+                clean_ex = clean_text_for_console(ex)
+                print(f"  - {clean_ex}")
     elif args.clean:
         articles = load_articles(ARTICLES_PATH)
         result = clean_articles(articles)

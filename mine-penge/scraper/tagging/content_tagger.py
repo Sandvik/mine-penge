@@ -245,11 +245,18 @@ class ContentTagger:
         with open(filepath, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
-        # Tag alle artikler
+        # Tag alle artikler - håndter forskellige JSON strukturer
         tagged_articles = []
-        total_articles = len(data.get('blog_posts', []))
         
-        for i, article in enumerate(data.get('blog_posts', []), 1):
+        # Prøv forskellige mulige nøgler for artikler
+        articles = data.get('blog_posts', []) or data.get('articles', []) or data.get('posts', [])
+        total_articles = len(articles)
+        
+        logger.info(f"Fandt {total_articles} artikler i {filepath}")
+        if total_articles == 0:
+            logger.warning(f"Ingen artikler fundet i {filepath}. Tilgængelige nøgler: {list(data.keys())}")
+        
+        for i, article in enumerate(articles, 1):
             logger.info(f"Tagger artikel {i}/{total_articles}: {article.get('title', '')[:50]}...")
             tagged_article = self.tag_article(article)
             tagged_articles.append(tagged_article)
@@ -261,7 +268,8 @@ class ContentTagger:
                 "total_articles": len(tagged_articles),
                 "tagged_at": datetime.now().isoformat(),
                 "tag_categories_used": list(self.tag_categories.keys()),
-                "target_audiences_used": list(self.target_audiences.keys())
+                "target_audiences_used": list(self.target_audiences.keys()),
+                "articles_found": total_articles
             },
             "articles": tagged_articles
         }
@@ -343,7 +351,7 @@ class ContentTagger:
 
 def main():
     """Hovedfunktion"""
-    print("🚀 Starter Mine Penge Content Tagger")
+    print("Starter Mine Penge Content Tagger")
     print("=" * 50)
     
     tagger = ContentTagger()
@@ -361,27 +369,27 @@ def main():
             json.dump(report, f, ensure_ascii=False, indent=2)
         
         # Print sammendrag
-        print("\n✅ TAGGING FÆRDIG!")
+        print("\nTAGGING FÆRDIG!")
         print("=" * 50)
         print(f"Behandlet filer: {report['summary']['total_files_processed']}")
         print(f"Taggede artikler: {report['summary']['total_articles_tagged']}")
         print(f"Taggede filer gemt i: data/tagged/")
         print(f"Rapport gemt: {report_filepath}")
         
-        print(f"\n📊 Kompleksitetsfordeling:")
+        print(f"\nKompleksitetsfordeling:")
         for level, count in report['complexity_statistics'].items():
             print(f"  - {level}: {count} artikler")
         
-        print(f"\n🎯 Top målgrupper:")
+        print(f"\nTop målgrupper:")
         for audience, count in report['audience_statistics'].items():
             print(f"  - {audience}: {count} artikler")
         
-        print(f"\n🏷️ Top tags:")
+        print(f"\nTop tags:")
         for tag, count in list(report['tag_statistics'].items())[:10]:
             print(f"  - {tag}: {count} artikler")
         
     else:
-        print("❌ Ingen filer blev behandlet!")
+        print("Ingen filer blev behandlet!")
 
 if __name__ == "__main__":
     main() 

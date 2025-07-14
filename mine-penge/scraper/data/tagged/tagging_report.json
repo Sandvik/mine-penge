@@ -1,50 +1,51 @@
 {
   "summary": {
-    "total_files_processed": 6,
-    "total_articles_tagged": 717,
-    "processing_date": "2025-07-13T17:45:43.489599"
+    "total_files_processed": 7,
+    "total_articles_tagged": 799,
+    "processing_date": "2025-07-14T13:20:43.013141"
   },
   "tag_statistics": {
-    "investering": 611,
-    "aktier": 482,
-    "su": 482,
-    "bank": 286,
-    "skat": 267,
-    "spare": 253,
-    "råd": 229,
-    "opsparing": 229,
-    "portefølje": 229,
-    "udbytte": 224,
-    "pris": 222,
-    "arbejde": 218,
-    "kort": 214,
-    "fonde": 193,
-    "forbrug": 147,
-    "rente": 135,
-    "betaling": 130,
-    "gæld": 127,
-    "etf": 126,
-    "budget": 118
+    "investering": 627,
+    "su": 497,
+    "aktier": 468,
+    "bank": 407,
+    "spare": 369,
+    "råd": 303,
+    "skat": 254,
+    "pris": 254,
+    "opsparing": 252,
+    "portefølje": 251,
+    "arbejde": 245,
+    "kort": 238,
+    "udbytte": 213,
+    "fonde": 188,
+    "forbrug": 182,
+    "rente": 169,
+    "gæld": 150,
+    "betaling": 144,
+    "etf": 138,
+    "budget": 135
   },
   "audience_statistics": {
-    "budgetbevidste": 525,
-    "nybegynder_investering": 531,
-    "økonomi_nybegynder": 347,
-    "studerende": 408,
-    "børnefamilier": 69,
-    "pensionister": 60
+    "budgetbevidste": 590,
+    "økonomi_nybegynder": 415,
+    "studerende": 447,
+    "børnefamilier": 87,
+    "nybegynder_investering": 545,
+    "pensionister": 79
   },
   "complexity_statistics": {
-    "begynder": 643,
-    "mellem": 71,
+    "begynder": 714,
+    "mellem": 82,
     "avanceret": 3
   },
   "tagged_files": [
-    "data/tagged/tagged_mitteldorf_blog_posts.json",
-    "data/tagged/tagged_moneypenny_blog_posts.json",
-    "data/tagged/tagged_ungmedpenge_blog_posts.json",
-    "data/tagged/tagged_nordnet_blog_posts.json",
-    "data/tagged/tagged_budgetnoerden_blog_posts.json",
-    "data/tagged/tagged_test_mitteldorf_10_articles.json"
+    "data\\tagged\\tagged_budgetnoerden_blog_posts.json",
+    "data\\tagged\\tagged_cleaning_report.json",
+    "data\\tagged\\tagged_mitteldorf_blog_posts.json",
+    "data\\tagged\\tagged_moneypenny_blog_posts.json",
+    "data\\tagged\\tagged_nordnet_blog_posts.json",
+    "data\\tagged\\tagged_taenk_blog_posts.json",
+    "data\\tagged\\tagged_ungmedpenge_blog_posts.json"
   ]
 }

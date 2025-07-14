@@ -414,7 +414,7 @@ const StudentInvestmentGuide = () => {
                 Forside
               </Link>
               <span>/</span>
-              <span className="text-gray-800 font-medium">Student Investment Guide</span>
+              <span className="text-gray-800 font-medium">Investering for studerende</span>
             </div>
             
             <div className="flex items-center justify-end">
@@ -431,7 +431,7 @@ const StudentInvestmentGuide = () => {
           {/* Page Header */}
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-800 mb-4">
-              Student Investment Guide
+              Investering for studerende
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Alt du skal vide om investering som studerende - fra teori til praksis

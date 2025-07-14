@@ -1,9 +1,35 @@
 {
-  "timestamp": "2025-07-14T08:13:10.338728",
-  "original_count": 479,
-  "cleaned_count": 479,
-  "removed_count": 0,
-  "reduction_percentage": 0.0,
-  "categories_removed": {},
-  "examples_removed": {}
+  "timestamp": "2025-07-14T13:23:48.895497",
+  "original_count": 799,
+  "cleaned_count": 639,
+  "removed_count": 160,
+  "reduction_percentage": 20.02503128911139,
+  "categories_removed": {
+    "year_specific_old": 112,
+    "portfolio_updates": 15,
+    "very_short_summaries": 32,
+    "repetitive_patterns": 81
+  },
+  "examples_removed": {
+    "year_specific_old": [
+      "Min pensionsplan - 2021 version",
+      "Økonomiske mål for 2022",
+      "Kvartalsopgørelse, 2. kvartal 2020"
+    ],
+    "portfolio_updates": [
+      "En opdatering på mine fondsporteføljer – Januar 2025",
+      "Opdatering af porteføljen – August 2024",
+      "Opdatering af porteføljen – September 2024"
+    ],
+    "very_short_summaries": [
+      "Refleksion over 2024 – Hvad vil du tage med dig ind i 2025?",
+      "Undgå impulsshopping i julen🎄",
+      "Få det nu f$cking gjort fra d. 23-27/9-2024"
+    ],
+    "repetitive_patterns": [
+      "Kvartalsopgørelse, 2. kvartal 2024",
+      "Kvartalsopgørelse, 2. kvartal 2023",
+      "Kvartalsopgørelse, 2. kvartal 2023"
+    ]
+  }
 }

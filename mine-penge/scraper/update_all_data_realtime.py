@@ -44,10 +44,10 @@ class DataUpdater:
         script_path = os.path.join(self.scrapers_dir, script_name)
         
         if not os.path.exists(script_path):
-            logger.error(f"Scraper script ikke fundet: {script_path}")
+            logger.error(f"Scraper script not found: {script_path}")
             return False
         
-        print(f"\n🔄 Kører {script_name}...")
+        print(f"\nStarting {script_name}...")
         print("=" * 50)
         
         try:
@@ -63,19 +63,19 @@ class DataUpdater:
             return_code = process.wait()
             
             if return_code == 0:
-                print(f"✅ {script_name} kørt succesfuldt")
+                print(f"✅ {script_name} completed successfully")
                 return True
             else:
-                print(f"❌ {script_name} fejlede med exit code {return_code}")
+                print(f"❌ {script_name} failed with exit code {return_code}")
                 return False
                 
         except Exception as e:
-            print(f"❌ Fejl ved kørsel af {script_name}: {e}")
+            print(f"❌ Error running {script_name}: {e}")
             return False
     
     def run_all_scrapers(self):
         """Kører alle scraper scripts i rækkefølge"""
-        print("🚀 Starter opdatering af alle blog data...")
+        print("🚀 Starting update of all blog data...")
         print("=" * 60)
         
         success_count = 0
@@ -88,22 +88,22 @@ class DataUpdater:
                 failed_scrapers.append(script)
         
         print("=" * 60)
-        print(f"📊 Scraping resultat: {success_count}/{len(self.scraper_scripts)} succesfulde")
+        print(f"📊 Scraping result: {success_count}/{len(self.scraper_scripts)} successful")
         
         if failed_scrapers:
-            print(f"⚠️ Fejlede scrapers: {', '.join(failed_scrapers)}")
+            print(f"⚠️ Failed scrapers: {', '.join(failed_scrapers)}")
         
         return len(failed_scrapers) == 0
     
     def run_tagging_realtime(self):
         """Kører content tagging med real-time output"""
-        print("\n🏷️ Starter automatisk tagging...")
+        print("\n🏷️ Starting automatic tagging...")
         print("=" * 50)
         
         tagging_script = os.path.join(self.tagging_dir, "content_tagger.py")
         
         if not os.path.exists(tagging_script):
-            print(f"Tagging script ikke fundet: {tagging_script}")
+            print(f"Tagging script not found: {tagging_script}")
             return False
         
         try:
@@ -119,19 +119,19 @@ class DataUpdater:
             return_code = process.wait()
             
             if return_code == 0:
-                print("✅ Tagging kørt succesfuldt")
+                print("✅ Tagging completed successfully")
                 return True
             else:
-                print(f"❌ Tagging fejlede med exit code {return_code}")
+                print(f"❌ Tagging failed with exit code {return_code}")
                 return False
                 
         except Exception as e:
-            print(f"❌ Fejl ved kørsel af tagging: {e}")
+            print(f"❌ Error running tagging: {e}")
             return False
     
     def check_for_duplicates(self):
         """Tjekker for dubletter i JSON filer"""
-        print("\n🔍 Tjekker for dubletter...")
+        print("\n🔍 Checking for duplicates...")
         
         duplicate_found = False
         
@@ -149,19 +149,19 @@ class DataUpdater:
                         
                         if len(urls) != len(unique_urls):
                             duplicates = len(urls) - len(unique_urls)
-                            print(f"⚠️ {filename}: {duplicates} dubletter fundet")
+                            print(f"⚠️ {filename}: {duplicates} duplicates found")
                             duplicate_found = True
                         else:
-                            print(f"✅ {filename}: Ingen dubletter")
+                            print(f"✅ {filename}: No duplicates")
                             
                 except Exception as e:
-                    print(f"❌ Fejl ved tjek af {filename}: {e}")
+                    print(f"❌ Error checking {filename}: {e}")
         
         return not duplicate_found
     
     def generate_summary_report(self):
         """Genererer en samlet rapport over opdateringen"""
-        print("\n📊 Genererer samlet rapport...")
+        print("\n📊 Generating summary report...")
         
         report = {
             "update_timestamp": datetime.now().isoformat(),
@@ -189,7 +189,7 @@ class DataUpdater:
                         report["total_articles"] += article_count
                         
                 except Exception as e:
-                    print(f"Fejl ved læsning af {filename}: {e}")
+                    print(f"Error reading {filename}: {e}")
         
         # Tæl taggede filer
         for filename in os.listdir(self.tagged_dir):
@@ -201,48 +201,48 @@ class DataUpdater:
         with open(report_file, 'w', encoding='utf-8') as f:
             json.dump(report, f, ensure_ascii=False, indent=2)
         
-        print(f"📄 Rapport gemt: {report_file}")
+        print(f"📄 Report saved: {report_file}")
         return report
     
     def run_full_update(self):
         """Kører komplet opdatering af alt data"""
         print("🚀 MINE PENGE DATA UPDATER - REAL-TIME VERSION")
         print("=" * 60)
-        print("Dette script vil:")
-        print("1. Køre alle scraper scripts i korrekt rækkefølge")
-        print("2. Tjekke for dubletter i data")
-        print("3. Køre automatisk tagging på alle JSON filer")
-        print("4. Generere en samlet rapport")
+        print("This script will:")
+        print("1. Run all scraper scripts in correct order")
+        print("2. Check for duplicates in data")
+        print("3. Run automatic tagging on all JSON files")
+        print("4. Generate a summary report")
         print("=" * 60)
         
         # Trin 1: Kør alle scrapers
         if not self.run_all_scrapers():
-            print("❌ Nogle scrapers fejlede - stopper opdatering")
+            print("❌ Some scrapers failed - stopping update")
             return False
         
         # Trin 2: Tjek for dubletter
         if not self.check_for_duplicates():
-            print("⚠️ Dubletter fundet - fortsætter alligevel")
+            print("⚠️ Duplicates found - continuing anyway")
         
         # Trin 3: Kør tagging
         if not self.run_tagging_realtime():
-            print("❌ Tagging fejlede")
+            print("❌ Tagging failed")
             return False
         
         # Trin 4: Generer rapport
         report = self.generate_summary_report()
         
         # Print sammendrag
-        print("\n✅ OPDATERING FÆRDIG!")
+        print("\n✅ UPDATE COMPLETE!")
         print("=" * 60)
-        print(f"📊 Total artikler opdateret: {report['total_articles']}")
-        print(f"📁 JSON filer opdateret: {len(report['files_updated'])}")
-        print(f"🏷️ Taggede filer: {len(report['tagged_files'])}")
-        print(f"📄 Rapport gemt: data/tagged/update_report.json")
+        print(f"📊 Total articles updated: {report['total_articles']}")
+        print(f"📁 JSON files updated: {len(report['files_updated'])}")
+        print(f"🏷️ Tagged files: {len(report['tagged_files'])}")
+        print(f"📄 Report saved: data/tagged/update_report.json")
         
-        print(f"\n📋 Detaljer:")
+        print(f"\n📋 Details:")
         for file_info in report['files_updated']:
-            print(f"  - {file_info['filename']}: {file_info['articles']} artikler")
+            print(f"  - {file_info['filename']}: {file_info['articles']} articles")
         
         return True
 
@@ -252,20 +252,20 @@ def main():
     success = updater.run_full_update()
     
     if success:
-        print("\n🎉 Alt data er nu opdateret og klar til brug!")
+        print("\n🎉 All data is now updated and ready for use!")
         
         # Kør build_articles.py for at samle alle artikler
-        print("\n🔨 Kører build_articles.py for at samle alle artikler...")
+        print("\n🔨 Running build_articles.py to compile all articles...")
         try:
             build_script = os.path.join(os.path.dirname(__file__), "build_articles.py")
             result = subprocess.run([sys.executable, build_script], check=True)
-            print("✅ Samlet articles.json er nu opdateret!")
+            print("✅ Compiled articles.json is now updated!")
         except subprocess.CalledProcessError as e:
-            print(f"❌ Fejl ved kørsel af build_articles.py: {e}")
+            print(f"❌ Error running build_articles.py: {e}")
         except Exception as e:
-            print(f"❌ Uventet fejl ved build: {e}")
+            print(f"❌ Unexpected error during build: {e}")
     else:
-        print("\n❌ Opdatering fejlede - tjek loggene ovenfor")
+        print("\n❌ Update failed - check logs above")
         sys.exit(1)
 
 if __name__ == "__main__":

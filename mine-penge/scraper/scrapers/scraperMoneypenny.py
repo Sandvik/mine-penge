@@ -13,19 +13,19 @@ logger = logging.getLogger(__name__)
 
 # Console output funktioner
 def print_progress(message):
-    print(f"🔄 {message}")
+    print(f"PROGRESS: {message}")
 
 def print_success(message):
-    print(f"✅ {message}")
+    print(f"SUCCESS: {message}")
 
 def print_error(message):
-    print(f"❌ {message}")
+    print(f"ERROR: {message}")
 
 def print_info(message):
-    print(f"ℹ️  {message}")
+    print(f"INFO: {message}")
 
 def print_warning(message):
-    print(f"⚠️  {message}")
+    print(f"WARNING: {message}")
 
 class MoneypennyBlogScraper:
     def __init__(self):
@@ -521,18 +521,18 @@ def main():
         
         # Print statistikker
         print(f"\n{'='*60}")
-        print(f"🎉 SCRAPING FÆRDIG!")
+        print(f"SCRAPING FÆRDIG!")
         print(f"{'='*60}")
-        print(f"📊 Antal indlæg scraped: {len(blog_posts)}")
-        print(f"💾 Data gemt til: {filename}")
+        print(f"Antal indlæg scraped: {len(blog_posts)}")
+        print(f"Data gemt til: {filename}")
         
         # Beregn gennemsnitlig ordantal
         total_words = sum(len(post.get('content', '').split()) for post in blog_posts)
         avg_words = total_words // len(blog_posts) if blog_posts else 0
-        print(f"📝 Gennemsnitlig ordantal: {avg_words}")
+        print(f"Gennemsnitlig ordantal: {avg_words}")
         
         # Vis de første 3 titler som eksempel
-        print(f"\n📋 Eksempler på titler:")
+        print(f"\nEksempler på titler:")
         for i, post in enumerate(blog_posts[:3]):
             title = post.get('title', 'Ingen titel')[:60]
             print(f"  {i+1}. {title}...")

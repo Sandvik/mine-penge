@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "original_file": "cleaning_report.json",
+    "total_articles": 0,
+    "tagged_at": "2025-07-14T13:20:42.104959",
+    "tag_categories_used": [
+      "Bolig & Ejendom",
+      "Investering & Aktier",
+      "Pension",
+      "SU & Studerende",
+      "Gæld & Lån",
+      "Opsparing",
+      "Bank & Betaling",
+      "Skat & Fradrag",
+      "Rente",
+      "Forbrug",
+      "Forsikring",
+      "Rådgivning",
+      "Familieøkonomi",
+      "Erhverv",
+      "Krypto",
+      "Pensionist",
+      "Problemer"
+    ],
+    "target_audiences_used": [
+      "studerende",
+      "børnefamilier",
+      "budgetbevidste",
+      "nybegynder_investering",
+      "økonomi_nybegynder",
+      "pensionister"
+    ],
+    "articles_found": 0
+  },
+  "articles": []
+}

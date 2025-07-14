@@ -1,45 +1,52 @@
 {
-  "update_timestamp": "2025-07-13T17:45:43.493122",
-  "scrapers_run": [
-    "scraperMoneypenny.py",
-    "scraperNordNet.py",
-    "scraperBudgetNoerd.py",
-    "scraperUngMedPenge.py",
-    "scraperMitteldorfDK.py"
-  ],
+  "timestamp": "2025-07-14T13:20:43.812149",
+  "total_articles": 799,
   "files_updated": [
     {
+      "filename": "budgetnoerden_blog_posts.json",
+      "articles": 97,
+      "source": "Budgetnoerden Blog (www.budgetnoerden.dk/blog)"
+    },
+    {
+      "filename": "cleaning_report.json",
+      "articles": 0,
+      "source": "Ukendt"
+    },
+    {
       "filename": "mitteldorf_blog_posts.json",
-      "articles": 214
+      "articles": 214,
+      "source": "Mitteldorf Blog (mitteldorf.dk/blog/)"
     },
     {
       "filename": "moneypenny_blog_posts.json",
-      "articles": 103
-    },
-    {
-      "filename": "ungmedpenge_blog_posts.json",
-      "articles": 242
+      "articles": 103,
+      "source": "Ukendt"
     },
     {
       "filename": "nordnet_blog_posts.json",
-      "articles": 52
+      "articles": 52,
+      "source": "Nordnet Blog (www.nordnet.dk/blog/)"
     },
     {
-      "filename": "budgetnoerden_blog_posts.json",
-      "articles": 96
+      "filename": "taenk_blog_posts.json",
+      "articles": 91,
+      "source": "Forbrugerrådet Tænk"
     },
     {
-      "filename": "test_mitteldorf_10_articles.json",
-      "articles": 10
+      "filename": "ungmedpenge_blog_posts.json",
+      "articles": 242,
+      "source": "Ungmedpenge Blog (ungmedpenge.dk)"
     }
   ],
   "tagged_files": [
     "tagged_budgetnoerden_blog_posts.json",
-    "tagged_ungmedpenge_blog_posts.json",
-    "tagged_test_mitteldorf_10_articles.json",
-    "tagged_moneypenny_blog_posts.json",
+    "tagged_cleaning_report.json",
     "tagged_mitteldorf_blog_posts.json",
-    "tagged_nordnet_blog_posts.json"
-  ],
-  "total_articles": 717
+    "tagged_moneypenny_blog_posts.json",
+    "tagged_nordnet_blog_posts.json",
+    "tagged_taenk_blog_posts.json",
+    "tagged_ungmedpenge_blog_posts.json",
+    "tagging_report.json",
+    "update_report.json"
+  ]
 }

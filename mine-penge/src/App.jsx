@@ -54,7 +54,7 @@ function App() {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const [pagination, setPagination] = useState({
     currentPage: 1,
-    pageSize: 20,
+    pageSize: 10,
     totalArticles: 0,
     totalPages: 0,
     hasNextPage: false,
@@ -307,6 +307,19 @@ function App() {
 
   const handlePageChange = (newPage) => {
     setPagination(prev => ({ ...prev, currentPage: newPage }));
+    
+    // Auto-scroll to search bar when changing pages
+    setTimeout(() => {
+      const searchBar = document.querySelector('[data-testid="search-bar"]') || 
+                       document.querySelector('input[type="text"]') ||
+                       document.querySelector('.max-w-7xl');
+      if (searchBar) {
+        searchBar.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        });
+      }
+    }, 100); // Small delay to ensure state update is complete
   };
 
   const handleBlacklistUpdate = () => {

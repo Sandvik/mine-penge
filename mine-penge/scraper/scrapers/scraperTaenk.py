@@ -13,9 +13,13 @@ from urllib.parse import urljoin, urlparse
 from datetime import datetime
 import time
 import logging
+import urllib3
+
+# Disable SSL warnings for testing
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Opsætning af logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 class TaenkScraper:
@@ -25,6 +29,8 @@ class TaenkScraper:
         self.session.headers.update({
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
         })
+        # Disable SSL verification for the session
+        self.session.verify = False
         
         # Kun relevante økonomiske kategorier
         self.financial_categories = [
@@ -94,36 +100,38 @@ class TaenkScraper:
         return None
     
     def is_financial_article(self, title, content, url):
-        """Tjekker om en artikel er økonomisk relevant - meget streng filtrering"""
+        """Tjekker om en artikel er økonomisk relevant - smart filtrering"""
         title_lower = title.lower()
         content_lower = content.lower()
         url_lower = url.lower()
         
-        # Undgå ALLE kategorier der IKKE er økonomiske
-        exclude_patterns = [
-            # Mad og drikke
-            'kaffe', 'mad', 'kemi', 'rengøring', 'toilet', 'vask', 'pleje', 'creme', 'olie',
-            'legetøj', 'cykel', 'løbehjul', 'bil', 'transport', 'møbel', 'elektronik',
-            'tøj', 'sko', 'kosmetik', 'sundhed', 'medicin', 'baby', 'børn', 'gravide',
-            'universalrengøring', 'toiletrens', 'mavecreme', 'maveolie', 'instant',
-            'foodprocessor', 'vaske-toerremaskine', 'loebehjul', 'loebecykler',
-            # Kemikalier og rengøring
-            'kemitest', 'uønsket kemi', 'rengøringsmidler', 'vaskemidler', 'opvaskemidler',
-            'luftfriskere', 'desinfektionsmidler', 'rengøringsservietter', 'gulvvaskemiddel',
-            'badebomber', 'badeslim', 'intimsæbe', 'intim', 'bad', 'sæbe',
-            # Baby og graviditet
-            'babyolie', 'babysalve', 'vådservietter', 'sutter', 'puslebord', 'cocktaileffekt',
-            'hovedpinepiller', 'panodil', 'ipren', 'hormonforstyrrende',
-            # Andre irrelevante
-            'festivalbilletter', 'koncertbilletter', 'radon', 'indeklima', 'støvsuger',
-            'bliv-medlem'  # Medlemskabsside
+        # Debug logging
+        debug_info = []
+        
+        # 1. Tjek for irrelevante kategorier i URL (smart mønstre)
+        irrelevant_url_patterns = [
+            r'/test/(kaffe|mad|kemi|rengøring|toilet|vask|pleje|creme|olie|legetøj|cykel|løbehjul|bil|transport|møbel|elektronik|tøj|sko|kosmetik|sundhed|medicin|baby|børn|gravide|universalrengøring|toiletrens|mavecreme|maveolie|instant|foodprocessor|vaske-toerremaskine|loebehjul|loebecykler|kemitest|uønsket kemi|rengøringsmidler|vaskemidler|opvaskemidler|luftfriskere|desinfektionsmidler|rengøringsservietter|gulvvaskemiddel|badebomber|badeslim|intimsæbe|intim|bad|sæbe|babyolie|babysalve|vådservietter|sutter|puslebord|cocktaileffekt|hovedpinepiller|panodil|ipren|hormonforstyrrende|festivalbilletter|koncertbilletter|radon|indeklima|støvsuger|bliv-medlem)',
+            r'/test/(kølefryseskab|mascara|klapvogn|proteinpulver|hårvoks|makeup|shampoo|vaskemaskine|tørretumbler|barnevogn|babymad|tv|computer|mobil|tablet|sport|fitness|drikke|kosttilskud|parfume|mode|have|grill|værktøj|ferie|rejse|hotel|fly|motorcykel|båd|camping|boligindretning|sengetøj|dyner|puder|gardiner|lamper|køkkenudstyr|gryder|pander|bestik|tallerkener|glas|kopper|service|opvaskemaskine|køleskab|fryser|ovn|komfur|mikroovn|kaffemaskine|elkedel|brødrister|blender|slowjuicer|airfryer|riskoger|ismaskine|sodavandsmaskine|elcykel|el-løbehjul|elbil|ladcykel|autostol|cykelhjelm|cykelstol|cykelanhænger|skateboard|rulleskøjter|ski|snowboard|skøjter|løbesko|fodbold|håndbold|basket|tennis|badminton|golf|svømning|dykning|fiskeri|jagt|telt|sovepose|liggeunderlag|rygsæk|kuffert|taske|pung|ur|smykker|briller|solbriller|høreapparat|tandbørste|tandpasta|tandtråd|mundskyl|barbermaskine|hårtørrer|glattejern|krøllejern|hårbørste|hårspray|hårgelé|hårmousse|hårkur|hårfarve|hårblegning|hårfjerningscreme|voks|epilator|skraber|barberskum|aftershave|deodorant|bodylotion|solcreme|selvbruner|ansigtsmaske|ansigtscreme|øjencreme|læbepomade|neglelak|neglelakfjerner|neglefil|negleklipper|fodcreme|fodbad|fodfil|fodmaske|fodpeeling|fodspray|fodpudder|foddeodorant|fodsalve|fodgel|fodbalsam|fodolie|fodskum)',
         ]
         
-        for pattern in exclude_patterns:
-            if pattern in title_lower or pattern in url_lower:
+        for pattern in irrelevant_url_patterns:
+            if re.search(pattern, url_lower):
+                debug_info.append(f"Ekskluderet pga. irrelevant kategori i URL: {pattern}")
+                logger.debug(f"Ekskluderet artikel '{title}' pga. irrelevant kategori i URL: {pattern}")
                 return False
         
-        # Kræv specifikke økonomiske kategorier i URL
+        # 2. Tjek for irrelevante ord i titel
+        irrelevant_title_patterns = [
+            r'\b(kaffe|mad|kemi|rengøring|toilet|vask|pleje|creme|olie|legetøj|cykel|løbehjul|bil|transport|møbel|elektronik|tøj|sko|kosmetik|sundhed|medicin|baby|børn|gravide|kølefryseskab|mascara|klapvogn|proteinpulver|hårvoks|makeup|shampoo|vaskemaskine|tørretumbler|barnevogn|babymad|tv|computer|mobil|tablet|sport|fitness|drikke|kosttilskud|parfume|mode|have|grill|værktøj|ferie|rejse|hotel|fly|motorcykel|båd|camping|boligindretning|sengetøj|dyner|puder|gardiner|lamper|køkkenudstyr|gryder|pander|bestik|tallerkener|glas|kopper|service|opvaskemaskine|køleskab|fryser|ovn|komfur|mikroovn|kaffemaskine|elkedel|brødrister|blender|slowjuicers|airfryer|riskoger|ismaskine|sodavandsmaskine|elcykel|el-løbehjul|elbil|ladcykel|autostol|cykelhjelm|cykelstol|cykelanhænger|skateboard|rulleskøjter|ski|snowboard|skøjter|løbesko|fodbold|håndbold|basket|tennis|badminton|golf|svømning|dykning|fiskeri|jagt|telt|sovepose|liggeunderlag|rygsæk|kuffert|taske|pung|ur|smykker|briller|solbriller|høreapparat|tandbørste|tandpasta|tandtråd|mundskyl|barbermaskine|hårtørrer|glattejern|krøllejern|hårbørste|hårspray|hårgelé|hårmousse|hårkur|hårfarve|hårblegning|hårfjerningscreme|voks|epilator|skraber|barberskum|aftershave|deodorant|bodylotion|solcreme|selvbruner|ansigtsmaske|ansigtscreme|øjencreme|læbepomade|neglelak|neglelakfjerner|neglefil|negleklipper|fodcreme|fodbad|fodfil|fodmaske|fodpeeling|fodspray|fodpudder|foddeodorant|fodsalve|fodgel|fodbalsam|fodolie|fodskum)\b'
+        ]
+        
+        for pattern in irrelevant_title_patterns:
+            if re.search(pattern, title_lower):
+                debug_info.append(f"Ekskluderet pga. irrelevant ord i titel: {pattern}")
+                logger.debug(f"Ekskluderet artikel '{title}' pga. irrelevant ord i titel: {pattern}")
+                return False
+        
+        # 3. Kræv specifikke økonomiske kategorier i URL
         financial_url_patterns = [
             '/test/bank', '/test/laan', '/test/kredit', '/test/forsikring', 
             '/test/investering', '/test/aktie', '/test/pension', '/test/opsparing',
@@ -138,9 +146,11 @@ class TaenkScraper:
         url_financial = any(pattern in url_lower for pattern in financial_url_patterns)
         
         if not url_financial:
+            debug_info.append("Ekskluderet pga. manglende økonomisk kategori i URL")
+            logger.debug(f"Ekskluderet artikel '{title}' pga. manglende økonomisk kategori i URL")
             return False
         
-        # Tjek for økonomiske nøgleord i indhold
+        # 4. Tjek for økonomiske nøgleord i indhold
         financial_keywords = [
             'bank', 'laan', 'kredit', 'forsikring', 'investering', 'aktie', 'pension', 
             'opsparing', 'skat', 'bolig', 'realkredit', 'forbrugslaan', 'kreditkort',
@@ -152,16 +162,26 @@ class TaenkScraper:
         ]
         
         financial_matches = 0
+        matched_keywords = []
         for keyword in financial_keywords:
             if keyword in title_lower or keyword in content_lower:
                 financial_matches += 1
+                matched_keywords.append(keyword)
         
         # Kræv mindst 2 økonomiske nøgleord i indholdet
-        return financial_matches >= 2
+        if financial_matches < 2:
+            debug_info.append(f"Ekskluderet pga. for få økonomiske nøgleord ({financial_matches} < 2). Matched: {matched_keywords}")
+            logger.debug(f"Ekskluderet artikel '{title}' pga. for få økonomiske nøgleord ({financial_matches} < 2). Matched: {matched_keywords}")
+            return False
+        
+        # Artikel accepteret
+        logger.debug(f"Artikel accepteret: '{title}' med {financial_matches} økonomiske nøgleord: {matched_keywords}")
+        return True
     
     def is_article_url(self, url):
-        """Tjekker om en URL er en artikel fra taenk.dk"""
-        if url.startswith("https://taenk.dk/") and 'taenk.dk' in url:
+        """Tjekker om en URL er en artikel fra taenk.dk/privatoekonomi"""
+        # Kun artikler fra privatøkonomi-sektionen
+        if url.startswith("https://taenk.dk/privatoekonomi"):
             # Undgå kategorisider og admin sider
             if not any(skip in url for skip in ['/admin', '/search', '/sitemap', '/rss', '/magasin', '/soeg']):
                 return True
@@ -348,20 +368,16 @@ class TaenkScraper:
         return list(set(article_links))  # Fjern duplikater
     
     def scrape_all_categories(self, max_articles=None):
-        """Scraper alle relevante kategorier"""
-        logger.info("Starter scraping af Forbrugerrådet Tænk - kun økonomiske artikler")
+        """Scraper kun privatøkonomi-kategorien og dens underkategorier"""
+        logger.info("Starter scraping af Forbrugerrådet Tænk - KUN privatøkonomi")
         
-        all_article_links = []
-        
-        for category in self.financial_categories:
-            logger.info(f"Scraper kategori: {category}")
-            article_links = self.get_article_links_from_category(category)
-            all_article_links.extend(article_links)
-            time.sleep(1)  # Pause mellem kategorier
+        # Start med hovedkategorien
+        start_url = "/privatoekonomi"
+        all_article_links = self.get_article_links_from_category(start_url)
         
         # Fjern duplikater
         unique_links = list(set(all_article_links))
-        logger.info(f"Fandt {len(unique_links)} unikke artikler")
+        logger.info(f"Fandt {len(unique_links)} unikke artikler i privatøkonomi")
         
         # Begræns antal artikler hvis max_articles er sat
         if max_articles:
@@ -376,7 +392,7 @@ class TaenkScraper:
                 self.articles.append(article)
             time.sleep(0.5)  # Pause mellem artikler
         
-        logger.info(f"Scraping færdig. Fandt {len(self.articles)} økonomiske artikler")
+        logger.info(f"Scraping færdig. Fandt {len(self.articles)} økonomiske artikler i privatøkonomi")
         return self.articles
     
     def save_articles(self, filename="taenk_blog_posts.json"):

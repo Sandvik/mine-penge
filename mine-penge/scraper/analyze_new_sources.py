@@ -20,7 +20,7 @@ class SourceAnalyzer:
     
     def analyze_taenk(self):
         """Analyser Forbrugerrådet Tænk"""
-        print("🔍 Analyserer Forbrugerrådet Tænk...")
+        print("Analyserer Forbrugerrådet Tænk...")
         
         base_url = "https://taenk.dk"
         
@@ -44,14 +44,14 @@ class SourceAnalyzer:
                 elements = soup.select(selector)
                 if elements:
                     article_elements = elements
-                    print(f"📊 Fundet {len(elements)} artikler med selector: {selector}")
+                    print(f"Fundet {len(elements)} artikler med selector: {selector}")
                     break
             
             if not article_elements:
                 # Prøv at finde links der kunne være artikler
                 links = soup.find_all('a', href=True)
                 article_links = [link for link in links if any(word in link.get('href', '').lower() for word in ['artikel', 'nyhed', 'test', 'sammenligning'])]
-                print(f"📊 Fundet {len(article_links)} potentielle artikel-links")
+                print(f"Fundet {len(article_links)} potentielle artikel-links")
                 
                 return {
                     'url': base_url,
@@ -113,7 +113,7 @@ class SourceAnalyzer:
     
     def analyze_penge_dk(self):
         """Analyser Penge.dk"""
-        print("🔍 Analyserer Penge.dk...")
+        print("Analyserer Penge.dk...")
         
         # Prøv forskellige mulige URLs
         urls_to_try = [
@@ -133,7 +133,7 @@ class SourceAnalyzer:
                 article_elements = soup.find_all('article') or soup.find_all('div', class_=re.compile(r'article|post|card'))
                 
                 if article_elements:
-                    print(f"📊 Fundet {len(article_elements)} artikler på {url}")
+                    print(f"Fundet {len(article_elements)} artikler på {url}")
                     
                     # Analyser struktur
                     structure_info = {
@@ -188,7 +188,7 @@ class SourceAnalyzer:
     
     def analyze_gaeldsraadgivning(self):
         """Analyser Gældsrådgivning.dk"""
-        print("🔍 Analyserer Gældsrådgivning.dk...")
+        print("Analyserer Gældsrådgivning.dk...")
         
         base_url = "https://gaeldsraadgivning.dk"
         
@@ -199,7 +199,7 @@ class SourceAnalyzer:
             # Find artikler
             article_elements = soup.find_all('article') or soup.find_all('div', class_=re.compile(r'article|post|card'))
             
-            print(f"📊 Fundet {len(article_elements)} potentielle artikler")
+            print(f"Fundet {len(article_elements)} potentielle artikler")
             
             # Analyser struktur
             structure_info = {
@@ -251,7 +251,7 @@ class SourceAnalyzer:
     
     def analyze_su_dk(self):
         """Analyser SU.dk"""
-        print("🔍 Analyserer SU.dk...")
+        print("Analyserer SU.dk...")
         
         base_url = "https://su.dk"
         
@@ -262,7 +262,7 @@ class SourceAnalyzer:
             # Find artikler
             article_elements = soup.find_all('article') or soup.find_all('div', class_=re.compile(r'article|post|card'))
             
-            print(f"📊 Fundet {len(article_elements)} potentielle artikler")
+            print(f"Fundet {len(article_elements)} potentielle artikler")
             
             # Analyser struktur
             structure_info = {
@@ -314,7 +314,7 @@ class SourceAnalyzer:
 
 def main():
     """Hovedfunktion til at analysere alle kilder"""
-    print("🚀 Starter analyse af nye kilder...")
+    print("Starter analyse af nye kilder...")
     
     analyzer = SourceAnalyzer()
     
@@ -330,7 +330,7 @@ def main():
         json.dump(results, f, ensure_ascii=False, indent=2)
     
     # Print sammendrag
-    print("\n📊 SAMMENDRAG AF ANALYSE:")
+    print("\nSAMMENDRAG AF ANALYSE:")
     print("=" * 50)
     
     for source, result in results.items():

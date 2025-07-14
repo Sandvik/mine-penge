@@ -1,12 +1,11 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumbs from '../components/Breadcrumbs';
 
 const FAQ = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [activeCategory, setActiveCategory] = useState('alle');
+  const [openCategory, setOpenCategory] = useState(null);
 
-  // FAQ data struktur
+  // FAQ data struktur (beholdes uændret)
   const faqData = {
     investering: {
       title: '💰 Investering',
@@ -494,7 +493,176 @@ Ejerbolig:
 💡 Tip: Sæt penge til side hver måned til boligskat, så du ikke bliver overrasket!`,
           tags: ['boligskat', 'ejendomsskat', 'skat'],
           related: ['/bolig-hus-guide']
-        }
+        },
+        {
+          id: 'bolig-ordbog',
+          question: 'Hvilke begreber skal jeg kende, når jeg køber bolig?',
+          answer: `
+A conto: En a conto betaling er en forudbetaling af forventet udgift eller en foreløbig betaling. En a conto betaling vil efterfølgende blive afregnet endeligt, eksempelvis betales der i flerfamilieejendomme a conto for varme og el.
+
+A meta: En aftale om fordeling af omkostninger.
+
+Acceptdato: Datoen for at man indgår aftale om et lån.
+
+Acceptfrist: Det seneste tidspunkt for at et tilbud skal være accepteret.
+
+Adkomst: Besidde ret til noget, eksempelvis fast ejendom. Står man som ejer på skødet til en given grund, har man adkomst til denne grund.
+
+Administrationsbidrag: Den del af ydelsen på et realkreditlån, som skal dække realkreditinstituttets udgifter til administration. Administrationsbidraget kan trækkes fra i skat.
+
+Administrator: Person, der varetager de administrative opgaver i en forening, heriblandt huslejeopkrævning, drift og betaling af løbende udgifter.
+
+Advokatforbehold: Et advokatforbehold betyder, at en ellers underskrevet købsaftale er betinget af, at købers advokat kan godkende hele købsaftalen i sin helhed. Købers advokat skal have minimum fem arbejdsdage til at kigge alle dokumenter igennem.
+
+Afdrag: Den del af ydelsen på et realkreditlån, som skal dække realkreditinstituttets udgifter til administration. Administrationsbidraget kan trækkes fra i skat.
+
+Afdragsfrie lån: Låntype hvor der løbende kun betales renter og gebyrer, hvorimod der ikke afdrages på selve gælden.
+
+Aflæsning af målere: Ved ind- og udflytning er det vigtigt at aflæse el-, vand-, varme- og gasmålere. Dette gør man for at sikre, at udgifterne bliver retfærdigt fordelt mellem tidligere og efterfølgende ejer(e). Aflæsningen bruges til at udfærdige refusionsopgørelsen.
+
+Aftægtsydelse: I ejendomshandler kan der eksempelvis indgå en aftale om at sælger efterfølgende har brugsretten til en ejendom, fri varme, fri kost el.lign. Dette kaldes en aftægtsydelse og kan indgå som en del af den samlede købesum.
+
+Akkord: En aftale om at kreditor nedsætter sit krav til skyldner, akkorden gives typisk for at skyldner undgår konkurs.
+
+Almindelig frit salg: Ejendomshandel mellem uafhængige parter i modsætning til eksempelvis familiehandler
+
+Amortisation: Fast tilbagebetaling af gæld.
+
+Andelsbevis: Dokument, der beviser, at man ejer en del af en andelsforening og har brugsret over en bolig i foreningen.
+
+Andelsbolig: En bolig, der er en del af en andelsforening. Andelsboliger er typisk lejligheder.
+
+Anpartslejlighed: Lejlighed i en ejendom med to anparter. Forholdet mellem anparterne reguleres ved en samejeoverenskomst. Der er til den ideelle anpart ikke tilknyttet egentligt ejerskab men kun eksklusiv brugsret over boligen.
+
+Anslået teknisk pris: En andelsboligs samlede pris. Den anslåede tekniske pris beregnes som summen af indskuddet og den anslåede andel af andelsforeningens nettogæld. Den anslåede tekniske pris er et godt sammenligningsgrundlag til kontantprisen på en ejerbolig.
+
+Auktion: Handel, som foregår på auktion.
+
+Bankgæld: Gæld, som er optaget i et pengeinstitut.
+
+Banklån: Lån, der er optaget i et pengeinstitut.
+
+Basisfinansiering: Et realkreditlån, som ligger inden for en lånegrænse på maksimalt 80 procent af ejendommens værdi i boligejendomme og 75 procent i fritidshuse.
+
+BBR: Forkortelse for Bygnings- og Boligregistret, som er et register med oplysninger om samtlige af landets bygninger og boliger. Det er boligejerens eget ansvar at sikre, at alle oplysninger om boligejerens egen bolig er korrekte og opdateret.
+
+BBR-ejermeddelelse: En BBR-meddelelse er en opsummering af oplysninger, der er registreret i Bygnings- og Boligregisteret (BBR) hos kommunen for den pågældende ejendom.
+
+BBR-meddelelse: En sammenfatning af de oplysninger, der er registreret i BBR-registret. Sammenfatningen viser oplysninger om ejendommens størrelse, opførelsestidspunkt, beliggenhed, indretning og tekniske forhold.
+
+Bebyggelsesprocent: Den procentvise andel af grunden, som må bebygges. Bebyggelsesprocenten er typisk på 30 procent.
+
+Bebygget areal: Det areal på grunden, som er godkendt til bebyggelse
+
+Behæftelse: En behæftelse er en gæld, som er sikret med pant. Panten kan eksempelvis være i form af en fast ejendom.
+
+Belåne: At stille konkret definerede aktiver som sikkerhed for et lån.
+
+Belåningsgrad: Den andel af ejendommens handelsværdi, som er belånt. Har man f.eks. en gæld på 800.000 kr. i en ejendom til en handelsværdi på 1,0 mio. kroner, så er belåningsgraden 80 procent.
+
+Belåningsværdi: Den vurderede kontante handelsværdi af en ejendom. Belåningsværdien afgør, hvor meget der kan lånes i boligen og er med til at sikre, at de lovmæssigt fastsatte lånegrænser overholdes. For helårsboliger er lånegrænsen 80 procent, og for fritidshuse er den 75 procent.
+
+Berigtigelse: Når en ejendom er berigtiget, betyder det, at handelen er gennemført i overensstemmelse med de aftalte vilkår. Mere konkret kan en berigtigelse dække over, at sælger har modtaget sine penge, at køber har fået skødet tinglyst og har opnået adkomst (ejendomsret) på ejendommen, at der er udarbejdet et pantebreve mm.
+
+Besigtigelse: En sagkyndigs undersøgelse og vurdering af tilstanden for eksempelvis en bolig.
+
+Besøgsstatistik: På Boligsiden kan du se, hvor mange der har været interesseret i den enkelte ejendom. Det kaldes besøgsstatistikken for ejendomme.
+
+Bestyrelse: Den øverste ledelse eksempelvis i en forening. Bestyrelsen vælges på foreningens generalforsamling og varetager den overordnede ledelse og daglige drift i foreningen.
+
+Betalingsgaranti: Når der stilles betalingsgaranti, afgives der et juridisk bindende løfte om at overtage den økonomiske risiko, som ellers ville ligge hos kreditor selv.
+
+Betinget købsaftale: En købsaftale, der er betinget af visse omstændigheder, eksempelvis at køber får solgt sit eget hus. Kun hvis de betingelser, der er opført i købsaftalen, opfyldes, kan handlen gennemføres.
+
+Betinget skøde: Et skøde, der er betinget af, at nogle specifikke betingelser skal være opfyldt, før der kan udstedes et endeligt skøde og ejendommen kan overdrages.
+
+Bevaringsdeklaration: En servitut, der indeholder bestemmelser om bevaring af ejendom, der er fredet. Er servitutten godkendt af Kulturarvsstyrelsen fritager den ejer fra bl.a. at skulle betale ejendomsskat.
+
+BFE nummer: BFE står for Bestemt Fast Ejendom. Det er en syvcifret talkombination som kæder alle registrerede oplysninger om den specifikke faste ejendom sammen.
+
+Blandede ejendomme: En ejendom, der anvendes til flere formål, f.eks. både beboelse og erhverv, kalder man en blandet ejendom. Dette gælder også for ejendomme, hvor underetagen bruges til butikslejemål, mens resten er beregnet til almindelig beboelse.
+
+Blanko lån: Et usikret forbrugslån, der typisk ansøges gennem finansieringsselskabernes hjemmesider eller pr. telefon. Da lånet er uden sikkerhed, betales der ofte højere renter.
+
+Bodelingsoverenskomst: En skriftlig aftale om opgørelse og fordeling af ægtefællers aktiver og passiver ved separation eller skilsmisse.
+
+Bolig i udbud: Bolig, der er udbudt til salg og er mulig for interesserede købere at byde på. De fleste boliger i udbud annonceres på internettet, men de kan også udbydes uden annoncering.
+
+Boligadvokat: En advokat, der specialiserer sig i ejendomshandel, som yder rådgivning til dig som køber og/eller sælger og sørger for, at du føler dig tryg i forbindelse med din bolighandel.
+
+Boligafgift: Som andelshaver i en andelsforening betaler du et månedlight beløb, som populært sagt kaldes husleje. Beløbet går til at dække foreningens udgifter (skatter, afgifter, prioritetsydelser m.v.) og kan derfor variere. Boligafgiften udregnes som regel på baggrund af boligens areal (fordelingstal).
+
+Boligareal: Den del af ejendommens areal, der er blevet godkendt til beboelse af kommunen.
+
+Boligboble: Længerevarende og kraftig stigning i boligpriserne, der ikke bygger på den reelle vækst i samfundsøkonomien, men som er løsrevet fra den øvrige økonomiske udvikling.
+
+Boligbyrde: Den beregnede andel af en boligejers nettoindkomst, der går til boliglån og boligskatter.
+
+Boligfinansiering: Boligfinansiering er et begreb, der dækker over, hvordan man finansierer købet af en ejerbolig. Ofte består finansieringen af en bolig af både realkreditlån (op til 80 procent), boliglån i banken (15 procent) og egenfinansieret udbetaling (cirka fem procent).
+
+Boligkøb: Køb af fast ejendom, hvad enten det er en lejlighed, en villa, et rækkehus eller et sommerhus.
+
+Boligkøberens håndbog: Boligkøberens håndbog – fra A til Å er Boligsidens guide til dig som boligkøber. Boligkøberens håndbog guider dig igennem de forskellige faser af boligkøbet – lige fra idéfasen til selve overdragelsen.
+
+Boligkøbsbevis: Et boligkøbsbevis er et dokument, som er et bevis på, at du er forhåndsgodkendt til at låne inden for en bestemt låneramme i eksempelvis et realkreditinstitut. Fordelen ved et boligkøbsbevis er, at du på forhånd ved, hvad din bolig må koste, og at du kan slå til med det samme, når drømmeboligen dukker op.
+
+Boligkredit: Ofte meget fleksibel låneform i forbindelse med boligfinansiering. Boligkreditten fungerer som en slags kassekredit.
+
+Boligkrise: Når et stort antal boligejere ikke kan få solgt deres boliger og samtidig ikke kan betale deres lån. Under en boligkrise kan boligpriserne falde, så gælden i boligen overstiger boligens salgsværdi.
+
+Boliglån: Lån, der optages for at finansiere boligkøb eller ombygning. Ofte finansieres størstedelen af boligkøbet med et realkreditlån (cirka 80 procent), mens kun en mindre del finansieres med et boliglån (cirka 15 procent).
+
+Boligopsparing: En opsparing rettet mod boligmæssige formål såsom boligkøb eller forbedringer ved din nuværende bolig. Ofte giver en boligopsparing en god rente og er som regel bundet inden for en aftalt tidsperiode.
+
+Boligrådgivning: Rådgivning om alle dele af ejendomshandel – både køb og salg.
+
+Boligretten: Afdeling i byretten, der behandler sager om lejeforhold.
+
+Boligsalg: Når du sælger et stykke fast ejendom, som du ejer, er der tale om boligsalg.
+
+Boligsikring: Boligsikring er et tilskud til huslejen forbeholdt de, der lejer en bolig. Størrelsen af tilskuddet afhænger af en række forhold som indtægt, boligens areal, antal beboere og huslejens størrelse.
+
+Bopælspligt: Når ejeren af en bolig har pligt til at sørge for, at boligen er konstant beboet – enten af ejer selv eller gennem udlejning.
+
+Bopælsret: Når en person bliver tildelt retten til at bebo en ejendom, som vedkommende ikke selv er ejer af. Dette kan f.eks. være som led i en handel, hvor sælger kan forbeholde sig retten til fortsat at kunne bebo ejendommen på livstid.
+
+Brandsikring: Forbedringer ved en eksisterende bygning, som har til formål at nedsætte brandfaren og forsinke, at en eventuelt opstået brand breder sig.
+
+Brugsret: Retten til at bruge og benytte fast ejendom eller løsøregenstande.
+
+Bruttoetageareal: Boligens samlede boligareal inklusive arealet for hver af boligens etager samt ydervægge. Benyttes bl.a. til at beregne, hvor meget du skal betale i ejendomsværdiskat. Som boligejer har du ansvaret for, at boligarealet er korrekt registreret, og dermed skal du også indberette ændringer i boligarealet.
+
+Bruttoydelse: De samlede udgifter før skat ved at låne til en bolig, det er administrationsbidrag, renter og afdrag. Vedligeholdelsesudgifter og anvendelsesudgifter som f.eks. vand-, el- og varmebidrag indgår ikke i bruttoydelsen.
+
+Budgetkonto: En konto, hvorfra alle tilbagevendende faste udgifter betales. På baggrund af alle faste udgifter for et helt år udregner man et månedligt gennemsnit, som skal indsættes på kontoen hver måned. På den måde vil der altid være dækning på kontoen til de udgifter, der kommer.
+
+Byggelån: En midlertidig kredit, der kun løber, mens et byggeprojekt står på. Når byggeriet er afsluttet og godkendt, skal lånet tilbagetales, hvilket typisk gøres gennem optagelse af et realkreditlån eller lignende.
+
+Byggelinie: Offentligt fastsat grænse, der viser, hvortil der må bygges. Byggelinien definerer afstanden til skel. Derudover kan højdegrænseplanet begrænse beliggenheden af en bolig.
+
+Byggemodning: Før der må bygges på en grund, skal grunden erklæres byggeklar dvs. der skal være anlagt veje, kloakeret, fremført vand og el m.v.. Når dette er opfyldt, kan en grund erklæres byggemoden.
+
+Byggepligt: Pligten til at påbegynde byggeri på en given grund inden en bestemt tidsfrist. Denne frist er typisk på to år. En sådan pligt indføres som et krav i købsaftalen eller skødet og benyttes f.eks. for at undgå spekulationsopkøb i forbindelse med udstykning af parcelhusgrunde.
+
+Byggeteknisk gennemgang: På baggrund af en byggeteknisk gennemgang af boligen udarbejdes en tilstandsrapport, som er en skriftlig vurdering af boligens stand indeholdende både synlige skader og tegn på skader. Eftersynet foretages af en byggesagkyndig, og tilstandsrapporten er nødvendig for at oplyse køber og danner grundlag for at køber kan tegne en ejerskifteforsikring.
+
+Byggetilladelse: En tilladelse, der skal gives af den lokale byggemyndighed, som regel kommunen, før visse byggerier må påbegyndes.
+
+Bygning på lejet grund: Bygning opført på en grund, der ikke tilhører bygningens ejer. Bygningen og grunden har her hvert sit blad i tingbogen.
+
+Bygningsareal: Summen af samtlige etagers arealer med undtagelse af eventuel kælder og tagetage.
+
+Bygningsattest: Anden betegnelse for ibrugtagningstilladelse. Når et byggeprojekt afsluttes, skal kommunen kontrollere, om det er udført i overensstemmelse med byggetilladelsen. Hvis det er tilfælde, udsteder kommunen en bygningsattest/ibrugtagningstilladelse.
+
+Bygningssagkyndig: Person, der er autoriseret af Ministeriet for By, Bolig og Landdistrikter til at udarbejde tilstandsrapporter og energimærkninger.
+
+Byrderubrik: Felt i ejendommens specifikke blad i tingbogen, hvor servitutter og øvrige byrder på ejendommen anføres.
+
+Byzone: Areal, der er dedikeret til bymæssig bebyggelse.
+`,
+  tags: ['boligordbog', 'begreber', 'boligkøb'],
+  related: []
+}
       ]
     },
     budget: {
@@ -998,46 +1166,6 @@ Dårlig gæld:
     }
   };
 
-  // Alle kategorier
-  const categories = [
-    { id: 'alle', title: 'Alle kategorier', icon: '📋' },
-    { id: 'investering', title: '💰 Investering', icon: '💰' },
-    { id: 'bolig', title: '🏠 Bolig & Hus', icon: '🏠' },
-    { id: 'budget', title: '📊 Budget & Økonomi', icon: '📊' },
-    { id: 'studerende', title: '🎓 Studerende', icon: '🎓' },
-    { id: 'pension', title: '👴 Pension', icon: '👴' },
-    { id: 'gæld', title: '💳 Gæld & Lån', icon: '💳' }
-  ];
-
-  // Filtrer spørgsmål baseret på søgning og kategori
-  const filteredQuestions = useMemo(() => {
-    let questions = [];
-    
-    // Saml alle spørgsmål
-    Object.values(faqData).forEach(category => {
-      questions.push(...category.questions);
-    });
-
-    // Filtrer på kategori
-    if (activeCategory !== 'alle') {
-      questions = questions.filter(q => 
-        faqData[activeCategory]?.questions.some(cq => cq.id === q.id)
-      );
-    }
-
-    // Filtrer på søgning
-    if (searchTerm) {
-      const searchLower = searchTerm.toLowerCase();
-      questions = questions.filter(q =>
-        q.question.toLowerCase().includes(searchLower) ||
-        q.answer.toLowerCase().includes(searchLower) ||
-        q.tags.some(tag => tag.toLowerCase().includes(searchLower))
-      );
-    }
-
-    return questions;
-  }, [searchTerm, activeCategory, faqData]);
-
   return (
     <>
       <Helmet>
@@ -1048,132 +1176,51 @@ Dårlig gæld:
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://minepenge.nu/faq" />
         <link rel="canonical" href="https://minepenge.nu/faq" />
-        
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": Object.values(faqData).flatMap(category => 
-              category.questions.map(q => ({
-                "@type": "Question",
-                "name": q.question,
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": q.answer.replace(/[^\w\s]/g, '').substring(0, 500) + '...'
-                }
-              }))
-            )
-          })}
-        </script>
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
         <div className="bg-white shadow-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <Breadcrumbs 
-              items={[
-                { name: 'Hjem', href: '/' },
-                { name: 'FAQ', href: '/faq' }
-              ]} 
-            />
-            
+            <Breadcrumbs currentPage="FAQ" />
             <div className="mt-6">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">
                 ❓ Ofte Stillede Spørgsmål
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl">
-                Find svar på de mest almindelige spørgsmål om investering, bolig, budget og økonomi. 
-                Brug søgefunktionen eller kategorierne nedenfor til at finde det du leder efter.
+                Find svar på de mest almindelige spørgsmål om investering, bolig, budget og økonomi. Klik på en kategori for at folde spørgsmålene ud.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Search and Categories */}
+        {/* Accordion UI for kategorier */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {/* Search */}
-          <div className="mb-8">
-            <div className="relative">
-              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </div>
-              <input
-                type="text"
-                placeholder="🔍 Søg efter spørgsmål..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="block w-full pl-10 pr-3 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg"
-              />
-            </div>
-          </div>
-
-          {/* Categories */}
-          <div className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">📊 Kategorier</h2>
-            <div className="flex flex-wrap gap-3">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                    activeCategory === category.id
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
-                  }`}
-                >
-                  {category.icon} {category.title}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Results */}
-          <div className="space-y-6">
-            {filteredQuestions.length === 0 ? (
-              <div className="text-center py-12">
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Ingen resultater fundet
-                </h3>
-                <p className="text-gray-600">
-                  Prøv at søge på noget andet eller vælg en anden kategori.
-                </p>
-              </div>
-            ) : (
-              <>
-                <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-2xl font-semibold text-gray-900">
-                    {filteredQuestions.length} spørgsmål fundet
-                  </h2>
-                  {searchTerm && (
-                    <button
-                      onClick={() => setSearchTerm('')}
-                      className="text-blue-600 hover:text-blue-800 font-medium"
-                    >
-                      Ryd søgning
-                    </button>
-                  )}
-                </div>
-
-                <div className="space-y-6">
-                  {filteredQuestions.map((item) => (
-                    <div key={item.id} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">
+          {Object.entries(faqData).map(([catKey, cat]) => (
+            <div key={catKey} className="mb-6 border rounded-lg bg-white shadow-sm">
+              <button
+                onClick={() => setOpenCategory(openCategory === catKey ? null : catKey)}
+                className="w-full text-left px-6 py-4 flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg font-semibold text-gray-900 hover:bg-gray-100 rounded-t-lg"
+                aria-expanded={openCategory === catKey}
+              >
+                <span>{cat.icon} {cat.title}</span>
+                <span>{openCategory === catKey ? '▲' : '▼'}</span>
+              </button>
+              {openCategory === catKey && (
+                <div className="px-6 pb-6 pt-2">
+                  {cat.questions.map((item) => (
+                    <div key={item.id} className="mb-8">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
                         {item.question}
                       </h3>
-                      <div className="prose prose-gray max-w-none mb-4">
+                      <div className="prose prose-gray max-w-none mb-2">
                         <div className="whitespace-pre-line text-gray-700 leading-relaxed">
                           {item.answer}
                         </div>
                       </div>
-                      
                       {/* Tags */}
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {item.tags.map((tag) => (
+                      <div className="flex flex-wrap gap-2 mb-2">
+                        {item.tags && item.tags.map((tag) => (
                           <span
                             key={tag}
                             className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800"
@@ -1182,11 +1229,10 @@ Dårlig gæld:
                           </span>
                         ))}
                       </div>
-
                       {/* Related Links */}
                       {item.related && item.related.length > 0 && (
-                        <div className="border-t border-gray-200 pt-4">
-                          <h4 className="text-sm font-medium text-gray-900 mb-2">
+                        <div className="border-t border-gray-200 pt-2">
+                          <h4 className="text-xs font-medium text-gray-900 mb-1">
                             📚 Relaterede links:
                           </h4>
                           <div className="flex flex-wrap gap-2">
@@ -1194,7 +1240,7 @@ Dårlig gæld:
                               <a
                                 key={index}
                                 href={link}
-                                className="inline-flex items-center px-3 py-1 rounded-md text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
+                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
                               >
                                 {link.includes('beregnere') ? '🧮 Beregner' : 
                                  link.includes('guide') ? '📖 Guide' : '🔗 Link'}
@@ -1206,9 +1252,9 @@ Dårlig gæld:
                     </div>
                   ))}
                 </div>
-              </>
-            )}
-          </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </>
