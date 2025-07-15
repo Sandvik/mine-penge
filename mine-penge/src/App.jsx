@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import GoogleAnalytics from './components/GoogleAnalytics';
 import Sidebar from './components/Sidebar';
 import MobileSidebar from './components/MobileSidebar';
 import ArticleCard from './components/ArticleCard';
@@ -542,6 +543,7 @@ function App() {
 
   return (
     <Router>
+      <GoogleAnalytics />
       <div className="min-h-screen bg-nordic-100">
         <div className="flex flex-col lg:flex-row">
           <Sidebar 
