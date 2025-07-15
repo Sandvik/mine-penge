@@ -8,7 +8,6 @@ import SearchBar from './components/SearchBar';
 import FilterBar from './components/FilterBar';
 import Footer from './components/Footer';
 import SEOHead from './components/SEOHead';
-import SEODashboard from './pages/SEODashboard';
 import LandingPageGenerator from './pages/LandingPageGenerator';
 import QAFeedGenerator from './pages/QAFeedGenerator';
 import InternalLinkStructure from './pages/InternalLinkStructure';
@@ -32,6 +31,7 @@ import curationService from './services/curationService';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import RelatedArticles from './components/RelatedArticles';
 import AdSense from './components/AdSense';
+import AdSenseScript from './components/AdSenseScript';
 import { getPublisherId, getAdSlot } from './config/adsense';
 import { generateSitemap } from './utils/sitemapGenerator';
 import './index.css';
@@ -543,6 +543,7 @@ function App() {
 
   return (
     <Router>
+      <AdSenseScript />
       <GoogleAnalytics />
       <div className="min-h-screen bg-nordic-100">
         <div className="flex flex-col lg:flex-row">
@@ -564,7 +565,6 @@ function App() {
         <Route path="/investering-guide" element={<InvesteringGuide />} />
         <Route path="/bolig-hus-guide" element={<BoligHusGuide />} />
         <Route path="/pensionist-guide" element={<PensionistGuide />} />
-              <Route path="/seo-dashboard" element={<SEODashboard />} />
               <Route path="/landing-page-generator" element={<LandingPageGenerator />} />
               <Route path="/qa-feed-generator" element={<QAFeedGenerator />} />
               <Route path="/internal-link-structure" element={<InternalLinkStructure />} />
@@ -598,6 +598,7 @@ function App() {
         )}
         
         <ScrollToTopButton />
+        {/* ChatWidget vises kun hvis enabled i chatwidget-config.json */}
         <ChatWidget />
         <Footer />
       </div>

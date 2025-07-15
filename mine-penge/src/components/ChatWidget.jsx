@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import articlesData from '../data/articles.json';
 import faqData from '../data/faqData';
 import Fuse from 'fuse.js';
+import chatWidgetConfig from '../config/chatwidget-config.json';
 
 // Synonym-ordbog
 const synonymMap = {
@@ -332,6 +333,11 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
     const messagesToSave = messages.slice(-50);
     localStorage.setItem('chatWidgetMessages', JSON.stringify(messagesToSave));
   }, [messages]);
+
+  // Tjek om chat assistant er enabled
+  if (chatWidgetConfig && chatWidgetConfig.enabled === false) {
+    return null;
+  }
 
   // Info Modal Component
   const InfoModal = () => {

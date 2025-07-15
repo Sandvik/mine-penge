@@ -61,17 +61,6 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Admin */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Admin</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/seo-dashboard" className="text-nordic-300 hover:text-white transition-colors">
-                  Login
-                </Link>
-              </li>
-            </ul>
-          </div>
         </div>
 
         {/* Bottom Bar */}
