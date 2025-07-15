@@ -20,6 +20,32 @@ const categoryMeta = {
 
 const FAQ = () => {
   const [openCategory, setOpenCategory] = useState(null);
+  const [search, setSearch] = useState('');
+
+  // Filtrér spørgsmål baseret på søgning (inkl. kategori og tags)
+  const filteredFaqData = Object.entries(groupedFaqData).reduce((acc, [catKey, questions]) => {
+    const s = search.trim().toLowerCase();
+    // Hvis søgning matcher kategoriens navn, vis alle spørgsmål i kategorien
+    const catTitle = categoryMeta[catKey]?.title?.toLowerCase() || '';
+    if (s && catTitle.includes(s)) {
+      acc[catKey] = questions;
+      return acc;
+    }
+    // Ellers filtrér på spørgsmål, svar og tags
+    const filteredQuestions = questions.filter(q => {
+      if (!s) return true;
+      const tagMatch = (q.tags || []).some(tag => tag.toLowerCase().includes(s));
+      return (
+        q.question.toLowerCase().includes(s) ||
+        q.answer.toLowerCase().includes(s) ||
+        tagMatch
+      );
+    });
+    if (filteredQuestions.length > 0) {
+      acc[catKey] = filteredQuestions;
+    }
+    return acc;
+  }, {});
 
   return (
     <>
@@ -51,12 +77,25 @@ const FAQ = () => {
                 Find svar på de mest almindelige spørgsmål om investering, bolig, budget og økonomi. Klik på en kategori for at folde spørgsmålene ud.
               </p>
             </div>
+            {/* Søgning */}
+            <div className="mt-8 flex justify-center">
+              <input
+                type="text"
+                value={search}
+                onChange={e => setSearch(e.target.value)}
+                placeholder="Søg i spørgsmål og svar..."
+                className="w-full max-w-xl px-4 py-3 rounded-lg border border-nordic-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm text-lg"
+              />
+            </div>
           </div>
         </div>
 
         {/* Accordion UI for kategorier */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {Object.entries(groupedFaqData).map(([catKey, questions]) => (
+          {Object.entries(filteredFaqData).length === 0 && (
+            <div className="text-center text-gray-500 text-lg py-12">Ingen spørgsmål matcher din søgning.</div>
+          )}
+          {Object.entries(filteredFaqData).map(([catKey, questions]) => (
             <div key={catKey} className="mb-6 border rounded-lg bg-white shadow-sm">
               <button
                 onClick={() => setOpenCategory(openCategory === catKey ? null : catKey)}
