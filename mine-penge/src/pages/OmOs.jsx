@@ -15,29 +15,37 @@ function OmOs() {
     const sourceUrls = {
       'budgetnoerden': 'https://budgetnoerden.dk',
       'budgetnørden': 'https://budgetnoerden.dk',
+      'budget nørden': 'https://budgetnoerden.dk',
       'mitteldorf': 'https://mitteldorf.dk',
       'mitteldorfdk': 'https://mitteldorf.dk',
+      'mitteldorf blog': 'https://mitteldorf.dk',
       'moneypenny': 'https://moneypennyandmore.dk',
       'moneypennyandmore': 'https://moneypennyandmore.dk',
       'moneypennydk': 'https://moneypennyandmore.dk',
       'nordnet': 'https://nordnet.dk',
       'nordnetdk': 'https://nordnet.dk',
       'ungmedpenge': 'https://ungmedpenge.dk',
-      'ungmedpengedk': 'https://ungmedpenge.dk'
+      'ungmedpengedk': 'https://ungmedpenge.dk',
+      'forbrugerrådet tænk': 'https://taenk.dk',
+      'taenk': 'https://taenk.dk'
     };
     
     const displayNames = {
       'budgetnoerden': 'BudgetNørden',
       'budgetnørden': 'BudgetNørden',
+      'budget nørden': 'BudgetNørden',
       'mitteldorf': 'Mitteldorf',
       'mitteldorfdk': 'Mitteldorf',
+      'mitteldorf blog': 'Mitteldorf',
       'moneypenny': 'Moneypenny & More',
       'moneypennyandmore': 'Moneypenny & More',
       'moneypennydk': 'Moneypenny & More',
       'nordnet': 'Nordnet',
       'nordnetdk': 'Nordnet',
       'ungmedpenge': 'Ung Med Penge',
-      'ungmedpengedk': 'Ung Med Penge'
+      'ungmedpengedk': 'Ung Med Penge',
+      'forbrugerrådet tænk': 'Forbrugerrådet Tænk',
+      'taenk': 'Forbrugerrådet Tænk'
     };
     
     return {
@@ -79,10 +87,16 @@ function OmOs() {
               <Target className="h-8 w-8 text-primary-600 mr-3" />
               <h2 className="text-2xl font-bold text-nordic-900">Vores Mission</h2>
             </div>
-            <p className="text-lg text-nordic-700 leading-relaxed">
+            <p className="text-lg text-nordic-700 leading-relaxed mb-4">
               Jeg vil gøre privatøkonomi tilgængelig og forståelig for alle danskere. 
               Uanset om du er studerende, børnefamilie eller pensionist, hjælper MinePenge.nu dig 
               med at træffe kloge økonomiske beslutninger gennem automatisk indsamling og kategorisering af kvalitetsindhold.
+            </p>
+            <p className="text-lg text-nordic-700 leading-relaxed">
+              Ud over at samle de bedste artikler fra eksperter, udvikler vi også vores egne omfattende guides 
+              under "Quick Links" - fra studerende økonomi til boligkøb og investering. Disse guides giver dig 
+              en struktureret vejledning gennem komplekse økonomiske emner, suppleret med praktiske værktøjer 
+              og beregnere.
             </p>
           </div>
 
@@ -140,7 +154,7 @@ function OmOs() {
                               <h2 className="text-2xl font-bold text-nordic-900">Skaberen bag MinePenge.nu</h2>
             </div>
             <p className="text-lg text-nordic-700 leading-relaxed mb-6">
-              MinePenge.nu er skabt af Thomas Sandvik, en udvikler og AI-entusiast, 
+              MinePenge.nu er skabt af Thomas Sandvik, en software udvikler og AI-entusiast, 
               der gør privatøkonomi tilgængelig for alle danskere.
             </p>
             
@@ -152,7 +166,7 @@ function OmOs() {
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-nordic-900 mb-2">Thomas Sandvik</h3>
                   <p className="text-nordic-700 mb-3">
-                    Full-stack udvikler og AI-entusiast med fokus på at skabe digitale løsninger, 
+                    Software udvikler og AI-entusiast med fokus på at skabe digitale løsninger, 
                     der gør komplekse emner som privatøkonomi nemme at forstå og navigere i.
                   </p>
                   <div className="flex flex-wrap gap-3">

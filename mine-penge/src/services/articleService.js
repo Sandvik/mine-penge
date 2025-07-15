@@ -265,7 +265,7 @@ class ArticleService {
     return {
       totalArticles: this.articles.length,
       lastUpdated: this.metadata.lastUpdated,
-      sources: this.metadata.sources || [],
+      sources: filters.sources, // Use actual sources from articles instead of metadata
       articlesPerSource: this.metadata.articlesPerSource || {},
       availableTags: filters.tags.length,
       availableAudiences: filters.audiences.length,

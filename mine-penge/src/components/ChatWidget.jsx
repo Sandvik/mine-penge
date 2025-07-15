@@ -359,9 +359,9 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <h3 className="font-semibold text-blue-900 mb-2">💰 Investering:</h3>
-                  <ul className="text-blue-800 space-y-1 text-sm">
+                <div className="bg-primary-50 p-4 rounded-lg">
+                  <h3 className="font-semibold text-primary-900 mb-2">💰 Investering:</h3>
+                  <ul className="text-primary-800 space-y-1 text-sm">
                     <li>• "Hvordan starter jeg med at investere?"</li>
                     <li>• "Hvad er ASK?"</li>
                     <li>• "Hvilke fonde skal jeg vælge?"</li>
@@ -424,7 +424,7 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
                 </button>
                 <button
                   onClick={() => setShowInfoModal(false)}
-                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm"
+                  className="px-4 py-2 bg-gradient-to-r from-primary-600 to-blue-600 text-white rounded-lg hover:from-primary-700 hover:to-blue-700 transition-colors text-sm"
                 >
                   Luk
                 </button>
@@ -440,11 +440,11 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
   if (isMinimized) {
     return (
       <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 lg:left-auto lg:right-20 lg:transform-none w-72 lg:w-80 bg-white rounded-lg shadow-xl border border-gray-200">
-        <div className="bg-blue-600 text-white p-4 rounded-lg">
+        <div className="bg-gradient-to-r from-primary-600 to-blue-600 text-white p-2.5 rounded-lg">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                <span className="text-blue-600 font-bold text-sm">💰</span>
+                <span className="text-primary-600 font-bold text-sm">💰</span>
               </div>
               <div>
                 <h3 className="font-semibold text-sm lg:text-base">MinePenge Assistent</h3>
@@ -472,11 +472,11 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
     <>
       <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 lg:left-auto lg:right-20 lg:transform-none w-80 lg:w-96 h-80 lg:h-96 bg-white rounded-lg shadow-xl border border-gray-200 flex flex-col">
         {/* Header */}
-        <div className="bg-blue-600 text-white p-4 rounded-t-lg">
+        <div className="bg-gradient-to-r from-primary-600 to-blue-600 text-white p-2.5 rounded-t-lg">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                <span className="text-blue-600 font-bold text-sm">💰</span>
+                <span className="text-primary-600 font-bold text-sm">💰</span>
               </div>
               <div>
                 <h3 className="font-semibold text-sm lg:text-base">MinePenge Assistent</h3>
@@ -521,7 +521,7 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
               <div
                 className={`max-w-[200px] lg:max-w-md px-3 lg:px-4 py-2 rounded-lg ${
                   message.type === 'user'
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-gradient-to-r from-primary-600 to-blue-600 text-white'
                     : 'bg-gray-100 text-gray-800'
                 }`}
               >
@@ -536,7 +536,7 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
                             href={part.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-700 hover:text-blue-900 underline"
+                            className="text-primary-700 hover:text-primary-900 underline"
                             onClick={(e) => e.stopPropagation()} // Prevent parent click
                           >
                             {part.text}
@@ -556,15 +556,15 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
                 
                 {/* Related Articles */}
                 {message.relatedArticles && message.relatedArticles.length > 0 && (
-                  <div className="mt-3 p-3 bg-blue-50 rounded-lg">
-                    <h4 className="font-semibold text-blue-900 mb-2 text-xs">📖 Relaterede artikler:</h4>
+                  <div className="mt-3 p-3 bg-primary-50 rounded-lg">
+                    <h4 className="font-semibold text-primary-900 mb-2 text-xs">📖 Relaterede artikler:</h4>
                     {message.relatedArticles.map(article => (
                       <a 
                         key={article.article_id}
                         href={article.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block text-blue-700 hover:text-blue-900 text-xs mb-1 truncate"
+                        className="block text-primary-700 hover:text-primary-900 text-xs mb-1 truncate"
                         title={article.title}
                       >
                         • {article.title}
@@ -604,13 +604,13 @@ Eller besøg vores FAQ side for flere spørgsmål og svar! 📚`,
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               placeholder="Skriv dit spørgsmål..."
-              className="flex-1 px-2 lg:px-3 py-2 text-sm lg:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="flex-1 px-2 lg:px-3 py-2 text-sm lg:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               disabled={isTyping}
             />
             <button
               type="submit"
               disabled={!inputValue.trim() || isTyping}
-              className="px-3 lg:px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-3 lg:px-4 py-2 bg-gradient-to-r from-primary-600 to-blue-600 text-white rounded-lg hover:from-primary-700 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />

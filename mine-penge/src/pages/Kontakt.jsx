@@ -63,7 +63,7 @@ function Kontakt() {
                       Hvor ofte opdateres indholdet?
                     </h3>
                     <p className="text-nordic-700 text-sm">
-                      Vi opdaterer vores indhold ugentligt med nye artikler fra vores partnere.
+                      Vi opdaterer vores indhold ugentligt med nye artikler fra egne kilder og eksterne kilder.
                     </p>
                   </div>
                 

@@ -28,12 +28,8 @@ function Footer() {
                 <span>info@minepenge.nu</span>
               </div>
               <div className="flex items-center text-sm text-nordic-300">
-                <Phone className="h-4 w-4 mr-2" />
-                <span>+45 70 12 34 56</span>
-              </div>
-              <div className="flex items-center text-sm text-nordic-300">
                 <MapPin className="h-4 w-4 mr-2" />
-                <span>København, Danmark</span>
+                <span>Hellerup, Danmark</span>
               </div>
             </div>
           </div>
@@ -82,20 +78,10 @@ function Footer() {
         <div className="border-t border-nordic-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm text-nordic-400 mb-4 md:mb-0">
-              © 2025 MinePenge.nu. Alle rettigheder forbeholdes.
+              © 2025 MinePenge.nu - Indhold fra egne kilder og eksterne kilder
             </div>
             
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-nordic-400 hover:text-white transition-colors">
-                Privatlivspolitik
-              </a>
-              <a href="#" className="text-nordic-400 hover:text-white transition-colors">
-                Vilkår og betingelser
-              </a>
-              <a href="#" className="text-nordic-400 hover:text-white transition-colors">
-                Cookies
-              </a>
-            </div>
+
           </div>
         </div>
       </div>
