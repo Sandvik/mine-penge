@@ -1,3 +1,35 @@
+// === DESIGN TOKENS ===
+// Ændr kun værdierne her for at ændre hele sitets udseende!
+const colors = {
+  // === Baggrunde ===
+  'bg-main': '#f5f5f5',      // Hovedbaggrund
+  'bg-container': '#e0e7ef', // Container/sektion baggrund
+  'bg-card': '#ffffff',      // Kort/box baggrund
+  'bg-accent': '#f0f4f8',    // Accent baggrund
+
+  // === Tekst ===
+  'text-main': '#22223b',    // Primær tekst
+  'text-muted': '#6c757d',   // Dæmpet tekst
+  'text-inverse': '#fff',    // Tekst på mørk baggrund
+
+  // === Primær/sekundær ===
+  'primary': '#1e90ff',      // Primær farve (fx knapper, links)
+  'primary-hover': '#1565c0',
+  'secondary': '#ffb703',    // Sekundær farve
+  'secondary-hover': '#ff9800',
+
+  // === Status ===
+  'success': '#4caf50',
+  'warning': '#ff9800',
+  'danger': '#f44336',
+};
+
+const fontFamily = {
+  'sans': ['Inter', 'Arial', 'sans-serif'],
+  'heading': ['Montserrat', 'sans-serif'],
+  // Tilføj flere hvis nødvendigt
+};
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -7,6 +39,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        ...colors,
         // Primary teal colors inspired by the CSS - mørkere versioner
         primary: {
           50: '#d1dfe3',   // Mørkere end før
@@ -87,6 +120,7 @@ export default {
         }
       },
       fontFamily: {
+        ...fontFamily,
         sans: ['Outfit', 'system-ui', 'sans-serif'],
         serif: ['Cormorant Garamond', 'serif'],
         display: ['Inter', 'sans-serif'],
@@ -102,4 +136,6 @@ export default {
     },
   },
   plugins: [],
-} 
+};
+// === SLUT PÅ DESIGN TOKENS ===
+// Brug fx className="bg-bg-main text-text-main" i dine komponenter 
